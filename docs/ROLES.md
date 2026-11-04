@@ -48,3 +48,28 @@ If authentication is added in a later version, possible application roles are:
 - Staff: manage day-to-day member records, check-ins, and class enrollments, with restricted access to sensitive configuration.
 
 These are recommendations only; they are not enforced by the current code.
+
+## Application-to-Database Role Mapping
+
+| Application Role | Intended Database Role | Access |
+|---|---|---|
+| Administrator | gym_app | Full application database operations |
+| Staff | gym_app | Restricted operations enforced by the application in a future authenticated version |
+| Reporting User | gym_readonly | Read-only database access |
+
+The current application uses a shared database connection and does not enforce individual application roles. The mapping above describes the intended design for future authentication and authorization.
+
+## Database Role Verification
+
+The following PostgreSQL roles were created and configured:
+
+| Database Role | Login | Permissions | Status |
+|---|---|---|---|
+| gym_app | Enabled | SELECT, INSERT, UPDATE, DELETE | Tested successfully |
+| gym_readonly | Enabled | SELECT only | Configured |
+
+The gym_app account was tested through the Spring Boot application. Reading, creating, editing, and deactivating member records were successful.
+
+The gym_readonly account is intended for read-only database access.
+
+The application currently uses gym_app as its database account instead of the PostgreSQL superuser.
