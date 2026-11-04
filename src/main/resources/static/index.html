@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batumbakal Gym Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>BATUMBAKAL</h2>
+            <p>GYM MANAGEMENT</p>
+        </div>
+
+        <nav id="navigation">
+            <button class="nav-item active" data-module="members">Members</button>
+            <button class="nav-item" data-module="trainers">Trainers</button>
+            <button class="nav-item" data-module="plans">Membership Plans</button>
+            <button class="nav-item" data-module="memberships">Memberships</button>
+            <button class="nav-item" data-module="payments">Payments</button>
+            <button class="nav-item" data-module="classes">Classes</button>
+            <button class="nav-item" data-module="enrollments">Class Enrollments</button>
+            <button class="nav-item" data-module="attendance">Attendance</button>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+    <div>
+        <p class="topbar-label">BATUMBAKAL GYM / MANAGEMENT</p>
+        <h1>Gym Management System</h1>
+    </div>
+</header>
+
+        <section class="content">
+            <div class="section-header">
+                <div>
+                    <h2 id="sectionTitle">Members</h2>
+                    <p id="sectionDescription">Manage registered gym members.</p>
+                </div>
+                <button id="addButton" class="primary-button">+ Add New</button>
+            </div>
+
+            <div class="toolbar">
+                <input type="text" id="searchInput" placeholder="Search records...">
+                <span id="recordCount">0 records</span>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead id="tableHead"></thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="formTitle">Add Record</h2>
+                <button id="closeModal" class="close-button">&times;</button>
+            </div>
+
+            <form id="recordForm">
+                <div id="formFields" class="form-fields"></div>
+                <div class="form-actions">
+                    <button type="button" id="cancelButton" class="secondary-button">Cancel</button>
+                    <button type="submit" class="primary-button">Save Record</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
