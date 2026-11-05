@@ -1,0 +1,3 @@
+# Preserve exact evidence bytes and checksums on Windows and other platforms.
+* -text
+*.pdf binary

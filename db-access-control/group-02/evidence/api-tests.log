@@ -1,0 +1,249 @@
+
+=== Anonymous ===
+PASS  GET venues without login  (expected 401, got 401)
+PASS  Login without CSRF token  (expected 403, got 403)
+PASS  Login with wrong password  (expected 401, got 401)
+
+=== Super Admin ===
+PASS  Admin login  (expected 204, got 204)
+PASS  Admin /me  (expected 200, got 200)
+      {"userId":1,"username":"activity4admin","role":"Super Admin"}
+PASS  Admin can read venues  (expected 200, got 200)
+PASS  Admin cannot create venue  (expected 403, got 403)
+PASS  Admin logout  (expected 204, got 204)
+PASS  After logout, venues blocked  (expected 401, got 401)
+
+=== Event Organizer ===
+PASS  Organizer login  (expected 204, got 204)
+PASS  Create venue  (expected 201, got 201)
+PASS  Duplicate venue name  (expected 409, got 409)
+PASS  Invalid venue (blank name, capacity -5)  (expected 400, got 400)
+PASS  Update venue  (expected 200, got 200)
+PASS  Get venue  (expected 200, got 200)
+PASS  Delete venue  (expected 204, got 204)
+PASS  Get deleted venue  (expected 404, got 404)
+
+=== Audit log ===
+PASS  Admin login again  (expected 204, got 204)
+PASS  Admin can read audit log  (expected 200, got 200)
+      11/6/2026 1:16:36 AM  activity4organizer  Deleted  venue #1
+      11/6/2026 1:16:36 AM  activity4organizer  Updated  venue #1
+      11/6/2026 1:16:36 AM  activity4organizer  Created  venue #1
+PASS  Organizer cannot read audit log  (expected 403, got 403)
+
+=== User management ===
+PASS  Admin login (user tests)  (expected 204, got 204)
+PASS  Admin creates user  (expected 201, got 201)
+PASS  Duplicate username, different case  (expected 409, got 409)
+PASS  Weak password rejected  (expected 400, got 400)
+PASS  Organizer cannot list users  (expected 403, got 403)
+PASS  Admin can list users  (expected 200, got 200)
+PASS  User list contains no password data
+--- self-service
+PASS  New user can log in  (expected 204, got 204)
+PASS  Change password, wrong current  (expected 400, got 400)
+PASS  Change password  (expected 204, got 204)
+PASS  Update own profile  (expected 200, got 200)
+PASS  Old password no longer works  (expected 401, got 401)
+PASS  New password works  (expected 204, got 204)
+--- deactivation
+PASS  Admin deactivates user  (expected 200, got 200)
+PASS  Deactivated user's open session is cut off  (expected 401, got 401)
+PASS  Deactivated user cannot log in  (expected 401, got 401)
+PASS  Admin cannot deactivate self  (expected 400, got 400)
+
+=== Events ===
+PASS  Create venue for event tests  (expected 201, got 201)
+PASS  Create event  (expected 201, got 201)
+      status=Upcoming organizer=Dev Organizer venue=Event Hall 98997
+PASS  Back-to-back event, same venue  (expected 201, got 201)
+PASS  Overlapping event, same venue  (expected 409, got 409)
+PASS  End time before start time  (expected 400, got 400)
+PASS  Date in the past  (expected 400, got 400)
+PASS  Unknown venue  (expected 400, got 400)
+PASS  Admin can read events  (expected 200, got 200)
+PASS  Admin cannot create events  (expected 403, got 403)
+PASS  Update event  (expected 200, got 200)
+PASS  Update into an overlap  (expected 409, got 409)
+PASS  Filter by status and search  (expected 200, got 200)
+      matching events: 1  (expected at least 1)
+PASS  Upcoming to Ongoing  (expected 200, got 200)
+PASS  Ongoing to Completed  (expected 200, got 200)
+PASS  Completed back to Upcoming  (expected 400, got 400)
+PASS  Editing a completed event  (expected 400, got 400)
+PASS  Cancel an event  (expected 200, got 200)
+PASS  Cancelled event releases its venue  (expected 201, got 201)
+PASS  Delete venue still used by events  (expected 409, got 409)
+PASS  Delete event 1  (expected 204, got 204)
+PASS  Delete event 2  (expected 204, got 204)
+PASS  Delete event 3  (expected 204, got 204)
+PASS  Get deleted event  (expected 404, got 404)
+PASS  Delete the test venue  (expected 204, got 204)
+
+=== Schedules and staff ===
+PASS  Create venue for schedule tests  (expected 201, got 201)
+PASS  Create event 09:00-12:00  (expected 201, got 201)
+--- schedule entries
+PASS  Add entry inside the event  (expected 201, got 201)
+PASS  Entry before the event starts  (expected 400, got 400)
+PASS  Entry after the event ends  (expected 400, got 400)
+PASS  Entry with end before start  (expected 400, got 400)
+PASS  Overlapping entries are allowed  (expected 201, got 201)
+PASS  Schedules of an unknown event  (expected 404, got 404)
+PASS  List entries  (expected 200, got 200)
+      - Opening  09:00:00-10:00:00
+      - Parallel workshop  09:30:00-11:00:00
+PASS  Update an entry  (expected 200, got 200)
+PASS  Update an entry outside the event  (expected 400, got 400)
+PASS  Admin can read entries  (expected 200, got 200)
+PASS  Admin cannot add entries  (expected 403, got 403)
+PASS  Shrink the event so entries fall outside  (expected 400, got 400)
+PASS  Add a temporary entry  (expected 201, got 201)
+PASS  Delete the temporary entry  (expected 204, got 204)
+--- staff
+PASS  Add staff without a status  (expected 201, got 201)
+      status=Pending  (expected Pending)
+PASS  Invalid staff status  (expected 400, got 400)
+PASS  Blank staff name  (expected 400, got 400)
+PASS  Confirm the assignment  (expected 200, got 200)
+PASS  List staff  (expected 200, got 200)
+PASS  Admin cannot add staff  (expected 403, got 403)
+--- locked events
+PASS  Event to Ongoing  (expected 200, got 200)
+PASS  Event to Completed  (expected 200, got 200)
+PASS  Cannot add entry to a completed event  (expected 400, got 400)
+PASS  Cannot add staff to a completed event  (expected 400, got 400)
+PASS  Cannot delete entries of a completed event  (expected 400, got 400)
+PASS  Entries stay readable  (expected 200, got 200)
+--- cleanup
+PASS  Delete the event (entries and staff go with it)  (expected 204, got 204)
+PASS  Schedules of the deleted event  (expected 404, got 404)
+PASS  Delete the test venue  (expected 204, got 204)
+
+=== Participants and attendance ===
+--- participants
+PASS  Create participant  (expected 201, got 201)
+PASS  Create second participant  (expected 201, got 201)
+PASS  Duplicate student number, different case  (expected 409, got 409)
+PASS  Blank first name  (expected 400, got 400)
+PASS  Student number too long  (expected 400, got 400)
+PASS  Update participant  (expected 200, got 200)
+PASS  Update into another student's number  (expected 409, got 409)
+PASS  Search participants  (expected 200, got 200)
+      matches: 1  (expected 1)
+PASS  Admin can read participants  (expected 200, got 200)
+PASS  Admin cannot create participants  (expected 403, got 403)
+--- attendance
+PASS  Create venue for attendance tests  (expected 201, got 201)
+PASS  Create event  (expected 201, got 201)
+PASS  Cannot record before the event starts  (expected 400, got 400)
+PASS  Event to Ongoing  (expected 200, got 200)
+PASS  Record Present  (expected 201, got 201)
+PASS  Record Late  (expected 201, got 201)
+PASS  Duplicate record for the same participant  (expected 409, got 409)
+PASS  Unknown participant  (expected 400, got 400)
+PASS  Invalid status  (expected 400, got 400)
+PASS  List attendance  (expected 200, got 200)
+      - STU-98997-A  Ana Cruz-Santos  Present
+      - STU-98997-B  Ben Reyes  Late
+PASS  Attendance summary  (expected 200, got 200)
+      present=1 late=1 absent=0 total=2  (expected 1 / 1 / 0 / 2)
+PASS  Change Late to Absent  (expected 200, got 200)
+      present=1 late=0 absent=1 total=2  (expected 1 / 0 / 1 / 2)
+PASS  Admin can read attendance  (expected 200, got 200)
+PASS  Admin cannot record attendance  (expected 403, got 403)
+PASS  Cannot delete a participant with attendance  (expected 409, got 409)
+PASS  Cannot delete an event with attendance  (expected 409, got 409)
+PASS  Remove a mistaken record  (expected 204, got 204)
+PASS  Event to Completed  (expected 200, got 200)
+PASS  Completed events still accept corrections  (expected 201, got 201)
+PASS  Create second event  (expected 201, got 201)
+PASS  Cancel the second event  (expected 200, got 200)
+PASS  Cannot record attendance for a cancelled event  (expected 400, got 400)
+--- cleanup
+PASS  Delete first attendance record  (expected 204, got 204)
+PASS  Delete second attendance record  (expected 204, got 204)
+PASS  Delete event  (expected 204, got 204)
+PASS  Delete cancelled event  (expected 204, got 204)
+PASS  Delete first participant  (expected 204, got 204)
+PASS  Delete second participant  (expected 204, got 204)
+PASS  Delete the test venue  (expected 204, got 204)
+
+=== Dashboard and reports ===
+PASS  Anonymous cannot read the dashboard  (expected 401, got 401)
+PASS  Organizer cannot read the dashboard  (expected 403, got 403)
+PASS  Organizer cannot read reports  (expected 403, got 403)
+PASS  Admin reads the dashboard  (expected 200, got 200)
+      events: upcoming=0 ongoing=0 completed=0 cancelled=0 total=0
+      users: active=2 inactive=1 suspended=0 total=3
+      venues=0 participants=0 attendance=0
+      recent activity rows: 5  (at most 5)
+--- create test data
+PASS  Create venue  (expected 201, got 201)
+PASS  Create event  (expected 201, got 201)
+PASS  Create participant A (grade 10)  (expected 201, got 201)
+PASS  Create participant B (grade 10)  (expected 201, got 201)
+PASS  Create participant C (grade 9)  (expected 201, got 201)
+PASS  Dashboard counts the new venue, event and participants
+PASS  Event to Ongoing  (expected 200, got 200)
+PASS  Record Present  (expected 201, got 201)
+PASS  Record Late  (expected 201, got 201)
+PASS  Record Absent  (expected 201, got 201)
+PASS  Dashboard counts one new Present, Late and Absent
+PASS  Dashboard moved the event from Upcoming to Ongoing
+--- reports
+PASS  Attendance report by event  (expected 200, got 200)
+      Report Event 98997: present=1 late=1 absent=1 total=3 rate=66.7  (expected 1 / 1 / 1 / 3 / 66.7)
+PASS  Exactly one row for that venue and date
+PASS  Filter by status (nothing is Completed)  (expected 200, got 200)
+PASS  No rows for the Completed filter
+PASS  Attendance report by grade  (expected 200, got 200)
+      grade 9: present=0 late=0 absent=1 rate=0
+      grade 10: present=1 late=1 absent=0 rate=100
+      (expected: grade 9 first with absent=1 rate=0, then grade 10 with present=1 late=1 rate=100)
+PASS  Reversed date range  (expected 400, got 400)
+PASS  Unknown event status  (expected 400, got 400)
+--- cleanup
+PASS  Delete attendance record  (expected 204, got 204)
+PASS  Delete attendance record  (expected 204, got 204)
+PASS  Delete attendance record  (expected 204, got 204)
+PASS  Delete event  (expected 204, got 204)
+PASS  Delete participant  (expected 204, got 204)
+PASS  Delete participant  (expected 204, got 204)
+PASS  Delete participant  (expected 204, got 204)
+PASS  Delete the test venue  (expected 204, got 204)
+
+=== Paging totals ===
+PASS  Create venue  (expected 201, got 201)
+PASS  Create participant 1  (expected 201, got 201)
+PASS  Create participant 2  (expected 201, got 201)
+PASS  Create participant 3  (expected 201, got 201)
+PASS  Create event 1  (expected 201, got 201)
+PASS  Create event 2  (expected 201, got 201)
+PASS  Create event 3  (expected 201, got 201)
+--- participants
+PASS  Participants page 1  (expected 200, got 200)
+PASS  Page 1 has 2 items and total 3
+PASS  Page 2 has 1 item and total 3
+PASS  A page beyond the end is empty, total still 3
+PASS  A search with no matches has total 0
+PASS  The grade filter also narrows the total
+--- events
+PASS  Events page 1  (expected 200, got 200)
+PASS  Page 1 has 2 items and total 3
+PASS  Page 2 has 1 item and total 3
+PASS  Status filter changes the total (no Completed events)
+PASS  Admin sees the same total for a date range
+PASS  Events with a reversed date range  (expected 400, got 400)
+--- audit log
+PASS  Audit log page  (expected 200, got 200)
+PASS  Audit page has 2 items and a total of at least 2
+      audit entries in total: 77
+--- cleanup
+PASS  Delete event  (expected 204, got 204)
+PASS  Delete event  (expected 204, got 204)
+PASS  Delete event  (expected 204, got 204)
+PASS  Delete participant  (expected 204, got 204)
+PASS  Delete participant  (expected 204, got 204)
+PASS  Delete participant  (expected 204, got 204)
+PASS  Delete the test venue  (expected 204, got 204)

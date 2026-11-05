@@ -1,0 +1,8 @@
+# BEGIN Activity4 Group02 - only these new accounts are affected
+local grp02_event_management_db event_owner,event_app,grp02_readonly scram-sha-256
+local all event_owner,event_app,grp02_readonly reject
+host grp02_event_management_db event_owner,event_app,grp02_readonly 0.0.0.0/0 scram-sha-256
+host grp02_event_management_db event_owner,event_app,grp02_readonly ::/0 scram-sha-256
+host all event_owner,event_app,grp02_readonly 0.0.0.0/0 reject
+host all event_owner,event_app,grp02_readonly ::/0 reject
+# END Activity4 Group02

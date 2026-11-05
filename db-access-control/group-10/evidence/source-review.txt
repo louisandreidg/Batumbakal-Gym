@@ -1,0 +1,6 @@
+Read-only inspection on 6 November 2026. Git commit c8ee5a2daaac8d84d06e9abd70149763cb62e8a6.
+backend/config/db.php calls mysqli_report, mysqli_connect and mysqli_set_charset.
+backend/api/create-order.php uses mysqli_prepare, mysqli_stmt_execute and mysqli_insert_id.
+backend/api/create-reservation.php uses mysqli_prepare and mysqli_query.
+README identifies current backend as MySQL/MySQLi and PostgreSQL/PDO as planned.
+No PostgreSQL application run, permission test or successful migration is claimed.

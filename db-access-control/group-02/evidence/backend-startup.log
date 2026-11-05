@@ -1,0 +1,180 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24381 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] --------< com.school_event_management:school_event_management >---------
+[INFO] Building school_event_management 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.1:run (default-cli) > test-compile @ school_event_management >>>
+[INFO] Loaded 24381 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ school_event_management ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ school_event_management ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ school_event_management ---
+[INFO] skip non existing resourceDirectory C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\group02\School_Event_Management_Web_Appli-main\school_event_management\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ school_event_management ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.1.1:run (default-cli) < test-compile @ school_event_management <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.1:run (default-cli) @ school_event_management ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/4.1.1/spring-boot-loader-tools-4.1.1.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/4.1.1/spring-boot-buildpack-platform-4.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/4.1.1/spring-boot-buildpack-platform-4.1.1.pom (3.0 kB at 14 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/4.1.1/spring-boot-loader-tools-4.1.1.pom (2.2 kB at 10 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.6.4/httpclient5-5.6.4.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.6.4/httpclient5-5.6.4.pom (6.7 kB at 83 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.pom (4.0 kB at 50 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5-parent/5.6.4/httpclient5-parent-5.6.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5-parent/5.6.4/httpclient5-parent-5.6.4.pom (20 kB at 261 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.4.3/httpcore5-5.4.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.4.3/httpcore5-h2-5.4.3.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.16.7/micrometer-commons-1.16.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.4.3/httpcore5-h2-5.4.3.pom (3.6 kB at 47 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.4.3/httpcore5-5.4.3.pom (3.9 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-parent/5.4.3/httpcore5-parent-5.4.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-parent/5.4.3/httpcore5-parent-5.4.3.pom (15 kB at 193 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.16.7/micrometer-commons-1.16.7.pom (3.8 kB at 17 kB/s)
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/4.1.1/spring-boot-buildpack-platform-4.1.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/4.1.1/spring-boot-buildpack-platform-4.1.1.jar (333 kB at 1.4 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/4.1.1/spring-boot-loader-tools-4.1.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.6.4/httpclient5-5.6.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.4.3/httpcore5-5.4.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.4.3/httpcore5-h2-5.4.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.jar (84 kB at 656 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.16.7/micrometer-commons-1.16.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/4.1.1/spring-boot-loader-tools-4.1.1.jar (342 kB at 2.1 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.16.7/micrometer-commons-1.16.7.jar (52 kB at 237 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.4.3/httpcore5-5.4.3.jar (955 kB at 3.4 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.4.3/httpcore5-h2-5.4.3.jar (264 kB at 809 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.6.4/httpclient5-5.6.4.jar (1.1 MB at 2.5 MB/s)
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-11-06T01:16:06.163+08:00  INFO 25020 --- [school_event_management] [  restartedMain] c.s.s.SchoolEventManagementApplication   : Starting SchoolEventManagementApplication using Java 25.0.4.1 with PID 25020 (C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\group02\School_Event_Management_Web_Appli-main\school_event_management\target\classes started by thedi in C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\group02\School_Event_Management_Web_Appli-main\school_event_management)
+2026-11-06T01:16:06.165+08:00  INFO 25020 --- [school_event_management] [  restartedMain] c.s.s.SchoolEventManagementApplication   : The following 1 profile is active: "local"
+2026-11-06T01:16:06.201+08:00  INFO 25020 --- [school_event_management] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-06T01:16:06.201+08:00  INFO 25020 --- [school_event_management] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-11-06T01:16:06.797+08:00  INFO 25020 --- [school_event_management] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-06T01:16:06.865+08:00  INFO 25020 --- [school_event_management] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 9 JPA repository interfaces.
+2026-11-06T01:16:07.311+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-06T01:16:07.323+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-06T01:16:07.324+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-06T01:16:07.368+08:00  INFO 25020 --- [school_event_management] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1167 ms
+2026-11-06T01:16:07.715+08:00  INFO 25020 --- [school_event_management] [  restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/grp02_event_management_db?currentSchema=school_event_management_db (PostgreSQL 18.6)
+2026-11-06T01:16:07.764+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.019s)
+2026-11-06T01:16:07.810+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "school_event_management_db": 3
+2026-11-06T01:16:07.812+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.f.core.internal.command.DbMigrate      : Schema "school_event_management_db" is up to date. No migration necessary.
+2026-11-06T01:16:07.877+08:00  INFO 25020 --- [school_event_management] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-06T01:16:07.919+08:00  INFO 25020 --- [school_event_management] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-06T01:16:08.301+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-06T01:16:08.327+08:00  INFO 25020 --- [school_event_management] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-06T01:16:08.368+08:00  INFO 25020 --- [school_event_management] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60047867
+2026-11-06T01:16:08.370+08:00  INFO 25020 --- [school_event_management] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-06T01:16:08.421+08:00  INFO 25020 --- [school_event_management] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/grp02_event_management_db?currentSchema=school_event_management_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: grp02_event_management_db/school_event_management_db
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-06T01:16:09.265+08:00  INFO 25020 --- [school_event_management] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-06T01:16:09.315+08:00  INFO 25020 --- [school_event_management] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-06T01:16:09.374+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-06T01:16:10.873+08:00  INFO 25020 --- [school_event_management] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserDetailsService
+2026-11-06T01:16:11.239+08:00  INFO 25020 --- [school_event_management] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-06T01:16:11.245+08:00  INFO 25020 --- [school_event_management] [  restartedMain] c.s.s.SchoolEventManagementApplication   : Started SchoolEventManagementApplication in 5.397 seconds (process running for 5.812)
+2026-11-06T01:16:35.331+08:00  INFO 25020 --- [school_event_management] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-06T01:16:35.331+08:00  INFO 25020 --- [school_event_management] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-06T01:16:35.332+08:00  INFO 25020 --- [school_event_management] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-06T01:16:36.117+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: A venue named 'Test Gym' already exists.]
+2026-11-06T01:16:36.134+08:00  WARN 25020 --- [school_event_management] [io-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.school_event.school_event_management.dto.VenueResponse> com.school_event.school_event_management.controller.VenueController.create(com.school_event.school_event_management.dto.VenueRequest) with 2 errors: [Field error in object 'venueRequest' on field 'capacity': rejected value [-5]; codes [Positive.venueRequest.capacity,Positive.capacity,Positive.java.lang.Integer,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [venueRequest.capacity,capacity]; arguments []; default message [capacity]]; default message [Capacity must be greater than zero.]] [Field error in object 'venueRequest' on field 'venueName': rejected value []; codes [NotBlank.venueRequest.venueName,NotBlank.venueName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [venueRequest.venueName,venueName]; arguments []; default message [venueName]]; default message [Venue name is required.]] ]
+2026-11-06T01:16:36.190+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.ResourceNotFoundException: Venue with id 1 was not found.]
+2026-11-06T01:16:36.497+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: A user named 'TMPUSER98997' already exists.]
+2026-11-06T01:16:36.506+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Password must be at least 10 characters long.]
+2026-11-06T01:16:36.689+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Current password is incorrect.]
+2026-11-06T01:16:37.103+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: You cannot change your own role or account status.]
+2026-11-06T01:16:37.178+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: The venue is already booked for an overlapping time on that date.]
+2026-11-06T01:16:37.183+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: End time must be after start time.]
+2026-11-06T01:16:37.190+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Event date cannot be in the past.]
+2026-11-06T01:16:37.198+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Venue 999999 does not exist.]
+2026-11-06T01:16:37.263+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: The venue is already booked for an overlapping time on that date.]
+2026-11-06T01:16:37.309+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: An event cannot change from Completed to Upcoming.]
+2026-11-06T01:16:37.318+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Completed or cancelled events cannot be edited.]
+2026-11-06T01:16:37.354+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-11-06T01:16:37.355+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "venue" violates foreign key constraint "event_venue_id_fkey" on table "event"
+  Detail: Key (venue_id)=(2) is still referenced from table "event".
+2026-11-06T01:16:37.362+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: update or delete on table "venue" violates foreign key constraint "event_venue_id_fkey" on table "event"<EOL>  Detail: Key (venue_id)=(2) is still referenced from table "event".] [delete from school_event_management_db.venue where venue_id=?]; SQL [delete from school_event_management_db.venue where venue_id=?]; constraint [event_venue_id_fkey]]
+2026-11-06T01:16:37.399+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.ResourceNotFoundException: Event with id 1 was not found.]
+2026-11-06T01:16:37.455+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The activity must fall within the event's time (09:00 to 12:00).]
+2026-11-06T01:16:37.464+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The activity must fall within the event's time (09:00 to 12:00).]
+2026-11-06T01:16:37.471+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: End time must be after start time.]
+2026-11-06T01:16:37.488+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.ResourceNotFoundException: Event with id 999999 was not found.]
+2026-11-06T01:16:37.521+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The activity must fall within the event's time (09:00 to 12:00).]
+2026-11-06T01:16:37.541+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Some schedule entries fall outside the new start and end time. Adjust or remove them first.]
+2026-11-06T01:16:37.588+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.school_event.school_event_management.dto.AssignmentResponse> com.school_event.school_event_management.controller.AssignmentController.create(java.lang.Integer,com.school_event.school_event_management.dto.AssignmentRequest): [Field error in object 'assignmentRequest' on field 'assignmentStatus': rejected value [Maybe]; codes [Pattern.assignmentRequest.assignmentStatus,Pattern.assignmentStatus,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [assignmentRequest.assignmentStatus,assignmentStatus]; arguments []; default message [assignmentStatus],[Ljakarta.validation.constraints.Pattern$Flag;@9c3e8ed,Confirmed|Pending|Cancelled]; default message [Assignment status must be Confirmed, Pending or Cancelled.]] ]
+2026-11-06T01:16:37.595+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.school_event.school_event_management.dto.AssignmentResponse> com.school_event.school_event_management.controller.AssignmentController.create(java.lang.Integer,com.school_event.school_event_management.dto.AssignmentRequest): [Field error in object 'assignmentRequest' on field 'staffName': rejected value []; codes [NotBlank.assignmentRequest.staffName,NotBlank.staffName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [assignmentRequest.staffName,staffName]; arguments []; default message [staffName]]; default message [Staff name is required.]] ]
+2026-11-06T01:16:37.640+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The schedule and staff of a completed event cannot be changed.]
+2026-11-06T01:16:37.649+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The schedule and staff of a completed event cannot be changed.]
+2026-11-06T01:16:37.656+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The schedule and staff of a completed event cannot be changed.]
+2026-11-06T01:16:37.673+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.ResourceNotFoundException: Event with id 4 was not found.]
+2026-11-06T01:16:37.719+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: A participant with student number 'stu-98997-a' already exists.]
+2026-11-06T01:16:37.724+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.school_event.school_event_management.dto.ParticipantResponse> com.school_event.school_event_management.controller.ParticipantController.create(com.school_event.school_event_management.dto.ParticipantRequest): [Field error in object 'participantRequest' on field 'firstName': rejected value []; codes [NotBlank.participantRequest.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [participantRequest.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required.]] ]
+2026-11-06T01:16:37.729+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.school_event.school_event_management.dto.ParticipantResponse> com.school_event.school_event_management.controller.ParticipantController.create(com.school_event.school_event_management.dto.ParticipantRequest): [Field error in object 'participantRequest' on field 'studentNumber': rejected value [123456789012345678901]; codes [Size.participantRequest.studentNumber,Size.studentNumber,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [participantRequest.studentNumber,studentNumber]; arguments []; default message [studentNumber],20,0]; default message [Student number must be at most 20 characters.]] ]
+2026-11-06T01:16:37.747+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: A participant with student number 'STU-98997-B' already exists.]
+2026-11-06T01:16:37.823+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Attendance can only be changed for ongoing or completed events (this event is upcoming).]
+2026-11-06T01:16:37.868+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: This participant already has an attendance record for this event. Change the existing record instead.]
+2026-11-06T01:16:37.872+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Participant 999999 does not exist.]
+2026-11-06T01:16:37.880+08:00  WARN 25020 --- [school_event_management] [io-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.school_event.school_event_management.dto.AttendanceResponse> com.school_event.school_event_management.controller.AttendanceController.record(java.lang.Integer,com.school_event.school_event_management.dto.AttendanceRequest): [Field error in object 'attendanceRequest' on field 'attendanceStatus': rejected value [Maybe]; codes [Pattern.attendanceRequest.attendanceStatus,Pattern.attendanceStatus,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [attendanceRequest.attendanceStatus,attendanceStatus]; arguments []; default message [attendanceStatus],[Ljakarta.validation.constraints.Pattern$Flag;@9c3e8ed,Present|Late|Absent]; default message [Attendance status must be Present, Late or Absent.]] ]
+2026-11-06T01:16:37.938+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-6] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-11-06T01:16:37.938+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-6] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "participant" violates foreign key constraint "attendance_participant_id_fkey" on table "attendance"
+  Detail: Key (participant_id)=(1) is still referenced from table "attendance".
+2026-11-06T01:16:37.940+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: This participant has attendance records and cannot be deleted.]
+2026-11-06T01:16:37.946+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-11-06T01:16:37.946+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "event" violates foreign key constraint "attendance_event_id_fkey" on table "attendance"
+  Detail: Key (event_id)=(5) is still referenced from table "attendance".
+2026-11-06T01:16:37.947+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.DuplicateResourceException: This event has attendance records and cannot be deleted. Cancel it instead.]
+2026-11-06T01:16:37.990+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Attendance can only be changed for ongoing or completed events (this event is cancelled).]
+2026-11-06T01:16:38.214+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The 'to' date cannot be before the 'from' date.]
+2026-11-06T01:16:38.220+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: Unknown event status: 'Done'.]
+2026-11-06T01:16:38.374+08:00  WARN 25020 --- [school_event_management] [nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.school_event.school_event_management.exception.InvalidRequestException: The 'to' date cannot be before the 'from' date.]
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10:44 min
+[INFO] Finished at: 2026-11-06T01:26:44+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.1.1:run (default-cli) on project school_event_management: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

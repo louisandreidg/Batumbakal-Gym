@@ -1,0 +1,9 @@
+\set VERBOSITY verbose
+BEGIN;
+BEGIN
+SET LOCAL search_path=school_event_management_db,public;
+SET
+ALTER TABLE school_event_management_db.venue ADD COLUMN activity4_probe int;
+ERROR:  42501: must be owner of table venue
+LOCATION:  aclcheck_error, aclchk.c:2933
+

@@ -1,0 +1,76 @@
+Login and access control
+  ok  anonymous visitor is sent to login
+  ok  wrong password shows an error
+  ok  POST without CSRF token is refused
+  ok  student@reserveit.test can log in
+  ok  student2@reserveit.test can log in
+  ok  staff@reserveit.test can log in
+  ok  admin@reserveit.test can log in
+  ok  student can open /
+  ok  student can open /rooms
+  ok  student can open /materials
+  ok  student can open /reservations
+  ok  student can open /reservations/new
+  ok  student can open /penalties
+  ok  staff can open /
+  ok  staff can open /rooms
+  ok  staff can open /materials
+  ok  staff can open /reservations
+  ok  staff can open /penalties
+  ok  staff can open /rooms/new
+  ok  staff can open /materials/new
+  ok  student blocked from /admin
+  ok  student blocked from adding rooms
+  ok  staff (non-admin) blocked from /admin
+  ok  admin can open /admin
+  ok  staff cannot submit a request (requesters only)
+Registration
+  ok  new user can register
+  ok  duplicate email is rejected
+  ok  short password is rejected
+Reservation rules
+  ok  past date is rejected
+  ok  end before start is rejected
+  ok  more than available is rejected
+  ok  nothing saved by failed requests
+  ok  valid request is accepted
+  ok  new request starts as PENDING
+  ok  pending request does not hold stock
+  ok  overlapping request can be filed while both are pending
+  ok  student cannot view someone else's reservation
+  ok  student cannot approve
+Approval workflow
+  ok  staff approval sets APPROVED
+  ok  approval takes materials out of stock
+  ok  reviewer is recorded
+  ok  overlapping second approval is blocked
+  ok  blocked approval left B pending
+  ok  blocked approval left stock unchanged
+  ok  new request over an approved booking is refused
+  ok  room availability search shows the booked room
+  ok  availability search shows other rooms free
+Cancel, complete, penalties
+  ok  staff can reject a pending request
+  ok  owner can cancel an approved reservation
+  ok  cancelling returns materials to stock
+  ok  completing marks COMPLETED
+  ok  completing returns materials
+  ok  penalty is recorded
+  ok  second penalty on same reservation is refused
+  ok  student sees their penalty
+  ok  student cannot issue penalties
+Penalty limit
+  ok  unpaid penalties above the limit block new requests
+  ok  blocked request was not saved
+  ok  marking paid records paid_date
+  ok  requests work again once the total is under the limit
+Admin and inventory
+  ok  admin can add a department
+  ok  admin can create staff
+  ok  suspended user cannot reserve
+  ok  staff can add a material
+  ok  editing total shifts available too
+  ok  unused material can be deleted
+  ok  room with history cannot be deleted
+
+All 67 checks passed.

@@ -1,0 +1,7 @@
+# Evidence logs are intentional submission files.
+!**/*.log
+.env
+*.env
+*.clixml
+*secrets*
+application-local.properties

@@ -1,0 +1,20 @@
+Supplementary actual-row operations observed on 6 November 2026.
+This file is transcribed from the successful terminal output in this chat; it is not an original captured log file.
+
+Connection: reserveit_dba to ReserveIT
+BEGIN;
+UPDATE department SET department_name=department_name WHERE department_id=(SELECT min(department_id) FROM department);
+Observed result: UPDATE 1
+ROLLBACK;
+
+Connection: reserveit_app to ReserveIT
+BEGIN;
+INSERT INTO material(material_name,category,total_quantity,available_quantity) VALUES('Activity4 rollback probe','SUPPLIES',2,2);
+Observed result: INSERT 0 1
+UPDATE material SET total_quantity=3,available_quantity=3 WHERE material_name='Activity4 rollback probe';
+Observed result: UPDATE 1
+DELETE FROM material WHERE material_name='Activity4 rollback probe';
+Observed result: DELETE 1
+ROLLBACK;
+
+These real-row operations supplement WHERE false privilege cases in the original access suite.
