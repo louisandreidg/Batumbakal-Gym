@@ -88,7 +88,7 @@ For a safer non-superuser database account, see [Database and Application Roles]
 From the project root in PowerShell:
 
 ```powershell
-.\mvnw.cmd spring-boot:run
+.\mvnw\.cmd spring-boot:run
 ```
 
 Open:
