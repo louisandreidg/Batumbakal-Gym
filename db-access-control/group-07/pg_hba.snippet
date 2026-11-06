@@ -1,8 +1,0 @@
-# BEGIN Activity4 Group07 - only the three new Group 7 accounts
-local grp07_applicantdb grp07_owner,grp07_app,grp07_readonly scram-sha-256
-local all grp07_owner,grp07_app,grp07_readonly reject
-host grp07_applicantdb grp07_owner,grp07_app,grp07_readonly 0.0.0.0/0 scram-sha-256
-host grp07_applicantdb grp07_owner,grp07_app,grp07_readonly ::/0 scram-sha-256
-host all grp07_owner,grp07_app,grp07_readonly 0.0.0.0/0 reject
-host all grp07_owner,grp07_app,grp07_readonly ::/0 reject
-# END Activity4 Group07

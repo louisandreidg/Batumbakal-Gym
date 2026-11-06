@@ -1,6 +1,0 @@
-
-<br />
-<b>Warning</b>:  Cannot modify header information - headers already sent by (output started at C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\unisync\php\app\auth\process_account_login.php:1) in <b>C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\unisync\php\app\auth\process_account_login.php</b> on line <b>13</b><br />
-<br />
-<b>Warning</b>:  session_regenerate_id(): Session ID cannot be regenerated after headers have already been sent in <b>C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\unisync\php\app\auth\process_account_login.php</b> on line <b>79</b><br />
-{"success":true,"message":"Login successful!"}

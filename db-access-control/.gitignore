@@ -5,3 +5,7 @@
 *.clixml
 *secrets*
 application-local.properties
+
+*.docx
+*paste-ready*
+Activity*-Progress-Report.md

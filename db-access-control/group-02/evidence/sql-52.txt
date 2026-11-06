@@ -1,2 +1,0 @@
-psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host "::1", user "grp02_readonly", database "grp99_gymdb", no encryption
-

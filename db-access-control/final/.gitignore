@@ -4,3 +4,7 @@
 *secrets*
 application-local.properties
 !**/*.log
+
+*.docx
+*paste-ready*
+Activity*-Progress-Report.md

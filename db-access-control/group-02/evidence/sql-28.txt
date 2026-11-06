@@ -1,9 +1,0 @@
-\set VERBOSITY verbose
-BEGIN;
-BEGIN
-SET LOCAL search_path=school_event_management_db,public;
-SET
-UPDATE school_event_management_db.audit_log SET action_performed='Updated';
-ERROR:  42501: permission denied for table audit_log
-LOCATION:  aclcheck_error, aclchk.c:2795
-

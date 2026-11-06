@@ -1,9 +1,0 @@
-\set VERBOSITY verbose
-BEGIN;
-BEGIN
-SET LOCAL search_path=school_event_management_db,public;
-SET
-UPDATE venue SET location='probe';
-ERROR:  42501: permission denied for table venue
-LOCATION:  aclcheck_error, aclchk.c:2795
-

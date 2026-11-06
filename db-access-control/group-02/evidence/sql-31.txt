@@ -1,9 +1,0 @@
-\set VERBOSITY verbose
-BEGIN;
-BEGIN
-SET LOCAL search_path=school_event_management_db,public;
-SET
-DELETE FROM school_event_management_db.user_account;
-ERROR:  42501: permission denied for table user_account
-LOCATION:  aclcheck_error, aclchk.c:2795
-

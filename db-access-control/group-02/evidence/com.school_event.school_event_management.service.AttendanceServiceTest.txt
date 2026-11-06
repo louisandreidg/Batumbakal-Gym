@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.school_event.school_event_management.service.AttendanceServiceTest
--------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.159 s -- in com.school_event.school_event_management.service.AttendanceServiceTest

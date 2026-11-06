@@ -1,9 +1,0 @@
-\set VERBOSITY verbose
-BEGIN;
-BEGIN
-SET LOCAL search_path=school_event_management_db,public;
-SET
-SELECT * FROM school_event_management_db.flyway_schema_history;
-ERROR:  42501: permission denied for table flyway_schema_history
-LOCATION:  aclcheck_error, aclchk.c:2795
-

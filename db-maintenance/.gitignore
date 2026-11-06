@@ -3,3 +3,7 @@
 *.clixml
 *secrets*
 !**/*.log
+
+*.docx
+*paste-ready*
+Activity*-Progress-Report.md
