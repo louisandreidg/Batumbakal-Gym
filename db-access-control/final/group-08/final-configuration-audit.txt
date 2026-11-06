@@ -1,0 +1,585 @@
+    current_database    | current_user |                                 version                                 
+------------------------+--------------+-------------------------------------------------------------------------
+ catering_management_db | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |    tablename     | tableowner 
+------------+------------------+------------
+ public     | admin            | postgres
+ public     | cancellation     | postgres
+ public     | customer         | postgres
+ public     | employee         | postgres
+ public     | event_assignment | postgres
+ public     | inventory        | postgres
+ public     | menu_item        | postgres
+ public     | package          | postgres
+ public     | payment          | postgres
+ public     | reservation      | postgres
+ public     | reservation_menu | postgres
+ public     | session          | postgres
+(12 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema | sequence_name 
+-----------------+---------------
+(0 rows)
+
+        rolname        | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+-----------------------+-------------+----------+-------------+---------------
+ catering_admin_grp    | f           | f        | f           | f
+ catering_app          | t           | f        | f           | f
+ catering_readonly_grp | f           | f        | f           | f
+ catering_report       | t           | f        | f           | f
+ catering_runtime_grp  | f           | f        | f           | f
+(5 rows)
+
+     member      |      group_role       
+-----------------+-----------------------
+ catering_app    | catering_runtime_grp
+ catering_report | catering_readonly_grp
+(2 rows)
+
+        datname         |  owner   |                                                         datacl                                                         
+------------------------+----------+------------------------------------------------------------------------------------------------------------------------
+ catering_management_db | postgres | {postgres=CTc/postgres,catering_runtime_grp=c/postgres,catering_readonly_grp=c/postgres,catering_admin_grp=c/postgres}
+(1 row)
+
+        grantee        | table_schema |    table_name    | privilege_type 
+-----------------------+--------------+------------------+----------------
+ catering_admin_grp    | public       | admin            | DELETE
+ catering_admin_grp    | public       | admin            | INSERT
+ catering_admin_grp    | public       | admin            | SELECT
+ catering_admin_grp    | public       | admin            | UPDATE
+ catering_admin_grp    | public       | cancellation     | DELETE
+ catering_admin_grp    | public       | cancellation     | INSERT
+ catering_admin_grp    | public       | cancellation     | SELECT
+ catering_admin_grp    | public       | cancellation     | UPDATE
+ catering_admin_grp    | public       | customer         | DELETE
+ catering_admin_grp    | public       | customer         | INSERT
+ catering_admin_grp    | public       | customer         | SELECT
+ catering_admin_grp    | public       | customer         | UPDATE
+ catering_admin_grp    | public       | employee         | DELETE
+ catering_admin_grp    | public       | employee         | INSERT
+ catering_admin_grp    | public       | employee         | SELECT
+ catering_admin_grp    | public       | employee         | UPDATE
+ catering_admin_grp    | public       | event_assignment | DELETE
+ catering_admin_grp    | public       | event_assignment | INSERT
+ catering_admin_grp    | public       | event_assignment | SELECT
+ catering_admin_grp    | public       | event_assignment | UPDATE
+ catering_admin_grp    | public       | inventory        | DELETE
+ catering_admin_grp    | public       | inventory        | INSERT
+ catering_admin_grp    | public       | inventory        | SELECT
+ catering_admin_grp    | public       | inventory        | UPDATE
+ catering_admin_grp    | public       | menu_item        | DELETE
+ catering_admin_grp    | public       | menu_item        | INSERT
+ catering_admin_grp    | public       | menu_item        | SELECT
+ catering_admin_grp    | public       | menu_item        | UPDATE
+ catering_admin_grp    | public       | package          | DELETE
+ catering_admin_grp    | public       | package          | INSERT
+ catering_admin_grp    | public       | package          | SELECT
+ catering_admin_grp    | public       | package          | UPDATE
+ catering_admin_grp    | public       | payment          | DELETE
+ catering_admin_grp    | public       | payment          | INSERT
+ catering_admin_grp    | public       | payment          | SELECT
+ catering_admin_grp    | public       | payment          | UPDATE
+ catering_admin_grp    | public       | reservation      | DELETE
+ catering_admin_grp    | public       | reservation      | INSERT
+ catering_admin_grp    | public       | reservation      | SELECT
+ catering_admin_grp    | public       | reservation      | UPDATE
+ catering_admin_grp    | public       | reservation_menu | DELETE
+ catering_admin_grp    | public       | reservation_menu | INSERT
+ catering_admin_grp    | public       | reservation_menu | SELECT
+ catering_admin_grp    | public       | reservation_menu | UPDATE
+ catering_readonly_grp | public       | cancellation     | SELECT
+ catering_readonly_grp | public       | employee         | SELECT
+ catering_readonly_grp | public       | event_assignment | SELECT
+ catering_readonly_grp | public       | inventory        | SELECT
+ catering_readonly_grp | public       | menu_item        | SELECT
+ catering_readonly_grp | public       | package          | SELECT
+ catering_readonly_grp | public       | payment          | SELECT
+ catering_readonly_grp | public       | reservation      | SELECT
+ catering_readonly_grp | public       | reservation_menu | SELECT
+ catering_runtime_grp  | public       | admin            | DELETE
+ catering_runtime_grp  | public       | admin            | INSERT
+ catering_runtime_grp  | public       | admin            | SELECT
+ catering_runtime_grp  | public       | admin            | UPDATE
+ catering_runtime_grp  | public       | cancellation     | DELETE
+ catering_runtime_grp  | public       | cancellation     | INSERT
+ catering_runtime_grp  | public       | cancellation     | SELECT
+ catering_runtime_grp  | public       | cancellation     | UPDATE
+ catering_runtime_grp  | public       | customer         | DELETE
+ catering_runtime_grp  | public       | customer         | INSERT
+ catering_runtime_grp  | public       | customer         | SELECT
+ catering_runtime_grp  | public       | customer         | UPDATE
+ catering_runtime_grp  | public       | employee         | DELETE
+ catering_runtime_grp  | public       | employee         | INSERT
+ catering_runtime_grp  | public       | employee         | SELECT
+ catering_runtime_grp  | public       | employee         | UPDATE
+ catering_runtime_grp  | public       | event_assignment | DELETE
+ catering_runtime_grp  | public       | event_assignment | INSERT
+ catering_runtime_grp  | public       | event_assignment | SELECT
+ catering_runtime_grp  | public       | event_assignment | UPDATE
+ catering_runtime_grp  | public       | inventory        | DELETE
+ catering_runtime_grp  | public       | inventory        | INSERT
+ catering_runtime_grp  | public       | inventory        | SELECT
+ catering_runtime_grp  | public       | inventory        | UPDATE
+ catering_runtime_grp  | public       | menu_item        | DELETE
+ catering_runtime_grp  | public       | menu_item        | INSERT
+ catering_runtime_grp  | public       | menu_item        | SELECT
+ catering_runtime_grp  | public       | menu_item        | UPDATE
+ catering_runtime_grp  | public       | package          | DELETE
+ catering_runtime_grp  | public       | package          | INSERT
+ catering_runtime_grp  | public       | package          | SELECT
+ catering_runtime_grp  | public       | package          | UPDATE
+ catering_runtime_grp  | public       | payment          | DELETE
+ catering_runtime_grp  | public       | payment          | INSERT
+ catering_runtime_grp  | public       | payment          | SELECT
+ catering_runtime_grp  | public       | payment          | UPDATE
+ catering_runtime_grp  | public       | reservation      | DELETE
+ catering_runtime_grp  | public       | reservation      | INSERT
+ catering_runtime_grp  | public       | reservation      | SELECT
+ catering_runtime_grp  | public       | reservation      | UPDATE
+ catering_runtime_grp  | public       | reservation_menu | DELETE
+ catering_runtime_grp  | public       | reservation_menu | INSERT
+ catering_runtime_grp  | public       | reservation_menu | SELECT
+ catering_runtime_grp  | public       | reservation_menu | UPDATE
+ catering_runtime_grp  | public       | session          | DELETE
+ catering_runtime_grp  | public       | session          | INSERT
+ catering_runtime_grp  | public       | session          | SELECT
+ catering_runtime_grp  | public       | session          | UPDATE
+(101 rows)
+
+        grantee        | table_schema |    table_name    |     column_name     | privilege_type 
+-----------------------+--------------+------------------+---------------------+----------------
+ catering_admin_grp    | public       | admin            | admin_id            | INSERT
+ catering_admin_grp    | public       | admin            | admin_id            | SELECT
+ catering_admin_grp    | public       | admin            | admin_id            | UPDATE
+ catering_admin_grp    | public       | admin            | created_at          | INSERT
+ catering_admin_grp    | public       | admin            | created_at          | SELECT
+ catering_admin_grp    | public       | admin            | created_at          | UPDATE
+ catering_admin_grp    | public       | admin            | password_hash       | INSERT
+ catering_admin_grp    | public       | admin            | password_hash       | SELECT
+ catering_admin_grp    | public       | admin            | password_hash       | UPDATE
+ catering_admin_grp    | public       | admin            | username            | INSERT
+ catering_admin_grp    | public       | admin            | username            | SELECT
+ catering_admin_grp    | public       | admin            | username            | UPDATE
+ catering_admin_grp    | public       | cancellation     | cancellation_date   | INSERT
+ catering_admin_grp    | public       | cancellation     | cancellation_date   | SELECT
+ catering_admin_grp    | public       | cancellation     | cancellation_date   | UPDATE
+ catering_admin_grp    | public       | cancellation     | cancellation_fee    | INSERT
+ catering_admin_grp    | public       | cancellation     | cancellation_fee    | SELECT
+ catering_admin_grp    | public       | cancellation     | cancellation_fee    | UPDATE
+ catering_admin_grp    | public       | cancellation     | cancellation_id     | INSERT
+ catering_admin_grp    | public       | cancellation     | cancellation_id     | SELECT
+ catering_admin_grp    | public       | cancellation     | cancellation_id     | UPDATE
+ catering_admin_grp    | public       | cancellation     | cancellation_reason | INSERT
+ catering_admin_grp    | public       | cancellation     | cancellation_reason | SELECT
+ catering_admin_grp    | public       | cancellation     | cancellation_reason | UPDATE
+ catering_admin_grp    | public       | cancellation     | cancellation_status | INSERT
+ catering_admin_grp    | public       | cancellation     | cancellation_status | SELECT
+ catering_admin_grp    | public       | cancellation     | cancellation_status | UPDATE
+ catering_admin_grp    | public       | cancellation     | refund_amount       | INSERT
+ catering_admin_grp    | public       | cancellation     | refund_amount       | SELECT
+ catering_admin_grp    | public       | cancellation     | refund_amount       | UPDATE
+ catering_admin_grp    | public       | cancellation     | reservation_id      | INSERT
+ catering_admin_grp    | public       | cancellation     | reservation_id      | SELECT
+ catering_admin_grp    | public       | cancellation     | reservation_id      | UPDATE
+ catering_admin_grp    | public       | customer         | address             | INSERT
+ catering_admin_grp    | public       | customer         | address             | SELECT
+ catering_admin_grp    | public       | customer         | address             | UPDATE
+ catering_admin_grp    | public       | customer         | customer_id         | INSERT
+ catering_admin_grp    | public       | customer         | customer_id         | SELECT
+ catering_admin_grp    | public       | customer         | customer_id         | UPDATE
+ catering_admin_grp    | public       | customer         | email               | INSERT
+ catering_admin_grp    | public       | customer         | email               | SELECT
+ catering_admin_grp    | public       | customer         | email               | UPDATE
+ catering_admin_grp    | public       | customer         | first_name          | INSERT
+ catering_admin_grp    | public       | customer         | first_name          | SELECT
+ catering_admin_grp    | public       | customer         | first_name          | UPDATE
+ catering_admin_grp    | public       | customer         | last_name           | INSERT
+ catering_admin_grp    | public       | customer         | last_name           | SELECT
+ catering_admin_grp    | public       | customer         | last_name           | UPDATE
+ catering_admin_grp    | public       | customer         | password_hash       | INSERT
+ catering_admin_grp    | public       | customer         | password_hash       | SELECT
+ catering_admin_grp    | public       | customer         | password_hash       | UPDATE
+ catering_admin_grp    | public       | customer         | phone               | INSERT
+ catering_admin_grp    | public       | customer         | phone               | SELECT
+ catering_admin_grp    | public       | customer         | phone               | UPDATE
+ catering_admin_grp    | public       | employee         | email               | INSERT
+ catering_admin_grp    | public       | employee         | email               | SELECT
+ catering_admin_grp    | public       | employee         | email               | UPDATE
+ catering_admin_grp    | public       | employee         | employee_id         | INSERT
+ catering_admin_grp    | public       | employee         | employee_id         | SELECT
+ catering_admin_grp    | public       | employee         | employee_id         | UPDATE
+ catering_admin_grp    | public       | employee         | first_name          | INSERT
+ catering_admin_grp    | public       | employee         | first_name          | SELECT
+ catering_admin_grp    | public       | employee         | first_name          | UPDATE
+ catering_admin_grp    | public       | employee         | last_name           | INSERT
+ catering_admin_grp    | public       | employee         | last_name           | SELECT
+ catering_admin_grp    | public       | employee         | last_name           | UPDATE
+ catering_admin_grp    | public       | employee         | phone               | INSERT
+ catering_admin_grp    | public       | employee         | phone               | SELECT
+ catering_admin_grp    | public       | employee         | phone               | UPDATE
+ catering_admin_grp    | public       | employee         | role                | INSERT
+ catering_admin_grp    | public       | employee         | role                | SELECT
+ catering_admin_grp    | public       | employee         | role                | UPDATE
+ catering_admin_grp    | public       | event_assignment | assignment_role     | INSERT
+ catering_admin_grp    | public       | event_assignment | assignment_role     | SELECT
+ catering_admin_grp    | public       | event_assignment | assignment_role     | UPDATE
+ catering_admin_grp    | public       | event_assignment | employee_id         | INSERT
+ catering_admin_grp    | public       | event_assignment | employee_id         | SELECT
+ catering_admin_grp    | public       | event_assignment | employee_id         | UPDATE
+ catering_admin_grp    | public       | event_assignment | reservation_id      | INSERT
+ catering_admin_grp    | public       | event_assignment | reservation_id      | SELECT
+ catering_admin_grp    | public       | event_assignment | reservation_id      | UPDATE
+ catering_admin_grp    | public       | inventory        | availability_status | INSERT
+ catering_admin_grp    | public       | inventory        | availability_status | SELECT
+ catering_admin_grp    | public       | inventory        | availability_status | UPDATE
+ catering_admin_grp    | public       | inventory        | inventory_id        | INSERT
+ catering_admin_grp    | public       | inventory        | inventory_id        | SELECT
+ catering_admin_grp    | public       | inventory        | inventory_id        | UPDATE
+ catering_admin_grp    | public       | inventory        | item_name           | INSERT
+ catering_admin_grp    | public       | inventory        | item_name           | SELECT
+ catering_admin_grp    | public       | inventory        | item_name           | UPDATE
+ catering_admin_grp    | public       | inventory        | quantity            | INSERT
+ catering_admin_grp    | public       | inventory        | quantity            | SELECT
+ catering_admin_grp    | public       | inventory        | quantity            | UPDATE
+ catering_admin_grp    | public       | inventory        | unit                | INSERT
+ catering_admin_grp    | public       | inventory        | unit                | SELECT
+ catering_admin_grp    | public       | inventory        | unit                | UPDATE
+ catering_admin_grp    | public       | menu_item        | category            | INSERT
+ catering_admin_grp    | public       | menu_item        | category            | SELECT
+ catering_admin_grp    | public       | menu_item        | category            | UPDATE
+ catering_admin_grp    | public       | menu_item        | description         | INSERT
+ catering_admin_grp    | public       | menu_item        | description         | SELECT
+ catering_admin_grp    | public       | menu_item        | description         | UPDATE
+ catering_admin_grp    | public       | menu_item        | item_name           | INSERT
+ catering_admin_grp    | public       | menu_item        | item_name           | SELECT
+ catering_admin_grp    | public       | menu_item        | item_name           | UPDATE
+ catering_admin_grp    | public       | menu_item        | menu_item_id        | INSERT
+ catering_admin_grp    | public       | menu_item        | menu_item_id        | SELECT
+ catering_admin_grp    | public       | menu_item        | menu_item_id        | UPDATE
+ catering_admin_grp    | public       | menu_item        | price               | INSERT
+ catering_admin_grp    | public       | menu_item        | price               | SELECT
+ catering_admin_grp    | public       | menu_item        | price               | UPDATE
+ catering_admin_grp    | public       | package          | description         | INSERT
+ catering_admin_grp    | public       | package          | description         | SELECT
+ catering_admin_grp    | public       | package          | description         | UPDATE
+ catering_admin_grp    | public       | package          | package_id          | INSERT
+ catering_admin_grp    | public       | package          | package_id          | SELECT
+ catering_admin_grp    | public       | package          | package_id          | UPDATE
+ catering_admin_grp    | public       | package          | package_name        | INSERT
+ catering_admin_grp    | public       | package          | package_name        | SELECT
+ catering_admin_grp    | public       | package          | package_name        | UPDATE
+ catering_admin_grp    | public       | package          | price_per_guest     | INSERT
+ catering_admin_grp    | public       | package          | price_per_guest     | SELECT
+ catering_admin_grp    | public       | package          | price_per_guest     | UPDATE
+ catering_admin_grp    | public       | payment          | payment_amount      | INSERT
+ catering_admin_grp    | public       | payment          | payment_amount      | SELECT
+ catering_admin_grp    | public       | payment          | payment_amount      | UPDATE
+ catering_admin_grp    | public       | payment          | payment_date        | INSERT
+ catering_admin_grp    | public       | payment          | payment_date        | SELECT
+ catering_admin_grp    | public       | payment          | payment_date        | UPDATE
+ catering_admin_grp    | public       | payment          | payment_id          | INSERT
+ catering_admin_grp    | public       | payment          | payment_id          | SELECT
+ catering_admin_grp    | public       | payment          | payment_id          | UPDATE
+ catering_admin_grp    | public       | payment          | payment_method      | INSERT
+ catering_admin_grp    | public       | payment          | payment_method      | SELECT
+ catering_admin_grp    | public       | payment          | payment_method      | UPDATE
+ catering_admin_grp    | public       | payment          | payment_status      | INSERT
+ catering_admin_grp    | public       | payment          | payment_status      | SELECT
+ catering_admin_grp    | public       | payment          | payment_status      | UPDATE
+ catering_admin_grp    | public       | payment          | reference_number    | INSERT
+ catering_admin_grp    | public       | payment          | reference_number    | SELECT
+ catering_admin_grp    | public       | payment          | reference_number    | UPDATE
+ catering_admin_grp    | public       | payment          | reservation_id      | INSERT
+ catering_admin_grp    | public       | payment          | reservation_id      | SELECT
+ catering_admin_grp    | public       | payment          | reservation_id      | UPDATE
+ catering_admin_grp    | public       | reservation      | customer_id         | INSERT
+ catering_admin_grp    | public       | reservation      | customer_id         | SELECT
+ catering_admin_grp    | public       | reservation      | customer_id         | UPDATE
+ catering_admin_grp    | public       | reservation      | estimated_cost      | INSERT
+ catering_admin_grp    | public       | reservation      | estimated_cost      | SELECT
+ catering_admin_grp    | public       | reservation      | estimated_cost      | UPDATE
+ catering_admin_grp    | public       | reservation      | event_date          | INSERT
+ catering_admin_grp    | public       | reservation      | event_date          | SELECT
+ catering_admin_grp    | public       | reservation      | event_date          | UPDATE
+ catering_admin_grp    | public       | reservation      | event_type          | INSERT
+ catering_admin_grp    | public       | reservation      | event_type          | SELECT
+ catering_admin_grp    | public       | reservation      | event_type          | UPDATE
+ catering_admin_grp    | public       | reservation      | number_of_guests    | INSERT
+ catering_admin_grp    | public       | reservation      | number_of_guests    | SELECT
+ catering_admin_grp    | public       | reservation      | number_of_guests    | UPDATE
+ catering_admin_grp    | public       | reservation      | package_id          | INSERT
+ catering_admin_grp    | public       | reservation      | package_id          | SELECT
+ catering_admin_grp    | public       | reservation      | package_id          | UPDATE
+ catering_admin_grp    | public       | reservation      | reservation_id      | INSERT
+ catering_admin_grp    | public       | reservation      | reservation_id      | SELECT
+ catering_admin_grp    | public       | reservation      | reservation_id      | UPDATE
+ catering_admin_grp    | public       | reservation      | status              | INSERT
+ catering_admin_grp    | public       | reservation      | status              | SELECT
+ catering_admin_grp    | public       | reservation      | status              | UPDATE
+ catering_admin_grp    | public       | reservation      | venue               | INSERT
+ catering_admin_grp    | public       | reservation      | venue               | SELECT
+ catering_admin_grp    | public       | reservation      | venue               | UPDATE
+ catering_admin_grp    | public       | reservation_menu | menu_item_id        | INSERT
+ catering_admin_grp    | public       | reservation_menu | menu_item_id        | SELECT
+ catering_admin_grp    | public       | reservation_menu | menu_item_id        | UPDATE
+ catering_admin_grp    | public       | reservation_menu | quantity            | INSERT
+ catering_admin_grp    | public       | reservation_menu | quantity            | SELECT
+ catering_admin_grp    | public       | reservation_menu | quantity            | UPDATE
+ catering_admin_grp    | public       | reservation_menu | reservation_id      | INSERT
+ catering_admin_grp    | public       | reservation_menu | reservation_id      | SELECT
+ catering_admin_grp    | public       | reservation_menu | reservation_id      | UPDATE
+ catering_readonly_grp | public       | admin            | admin_id            | SELECT
+ catering_readonly_grp | public       | admin            | created_at          | SELECT
+ catering_readonly_grp | public       | admin            | username            | SELECT
+ catering_readonly_grp | public       | cancellation     | cancellation_date   | SELECT
+ catering_readonly_grp | public       | cancellation     | cancellation_fee    | SELECT
+ catering_readonly_grp | public       | cancellation     | cancellation_id     | SELECT
+ catering_readonly_grp | public       | cancellation     | cancellation_reason | SELECT
+ catering_readonly_grp | public       | cancellation     | cancellation_status | SELECT
+ catering_readonly_grp | public       | cancellation     | refund_amount       | SELECT
+ catering_readonly_grp | public       | cancellation     | reservation_id      | SELECT
+ catering_readonly_grp | public       | customer         | address             | SELECT
+ catering_readonly_grp | public       | customer         | customer_id         | SELECT
+ catering_readonly_grp | public       | customer         | first_name          | SELECT
+ catering_readonly_grp | public       | customer         | last_name           | SELECT
+ catering_readonly_grp | public       | customer         | phone               | SELECT
+ catering_readonly_grp | public       | employee         | email               | SELECT
+ catering_readonly_grp | public       | employee         | employee_id         | SELECT
+ catering_readonly_grp | public       | employee         | first_name          | SELECT
+ catering_readonly_grp | public       | employee         | last_name           | SELECT
+ catering_readonly_grp | public       | employee         | phone               | SELECT
+ catering_readonly_grp | public       | employee         | role                | SELECT
+ catering_readonly_grp | public       | event_assignment | assignment_role     | SELECT
+ catering_readonly_grp | public       | event_assignment | employee_id         | SELECT
+ catering_readonly_grp | public       | event_assignment | reservation_id      | SELECT
+ catering_readonly_grp | public       | inventory        | availability_status | SELECT
+ catering_readonly_grp | public       | inventory        | inventory_id        | SELECT
+ catering_readonly_grp | public       | inventory        | item_name           | SELECT
+ catering_readonly_grp | public       | inventory        | quantity            | SELECT
+ catering_readonly_grp | public       | inventory        | unit                | SELECT
+ catering_readonly_grp | public       | menu_item        | category            | SELECT
+ catering_readonly_grp | public       | menu_item        | description         | SELECT
+ catering_readonly_grp | public       | menu_item        | item_name           | SELECT
+ catering_readonly_grp | public       | menu_item        | menu_item_id        | SELECT
+ catering_readonly_grp | public       | menu_item        | price               | SELECT
+ catering_readonly_grp | public       | package          | description         | SELECT
+ catering_readonly_grp | public       | package          | package_id          | SELECT
+ catering_readonly_grp | public       | package          | package_name        | SELECT
+ catering_readonly_grp | public       | package          | price_per_guest     | SELECT
+ catering_readonly_grp | public       | payment          | payment_amount      | SELECT
+ catering_readonly_grp | public       | payment          | payment_date        | SELECT
+ catering_readonly_grp | public       | payment          | payment_id          | SELECT
+ catering_readonly_grp | public       | payment          | payment_method      | SELECT
+ catering_readonly_grp | public       | payment          | payment_status      | SELECT
+ catering_readonly_grp | public       | payment          | reference_number    | SELECT
+ catering_readonly_grp | public       | payment          | reservation_id      | SELECT
+ catering_readonly_grp | public       | reservation      | customer_id         | SELECT
+ catering_readonly_grp | public       | reservation      | estimated_cost      | SELECT
+ catering_readonly_grp | public       | reservation      | event_date          | SELECT
+ catering_readonly_grp | public       | reservation      | event_type          | SELECT
+ catering_readonly_grp | public       | reservation      | number_of_guests    | SELECT
+ catering_readonly_grp | public       | reservation      | package_id          | SELECT
+ catering_readonly_grp | public       | reservation      | reservation_id      | SELECT
+ catering_readonly_grp | public       | reservation      | status              | SELECT
+ catering_readonly_grp | public       | reservation      | venue               | SELECT
+ catering_readonly_grp | public       | reservation_menu | menu_item_id        | SELECT
+ catering_readonly_grp | public       | reservation_menu | quantity            | SELECT
+ catering_readonly_grp | public       | reservation_menu | reservation_id      | SELECT
+ catering_runtime_grp  | public       | admin            | admin_id            | INSERT
+ catering_runtime_grp  | public       | admin            | admin_id            | SELECT
+ catering_runtime_grp  | public       | admin            | admin_id            | UPDATE
+ catering_runtime_grp  | public       | admin            | created_at          | INSERT
+ catering_runtime_grp  | public       | admin            | created_at          | SELECT
+ catering_runtime_grp  | public       | admin            | created_at          | UPDATE
+ catering_runtime_grp  | public       | admin            | password_hash       | INSERT
+ catering_runtime_grp  | public       | admin            | password_hash       | SELECT
+ catering_runtime_grp  | public       | admin            | password_hash       | UPDATE
+ catering_runtime_grp  | public       | admin            | username            | INSERT
+ catering_runtime_grp  | public       | admin            | username            | SELECT
+ catering_runtime_grp  | public       | admin            | username            | UPDATE
+ catering_runtime_grp  | public       | cancellation     | cancellation_date   | INSERT
+ catering_runtime_grp  | public       | cancellation     | cancellation_date   | SELECT
+ catering_runtime_grp  | public       | cancellation     | cancellation_date   | UPDATE
+ catering_runtime_grp  | public       | cancellation     | cancellation_fee    | INSERT
+ catering_runtime_grp  | public       | cancellation     | cancellation_fee    | SELECT
+ catering_runtime_grp  | public       | cancellation     | cancellation_fee    | UPDATE
+ catering_runtime_grp  | public       | cancellation     | cancellation_id     | INSERT
+ catering_runtime_grp  | public       | cancellation     | cancellation_id     | SELECT
+ catering_runtime_grp  | public       | cancellation     | cancellation_id     | UPDATE
+ catering_runtime_grp  | public       | cancellation     | cancellation_reason | INSERT
+ catering_runtime_grp  | public       | cancellation     | cancellation_reason | SELECT
+ catering_runtime_grp  | public       | cancellation     | cancellation_reason | UPDATE
+ catering_runtime_grp  | public       | cancellation     | cancellation_status | INSERT
+ catering_runtime_grp  | public       | cancellation     | cancellation_status | SELECT
+ catering_runtime_grp  | public       | cancellation     | cancellation_status | UPDATE
+ catering_runtime_grp  | public       | cancellation     | refund_amount       | INSERT
+ catering_runtime_grp  | public       | cancellation     | refund_amount       | SELECT
+ catering_runtime_grp  | public       | cancellation     | refund_amount       | UPDATE
+ catering_runtime_grp  | public       | cancellation     | reservation_id      | INSERT
+ catering_runtime_grp  | public       | cancellation     | reservation_id      | SELECT
+ catering_runtime_grp  | public       | cancellation     | reservation_id      | UPDATE
+ catering_runtime_grp  | public       | customer         | address             | INSERT
+ catering_runtime_grp  | public       | customer         | address             | SELECT
+ catering_runtime_grp  | public       | customer         | address             | UPDATE
+ catering_runtime_grp  | public       | customer         | customer_id         | INSERT
+ catering_runtime_grp  | public       | customer         | customer_id         | SELECT
+ catering_runtime_grp  | public       | customer         | customer_id         | UPDATE
+ catering_runtime_grp  | public       | customer         | email               | INSERT
+ catering_runtime_grp  | public       | customer         | email               | SELECT
+ catering_runtime_grp  | public       | customer         | email               | UPDATE
+ catering_runtime_grp  | public       | customer         | first_name          | INSERT
+ catering_runtime_grp  | public       | customer         | first_name          | SELECT
+ catering_runtime_grp  | public       | customer         | first_name          | UPDATE
+ catering_runtime_grp  | public       | customer         | last_name           | INSERT
+ catering_runtime_grp  | public       | customer         | last_name           | SELECT
+ catering_runtime_grp  | public       | customer         | last_name           | UPDATE
+ catering_runtime_grp  | public       | customer         | password_hash       | INSERT
+ catering_runtime_grp  | public       | customer         | password_hash       | SELECT
+ catering_runtime_grp  | public       | customer         | password_hash       | UPDATE
+ catering_runtime_grp  | public       | customer         | phone               | INSERT
+ catering_runtime_grp  | public       | customer         | phone               | SELECT
+ catering_runtime_grp  | public       | customer         | phone               | UPDATE
+ catering_runtime_grp  | public       | employee         | email               | INSERT
+ catering_runtime_grp  | public       | employee         | email               | SELECT
+ catering_runtime_grp  | public       | employee         | email               | UPDATE
+ catering_runtime_grp  | public       | employee         | employee_id         | INSERT
+ catering_runtime_grp  | public       | employee         | employee_id         | SELECT
+ catering_runtime_grp  | public       | employee         | employee_id         | UPDATE
+ catering_runtime_grp  | public       | employee         | first_name          | INSERT
+ catering_runtime_grp  | public       | employee         | first_name          | SELECT
+ catering_runtime_grp  | public       | employee         | first_name          | UPDATE
+ catering_runtime_grp  | public       | employee         | last_name           | INSERT
+ catering_runtime_grp  | public       | employee         | last_name           | SELECT
+ catering_runtime_grp  | public       | employee         | last_name           | UPDATE
+ catering_runtime_grp  | public       | employee         | phone               | INSERT
+ catering_runtime_grp  | public       | employee         | phone               | SELECT
+ catering_runtime_grp  | public       | employee         | phone               | UPDATE
+ catering_runtime_grp  | public       | employee         | role                | INSERT
+ catering_runtime_grp  | public       | employee         | role                | SELECT
+ catering_runtime_grp  | public       | employee         | role                | UPDATE
+ catering_runtime_grp  | public       | event_assignment | assignment_role     | INSERT
+ catering_runtime_grp  | public       | event_assignment | assignment_role     | SELECT
+ catering_runtime_grp  | public       | event_assignment | assignment_role     | UPDATE
+ catering_runtime_grp  | public       | event_assignment | employee_id         | INSERT
+ catering_runtime_grp  | public       | event_assignment | employee_id         | SELECT
+ catering_runtime_grp  | public       | event_assignment | employee_id         | UPDATE
+ catering_runtime_grp  | public       | event_assignment | reservation_id      | INSERT
+ catering_runtime_grp  | public       | event_assignment | reservation_id      | SELECT
+ catering_runtime_grp  | public       | event_assignment | reservation_id      | UPDATE
+ catering_runtime_grp  | public       | inventory        | availability_status | INSERT
+ catering_runtime_grp  | public       | inventory        | availability_status | SELECT
+ catering_runtime_grp  | public       | inventory        | availability_status | UPDATE
+ catering_runtime_grp  | public       | inventory        | inventory_id        | INSERT
+ catering_runtime_grp  | public       | inventory        | inventory_id        | SELECT
+ catering_runtime_grp  | public       | inventory        | inventory_id        | UPDATE
+ catering_runtime_grp  | public       | inventory        | item_name           | INSERT
+ catering_runtime_grp  | public       | inventory        | item_name           | SELECT
+ catering_runtime_grp  | public       | inventory        | item_name           | UPDATE
+ catering_runtime_grp  | public       | inventory        | quantity            | INSERT
+ catering_runtime_grp  | public       | inventory        | quantity            | SELECT
+ catering_runtime_grp  | public       | inventory        | quantity            | UPDATE
+ catering_runtime_grp  | public       | inventory        | unit                | INSERT
+ catering_runtime_grp  | public       | inventory        | unit                | SELECT
+ catering_runtime_grp  | public       | inventory        | unit                | UPDATE
+ catering_runtime_grp  | public       | menu_item        | category            | INSERT
+ catering_runtime_grp  | public       | menu_item        | category            | SELECT
+ catering_runtime_grp  | public       | menu_item        | category            | UPDATE
+ catering_runtime_grp  | public       | menu_item        | description         | INSERT
+ catering_runtime_grp  | public       | menu_item        | description         | SELECT
+ catering_runtime_grp  | public       | menu_item        | description         | UPDATE
+ catering_runtime_grp  | public       | menu_item        | item_name           | INSERT
+ catering_runtime_grp  | public       | menu_item        | item_name           | SELECT
+ catering_runtime_grp  | public       | menu_item        | item_name           | UPDATE
+ catering_runtime_grp  | public       | menu_item        | menu_item_id        | INSERT
+ catering_runtime_grp  | public       | menu_item        | menu_item_id        | SELECT
+ catering_runtime_grp  | public       | menu_item        | menu_item_id        | UPDATE
+ catering_runtime_grp  | public       | menu_item        | price               | INSERT
+ catering_runtime_grp  | public       | menu_item        | price               | SELECT
+ catering_runtime_grp  | public       | menu_item        | price               | UPDATE
+ catering_runtime_grp  | public       | package          | description         | INSERT
+ catering_runtime_grp  | public       | package          | description         | SELECT
+ catering_runtime_grp  | public       | package          | description         | UPDATE
+ catering_runtime_grp  | public       | package          | package_id          | INSERT
+ catering_runtime_grp  | public       | package          | package_id          | SELECT
+ catering_runtime_grp  | public       | package          | package_id          | UPDATE
+ catering_runtime_grp  | public       | package          | package_name        | INSERT
+ catering_runtime_grp  | public       | package          | package_name        | SELECT
+ catering_runtime_grp  | public       | package          | package_name        | UPDATE
+ catering_runtime_grp  | public       | package          | price_per_guest     | INSERT
+ catering_runtime_grp  | public       | package          | price_per_guest     | SELECT
+ catering_runtime_grp  | public       | package          | price_per_guest     | UPDATE
+ catering_runtime_grp  | public       | payment          | payment_amount      | INSERT
+ catering_runtime_grp  | public       | payment          | payment_amount      | SELECT
+ catering_runtime_grp  | public       | payment          | payment_amount      | UPDATE
+ catering_runtime_grp  | public       | payment          | payment_date        | INSERT
+ catering_runtime_grp  | public       | payment          | payment_date        | SELECT
+ catering_runtime_grp  | public       | payment          | payment_date        | UPDATE
+ catering_runtime_grp  | public       | payment          | payment_id          | INSERT
+ catering_runtime_grp  | public       | payment          | payment_id          | SELECT
+ catering_runtime_grp  | public       | payment          | payment_id          | UPDATE
+ catering_runtime_grp  | public       | payment          | payment_method      | INSERT
+ catering_runtime_grp  | public       | payment          | payment_method      | SELECT
+ catering_runtime_grp  | public       | payment          | payment_method      | UPDATE
+ catering_runtime_grp  | public       | payment          | payment_status      | INSERT
+ catering_runtime_grp  | public       | payment          | payment_status      | SELECT
+ catering_runtime_grp  | public       | payment          | payment_status      | UPDATE
+ catering_runtime_grp  | public       | payment          | reference_number    | INSERT
+ catering_runtime_grp  | public       | payment          | reference_number    | SELECT
+ catering_runtime_grp  | public       | payment          | reference_number    | UPDATE
+ catering_runtime_grp  | public       | payment          | reservation_id      | INSERT
+ catering_runtime_grp  | public       | payment          | reservation_id      | SELECT
+ catering_runtime_grp  | public       | payment          | reservation_id      | UPDATE
+ catering_runtime_grp  | public       | reservation      | customer_id         | INSERT
+ catering_runtime_grp  | public       | reservation      | customer_id         | SELECT
+ catering_runtime_grp  | public       | reservation      | customer_id         | UPDATE
+ catering_runtime_grp  | public       | reservation      | estimated_cost      | INSERT
+ catering_runtime_grp  | public       | reservation      | estimated_cost      | SELECT
+ catering_runtime_grp  | public       | reservation      | estimated_cost      | UPDATE
+ catering_runtime_grp  | public       | reservation      | event_date          | INSERT
+ catering_runtime_grp  | public       | reservation      | event_date          | SELECT
+ catering_runtime_grp  | public       | reservation      | event_date          | UPDATE
+ catering_runtime_grp  | public       | reservation      | event_type          | INSERT
+ catering_runtime_grp  | public       | reservation      | event_type          | SELECT
+ catering_runtime_grp  | public       | reservation      | event_type          | UPDATE
+ catering_runtime_grp  | public       | reservation      | number_of_guests    | INSERT
+ catering_runtime_grp  | public       | reservation      | number_of_guests    | SELECT
+ catering_runtime_grp  | public       | reservation      | number_of_guests    | UPDATE
+ catering_runtime_grp  | public       | reservation      | package_id          | INSERT
+ catering_runtime_grp  | public       | reservation      | package_id          | SELECT
+ catering_runtime_grp  | public       | reservation      | package_id          | UPDATE
+ catering_runtime_grp  | public       | reservation      | reservation_id      | INSERT
+ catering_runtime_grp  | public       | reservation      | reservation_id      | SELECT
+ catering_runtime_grp  | public       | reservation      | reservation_id      | UPDATE
+ catering_runtime_grp  | public       | reservation      | status              | INSERT
+ catering_runtime_grp  | public       | reservation      | status              | SELECT
+ catering_runtime_grp  | public       | reservation      | status              | UPDATE
+ catering_runtime_grp  | public       | reservation      | venue               | INSERT
+ catering_runtime_grp  | public       | reservation      | venue               | SELECT
+ catering_runtime_grp  | public       | reservation      | venue               | UPDATE
+ catering_runtime_grp  | public       | reservation_menu | menu_item_id        | INSERT
+ catering_runtime_grp  | public       | reservation_menu | menu_item_id        | SELECT
+ catering_runtime_grp  | public       | reservation_menu | menu_item_id        | UPDATE
+ catering_runtime_grp  | public       | reservation_menu | quantity            | INSERT
+ catering_runtime_grp  | public       | reservation_menu | quantity            | SELECT
+ catering_runtime_grp  | public       | reservation_menu | quantity            | UPDATE
+ catering_runtime_grp  | public       | reservation_menu | reservation_id      | INSERT
+ catering_runtime_grp  | public       | reservation_menu | reservation_id      | SELECT
+ catering_runtime_grp  | public       | reservation_menu | reservation_id      | UPDATE
+ catering_runtime_grp  | public       | session          | expire              | INSERT
+ catering_runtime_grp  | public       | session          | expire              | SELECT
+ catering_runtime_grp  | public       | session          | expire              | UPDATE
+ catering_runtime_grp  | public       | session          | sess                | INSERT
+ catering_runtime_grp  | public       | session          | sess                | SELECT
+ catering_runtime_grp  | public       | session          | sess                | UPDATE
+ catering_runtime_grp  | public       | session          | sid                 | INSERT
+ catering_runtime_grp  | public       | session          | sid                 | SELECT
+ catering_runtime_grp  | public       | session          | sid                 | UPDATE
+(426 rows)
+
+

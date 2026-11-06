@@ -1,0 +1,282 @@
+[
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/staff_appointments.php",
+    "expected": 401,
+    "actual": 401,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/login.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/appointments.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/appointments.php",
+    "expected": 201,
+    "actual": 201,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/appointments.php",
+    "expected": 409,
+    "actual": 409,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/appointments.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/staff_login.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/staff_appointments.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/backup.php",
+    "expected": 403,
+    "actual": 403,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/staff_login.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/staff_appointments.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/backup.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/staff_delete.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "POST http://127.0.0.1:8013/backend/staff_login.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "HealthBridge",
+    "operation": "GET http://127.0.0.1:8013/backend/staff_appointments.php",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/packages",
+    "expected": 401,
+    "actual": 401,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "POST http://127.0.0.1:5015/api/admin/login",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/customers",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/packages",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/menu-items",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/employees",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/inventory",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/reservations",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/payments",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/reservation-menu",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/event-assignments",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/cancellations",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "POST http://127.0.0.1:5015/api/packages",
+    "expected": 201,
+    "actual": 201,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "PUT http://127.0.0.1:5015/api/packages/5",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "DELETE http://127.0.0.1:5015/api/packages/5",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "POST http://127.0.0.1:5015/api/customer-portal/register",
+    "expected": 201,
+    "actual": 201,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "POST http://127.0.0.1:5015/api/customer-portal/login",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/customer-portal/me",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "POST http://127.0.0.1:5015/api/customer-portal/reservations",
+    "expected": 201,
+    "actual": 201,
+    "passed": true
+  },
+  {
+    "project": "Catering",
+    "operation": "GET http://127.0.0.1:5015/api/customer-portal/reservations",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "CarRental",
+    "operation": "GET http://127.0.0.1:8094/api/vehicles",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "CarRental",
+    "operation": "GET http://127.0.0.1:8094/api/admin/vehicles",
+    "expected": 401,
+    "actual": 401,
+    "passed": true
+  },
+  {
+    "project": "CarRental",
+    "operation": "POST http://127.0.0.1:8094/api/auth/login",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "CarRental",
+    "operation": "GET http://127.0.0.1:8094/api/admin/vehicles",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  },
+  {
+    "project": "CarRental",
+    "operation": "GET http://127.0.0.1:8094/api/categories",
+    "expected": 200,
+    "actual": 200,
+    "passed": true
+  }
+]

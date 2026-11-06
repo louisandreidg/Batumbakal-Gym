@@ -1,0 +1,791 @@
+ current_database | current_user |                                 version                                 
+------------------+--------------+-------------------------------------------------------------------------
+ grp03_projectdb  | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |        tablename        | tableowner 
+------------+-------------------------+------------
+ public     | appointments            | postgres
+ public     | billing                 | postgres
+ public     | deleted_records         | postgres
+ public     | doctors                 | postgres
+ public     | medical_notes           | postgres
+ public     | patient_password_resets | postgres
+ public     | patients                | postgres
+ public     | prescriptions           | postgres
+ public     | specialties             | postgres
+ public     | staff_password_resets   | postgres
+ public     | staff_users             | postgres
+(11 rows)
+
+ schemaname |      viewname       
+------------+---------------------
+ public     | appointment_details
+ public     | visit_records
+(2 rows)
+
+ sequence_schema |            sequence_name             
+-----------------+--------------------------------------
+ public          | appointments_appointment_id_seq
+ public          | billing_bill_id_seq
+ public          | deleted_records_record_id_seq
+ public          | doctors_doctor_id_seq
+ public          | medical_notes_note_id_seq
+ public          | patient_password_resets_reset_id_seq
+ public          | patients_patient_id_seq
+ public          | prescriptions_prescription_id_seq
+ public          | specialties_specialty_id_seq
+ public          | staff_password_resets_reset_id_seq
+ public          | staff_users_user_id_seq
+(11 rows)
+
+     rolname     | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+-----------------+-------------+----------+-------------+---------------
+ hb_admin        | f           | f        | f           | f
+ hb_app          | t           | f        | f           | f
+ hb_maintenance  | t           | f        | f           | f
+ hb_readonly_grp | f           | f        | f           | f
+ hb_report       | t           | f        | f           | f
+ hb_staff        | f           | f        | f           | f
+(6 rows)
+
+     member     |   group_role    
+----------------+-----------------
+ hb_app         | hb_staff
+ hb_maintenance | hb_admin
+ hb_report      | hb_readonly_grp
+(3 rows)
+
+     datname     |  owner   |                                                    datacl                                                    
+-----------------+----------+--------------------------------------------------------------------------------------------------------------
+ grp03_projectdb | postgres | {postgres=CTc/postgres,hb_admin=c/postgres,hb_staff=c/postgres,hb_app=c/postgres,hb_readonly_grp=c/postgres}
+(1 row)
+
+     grantee     | table_schema |       table_name        | privilege_type 
+-----------------+--------------+-------------------------+----------------
+ hb_admin        | public       | appointment_details     | DELETE
+ hb_admin        | public       | appointment_details     | INSERT
+ hb_admin        | public       | appointment_details     | REFERENCES
+ hb_admin        | public       | appointment_details     | SELECT
+ hb_admin        | public       | appointment_details     | TRIGGER
+ hb_admin        | public       | appointment_details     | TRUNCATE
+ hb_admin        | public       | appointment_details     | UPDATE
+ hb_admin        | public       | appointments            | DELETE
+ hb_admin        | public       | appointments            | INSERT
+ hb_admin        | public       | appointments            | REFERENCES
+ hb_admin        | public       | appointments            | SELECT
+ hb_admin        | public       | appointments            | TRIGGER
+ hb_admin        | public       | appointments            | TRUNCATE
+ hb_admin        | public       | appointments            | UPDATE
+ hb_admin        | public       | billing                 | DELETE
+ hb_admin        | public       | billing                 | INSERT
+ hb_admin        | public       | billing                 | REFERENCES
+ hb_admin        | public       | billing                 | SELECT
+ hb_admin        | public       | billing                 | TRIGGER
+ hb_admin        | public       | billing                 | TRUNCATE
+ hb_admin        | public       | billing                 | UPDATE
+ hb_admin        | public       | deleted_records         | DELETE
+ hb_admin        | public       | deleted_records         | INSERT
+ hb_admin        | public       | deleted_records         | REFERENCES
+ hb_admin        | public       | deleted_records         | SELECT
+ hb_admin        | public       | deleted_records         | TRIGGER
+ hb_admin        | public       | deleted_records         | TRUNCATE
+ hb_admin        | public       | deleted_records         | UPDATE
+ hb_admin        | public       | doctors                 | DELETE
+ hb_admin        | public       | doctors                 | INSERT
+ hb_admin        | public       | doctors                 | REFERENCES
+ hb_admin        | public       | doctors                 | SELECT
+ hb_admin        | public       | doctors                 | TRIGGER
+ hb_admin        | public       | doctors                 | TRUNCATE
+ hb_admin        | public       | doctors                 | UPDATE
+ hb_admin        | public       | medical_notes           | DELETE
+ hb_admin        | public       | medical_notes           | INSERT
+ hb_admin        | public       | medical_notes           | REFERENCES
+ hb_admin        | public       | medical_notes           | SELECT
+ hb_admin        | public       | medical_notes           | TRIGGER
+ hb_admin        | public       | medical_notes           | TRUNCATE
+ hb_admin        | public       | medical_notes           | UPDATE
+ hb_admin        | public       | patient_password_resets | DELETE
+ hb_admin        | public       | patient_password_resets | INSERT
+ hb_admin        | public       | patient_password_resets | REFERENCES
+ hb_admin        | public       | patient_password_resets | SELECT
+ hb_admin        | public       | patient_password_resets | TRIGGER
+ hb_admin        | public       | patient_password_resets | TRUNCATE
+ hb_admin        | public       | patient_password_resets | UPDATE
+ hb_admin        | public       | patients                | DELETE
+ hb_admin        | public       | patients                | INSERT
+ hb_admin        | public       | patients                | REFERENCES
+ hb_admin        | public       | patients                | SELECT
+ hb_admin        | public       | patients                | TRIGGER
+ hb_admin        | public       | patients                | TRUNCATE
+ hb_admin        | public       | patients                | UPDATE
+ hb_admin        | public       | prescriptions           | DELETE
+ hb_admin        | public       | prescriptions           | INSERT
+ hb_admin        | public       | prescriptions           | REFERENCES
+ hb_admin        | public       | prescriptions           | SELECT
+ hb_admin        | public       | prescriptions           | TRIGGER
+ hb_admin        | public       | prescriptions           | TRUNCATE
+ hb_admin        | public       | prescriptions           | UPDATE
+ hb_admin        | public       | specialties             | DELETE
+ hb_admin        | public       | specialties             | INSERT
+ hb_admin        | public       | specialties             | REFERENCES
+ hb_admin        | public       | specialties             | SELECT
+ hb_admin        | public       | specialties             | TRIGGER
+ hb_admin        | public       | specialties             | TRUNCATE
+ hb_admin        | public       | specialties             | UPDATE
+ hb_admin        | public       | staff_password_resets   | DELETE
+ hb_admin        | public       | staff_password_resets   | INSERT
+ hb_admin        | public       | staff_password_resets   | REFERENCES
+ hb_admin        | public       | staff_password_resets   | SELECT
+ hb_admin        | public       | staff_password_resets   | TRIGGER
+ hb_admin        | public       | staff_password_resets   | TRUNCATE
+ hb_admin        | public       | staff_password_resets   | UPDATE
+ hb_admin        | public       | staff_users             | DELETE
+ hb_admin        | public       | staff_users             | INSERT
+ hb_admin        | public       | staff_users             | REFERENCES
+ hb_admin        | public       | staff_users             | SELECT
+ hb_admin        | public       | staff_users             | TRIGGER
+ hb_admin        | public       | staff_users             | TRUNCATE
+ hb_admin        | public       | staff_users             | UPDATE
+ hb_admin        | public       | visit_records           | DELETE
+ hb_admin        | public       | visit_records           | INSERT
+ hb_admin        | public       | visit_records           | REFERENCES
+ hb_admin        | public       | visit_records           | SELECT
+ hb_admin        | public       | visit_records           | TRIGGER
+ hb_admin        | public       | visit_records           | TRUNCATE
+ hb_admin        | public       | visit_records           | UPDATE
+ hb_readonly_grp | public       | appointments            | SELECT
+ hb_readonly_grp | public       | billing                 | SELECT
+ hb_readonly_grp | public       | doctors                 | SELECT
+ hb_readonly_grp | public       | medical_notes           | SELECT
+ hb_readonly_grp | public       | prescriptions           | SELECT
+ hb_readonly_grp | public       | specialties             | SELECT
+ hb_staff        | public       | appointments            | DELETE
+ hb_staff        | public       | appointments            | INSERT
+ hb_staff        | public       | appointments            | SELECT
+ hb_staff        | public       | appointments            | UPDATE
+ hb_staff        | public       | billing                 | DELETE
+ hb_staff        | public       | billing                 | INSERT
+ hb_staff        | public       | billing                 | SELECT
+ hb_staff        | public       | billing                 | UPDATE
+ hb_staff        | public       | deleted_records         | DELETE
+ hb_staff        | public       | deleted_records         | INSERT
+ hb_staff        | public       | deleted_records         | SELECT
+ hb_staff        | public       | deleted_records         | UPDATE
+ hb_staff        | public       | doctors                 | SELECT
+ hb_staff        | public       | medical_notes           | DELETE
+ hb_staff        | public       | medical_notes           | INSERT
+ hb_staff        | public       | medical_notes           | SELECT
+ hb_staff        | public       | medical_notes           | UPDATE
+ hb_staff        | public       | patient_password_resets | INSERT
+ hb_staff        | public       | patient_password_resets | SELECT
+ hb_staff        | public       | patient_password_resets | UPDATE
+ hb_staff        | public       | patients                | DELETE
+ hb_staff        | public       | patients                | INSERT
+ hb_staff        | public       | patients                | SELECT
+ hb_staff        | public       | patients                | UPDATE
+ hb_staff        | public       | prescriptions           | DELETE
+ hb_staff        | public       | prescriptions           | INSERT
+ hb_staff        | public       | prescriptions           | SELECT
+ hb_staff        | public       | prescriptions           | UPDATE
+ hb_staff        | public       | specialties             | SELECT
+ hb_staff        | public       | staff_password_resets   | INSERT
+ hb_staff        | public       | staff_password_resets   | SELECT
+ hb_staff        | public       | staff_password_resets   | UPDATE
+ hb_staff        | public       | staff_users             | SELECT
+ hb_staff        | public       | staff_users             | UPDATE
+(131 rows)
+
+     grantee     | table_schema |       table_name        |      column_name      | privilege_type 
+-----------------+--------------+-------------------------+-----------------------+----------------
+ hb_admin        | public       | appointment_details     | appointment_date      | INSERT
+ hb_admin        | public       | appointment_details     | appointment_date      | REFERENCES
+ hb_admin        | public       | appointment_details     | appointment_date      | SELECT
+ hb_admin        | public       | appointment_details     | appointment_date      | UPDATE
+ hb_admin        | public       | appointment_details     | appointment_id        | INSERT
+ hb_admin        | public       | appointment_details     | appointment_id        | REFERENCES
+ hb_admin        | public       | appointment_details     | appointment_id        | SELECT
+ hb_admin        | public       | appointment_details     | appointment_id        | UPDATE
+ hb_admin        | public       | appointment_details     | doctor_id             | INSERT
+ hb_admin        | public       | appointment_details     | doctor_id             | REFERENCES
+ hb_admin        | public       | appointment_details     | doctor_id             | SELECT
+ hb_admin        | public       | appointment_details     | doctor_id             | UPDATE
+ hb_admin        | public       | appointment_details     | doctor_name           | INSERT
+ hb_admin        | public       | appointment_details     | doctor_name           | REFERENCES
+ hb_admin        | public       | appointment_details     | doctor_name           | SELECT
+ hb_admin        | public       | appointment_details     | doctor_name           | UPDATE
+ hb_admin        | public       | appointment_details     | patient_id            | INSERT
+ hb_admin        | public       | appointment_details     | patient_id            | REFERENCES
+ hb_admin        | public       | appointment_details     | patient_id            | SELECT
+ hb_admin        | public       | appointment_details     | patient_id            | UPDATE
+ hb_admin        | public       | appointment_details     | patient_name          | INSERT
+ hb_admin        | public       | appointment_details     | patient_name          | REFERENCES
+ hb_admin        | public       | appointment_details     | patient_name          | SELECT
+ hb_admin        | public       | appointment_details     | patient_name          | UPDATE
+ hb_admin        | public       | appointment_details     | reason                | INSERT
+ hb_admin        | public       | appointment_details     | reason                | REFERENCES
+ hb_admin        | public       | appointment_details     | reason                | SELECT
+ hb_admin        | public       | appointment_details     | reason                | UPDATE
+ hb_admin        | public       | appointment_details     | specialty_name        | INSERT
+ hb_admin        | public       | appointment_details     | specialty_name        | REFERENCES
+ hb_admin        | public       | appointment_details     | specialty_name        | SELECT
+ hb_admin        | public       | appointment_details     | specialty_name        | UPDATE
+ hb_admin        | public       | appointment_details     | status                | INSERT
+ hb_admin        | public       | appointment_details     | status                | REFERENCES
+ hb_admin        | public       | appointment_details     | status                | SELECT
+ hb_admin        | public       | appointment_details     | status                | UPDATE
+ hb_admin        | public       | appointments            | appointment_date      | INSERT
+ hb_admin        | public       | appointments            | appointment_date      | REFERENCES
+ hb_admin        | public       | appointments            | appointment_date      | SELECT
+ hb_admin        | public       | appointments            | appointment_date      | UPDATE
+ hb_admin        | public       | appointments            | appointment_id        | INSERT
+ hb_admin        | public       | appointments            | appointment_id        | REFERENCES
+ hb_admin        | public       | appointments            | appointment_id        | SELECT
+ hb_admin        | public       | appointments            | appointment_id        | UPDATE
+ hb_admin        | public       | appointments            | doctor_id             | INSERT
+ hb_admin        | public       | appointments            | doctor_id             | REFERENCES
+ hb_admin        | public       | appointments            | doctor_id             | SELECT
+ hb_admin        | public       | appointments            | doctor_id             | UPDATE
+ hb_admin        | public       | appointments            | patient_id            | INSERT
+ hb_admin        | public       | appointments            | patient_id            | REFERENCES
+ hb_admin        | public       | appointments            | patient_id            | SELECT
+ hb_admin        | public       | appointments            | patient_id            | UPDATE
+ hb_admin        | public       | appointments            | reason                | INSERT
+ hb_admin        | public       | appointments            | reason                | REFERENCES
+ hb_admin        | public       | appointments            | reason                | SELECT
+ hb_admin        | public       | appointments            | reason                | UPDATE
+ hb_admin        | public       | appointments            | status                | INSERT
+ hb_admin        | public       | appointments            | status                | REFERENCES
+ hb_admin        | public       | appointments            | status                | SELECT
+ hb_admin        | public       | appointments            | status                | UPDATE
+ hb_admin        | public       | billing                 | amount                | INSERT
+ hb_admin        | public       | billing                 | amount                | REFERENCES
+ hb_admin        | public       | billing                 | amount                | SELECT
+ hb_admin        | public       | billing                 | amount                | UPDATE
+ hb_admin        | public       | billing                 | appointment_id        | INSERT
+ hb_admin        | public       | billing                 | appointment_id        | REFERENCES
+ hb_admin        | public       | billing                 | appointment_id        | SELECT
+ hb_admin        | public       | billing                 | appointment_id        | UPDATE
+ hb_admin        | public       | billing                 | bill_id               | INSERT
+ hb_admin        | public       | billing                 | bill_id               | REFERENCES
+ hb_admin        | public       | billing                 | bill_id               | SELECT
+ hb_admin        | public       | billing                 | bill_id               | UPDATE
+ hb_admin        | public       | billing                 | billed_at             | INSERT
+ hb_admin        | public       | billing                 | billed_at             | REFERENCES
+ hb_admin        | public       | billing                 | billed_at             | SELECT
+ hb_admin        | public       | billing                 | billed_at             | UPDATE
+ hb_admin        | public       | billing                 | paid_at               | INSERT
+ hb_admin        | public       | billing                 | paid_at               | REFERENCES
+ hb_admin        | public       | billing                 | paid_at               | SELECT
+ hb_admin        | public       | billing                 | paid_at               | UPDATE
+ hb_admin        | public       | billing                 | payment_method        | INSERT
+ hb_admin        | public       | billing                 | payment_method        | REFERENCES
+ hb_admin        | public       | billing                 | payment_method        | SELECT
+ hb_admin        | public       | billing                 | payment_method        | UPDATE
+ hb_admin        | public       | billing                 | status                | INSERT
+ hb_admin        | public       | billing                 | status                | REFERENCES
+ hb_admin        | public       | billing                 | status                | SELECT
+ hb_admin        | public       | billing                 | status                | UPDATE
+ hb_admin        | public       | deleted_records         | deleted_at            | INSERT
+ hb_admin        | public       | deleted_records         | deleted_at            | REFERENCES
+ hb_admin        | public       | deleted_records         | deleted_at            | SELECT
+ hb_admin        | public       | deleted_records         | deleted_at            | UPDATE
+ hb_admin        | public       | deleted_records         | deleted_by            | INSERT
+ hb_admin        | public       | deleted_records         | deleted_by            | REFERENCES
+ hb_admin        | public       | deleted_records         | deleted_by            | SELECT
+ hb_admin        | public       | deleted_records         | deleted_by            | UPDATE
+ hb_admin        | public       | deleted_records         | label                 | INSERT
+ hb_admin        | public       | deleted_records         | label                 | REFERENCES
+ hb_admin        | public       | deleted_records         | label                 | SELECT
+ hb_admin        | public       | deleted_records         | label                 | UPDATE
+ hb_admin        | public       | deleted_records         | payload               | INSERT
+ hb_admin        | public       | deleted_records         | payload               | REFERENCES
+ hb_admin        | public       | deleted_records         | payload               | SELECT
+ hb_admin        | public       | deleted_records         | payload               | UPDATE
+ hb_admin        | public       | deleted_records         | rec_type              | INSERT
+ hb_admin        | public       | deleted_records         | rec_type              | REFERENCES
+ hb_admin        | public       | deleted_records         | rec_type              | SELECT
+ hb_admin        | public       | deleted_records         | rec_type              | UPDATE
+ hb_admin        | public       | deleted_records         | record_id             | INSERT
+ hb_admin        | public       | deleted_records         | record_id             | REFERENCES
+ hb_admin        | public       | deleted_records         | record_id             | SELECT
+ hb_admin        | public       | deleted_records         | record_id             | UPDATE
+ hb_admin        | public       | deleted_records         | ref_id                | INSERT
+ hb_admin        | public       | deleted_records         | ref_id                | REFERENCES
+ hb_admin        | public       | deleted_records         | ref_id                | SELECT
+ hb_admin        | public       | deleted_records         | ref_id                | UPDATE
+ hb_admin        | public       | doctors                 | doctor_id             | INSERT
+ hb_admin        | public       | doctors                 | doctor_id             | REFERENCES
+ hb_admin        | public       | doctors                 | doctor_id             | SELECT
+ hb_admin        | public       | doctors                 | doctor_id             | UPDATE
+ hb_admin        | public       | doctors                 | email                 | INSERT
+ hb_admin        | public       | doctors                 | email                 | REFERENCES
+ hb_admin        | public       | doctors                 | email                 | SELECT
+ hb_admin        | public       | doctors                 | email                 | UPDATE
+ hb_admin        | public       | doctors                 | first_name            | INSERT
+ hb_admin        | public       | doctors                 | first_name            | REFERENCES
+ hb_admin        | public       | doctors                 | first_name            | SELECT
+ hb_admin        | public       | doctors                 | first_name            | UPDATE
+ hb_admin        | public       | doctors                 | last_name             | INSERT
+ hb_admin        | public       | doctors                 | last_name             | REFERENCES
+ hb_admin        | public       | doctors                 | last_name             | SELECT
+ hb_admin        | public       | doctors                 | last_name             | UPDATE
+ hb_admin        | public       | doctors                 | phone                 | INSERT
+ hb_admin        | public       | doctors                 | phone                 | REFERENCES
+ hb_admin        | public       | doctors                 | phone                 | SELECT
+ hb_admin        | public       | doctors                 | phone                 | UPDATE
+ hb_admin        | public       | doctors                 | specialty_id          | INSERT
+ hb_admin        | public       | doctors                 | specialty_id          | REFERENCES
+ hb_admin        | public       | doctors                 | specialty_id          | SELECT
+ hb_admin        | public       | doctors                 | specialty_id          | UPDATE
+ hb_admin        | public       | medical_notes           | appointment_id        | INSERT
+ hb_admin        | public       | medical_notes           | appointment_id        | REFERENCES
+ hb_admin        | public       | medical_notes           | appointment_id        | SELECT
+ hb_admin        | public       | medical_notes           | appointment_id        | UPDATE
+ hb_admin        | public       | medical_notes           | clinical_observations | INSERT
+ hb_admin        | public       | medical_notes           | clinical_observations | REFERENCES
+ hb_admin        | public       | medical_notes           | clinical_observations | SELECT
+ hb_admin        | public       | medical_notes           | clinical_observations | UPDATE
+ hb_admin        | public       | medical_notes           | diagnosis             | INSERT
+ hb_admin        | public       | medical_notes           | diagnosis             | REFERENCES
+ hb_admin        | public       | medical_notes           | diagnosis             | SELECT
+ hb_admin        | public       | medical_notes           | diagnosis             | UPDATE
+ hb_admin        | public       | medical_notes           | note_id               | INSERT
+ hb_admin        | public       | medical_notes           | note_id               | REFERENCES
+ hb_admin        | public       | medical_notes           | note_id               | SELECT
+ hb_admin        | public       | medical_notes           | note_id               | UPDATE
+ hb_admin        | public       | medical_notes           | recorded_at           | INSERT
+ hb_admin        | public       | medical_notes           | recorded_at           | REFERENCES
+ hb_admin        | public       | medical_notes           | recorded_at           | SELECT
+ hb_admin        | public       | medical_notes           | recorded_at           | UPDATE
+ hb_admin        | public       | patient_password_resets | attempts              | INSERT
+ hb_admin        | public       | patient_password_resets | attempts              | REFERENCES
+ hb_admin        | public       | patient_password_resets | attempts              | SELECT
+ hb_admin        | public       | patient_password_resets | attempts              | UPDATE
+ hb_admin        | public       | patient_password_resets | code_hash             | INSERT
+ hb_admin        | public       | patient_password_resets | code_hash             | REFERENCES
+ hb_admin        | public       | patient_password_resets | code_hash             | SELECT
+ hb_admin        | public       | patient_password_resets | code_hash             | UPDATE
+ hb_admin        | public       | patient_password_resets | created_at            | INSERT
+ hb_admin        | public       | patient_password_resets | created_at            | REFERENCES
+ hb_admin        | public       | patient_password_resets | created_at            | SELECT
+ hb_admin        | public       | patient_password_resets | created_at            | UPDATE
+ hb_admin        | public       | patient_password_resets | expires_at            | INSERT
+ hb_admin        | public       | patient_password_resets | expires_at            | REFERENCES
+ hb_admin        | public       | patient_password_resets | expires_at            | SELECT
+ hb_admin        | public       | patient_password_resets | expires_at            | UPDATE
+ hb_admin        | public       | patient_password_resets | method                | INSERT
+ hb_admin        | public       | patient_password_resets | method                | REFERENCES
+ hb_admin        | public       | patient_password_resets | method                | SELECT
+ hb_admin        | public       | patient_password_resets | method                | UPDATE
+ hb_admin        | public       | patient_password_resets | patient_id            | INSERT
+ hb_admin        | public       | patient_password_resets | patient_id            | REFERENCES
+ hb_admin        | public       | patient_password_resets | patient_id            | SELECT
+ hb_admin        | public       | patient_password_resets | patient_id            | UPDATE
+ hb_admin        | public       | patient_password_resets | reset_id              | INSERT
+ hb_admin        | public       | patient_password_resets | reset_id              | REFERENCES
+ hb_admin        | public       | patient_password_resets | reset_id              | SELECT
+ hb_admin        | public       | patient_password_resets | reset_id              | UPDATE
+ hb_admin        | public       | patient_password_resets | used                  | INSERT
+ hb_admin        | public       | patient_password_resets | used                  | REFERENCES
+ hb_admin        | public       | patient_password_resets | used                  | SELECT
+ hb_admin        | public       | patient_password_resets | used                  | UPDATE
+ hb_admin        | public       | patients                | address               | INSERT
+ hb_admin        | public       | patients                | address               | REFERENCES
+ hb_admin        | public       | patients                | address               | SELECT
+ hb_admin        | public       | patients                | address               | UPDATE
+ hb_admin        | public       | patients                | contact_number        | INSERT
+ hb_admin        | public       | patients                | contact_number        | REFERENCES
+ hb_admin        | public       | patients                | contact_number        | SELECT
+ hb_admin        | public       | patients                | contact_number        | UPDATE
+ hb_admin        | public       | patients                | date_of_birth         | INSERT
+ hb_admin        | public       | patients                | date_of_birth         | REFERENCES
+ hb_admin        | public       | patients                | date_of_birth         | SELECT
+ hb_admin        | public       | patients                | date_of_birth         | UPDATE
+ hb_admin        | public       | patients                | email                 | INSERT
+ hb_admin        | public       | patients                | email                 | REFERENCES
+ hb_admin        | public       | patients                | email                 | SELECT
+ hb_admin        | public       | patients                | email                 | UPDATE
+ hb_admin        | public       | patients                | first_name            | INSERT
+ hb_admin        | public       | patients                | first_name            | REFERENCES
+ hb_admin        | public       | patients                | first_name            | SELECT
+ hb_admin        | public       | patients                | first_name            | UPDATE
+ hb_admin        | public       | patients                | gender                | INSERT
+ hb_admin        | public       | patients                | gender                | REFERENCES
+ hb_admin        | public       | patients                | gender                | SELECT
+ hb_admin        | public       | patients                | gender                | UPDATE
+ hb_admin        | public       | patients                | last_name             | INSERT
+ hb_admin        | public       | patients                | last_name             | REFERENCES
+ hb_admin        | public       | patients                | last_name             | SELECT
+ hb_admin        | public       | patients                | last_name             | UPDATE
+ hb_admin        | public       | patients                | password_hash         | INSERT
+ hb_admin        | public       | patients                | password_hash         | REFERENCES
+ hb_admin        | public       | patients                | password_hash         | SELECT
+ hb_admin        | public       | patients                | password_hash         | UPDATE
+ hb_admin        | public       | patients                | patient_id            | INSERT
+ hb_admin        | public       | patients                | patient_id            | REFERENCES
+ hb_admin        | public       | patients                | patient_id            | SELECT
+ hb_admin        | public       | patients                | patient_id            | UPDATE
+ hb_admin        | public       | prescriptions           | appointment_id        | INSERT
+ hb_admin        | public       | prescriptions           | appointment_id        | REFERENCES
+ hb_admin        | public       | prescriptions           | appointment_id        | SELECT
+ hb_admin        | public       | prescriptions           | appointment_id        | UPDATE
+ hb_admin        | public       | prescriptions           | dosage                | INSERT
+ hb_admin        | public       | prescriptions           | dosage                | REFERENCES
+ hb_admin        | public       | prescriptions           | dosage                | SELECT
+ hb_admin        | public       | prescriptions           | dosage                | UPDATE
+ hb_admin        | public       | prescriptions           | instructions          | INSERT
+ hb_admin        | public       | prescriptions           | instructions          | REFERENCES
+ hb_admin        | public       | prescriptions           | instructions          | SELECT
+ hb_admin        | public       | prescriptions           | instructions          | UPDATE
+ hb_admin        | public       | prescriptions           | medication_name       | INSERT
+ hb_admin        | public       | prescriptions           | medication_name       | REFERENCES
+ hb_admin        | public       | prescriptions           | medication_name       | SELECT
+ hb_admin        | public       | prescriptions           | medication_name       | UPDATE
+ hb_admin        | public       | prescriptions           | prescription_id       | INSERT
+ hb_admin        | public       | prescriptions           | prescription_id       | REFERENCES
+ hb_admin        | public       | prescriptions           | prescription_id       | SELECT
+ hb_admin        | public       | prescriptions           | prescription_id       | UPDATE
+ hb_admin        | public       | specialties             | specialty_id          | INSERT
+ hb_admin        | public       | specialties             | specialty_id          | REFERENCES
+ hb_admin        | public       | specialties             | specialty_id          | SELECT
+ hb_admin        | public       | specialties             | specialty_id          | UPDATE
+ hb_admin        | public       | specialties             | specialty_name        | INSERT
+ hb_admin        | public       | specialties             | specialty_name        | REFERENCES
+ hb_admin        | public       | specialties             | specialty_name        | SELECT
+ hb_admin        | public       | specialties             | specialty_name        | UPDATE
+ hb_admin        | public       | staff_password_resets   | attempts              | INSERT
+ hb_admin        | public       | staff_password_resets   | attempts              | REFERENCES
+ hb_admin        | public       | staff_password_resets   | attempts              | SELECT
+ hb_admin        | public       | staff_password_resets   | attempts              | UPDATE
+ hb_admin        | public       | staff_password_resets   | code_hash             | INSERT
+ hb_admin        | public       | staff_password_resets   | code_hash             | REFERENCES
+ hb_admin        | public       | staff_password_resets   | code_hash             | SELECT
+ hb_admin        | public       | staff_password_resets   | code_hash             | UPDATE
+ hb_admin        | public       | staff_password_resets   | created_at            | INSERT
+ hb_admin        | public       | staff_password_resets   | created_at            | REFERENCES
+ hb_admin        | public       | staff_password_resets   | created_at            | SELECT
+ hb_admin        | public       | staff_password_resets   | created_at            | UPDATE
+ hb_admin        | public       | staff_password_resets   | expires_at            | INSERT
+ hb_admin        | public       | staff_password_resets   | expires_at            | REFERENCES
+ hb_admin        | public       | staff_password_resets   | expires_at            | SELECT
+ hb_admin        | public       | staff_password_resets   | expires_at            | UPDATE
+ hb_admin        | public       | staff_password_resets   | method                | INSERT
+ hb_admin        | public       | staff_password_resets   | method                | REFERENCES
+ hb_admin        | public       | staff_password_resets   | method                | SELECT
+ hb_admin        | public       | staff_password_resets   | method                | UPDATE
+ hb_admin        | public       | staff_password_resets   | reset_id              | INSERT
+ hb_admin        | public       | staff_password_resets   | reset_id              | REFERENCES
+ hb_admin        | public       | staff_password_resets   | reset_id              | SELECT
+ hb_admin        | public       | staff_password_resets   | reset_id              | UPDATE
+ hb_admin        | public       | staff_password_resets   | used                  | INSERT
+ hb_admin        | public       | staff_password_resets   | used                  | REFERENCES
+ hb_admin        | public       | staff_password_resets   | used                  | SELECT
+ hb_admin        | public       | staff_password_resets   | used                  | UPDATE
+ hb_admin        | public       | staff_password_resets   | user_id               | INSERT
+ hb_admin        | public       | staff_password_resets   | user_id               | REFERENCES
+ hb_admin        | public       | staff_password_resets   | user_id               | SELECT
+ hb_admin        | public       | staff_password_resets   | user_id               | UPDATE
+ hb_admin        | public       | staff_users             | created_at            | INSERT
+ hb_admin        | public       | staff_users             | created_at            | REFERENCES
+ hb_admin        | public       | staff_users             | created_at            | SELECT
+ hb_admin        | public       | staff_users             | created_at            | UPDATE
+ hb_admin        | public       | staff_users             | doctor_id             | INSERT
+ hb_admin        | public       | staff_users             | doctor_id             | REFERENCES
+ hb_admin        | public       | staff_users             | doctor_id             | SELECT
+ hb_admin        | public       | staff_users             | doctor_id             | UPDATE
+ hb_admin        | public       | staff_users             | email                 | INSERT
+ hb_admin        | public       | staff_users             | email                 | REFERENCES
+ hb_admin        | public       | staff_users             | email                 | SELECT
+ hb_admin        | public       | staff_users             | email                 | UPDATE
+ hb_admin        | public       | staff_users             | first_name            | INSERT
+ hb_admin        | public       | staff_users             | first_name            | REFERENCES
+ hb_admin        | public       | staff_users             | first_name            | SELECT
+ hb_admin        | public       | staff_users             | first_name            | UPDATE
+ hb_admin        | public       | staff_users             | is_active             | INSERT
+ hb_admin        | public       | staff_users             | is_active             | REFERENCES
+ hb_admin        | public       | staff_users             | is_active             | SELECT
+ hb_admin        | public       | staff_users             | is_active             | UPDATE
+ hb_admin        | public       | staff_users             | last_name             | INSERT
+ hb_admin        | public       | staff_users             | last_name             | REFERENCES
+ hb_admin        | public       | staff_users             | last_name             | SELECT
+ hb_admin        | public       | staff_users             | last_name             | UPDATE
+ hb_admin        | public       | staff_users             | password_hash         | INSERT
+ hb_admin        | public       | staff_users             | password_hash         | REFERENCES
+ hb_admin        | public       | staff_users             | password_hash         | SELECT
+ hb_admin        | public       | staff_users             | password_hash         | UPDATE
+ hb_admin        | public       | staff_users             | phone                 | INSERT
+ hb_admin        | public       | staff_users             | phone                 | REFERENCES
+ hb_admin        | public       | staff_users             | phone                 | SELECT
+ hb_admin        | public       | staff_users             | phone                 | UPDATE
+ hb_admin        | public       | staff_users             | role                  | INSERT
+ hb_admin        | public       | staff_users             | role                  | REFERENCES
+ hb_admin        | public       | staff_users             | role                  | SELECT
+ hb_admin        | public       | staff_users             | role                  | UPDATE
+ hb_admin        | public       | staff_users             | user_id               | INSERT
+ hb_admin        | public       | staff_users             | user_id               | REFERENCES
+ hb_admin        | public       | staff_users             | user_id               | SELECT
+ hb_admin        | public       | staff_users             | user_id               | UPDATE
+ hb_admin        | public       | visit_records           | appointment_date      | INSERT
+ hb_admin        | public       | visit_records           | appointment_date      | REFERENCES
+ hb_admin        | public       | visit_records           | appointment_date      | SELECT
+ hb_admin        | public       | visit_records           | appointment_date      | UPDATE
+ hb_admin        | public       | visit_records           | appointment_id        | INSERT
+ hb_admin        | public       | visit_records           | appointment_id        | REFERENCES
+ hb_admin        | public       | visit_records           | appointment_id        | SELECT
+ hb_admin        | public       | visit_records           | appointment_id        | UPDATE
+ hb_admin        | public       | visit_records           | clinical_observations | INSERT
+ hb_admin        | public       | visit_records           | clinical_observations | REFERENCES
+ hb_admin        | public       | visit_records           | clinical_observations | SELECT
+ hb_admin        | public       | visit_records           | clinical_observations | UPDATE
+ hb_admin        | public       | visit_records           | diagnosis             | INSERT
+ hb_admin        | public       | visit_records           | diagnosis             | REFERENCES
+ hb_admin        | public       | visit_records           | diagnosis             | SELECT
+ hb_admin        | public       | visit_records           | diagnosis             | UPDATE
+ hb_admin        | public       | visit_records           | doctor_name           | INSERT
+ hb_admin        | public       | visit_records           | doctor_name           | REFERENCES
+ hb_admin        | public       | visit_records           | doctor_name           | SELECT
+ hb_admin        | public       | visit_records           | doctor_name           | UPDATE
+ hb_admin        | public       | visit_records           | dosage                | INSERT
+ hb_admin        | public       | visit_records           | dosage                | REFERENCES
+ hb_admin        | public       | visit_records           | dosage                | SELECT
+ hb_admin        | public       | visit_records           | dosage                | UPDATE
+ hb_admin        | public       | visit_records           | instructions          | INSERT
+ hb_admin        | public       | visit_records           | instructions          | REFERENCES
+ hb_admin        | public       | visit_records           | instructions          | SELECT
+ hb_admin        | public       | visit_records           | instructions          | UPDATE
+ hb_admin        | public       | visit_records           | medication_name       | INSERT
+ hb_admin        | public       | visit_records           | medication_name       | REFERENCES
+ hb_admin        | public       | visit_records           | medication_name       | SELECT
+ hb_admin        | public       | visit_records           | medication_name       | UPDATE
+ hb_admin        | public       | visit_records           | patient_name          | INSERT
+ hb_admin        | public       | visit_records           | patient_name          | REFERENCES
+ hb_admin        | public       | visit_records           | patient_name          | SELECT
+ hb_admin        | public       | visit_records           | patient_name          | UPDATE
+ hb_readonly_grp | public       | appointments            | appointment_date      | SELECT
+ hb_readonly_grp | public       | appointments            | appointment_id        | SELECT
+ hb_readonly_grp | public       | appointments            | doctor_id             | SELECT
+ hb_readonly_grp | public       | appointments            | patient_id            | SELECT
+ hb_readonly_grp | public       | appointments            | reason                | SELECT
+ hb_readonly_grp | public       | appointments            | status                | SELECT
+ hb_readonly_grp | public       | billing                 | amount                | SELECT
+ hb_readonly_grp | public       | billing                 | appointment_id        | SELECT
+ hb_readonly_grp | public       | billing                 | bill_id               | SELECT
+ hb_readonly_grp | public       | billing                 | billed_at             | SELECT
+ hb_readonly_grp | public       | billing                 | paid_at               | SELECT
+ hb_readonly_grp | public       | billing                 | payment_method        | SELECT
+ hb_readonly_grp | public       | billing                 | status                | SELECT
+ hb_readonly_grp | public       | doctors                 | doctor_id             | SELECT
+ hb_readonly_grp | public       | doctors                 | email                 | SELECT
+ hb_readonly_grp | public       | doctors                 | first_name            | SELECT
+ hb_readonly_grp | public       | doctors                 | last_name             | SELECT
+ hb_readonly_grp | public       | doctors                 | phone                 | SELECT
+ hb_readonly_grp | public       | doctors                 | specialty_id          | SELECT
+ hb_readonly_grp | public       | medical_notes           | appointment_id        | SELECT
+ hb_readonly_grp | public       | medical_notes           | clinical_observations | SELECT
+ hb_readonly_grp | public       | medical_notes           | diagnosis             | SELECT
+ hb_readonly_grp | public       | medical_notes           | note_id               | SELECT
+ hb_readonly_grp | public       | medical_notes           | recorded_at           | SELECT
+ hb_readonly_grp | public       | prescriptions           | appointment_id        | SELECT
+ hb_readonly_grp | public       | prescriptions           | dosage                | SELECT
+ hb_readonly_grp | public       | prescriptions           | instructions          | SELECT
+ hb_readonly_grp | public       | prescriptions           | medication_name       | SELECT
+ hb_readonly_grp | public       | prescriptions           | prescription_id       | SELECT
+ hb_readonly_grp | public       | specialties             | specialty_id          | SELECT
+ hb_readonly_grp | public       | specialties             | specialty_name        | SELECT
+ hb_staff        | public       | appointments            | appointment_date      | INSERT
+ hb_staff        | public       | appointments            | appointment_date      | SELECT
+ hb_staff        | public       | appointments            | appointment_date      | UPDATE
+ hb_staff        | public       | appointments            | appointment_id        | INSERT
+ hb_staff        | public       | appointments            | appointment_id        | SELECT
+ hb_staff        | public       | appointments            | appointment_id        | UPDATE
+ hb_staff        | public       | appointments            | doctor_id             | INSERT
+ hb_staff        | public       | appointments            | doctor_id             | SELECT
+ hb_staff        | public       | appointments            | doctor_id             | UPDATE
+ hb_staff        | public       | appointments            | patient_id            | INSERT
+ hb_staff        | public       | appointments            | patient_id            | SELECT
+ hb_staff        | public       | appointments            | patient_id            | UPDATE
+ hb_staff        | public       | appointments            | reason                | INSERT
+ hb_staff        | public       | appointments            | reason                | SELECT
+ hb_staff        | public       | appointments            | reason                | UPDATE
+ hb_staff        | public       | appointments            | status                | INSERT
+ hb_staff        | public       | appointments            | status                | SELECT
+ hb_staff        | public       | appointments            | status                | UPDATE
+ hb_staff        | public       | billing                 | amount                | INSERT
+ hb_staff        | public       | billing                 | amount                | SELECT
+ hb_staff        | public       | billing                 | amount                | UPDATE
+ hb_staff        | public       | billing                 | appointment_id        | INSERT
+ hb_staff        | public       | billing                 | appointment_id        | SELECT
+ hb_staff        | public       | billing                 | appointment_id        | UPDATE
+ hb_staff        | public       | billing                 | bill_id               | INSERT
+ hb_staff        | public       | billing                 | bill_id               | SELECT
+ hb_staff        | public       | billing                 | bill_id               | UPDATE
+ hb_staff        | public       | billing                 | billed_at             | INSERT
+ hb_staff        | public       | billing                 | billed_at             | SELECT
+ hb_staff        | public       | billing                 | billed_at             | UPDATE
+ hb_staff        | public       | billing                 | paid_at               | INSERT
+ hb_staff        | public       | billing                 | paid_at               | SELECT
+ hb_staff        | public       | billing                 | paid_at               | UPDATE
+ hb_staff        | public       | billing                 | payment_method        | INSERT
+ hb_staff        | public       | billing                 | payment_method        | SELECT
+ hb_staff        | public       | billing                 | payment_method        | UPDATE
+ hb_staff        | public       | billing                 | status                | INSERT
+ hb_staff        | public       | billing                 | status                | SELECT
+ hb_staff        | public       | billing                 | status                | UPDATE
+ hb_staff        | public       | deleted_records         | deleted_at            | INSERT
+ hb_staff        | public       | deleted_records         | deleted_at            | SELECT
+ hb_staff        | public       | deleted_records         | deleted_at            | UPDATE
+ hb_staff        | public       | deleted_records         | deleted_by            | INSERT
+ hb_staff        | public       | deleted_records         | deleted_by            | SELECT
+ hb_staff        | public       | deleted_records         | deleted_by            | UPDATE
+ hb_staff        | public       | deleted_records         | label                 | INSERT
+ hb_staff        | public       | deleted_records         | label                 | SELECT
+ hb_staff        | public       | deleted_records         | label                 | UPDATE
+ hb_staff        | public       | deleted_records         | payload               | INSERT
+ hb_staff        | public       | deleted_records         | payload               | SELECT
+ hb_staff        | public       | deleted_records         | payload               | UPDATE
+ hb_staff        | public       | deleted_records         | rec_type              | INSERT
+ hb_staff        | public       | deleted_records         | rec_type              | SELECT
+ hb_staff        | public       | deleted_records         | rec_type              | UPDATE
+ hb_staff        | public       | deleted_records         | record_id             | INSERT
+ hb_staff        | public       | deleted_records         | record_id             | SELECT
+ hb_staff        | public       | deleted_records         | record_id             | UPDATE
+ hb_staff        | public       | deleted_records         | ref_id                | INSERT
+ hb_staff        | public       | deleted_records         | ref_id                | SELECT
+ hb_staff        | public       | deleted_records         | ref_id                | UPDATE
+ hb_staff        | public       | doctors                 | doctor_id             | SELECT
+ hb_staff        | public       | doctors                 | email                 | SELECT
+ hb_staff        | public       | doctors                 | first_name            | SELECT
+ hb_staff        | public       | doctors                 | last_name             | SELECT
+ hb_staff        | public       | doctors                 | phone                 | SELECT
+ hb_staff        | public       | doctors                 | specialty_id          | SELECT
+ hb_staff        | public       | medical_notes           | appointment_id        | INSERT
+ hb_staff        | public       | medical_notes           | appointment_id        | SELECT
+ hb_staff        | public       | medical_notes           | appointment_id        | UPDATE
+ hb_staff        | public       | medical_notes           | clinical_observations | INSERT
+ hb_staff        | public       | medical_notes           | clinical_observations | SELECT
+ hb_staff        | public       | medical_notes           | clinical_observations | UPDATE
+ hb_staff        | public       | medical_notes           | diagnosis             | INSERT
+ hb_staff        | public       | medical_notes           | diagnosis             | SELECT
+ hb_staff        | public       | medical_notes           | diagnosis             | UPDATE
+ hb_staff        | public       | medical_notes           | note_id               | INSERT
+ hb_staff        | public       | medical_notes           | note_id               | SELECT
+ hb_staff        | public       | medical_notes           | note_id               | UPDATE
+ hb_staff        | public       | medical_notes           | recorded_at           | INSERT
+ hb_staff        | public       | medical_notes           | recorded_at           | SELECT
+ hb_staff        | public       | medical_notes           | recorded_at           | UPDATE
+ hb_staff        | public       | patient_password_resets | attempts              | INSERT
+ hb_staff        | public       | patient_password_resets | attempts              | SELECT
+ hb_staff        | public       | patient_password_resets | attempts              | UPDATE
+ hb_staff        | public       | patient_password_resets | code_hash             | INSERT
+ hb_staff        | public       | patient_password_resets | code_hash             | SELECT
+ hb_staff        | public       | patient_password_resets | code_hash             | UPDATE
+ hb_staff        | public       | patient_password_resets | created_at            | INSERT
+ hb_staff        | public       | patient_password_resets | created_at            | SELECT
+ hb_staff        | public       | patient_password_resets | created_at            | UPDATE
+ hb_staff        | public       | patient_password_resets | expires_at            | INSERT
+ hb_staff        | public       | patient_password_resets | expires_at            | SELECT
+ hb_staff        | public       | patient_password_resets | expires_at            | UPDATE
+ hb_staff        | public       | patient_password_resets | method                | INSERT
+ hb_staff        | public       | patient_password_resets | method                | SELECT
+ hb_staff        | public       | patient_password_resets | method                | UPDATE
+ hb_staff        | public       | patient_password_resets | patient_id            | INSERT
+ hb_staff        | public       | patient_password_resets | patient_id            | SELECT
+ hb_staff        | public       | patient_password_resets | patient_id            | UPDATE
+ hb_staff        | public       | patient_password_resets | reset_id              | INSERT
+ hb_staff        | public       | patient_password_resets | reset_id              | SELECT
+ hb_staff        | public       | patient_password_resets | reset_id              | UPDATE
+ hb_staff        | public       | patient_password_resets | used                  | INSERT
+ hb_staff        | public       | patient_password_resets | used                  | SELECT
+ hb_staff        | public       | patient_password_resets | used                  | UPDATE
+ hb_staff        | public       | patients                | address               | INSERT
+ hb_staff        | public       | patients                | address               | SELECT
+ hb_staff        | public       | patients                | address               | UPDATE
+ hb_staff        | public       | patients                | contact_number        | INSERT
+ hb_staff        | public       | patients                | contact_number        | SELECT
+ hb_staff        | public       | patients                | contact_number        | UPDATE
+ hb_staff        | public       | patients                | date_of_birth         | INSERT
+ hb_staff        | public       | patients                | date_of_birth         | SELECT
+ hb_staff        | public       | patients                | date_of_birth         | UPDATE
+ hb_staff        | public       | patients                | email                 | INSERT
+ hb_staff        | public       | patients                | email                 | SELECT
+ hb_staff        | public       | patients                | email                 | UPDATE
+ hb_staff        | public       | patients                | first_name            | INSERT
+ hb_staff        | public       | patients                | first_name            | SELECT
+ hb_staff        | public       | patients                | first_name            | UPDATE
+ hb_staff        | public       | patients                | gender                | INSERT
+ hb_staff        | public       | patients                | gender                | SELECT
+ hb_staff        | public       | patients                | gender                | UPDATE
+ hb_staff        | public       | patients                | last_name             | INSERT
+ hb_staff        | public       | patients                | last_name             | SELECT
+ hb_staff        | public       | patients                | last_name             | UPDATE
+ hb_staff        | public       | patients                | password_hash         | INSERT
+ hb_staff        | public       | patients                | password_hash         | SELECT
+ hb_staff        | public       | patients                | password_hash         | UPDATE
+ hb_staff        | public       | patients                | patient_id            | INSERT
+ hb_staff        | public       | patients                | patient_id            | SELECT
+ hb_staff        | public       | patients                | patient_id            | UPDATE
+ hb_staff        | public       | prescriptions           | appointment_id        | INSERT
+ hb_staff        | public       | prescriptions           | appointment_id        | SELECT
+ hb_staff        | public       | prescriptions           | appointment_id        | UPDATE
+ hb_staff        | public       | prescriptions           | dosage                | INSERT
+ hb_staff        | public       | prescriptions           | dosage                | SELECT
+ hb_staff        | public       | prescriptions           | dosage                | UPDATE
+ hb_staff        | public       | prescriptions           | instructions          | INSERT
+ hb_staff        | public       | prescriptions           | instructions          | SELECT
+ hb_staff        | public       | prescriptions           | instructions          | UPDATE
+ hb_staff        | public       | prescriptions           | medication_name       | INSERT
+ hb_staff        | public       | prescriptions           | medication_name       | SELECT
+ hb_staff        | public       | prescriptions           | medication_name       | UPDATE
+ hb_staff        | public       | prescriptions           | prescription_id       | INSERT
+ hb_staff        | public       | prescriptions           | prescription_id       | SELECT
+ hb_staff        | public       | prescriptions           | prescription_id       | UPDATE
+ hb_staff        | public       | specialties             | specialty_id          | SELECT
+ hb_staff        | public       | specialties             | specialty_name        | SELECT
+ hb_staff        | public       | staff_password_resets   | attempts              | INSERT
+ hb_staff        | public       | staff_password_resets   | attempts              | SELECT
+ hb_staff        | public       | staff_password_resets   | attempts              | UPDATE
+ hb_staff        | public       | staff_password_resets   | code_hash             | INSERT
+ hb_staff        | public       | staff_password_resets   | code_hash             | SELECT
+ hb_staff        | public       | staff_password_resets   | code_hash             | UPDATE
+ hb_staff        | public       | staff_password_resets   | created_at            | INSERT
+ hb_staff        | public       | staff_password_resets   | created_at            | SELECT
+ hb_staff        | public       | staff_password_resets   | created_at            | UPDATE
+ hb_staff        | public       | staff_password_resets   | expires_at            | INSERT
+ hb_staff        | public       | staff_password_resets   | expires_at            | SELECT
+ hb_staff        | public       | staff_password_resets   | expires_at            | UPDATE
+ hb_staff        | public       | staff_password_resets   | method                | INSERT
+ hb_staff        | public       | staff_password_resets   | method                | SELECT
+ hb_staff        | public       | staff_password_resets   | method                | UPDATE
+ hb_staff        | public       | staff_password_resets   | reset_id              | INSERT
+ hb_staff        | public       | staff_password_resets   | reset_id              | SELECT
+ hb_staff        | public       | staff_password_resets   | reset_id              | UPDATE
+ hb_staff        | public       | staff_password_resets   | used                  | INSERT
+ hb_staff        | public       | staff_password_resets   | used                  | SELECT
+ hb_staff        | public       | staff_password_resets   | used                  | UPDATE
+ hb_staff        | public       | staff_password_resets   | user_id               | INSERT
+ hb_staff        | public       | staff_password_resets   | user_id               | SELECT
+ hb_staff        | public       | staff_password_resets   | user_id               | UPDATE
+ hb_staff        | public       | staff_users             | created_at            | SELECT
+ hb_staff        | public       | staff_users             | created_at            | UPDATE
+ hb_staff        | public       | staff_users             | doctor_id             | SELECT
+ hb_staff        | public       | staff_users             | doctor_id             | UPDATE
+ hb_staff        | public       | staff_users             | email                 | SELECT
+ hb_staff        | public       | staff_users             | email                 | UPDATE
+ hb_staff        | public       | staff_users             | first_name            | SELECT
+ hb_staff        | public       | staff_users             | first_name            | UPDATE
+ hb_staff        | public       | staff_users             | is_active             | SELECT
+ hb_staff        | public       | staff_users             | is_active             | UPDATE
+ hb_staff        | public       | staff_users             | last_name             | SELECT
+ hb_staff        | public       | staff_users             | last_name             | UPDATE
+ hb_staff        | public       | staff_users             | password_hash         | SELECT
+ hb_staff        | public       | staff_users             | password_hash         | UPDATE
+ hb_staff        | public       | staff_users             | phone                 | SELECT
+ hb_staff        | public       | staff_users             | phone                 | UPDATE
+ hb_staff        | public       | staff_users             | role                  | SELECT
+ hb_staff        | public       | staff_users             | role                  | UPDATE
+ hb_staff        | public       | staff_users             | user_id               | SELECT
+ hb_staff        | public       | staff_users             | user_id               | UPDATE
+(588 rows)
+
+

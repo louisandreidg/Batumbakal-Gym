@@ -1,0 +1,14 @@
+\set VERBOSITY verbose
+BEGIN;
+BEGIN
+SET LOCAL search_path=school_event_management_db,public;
+SET
+SELECT count(*) FROM audit_log;
+ count 
+-------
+    84
+(1 row)
+
+ROLLBACK;
+ROLLBACK
+

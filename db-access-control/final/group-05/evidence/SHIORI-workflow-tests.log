@@ -1,0 +1,96 @@
+========================================================
+SHIORI CAFE CASHIER WORKFLOW TDD AUDIT - TEST RUNNER
+========================================================
+
+>>> SUITE: Unit & Contract Tests
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/queue.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 90
+  [ PASS ] test_queue_file_uses_pdo_not_pg_query
+  [ PASS ] test_waiting_for_commit_shows_pending_orders
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/queue.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 166
+  [ FAIL ] test_queue_displays_item_details_and_quantities
+           -> admin/queue.php does not query or display line items/quantities for orders.
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/queue.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 174
+  [ FAIL ] test_queue_status_filtering_support
+           -> admin/queue.php does not support status filtering for pending vs active vs completed.
+  [ FAIL ] test_update_order_file_exists
+           -> admin/update_order.php does not exist.
+  [ FAIL ] test_update_order_requires_authorization
+           -> admin/update_order.php does not exist.
+  [ FAIL ] test_update_order_validates_csrf
+           -> admin/update_order.php does not exist.
+  [ PASS ] test_update_order_lifecycle_transitions
+  [ FAIL ] test_update_order_duplicate_prevention_and_concurrency
+           -> admin/update_order.php does not exist.
+  [ PASS ] test_pos_file_uses_pdo_and_loads_menu
+  [ FAIL ] test_process_walkin_handler_exists
+           -> admin/process_walkin.php does not exist.
+  [ FAIL ] test_process_walkin_validates_order_type_and_table
+           -> admin/process_walkin.php does not exist.
+  [ FAIL ] test_process_walkin_calculates_prices_server_side
+           -> admin/process_walkin.php does not exist.
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/tables.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 309
+  [ FAIL ] test_tables_file_uses_pdo_and_real_occupancy
+           -> admin/tables.php only checks operational_status and does not check active reservation Occupied status.
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/checkin.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 320
+  [ PASS ] test_checkin_file_uses_pdo
+  [ FAIL ] test_process_checkin_handler_exists_and_prevents_duplicate
+           -> admin/process_checkin.php does not exist.
+  [ FAIL ] test_walkin_transaction_rollback_integrity
+           -> admin/process_walkin.php does not exist.
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/queue.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 360
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/tables.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 360
+
+Warning: file_get_contents(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/checkin.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\CashierWorkflowTest.php on line 360
+  [ PASS ] test_parameterized_queries_in_all_handlers
+
+>>> SUITE: End-to-End Integration Tests
+  [ FAIL ] test_e2e_walkin_takeaway_creation_and_payment
+           -> Walk-in reservation was not created for takeaway order. Subprocess output: 
+Warning: Module "pdo_pgsql" is already loaded in Unknown on line 0
+
+Warning: Module "pgsql" is already loaded in Unknown on line 0
+
+Warning: require(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/process_walkin.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\temp_runner_1937ebb2bffa.php on line 23
+
+Fatal error: Uncaught Error: Failed opening required 'C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/process_walkin.php' (include_path='.;C:\php\pear') in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\temp_runner_1937ebb2bffa.php:23
+Stack trace:
+#0 {main}
+  thrown in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\temp_runner_1937ebb2bffa.php on line 23
+
+---SESSION_START---
+{"user_role":"Cashier","user_id":1,"user_name":"Test Cashier","csrf_token":"test-token-takeaway"}
+---SESSION_END---
+  [ FAIL ] test_e2e_walkin_dinein_requires_and_occupies_table
+           -> Dine-In reservation was not created or not Occupied. Output: 
+Warning: Module "pdo_pgsql" is already loaded in Unknown on line 0
+
+Warning: Module "pgsql" is already loaded in Unknown on line 0
+
+Warning: require(C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/process_walkin.php): Failed to open stream: No such file or directory in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\temp_runner_2a833dcd2fa7.php on line 25
+
+Fatal error: Uncaught Error: Failed opening required 'C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests/../admin/process_walkin.php' (include_path='.;C:\php\pear') in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\temp_runner_2a833dcd2fa7.php:25
+Stack trace:
+#0 {main}
+  thrown in C:\Users\thedi\AppData\Local\Temp\codex-shiori-activity4-tests\tests\temp_runner_2a833dcd2fa7.php on line 25
+
+---SESSION_START---
+{"user_role":"Cashier","user_id":1,"user_name":"Test Cashier","csrf_token":"test-token-dinein"}
+---SESSION_END---
+  [ FAIL ] test_e2e_cashier_order_lifecycle_commits
+           -> Order failed to transition from Pending to Preparing. Status: Pending
+  [ FAIL ] test_e2e_checkin_flow_and_duplicate_prevention
+           -> Checked in reservation must have status 'Occupied', got: Confirmed
+  [ PASS ] test_e2e_unauthorized_guest_rejected
+  [ FAIL ] test_e2e_invalid_csrf_token_rejected
+           -> Request with invalid CSRF token was not rejected. Error: 
+
+========================================================
+OVERALL RESULTS: 24 | PASSED: 7 | FAILED: 17
+========================================================

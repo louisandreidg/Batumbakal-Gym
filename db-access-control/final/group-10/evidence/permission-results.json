@@ -1,0 +1,389 @@
+[
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.account;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.account;\r\n count \r\n-------\r\n   130\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.organization;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.organization;\r\n count \r\n-------\r\n    31\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.membership;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.membership;\r\n count \r\n-------\r\n   241\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.event;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.event;\r\n count \r\n-------\r\n    52\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.venue;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.venue;\r\n count \r\n-------\r\n    51\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.event_schedule;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.event_schedule;\r\n count \r\n-------\r\n   120\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.registration;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.registration;\r\n count \r\n-------\r\n   946\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.notification;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.notification;\r\n count \r\n-------\r\n     2\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "INSERT INTO public.organization(organization_name,university_name) VALUES('Activity4 SQL test','Test'); UPDATE public.organization SET description='Updated',status='deleted' WHERE organization_name='Activity4 SQL test'; SELECT status FROM public.organization WHERE organization_name='Activity4 SQL test';",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nINSERT INTO public.organization(organization_name,university_name) VALUES('Activity4 SQL test','Test'); UPDATE public.organization SET description='Updated',status='deleted' WHERE organization_name='Activity4 SQL test'; SELECT status FROM public.organization WHERE organization_name='Activity4 SQL test';\r\nINSERT 0 1\r\nUPDATE 1\r\n status  \r\n---------\r\n deleted\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.account;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.account;\r\nERROR:  42501: permission denied for table account\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.organization;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.organization;\r\nERROR:  42501: permission denied for table organization\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.membership;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.membership;\r\nERROR:  42501: permission denied for table membership\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.event;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.event;\r\nERROR:  42501: permission denied for table event\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.venue;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.venue;\r\nERROR:  42501: permission denied for table venue\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.event_schedule;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.event_schedule;\r\nERROR:  42501: permission denied for table event_schedule\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.registration;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.registration;\r\nERROR:  42501: permission denied for table registration\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.notification;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.notification;\r\nERROR:  42501: permission denied for table notification\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT account_id,account_name,email,avatar_url,account_status FROM public.account LIMIT 1;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT account_id,account_name,email,avatar_url,account_status FROM public.account LIMIT 1;\r\n account_id |  account_name   |             email             | avatar_url | account_status \r\n------------+-----------------+-------------------------------+------------+----------------\r\n          1 | Alyssa Santiago | alyssa.santiago@ateneo.edu.ph |            | active\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT password_hash FROM public.account;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT password_hash FROM public.account;\r\nERROR:  42501: permission denied for table account\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "SELECT count(*) FROM public.event;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nSELECT count(*) FROM public.event;\r\n count \r\n-------\r\n    52\r\n(1 row)\r\n\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "INSERT INTO public.organization(organization_name,university_name) VALUES('Forbidden','Test');",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nINSERT INTO public.organization(organization_name,university_name) VALUES('Forbidden','Test');\r\nERROR:  42501: permission denied for table organization\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "UPDATE public.organization SET description='Forbidden';",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nUPDATE public.organization SET description='Forbidden';\r\nERROR:  42501: permission denied for table organization\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "DELETE FROM public.organization;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nDELETE FROM public.organization;\r\nERROR:  42501: permission denied for table organization\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE TABLE public.activity4_ddl_probe(id int);",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nCREATE TABLE public.activity4_ddl_probe(id int);\r\nERROR:  42501: permission denied for schema public\r\nLINE 1: CREATE TABLE public.activity4_ddl_probe(id int);\r\n                     ^\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE ROLE unisync_denied_probe;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nCREATE ROLE unisync_denied_probe;\r\nERROR:  42501: permission denied to create role\r\nDETAIL:  Only roles with the CREATEROLE attribute may create roles.\r\nLOCATION:  CreateRole, user.c:320\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE DATABASE unisync_denied_probe;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "CREATE DATABASE unisync_denied_probe;\r\nERROR:  permission denied to create database\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE TABLE public.activity4_ddl_probe(id int);",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nCREATE TABLE public.activity4_ddl_probe(id int);\r\nERROR:  42501: permission denied for schema public\r\nLINE 1: CREATE TABLE public.activity4_ddl_probe(id int);\r\n                     ^\r\nLOCATION:  aclcheck_error, aclchk.c:2795\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE ROLE unisync_denied_probe;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nCREATE ROLE unisync_denied_probe;\r\nERROR:  42501: permission denied to create role\r\nDETAIL:  Only roles with the CREATEROLE attribute may create roles.\r\nLOCATION:  CreateRole, user.c:320\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE DATABASE unisync_denied_probe;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "CREATE DATABASE unisync_denied_probe;\r\nERROR:  permission denied to create database\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE TABLE public.activity4_ddl_probe(id int); ALTER TABLE public.activity4_ddl_probe ADD COLUMN note text; DROP TABLE public.activity4_ddl_probe;",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nCREATE TABLE public.activity4_ddl_probe(id int); ALTER TABLE public.activity4_ddl_probe ADD COLUMN note text; DROP TABLE public.activity4_ddl_probe;\r\nCREATE TABLE\r\nALTER TABLE\r\nDROP TABLE\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "grp10_unisyncdb",
+    "sql": "INSERT INTO public.organization(organization_name,university_name) VALUES('Activity4 DBA probe','Test'); UPDATE public.organization SET description='Updated' WHERE organization_name='Activity4 DBA probe'; DELETE FROM public.organization WHERE organization_name='Activity4 DBA probe';",
+    "expected": "Allowed",
+    "actual": "Allowed",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nINSERT INTO public.organization(organization_name,university_name) VALUES('Activity4 DBA probe','Test'); UPDATE public.organization SET description='Updated' WHERE organization_name='Activity4 DBA probe'; DELETE FROM public.organization WHERE organization_name='Activity4 DBA probe';\r\nINSERT 0 1\r\nUPDATE 1\r\nDELETE 1\r\nROLLBACK;\r\nROLLBACK\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE ROLE unisync_denied_probe;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nCREATE ROLE unisync_denied_probe;\r\nERROR:  42501: permission denied to create role\r\nDETAIL:  Only roles with the CREATEROLE attribute may create roles.\r\nLOCATION:  CreateRole, user.c:320\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "grp10_unisyncdb",
+    "sql": "CREATE DATABASE unisync_denied_probe;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "CREATE DATABASE unisync_denied_probe;\r\nERROR:  permission denied to create database\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp10_unisyncdb",
+    "sql": "INSERT INTO public.event_schedule(event_id,venue_id,event_date,start_time,end_time) VALUES(1,1,CURRENT_DATE,'10:00','09:00');",
+    "expected": "Constraint denied",
+    "actual": "Constraint denied",
+    "passed": true,
+    "output": "\\set VERBOSITY verbose\r\nBEGIN;\r\nBEGIN\r\nINSERT INTO public.event_schedule(event_id,venue_id,event_date,start_time,end_time) VALUES(1,1,CURRENT_DATE,'10:00','09:00');\r\nERROR:  23514: new row for relation \"event_schedule\" violates check constraint \"chk_schedule_time\"\r\nDETAIL:  Failing row contains (121, 1, 1, 2026-11-06, 10:00:00, 09:00:00, pending).\r\nSCHEMA NAME:  public\r\nTABLE NAME:  event_schedule\r\nCONSTRAINT NAME:  chk_schedule_time\r\nLOCATION:  ExecConstraints, execMain.c:2081\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "dropboxed_db",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_app\", database \"dropboxed_db\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "ReserveIT",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_app\", database \"ReserveIT\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_app",
+    "database": "grp99_gymdb",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_app\", database \"grp99_gymdb\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "dropboxed_db",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_dba\", database \"dropboxed_db\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "ReserveIT",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_dba\", database \"ReserveIT\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_dba",
+    "database": "grp99_gymdb",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_dba\", database \"grp99_gymdb\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "dropboxed_db",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_auditor\", database \"dropboxed_db\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "ReserveIT",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_auditor\", database \"ReserveIT\", no encryption\r\n"
+  },
+  {
+    "account": "unisync_auditor",
+    "database": "grp99_gymdb",
+    "sql": "SELECT current_user;",
+    "expected": "Denied",
+    "actual": "Denied",
+    "passed": true,
+    "output": "psql: error: connection to server at \"localhost\" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"unisync_auditor\", database \"grp99_gymdb\", no encryption\r\n"
+  }
+]

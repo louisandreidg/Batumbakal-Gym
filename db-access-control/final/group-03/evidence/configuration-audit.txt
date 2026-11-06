@@ -1,0 +1,92 @@
+ current_database | current_user 
+------------------+--------------
+ group3_Pawpaw    | postgres
+(1 row)
+
+      tablename      | tableowner 
+---------------------+------------
+ appointment         | postgres
+ appointment_service | postgres
+ audit_log           | postgres
+ auth_session        | postgres
+ medical_record      | postgres
+ notification        | postgres
+ owner               | postgres
+ password_reset_code | postgres
+ pet                 | postgres
+ prescription        | postgres
+ service             | postgres
+ user_account        | postgres
+ vaccination         | postgres
+ veterinarian        | postgres
+(14 rows)
+
+       member       |     group_role     
+--------------------+--------------------
+ grp07_app          | grp07_runtime_grp
+ grp07_readonly     | grp07_readonly_grp
+ reserveit_app      | app_runtime_grp
+ reserveit_reporter | app_readonly_grp
+ reserveit_dba      | app_admin_grp
+(5 rows)
+
+  grantee   | table_schema |     table_name      | privilege_type 
+------------+--------------+---------------------+----------------
+ pawpaw_app | public       | appointment         | DELETE
+ pawpaw_app | public       | appointment         | INSERT
+ pawpaw_app | public       | appointment         | SELECT
+ pawpaw_app | public       | appointment         | UPDATE
+ pawpaw_app | public       | appointment_service | DELETE
+ pawpaw_app | public       | appointment_service | INSERT
+ pawpaw_app | public       | appointment_service | SELECT
+ pawpaw_app | public       | appointment_service | UPDATE
+ pawpaw_app | public       | audit_log           | DELETE
+ pawpaw_app | public       | audit_log           | INSERT
+ pawpaw_app | public       | audit_log           | SELECT
+ pawpaw_app | public       | audit_log           | UPDATE
+ pawpaw_app | public       | auth_session        | DELETE
+ pawpaw_app | public       | auth_session        | INSERT
+ pawpaw_app | public       | auth_session        | SELECT
+ pawpaw_app | public       | auth_session        | UPDATE
+ pawpaw_app | public       | medical_record      | DELETE
+ pawpaw_app | public       | medical_record      | INSERT
+ pawpaw_app | public       | medical_record      | SELECT
+ pawpaw_app | public       | medical_record      | UPDATE
+ pawpaw_app | public       | notification        | DELETE
+ pawpaw_app | public       | notification        | INSERT
+ pawpaw_app | public       | notification        | SELECT
+ pawpaw_app | public       | notification        | UPDATE
+ pawpaw_app | public       | owner               | DELETE
+ pawpaw_app | public       | owner               | INSERT
+ pawpaw_app | public       | owner               | SELECT
+ pawpaw_app | public       | owner               | UPDATE
+ pawpaw_app | public       | password_reset_code | DELETE
+ pawpaw_app | public       | password_reset_code | INSERT
+ pawpaw_app | public       | password_reset_code | SELECT
+ pawpaw_app | public       | password_reset_code | UPDATE
+ pawpaw_app | public       | pet                 | DELETE
+ pawpaw_app | public       | pet                 | INSERT
+ pawpaw_app | public       | pet                 | SELECT
+ pawpaw_app | public       | pet                 | UPDATE
+ pawpaw_app | public       | prescription        | DELETE
+ pawpaw_app | public       | prescription        | INSERT
+ pawpaw_app | public       | prescription        | SELECT
+ pawpaw_app | public       | prescription        | UPDATE
+ pawpaw_app | public       | service             | DELETE
+ pawpaw_app | public       | service             | INSERT
+ pawpaw_app | public       | service             | SELECT
+ pawpaw_app | public       | service             | UPDATE
+ pawpaw_app | public       | user_account        | DELETE
+ pawpaw_app | public       | user_account        | INSERT
+ pawpaw_app | public       | user_account        | SELECT
+ pawpaw_app | public       | user_account        | UPDATE
+ pawpaw_app | public       | vaccination         | DELETE
+ pawpaw_app | public       | vaccination         | INSERT
+ pawpaw_app | public       | vaccination         | SELECT
+ pawpaw_app | public       | vaccination         | UPDATE
+ pawpaw_app | public       | veterinarian        | DELETE
+ pawpaw_app | public       | veterinarian        | INSERT
+ pawpaw_app | public       | veterinarian        | SELECT
+ pawpaw_app | public       | veterinarian        | UPDATE
+(56 rows)
+

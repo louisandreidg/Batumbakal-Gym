@@ -1,0 +1,123 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24381 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] --------< com.school_event_management:school_event_management >---------
+[INFO] Building school_event_management 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24381 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ school_event_management ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ school_event_management ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ school_event_management ---
+[INFO] skip non existing resourceDirectory C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\group02\School_Event_Management_Web_Appli-main\school_event_management\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ school_event_management ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ school_event_management ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.school_event.school_event_management.audit.AuditServiceTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\thedi\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.816 s -- in com.school_event.school_event_management.audit.AuditServiceTest
+[INFO] Running com.school_event.school_event_management.SchoolEventManagementApplicationTests
+01:15:08.314 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.school_event.school_event_management.SchoolEventManagementApplicationTests]: SchoolEventManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:15:08.420 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.school_event.school_event_management.SchoolEventManagementApplication for test class com.school_event.school_event_management.SchoolEventManagementApplicationTests
+01:15:08.521 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.school_event.school_event_management.SchoolEventManagementApplicationTests]: SchoolEventManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:15:08.522 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.school_event.school_event_management.SchoolEventManagementApplication for test class com.school_event.school_event_management.SchoolEventManagementApplicationTests
+01:15:08.577 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-11-06T01:15:08.796+08:00  INFO 11256 --- [school_event_management] [           main] .s.SchoolEventManagementApplicationTests : Starting SchoolEventManagementApplicationTests using Java 25.0.4.1 with PID 11256 (started by thedi in C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\group02\School_Event_Management_Web_Appli-main\school_event_management)
+2026-11-06T01:15:08.797+08:00  INFO 11256 --- [school_event_management] [           main] .s.SchoolEventManagementApplicationTests : The following 1 profile is active: "local"
+2026-11-06T01:15:09.430+08:00  INFO 11256 --- [school_event_management] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-06T01:15:09.511+08:00  INFO 11256 --- [school_event_management] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 9 JPA repository interfaces.
+2026-11-06T01:15:10.201+08:00  INFO 11256 --- [school_event_management] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/grp02_event_management_db?currentSchema=school_event_management_db (PostgreSQL 18.6)
+2026-11-06T01:15:10.252+08:00  INFO 11256 --- [school_event_management] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "school_event_management_db"."flyway_schema_history" does not exist yet
+2026-11-06T01:15:10.255+08:00  INFO 11256 --- [school_event_management] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.017s)
+2026-11-06T01:15:10.267+08:00  INFO 11256 --- [school_event_management] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "school_event_management_db"."flyway_schema_history" ...
+2026-11-06T01:15:10.327+08:00  INFO 11256 --- [school_event_management] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "school_event_management_db": << Empty Schema >>
+2026-11-06T01:15:10.340+08:00  INFO 11256 --- [school_event_management] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "school_event_management_db" to version "1 - create tables"
+2026-11-06T01:15:10.399+08:00  INFO 11256 --- [school_event_management] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "school_event_management_db" to version "2 - seed roles"
+2026-11-06T01:15:10.411+08:00  INFO 11256 --- [school_event_management] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "school_event_management_db" to version "3 - app privileges"
+2026-11-06T01:15:10.419+08:00  INFO 11256 --- [school_event_management] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "school_event_management_db", now at version v3 (execution time 00:00.051s)
+2026-11-06T01:15:10.529+08:00  INFO 11256 --- [school_event_management] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-06T01:15:10.587+08:00  INFO 11256 --- [school_event_management] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-06T01:15:10.867+08:00  INFO 11256 --- [school_event_management] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-06T01:15:10.897+08:00  INFO 11256 --- [school_event_management] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-06T01:15:10.938+08:00  INFO 11256 --- [school_event_management] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e51ede1
+2026-11-06T01:15:10.940+08:00  INFO 11256 --- [school_event_management] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-06T01:15:10.998+08:00  INFO 11256 --- [school_event_management] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/grp02_event_management_db?currentSchema=school_event_management_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: grp02_event_management_db/school_event_management_db
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-06T01:15:11.774+08:00  INFO 11256 --- [school_event_management] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-06T01:15:11.824+08:00  INFO 11256 --- [school_event_management] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-06T01:15:11.885+08:00  INFO 11256 --- [school_event_management] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-06T01:15:13.164+08:00  INFO 11256 --- [school_event_management] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserDetailsService
+2026-11-06T01:15:13.562+08:00  INFO 11256 --- [school_event_management] [           main] .s.SchoolEventManagementApplicationTests : Started SchoolEventManagementApplicationTests in 4.992 seconds (process running for 6.767)
+2026-11-06T01:15:13.864+08:00  INFO 11256 --- [school_event_management] [           main] c.s.s.security.AccountBootstrap          : Created first Super Admin account 'activity4admin'.
+2026-11-06T01:15:13.924+08:00  INFO 11256 --- [school_event_management] [           main] c.s.s.security.AccountBootstrap          : Created first Event Organizer account 'activity4organizer'.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.698 s -- in com.school_event.school_event_management.SchoolEventManagementApplicationTests
+[INFO] Running com.school_event.school_event_management.service.AssignmentServiceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.207 s -- in com.school_event.school_event_management.service.AssignmentServiceTest
+[INFO] Running com.school_event.school_event_management.service.AttendanceServiceTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.139 s -- in com.school_event.school_event_management.service.AttendanceServiceTest
+[INFO] Running com.school_event.school_event_management.service.DashboardServiceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in com.school_event.school_event_management.service.DashboardServiceTest
+[INFO] Running com.school_event.school_event_management.service.EventServiceTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s -- in com.school_event.school_event_management.service.EventServiceTest
+[INFO] Running com.school_event.school_event_management.service.ParticipantServiceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.school_event.school_event_management.service.ParticipantServiceTest
+[INFO] Running com.school_event.school_event_management.service.ReportServiceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in com.school_event.school_event_management.service.ReportServiceTest
+[INFO] Running com.school_event.school_event_management.service.ScheduleServiceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.school_event.school_event_management.service.ScheduleServiceTest
+[INFO] Running com.school_event.school_event_management.service.UserServiceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.134 s -- in com.school_event.school_event_management.service.UserServiceTest
+[INFO] Running com.school_event.school_event_management.service.VenueServiceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.school_event.school_event_management.service.VenueServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 44, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.460 s
+[INFO] Finished at: 2026-11-06T01:15:14+08:00
+[INFO] ------------------------------------------------------------------------

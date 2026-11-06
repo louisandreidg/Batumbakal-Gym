@@ -1,0 +1,6 @@
+*.env
+.env
+*.clixml
+*secrets*
+application-local.properties
+!**/*.log

@@ -1,0 +1,440 @@
+ current_database | current_user |                                 version                                 
+------------------+--------------+-------------------------------------------------------------------------
+ group3_Pawpaw    | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |      tablename      | tableowner 
+------------+---------------------+------------
+ public     | appointment         | postgres
+ public     | appointment_service | postgres
+ public     | audit_log           | postgres
+ public     | auth_session        | postgres
+ public     | medical_record      | postgres
+ public     | notification        | postgres
+ public     | owner               | postgres
+ public     | password_reset_code | postgres
+ public     | pet                 | postgres
+ public     | prescription        | postgres
+ public     | service             | postgres
+ public     | user_account        | postgres
+ public     | vaccination         | postgres
+ public     | veterinarian        | postgres
+(14 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema | sequence_name 
+-----------------+---------------
+(0 rows)
+
+  rolname   | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+------------+-------------+----------+-------------+---------------
+ pawpaw_app | t           | f        | f           | f
+(1 row)
+
+ member | group_role 
+--------+------------
+(0 rows)
+
+    datname    |  owner   |                           datacl                           
+---------------+----------+------------------------------------------------------------
+ group3_Pawpaw | postgres | {=Tc/postgres,postgres=CTc/postgres,pawpaw_app=c/postgres}
+(1 row)
+
+  grantee   | table_schema |     table_name      | privilege_type 
+------------+--------------+---------------------+----------------
+ pawpaw_app | public       | appointment         | DELETE
+ pawpaw_app | public       | appointment         | INSERT
+ pawpaw_app | public       | appointment         | SELECT
+ pawpaw_app | public       | appointment         | UPDATE
+ pawpaw_app | public       | appointment_service | DELETE
+ pawpaw_app | public       | appointment_service | INSERT
+ pawpaw_app | public       | appointment_service | SELECT
+ pawpaw_app | public       | appointment_service | UPDATE
+ pawpaw_app | public       | audit_log           | DELETE
+ pawpaw_app | public       | audit_log           | INSERT
+ pawpaw_app | public       | audit_log           | SELECT
+ pawpaw_app | public       | audit_log           | UPDATE
+ pawpaw_app | public       | auth_session        | DELETE
+ pawpaw_app | public       | auth_session        | INSERT
+ pawpaw_app | public       | auth_session        | SELECT
+ pawpaw_app | public       | auth_session        | UPDATE
+ pawpaw_app | public       | medical_record      | DELETE
+ pawpaw_app | public       | medical_record      | INSERT
+ pawpaw_app | public       | medical_record      | SELECT
+ pawpaw_app | public       | medical_record      | UPDATE
+ pawpaw_app | public       | notification        | DELETE
+ pawpaw_app | public       | notification        | INSERT
+ pawpaw_app | public       | notification        | SELECT
+ pawpaw_app | public       | notification        | UPDATE
+ pawpaw_app | public       | owner               | DELETE
+ pawpaw_app | public       | owner               | INSERT
+ pawpaw_app | public       | owner               | SELECT
+ pawpaw_app | public       | owner               | UPDATE
+ pawpaw_app | public       | password_reset_code | DELETE
+ pawpaw_app | public       | password_reset_code | INSERT
+ pawpaw_app | public       | password_reset_code | SELECT
+ pawpaw_app | public       | password_reset_code | UPDATE
+ pawpaw_app | public       | pet                 | DELETE
+ pawpaw_app | public       | pet                 | INSERT
+ pawpaw_app | public       | pet                 | SELECT
+ pawpaw_app | public       | pet                 | UPDATE
+ pawpaw_app | public       | prescription        | DELETE
+ pawpaw_app | public       | prescription        | INSERT
+ pawpaw_app | public       | prescription        | SELECT
+ pawpaw_app | public       | prescription        | UPDATE
+ pawpaw_app | public       | service             | DELETE
+ pawpaw_app | public       | service             | INSERT
+ pawpaw_app | public       | service             | SELECT
+ pawpaw_app | public       | service             | UPDATE
+ pawpaw_app | public       | user_account        | DELETE
+ pawpaw_app | public       | user_account        | INSERT
+ pawpaw_app | public       | user_account        | SELECT
+ pawpaw_app | public       | user_account        | UPDATE
+ pawpaw_app | public       | vaccination         | DELETE
+ pawpaw_app | public       | vaccination         | INSERT
+ pawpaw_app | public       | vaccination         | SELECT
+ pawpaw_app | public       | vaccination         | UPDATE
+ pawpaw_app | public       | veterinarian        | DELETE
+ pawpaw_app | public       | veterinarian        | INSERT
+ pawpaw_app | public       | veterinarian        | SELECT
+ pawpaw_app | public       | veterinarian        | UPDATE
+(56 rows)
+
+  grantee   | table_schema |     table_name      |      column_name      | privilege_type 
+------------+--------------+---------------------+-----------------------+----------------
+ pawpaw_app | public       | appointment         | appointment_date      | INSERT
+ pawpaw_app | public       | appointment         | appointment_date      | SELECT
+ pawpaw_app | public       | appointment         | appointment_date      | UPDATE
+ pawpaw_app | public       | appointment         | appointment_id        | INSERT
+ pawpaw_app | public       | appointment         | appointment_id        | SELECT
+ pawpaw_app | public       | appointment         | appointment_id        | UPDATE
+ pawpaw_app | public       | appointment         | appointment_time      | INSERT
+ pawpaw_app | public       | appointment         | appointment_time      | SELECT
+ pawpaw_app | public       | appointment         | appointment_time      | UPDATE
+ pawpaw_app | public       | appointment         | cancellation_reason   | INSERT
+ pawpaw_app | public       | appointment         | cancellation_reason   | SELECT
+ pawpaw_app | public       | appointment         | cancellation_reason   | UPDATE
+ pawpaw_app | public       | appointment         | created_date          | INSERT
+ pawpaw_app | public       | appointment         | created_date          | SELECT
+ pawpaw_app | public       | appointment         | created_date          | UPDATE
+ pawpaw_app | public       | appointment         | pet_id                | INSERT
+ pawpaw_app | public       | appointment         | pet_id                | SELECT
+ pawpaw_app | public       | appointment         | pet_id                | UPDATE
+ pawpaw_app | public       | appointment         | reason                | INSERT
+ pawpaw_app | public       | appointment         | reason                | SELECT
+ pawpaw_app | public       | appointment         | reason                | UPDATE
+ pawpaw_app | public       | appointment         | reschedule_reason     | INSERT
+ pawpaw_app | public       | appointment         | reschedule_reason     | SELECT
+ pawpaw_app | public       | appointment         | reschedule_reason     | UPDATE
+ pawpaw_app | public       | appointment         | rescheduled_from_date | INSERT
+ pawpaw_app | public       | appointment         | rescheduled_from_date | SELECT
+ pawpaw_app | public       | appointment         | rescheduled_from_date | UPDATE
+ pawpaw_app | public       | appointment         | rescheduled_from_time | INSERT
+ pawpaw_app | public       | appointment         | rescheduled_from_time | SELECT
+ pawpaw_app | public       | appointment         | rescheduled_from_time | UPDATE
+ pawpaw_app | public       | appointment         | status                | INSERT
+ pawpaw_app | public       | appointment         | status                | SELECT
+ pawpaw_app | public       | appointment         | status                | UPDATE
+ pawpaw_app | public       | appointment         | updated_date          | INSERT
+ pawpaw_app | public       | appointment         | updated_date          | SELECT
+ pawpaw_app | public       | appointment         | updated_date          | UPDATE
+ pawpaw_app | public       | appointment         | veterinarian_id       | INSERT
+ pawpaw_app | public       | appointment         | veterinarian_id       | SELECT
+ pawpaw_app | public       | appointment         | veterinarian_id       | UPDATE
+ pawpaw_app | public       | appointment_service | appointment_id        | INSERT
+ pawpaw_app | public       | appointment_service | appointment_id        | SELECT
+ pawpaw_app | public       | appointment_service | appointment_id        | UPDATE
+ pawpaw_app | public       | appointment_service | quantity              | INSERT
+ pawpaw_app | public       | appointment_service | quantity              | SELECT
+ pawpaw_app | public       | appointment_service | quantity              | UPDATE
+ pawpaw_app | public       | appointment_service | service_id            | INSERT
+ pawpaw_app | public       | appointment_service | service_id            | SELECT
+ pawpaw_app | public       | appointment_service | service_id            | UPDATE
+ pawpaw_app | public       | appointment_service | unit_price            | INSERT
+ pawpaw_app | public       | appointment_service | unit_price            | SELECT
+ pawpaw_app | public       | appointment_service | unit_price            | UPDATE
+ pawpaw_app | public       | audit_log           | action_date           | INSERT
+ pawpaw_app | public       | audit_log           | action_date           | SELECT
+ pawpaw_app | public       | audit_log           | action_date           | UPDATE
+ pawpaw_app | public       | audit_log           | action_description    | INSERT
+ pawpaw_app | public       | audit_log           | action_description    | SELECT
+ pawpaw_app | public       | audit_log           | action_description    | UPDATE
+ pawpaw_app | public       | audit_log           | action_type           | INSERT
+ pawpaw_app | public       | audit_log           | action_type           | SELECT
+ pawpaw_app | public       | audit_log           | action_type           | UPDATE
+ pawpaw_app | public       | audit_log           | audit_id              | INSERT
+ pawpaw_app | public       | audit_log           | audit_id              | SELECT
+ pawpaw_app | public       | audit_log           | audit_id              | UPDATE
+ pawpaw_app | public       | audit_log           | record_id             | INSERT
+ pawpaw_app | public       | audit_log           | record_id             | SELECT
+ pawpaw_app | public       | audit_log           | record_id             | UPDATE
+ pawpaw_app | public       | audit_log           | table_name            | INSERT
+ pawpaw_app | public       | audit_log           | table_name            | SELECT
+ pawpaw_app | public       | audit_log           | table_name            | UPDATE
+ pawpaw_app | public       | audit_log           | user_id               | INSERT
+ pawpaw_app | public       | audit_log           | user_id               | SELECT
+ pawpaw_app | public       | audit_log           | user_id               | UPDATE
+ pawpaw_app | public       | auth_session        | created_at            | INSERT
+ pawpaw_app | public       | auth_session        | created_at            | SELECT
+ pawpaw_app | public       | auth_session        | created_at            | UPDATE
+ pawpaw_app | public       | auth_session        | expires_at            | INSERT
+ pawpaw_app | public       | auth_session        | expires_at            | SELECT
+ pawpaw_app | public       | auth_session        | expires_at            | UPDATE
+ pawpaw_app | public       | auth_session        | role                  | INSERT
+ pawpaw_app | public       | auth_session        | role                  | SELECT
+ pawpaw_app | public       | auth_session        | role                  | UPDATE
+ pawpaw_app | public       | auth_session        | token_hash            | INSERT
+ pawpaw_app | public       | auth_session        | token_hash            | SELECT
+ pawpaw_app | public       | auth_session        | token_hash            | UPDATE
+ pawpaw_app | public       | auth_session        | user_id               | INSERT
+ pawpaw_app | public       | auth_session        | user_id               | SELECT
+ pawpaw_app | public       | auth_session        | user_id               | UPDATE
+ pawpaw_app | public       | medical_record      | appointment_id        | INSERT
+ pawpaw_app | public       | medical_record      | appointment_id        | SELECT
+ pawpaw_app | public       | medical_record      | appointment_id        | UPDATE
+ pawpaw_app | public       | medical_record      | diagnosis             | INSERT
+ pawpaw_app | public       | medical_record      | diagnosis             | SELECT
+ pawpaw_app | public       | medical_record      | diagnosis             | UPDATE
+ pawpaw_app | public       | medical_record      | notes                 | INSERT
+ pawpaw_app | public       | medical_record      | notes                 | SELECT
+ pawpaw_app | public       | medical_record      | notes                 | UPDATE
+ pawpaw_app | public       | medical_record      | record_date           | INSERT
+ pawpaw_app | public       | medical_record      | record_date           | SELECT
+ pawpaw_app | public       | medical_record      | record_date           | UPDATE
+ pawpaw_app | public       | medical_record      | record_id             | INSERT
+ pawpaw_app | public       | medical_record      | record_id             | SELECT
+ pawpaw_app | public       | medical_record      | record_id             | UPDATE
+ pawpaw_app | public       | medical_record      | services              | INSERT
+ pawpaw_app | public       | medical_record      | services              | SELECT
+ pawpaw_app | public       | medical_record      | services              | UPDATE
+ pawpaw_app | public       | medical_record      | treatment             | INSERT
+ pawpaw_app | public       | medical_record      | treatment             | SELECT
+ pawpaw_app | public       | medical_record      | treatment             | UPDATE
+ pawpaw_app | public       | notification        | created_at            | INSERT
+ pawpaw_app | public       | notification        | created_at            | SELECT
+ pawpaw_app | public       | notification        | created_at            | UPDATE
+ pawpaw_app | public       | notification        | message               | INSERT
+ pawpaw_app | public       | notification        | message               | SELECT
+ pawpaw_app | public       | notification        | message               | UPDATE
+ pawpaw_app | public       | notification        | notification_id       | INSERT
+ pawpaw_app | public       | notification        | notification_id       | SELECT
+ pawpaw_app | public       | notification        | notification_id       | UPDATE
+ pawpaw_app | public       | notification        | notification_type     | INSERT
+ pawpaw_app | public       | notification        | notification_type     | SELECT
+ pawpaw_app | public       | notification        | notification_type     | UPDATE
+ pawpaw_app | public       | notification        | read_at               | INSERT
+ pawpaw_app | public       | notification        | read_at               | SELECT
+ pawpaw_app | public       | notification        | read_at               | UPDATE
+ pawpaw_app | public       | notification        | title                 | INSERT
+ pawpaw_app | public       | notification        | title                 | SELECT
+ pawpaw_app | public       | notification        | title                 | UPDATE
+ pawpaw_app | public       | notification        | user_id               | INSERT
+ pawpaw_app | public       | notification        | user_id               | SELECT
+ pawpaw_app | public       | notification        | user_id               | UPDATE
+ pawpaw_app | public       | owner               | address               | INSERT
+ pawpaw_app | public       | owner               | address               | SELECT
+ pawpaw_app | public       | owner               | address               | UPDATE
+ pawpaw_app | public       | owner               | email                 | INSERT
+ pawpaw_app | public       | owner               | email                 | SELECT
+ pawpaw_app | public       | owner               | email                 | UPDATE
+ pawpaw_app | public       | owner               | first_name            | INSERT
+ pawpaw_app | public       | owner               | first_name            | SELECT
+ pawpaw_app | public       | owner               | first_name            | UPDATE
+ pawpaw_app | public       | owner               | last_name             | INSERT
+ pawpaw_app | public       | owner               | last_name             | SELECT
+ pawpaw_app | public       | owner               | last_name             | UPDATE
+ pawpaw_app | public       | owner               | middle_name           | INSERT
+ pawpaw_app | public       | owner               | middle_name           | SELECT
+ pawpaw_app | public       | owner               | middle_name           | UPDATE
+ pawpaw_app | public       | owner               | name                  | INSERT
+ pawpaw_app | public       | owner               | name                  | SELECT
+ pawpaw_app | public       | owner               | name                  | UPDATE
+ pawpaw_app | public       | owner               | owner_id              | INSERT
+ pawpaw_app | public       | owner               | owner_id              | SELECT
+ pawpaw_app | public       | owner               | owner_id              | UPDATE
+ pawpaw_app | public       | owner               | phone                 | INSERT
+ pawpaw_app | public       | owner               | phone                 | SELECT
+ pawpaw_app | public       | owner               | phone                 | UPDATE
+ pawpaw_app | public       | owner               | photo                 | INSERT
+ pawpaw_app | public       | owner               | photo                 | SELECT
+ pawpaw_app | public       | owner               | photo                 | UPDATE
+ pawpaw_app | public       | owner               | registration_date     | INSERT
+ pawpaw_app | public       | owner               | registration_date     | SELECT
+ pawpaw_app | public       | owner               | registration_date     | UPDATE
+ pawpaw_app | public       | owner               | user_id               | INSERT
+ pawpaw_app | public       | owner               | user_id               | SELECT
+ pawpaw_app | public       | owner               | user_id               | UPDATE
+ pawpaw_app | public       | password_reset_code | attempts              | INSERT
+ pawpaw_app | public       | password_reset_code | attempts              | SELECT
+ pawpaw_app | public       | password_reset_code | attempts              | UPDATE
+ pawpaw_app | public       | password_reset_code | code_hash             | INSERT
+ pawpaw_app | public       | password_reset_code | code_hash             | SELECT
+ pawpaw_app | public       | password_reset_code | code_hash             | UPDATE
+ pawpaw_app | public       | password_reset_code | created_at            | INSERT
+ pawpaw_app | public       | password_reset_code | created_at            | SELECT
+ pawpaw_app | public       | password_reset_code | created_at            | UPDATE
+ pawpaw_app | public       | password_reset_code | expires_at            | INSERT
+ pawpaw_app | public       | password_reset_code | expires_at            | SELECT
+ pawpaw_app | public       | password_reset_code | expires_at            | UPDATE
+ pawpaw_app | public       | password_reset_code | reset_id              | INSERT
+ pawpaw_app | public       | password_reset_code | reset_id              | SELECT
+ pawpaw_app | public       | password_reset_code | reset_id              | UPDATE
+ pawpaw_app | public       | password_reset_code | user_id               | INSERT
+ pawpaw_app | public       | password_reset_code | user_id               | SELECT
+ pawpaw_app | public       | password_reset_code | user_id               | UPDATE
+ pawpaw_app | public       | password_reset_code | verified_at           | INSERT
+ pawpaw_app | public       | password_reset_code | verified_at           | SELECT
+ pawpaw_app | public       | password_reset_code | verified_at           | UPDATE
+ pawpaw_app | public       | pet                 | allergies             | INSERT
+ pawpaw_app | public       | pet                 | allergies             | SELECT
+ pawpaw_app | public       | pet                 | allergies             | UPDATE
+ pawpaw_app | public       | pet                 | breed                 | INSERT
+ pawpaw_app | public       | pet                 | breed                 | SELECT
+ pawpaw_app | public       | pet                 | breed                 | UPDATE
+ pawpaw_app | public       | pet                 | date_of_birth         | INSERT
+ pawpaw_app | public       | pet                 | date_of_birth         | SELECT
+ pawpaw_app | public       | pet                 | date_of_birth         | UPDATE
+ pawpaw_app | public       | pet                 | gender                | INSERT
+ pawpaw_app | public       | pet                 | gender                | SELECT
+ pawpaw_app | public       | pet                 | gender                | UPDATE
+ pawpaw_app | public       | pet                 | name                  | INSERT
+ pawpaw_app | public       | pet                 | name                  | SELECT
+ pawpaw_app | public       | pet                 | name                  | UPDATE
+ pawpaw_app | public       | pet                 | notes                 | INSERT
+ pawpaw_app | public       | pet                 | notes                 | SELECT
+ pawpaw_app | public       | pet                 | notes                 | UPDATE
+ pawpaw_app | public       | pet                 | owner_id              | INSERT
+ pawpaw_app | public       | pet                 | owner_id              | SELECT
+ pawpaw_app | public       | pet                 | owner_id              | UPDATE
+ pawpaw_app | public       | pet                 | pet_id                | INSERT
+ pawpaw_app | public       | pet                 | pet_id                | SELECT
+ pawpaw_app | public       | pet                 | pet_id                | UPDATE
+ pawpaw_app | public       | pet                 | pet_status            | INSERT
+ pawpaw_app | public       | pet                 | pet_status            | SELECT
+ pawpaw_app | public       | pet                 | pet_status            | UPDATE
+ pawpaw_app | public       | pet                 | photo                 | INSERT
+ pawpaw_app | public       | pet                 | photo                 | SELECT
+ pawpaw_app | public       | pet                 | photo                 | UPDATE
+ pawpaw_app | public       | pet                 | species               | INSERT
+ pawpaw_app | public       | pet                 | species               | SELECT
+ pawpaw_app | public       | pet                 | species               | UPDATE
+ pawpaw_app | public       | prescription        | date_prescribed       | INSERT
+ pawpaw_app | public       | prescription        | date_prescribed       | SELECT
+ pawpaw_app | public       | prescription        | date_prescribed       | UPDATE
+ pawpaw_app | public       | prescription        | dosage                | INSERT
+ pawpaw_app | public       | prescription        | dosage                | SELECT
+ pawpaw_app | public       | prescription        | dosage                | UPDATE
+ pawpaw_app | public       | prescription        | instructions          | INSERT
+ pawpaw_app | public       | prescription        | instructions          | SELECT
+ pawpaw_app | public       | prescription        | instructions          | UPDATE
+ pawpaw_app | public       | prescription        | medication_name       | INSERT
+ pawpaw_app | public       | prescription        | medication_name       | SELECT
+ pawpaw_app | public       | prescription        | medication_name       | UPDATE
+ pawpaw_app | public       | prescription        | prescription_id       | INSERT
+ pawpaw_app | public       | prescription        | prescription_id       | SELECT
+ pawpaw_app | public       | prescription        | prescription_id       | UPDATE
+ pawpaw_app | public       | prescription        | quantity              | INSERT
+ pawpaw_app | public       | prescription        | quantity              | SELECT
+ pawpaw_app | public       | prescription        | quantity              | UPDATE
+ pawpaw_app | public       | prescription        | record_id             | INSERT
+ pawpaw_app | public       | prescription        | record_id             | SELECT
+ pawpaw_app | public       | prescription        | record_id             | UPDATE
+ pawpaw_app | public       | service             | description           | INSERT
+ pawpaw_app | public       | service             | description           | SELECT
+ pawpaw_app | public       | service             | description           | UPDATE
+ pawpaw_app | public       | service             | price                 | INSERT
+ pawpaw_app | public       | service             | price                 | SELECT
+ pawpaw_app | public       | service             | price                 | UPDATE
+ pawpaw_app | public       | service             | service_id            | INSERT
+ pawpaw_app | public       | service             | service_id            | SELECT
+ pawpaw_app | public       | service             | service_id            | UPDATE
+ pawpaw_app | public       | service             | service_name          | INSERT
+ pawpaw_app | public       | service             | service_name          | SELECT
+ pawpaw_app | public       | service             | service_name          | UPDATE
+ pawpaw_app | public       | user_account        | account_status        | INSERT
+ pawpaw_app | public       | user_account        | account_status        | SELECT
+ pawpaw_app | public       | user_account        | account_status        | UPDATE
+ pawpaw_app | public       | user_account        | created_date          | INSERT
+ pawpaw_app | public       | user_account        | created_date          | SELECT
+ pawpaw_app | public       | user_account        | created_date          | UPDATE
+ pawpaw_app | public       | user_account        | display_name          | INSERT
+ pawpaw_app | public       | user_account        | display_name          | SELECT
+ pawpaw_app | public       | user_account        | display_name          | UPDATE
+ pawpaw_app | public       | user_account        | email                 | INSERT
+ pawpaw_app | public       | user_account        | email                 | SELECT
+ pawpaw_app | public       | user_account        | email                 | UPDATE
+ pawpaw_app | public       | user_account        | password_hash         | INSERT
+ pawpaw_app | public       | user_account        | password_hash         | SELECT
+ pawpaw_app | public       | user_account        | password_hash         | UPDATE
+ pawpaw_app | public       | user_account        | phone                 | INSERT
+ pawpaw_app | public       | user_account        | phone                 | SELECT
+ pawpaw_app | public       | user_account        | phone                 | UPDATE
+ pawpaw_app | public       | user_account        | profile_photo         | INSERT
+ pawpaw_app | public       | user_account        | profile_photo         | SELECT
+ pawpaw_app | public       | user_account        | profile_photo         | UPDATE
+ pawpaw_app | public       | user_account        | role                  | INSERT
+ pawpaw_app | public       | user_account        | role                  | SELECT
+ pawpaw_app | public       | user_account        | role                  | UPDATE
+ pawpaw_app | public       | user_account        | user_id               | INSERT
+ pawpaw_app | public       | user_account        | user_id               | SELECT
+ pawpaw_app | public       | user_account        | user_id               | UPDATE
+ pawpaw_app | public       | user_account        | username              | INSERT
+ pawpaw_app | public       | user_account        | username              | SELECT
+ pawpaw_app | public       | user_account        | username              | UPDATE
+ pawpaw_app | public       | vaccination         | administered_by       | INSERT
+ pawpaw_app | public       | vaccination         | administered_by       | SELECT
+ pawpaw_app | public       | vaccination         | administered_by       | UPDATE
+ pawpaw_app | public       | vaccination         | appointment_id        | INSERT
+ pawpaw_app | public       | vaccination         | appointment_id        | SELECT
+ pawpaw_app | public       | vaccination         | appointment_id        | UPDATE
+ pawpaw_app | public       | vaccination         | date_administered     | INSERT
+ pawpaw_app | public       | vaccination         | date_administered     | SELECT
+ pawpaw_app | public       | vaccination         | date_administered     | UPDATE
+ pawpaw_app | public       | vaccination         | last_reminded_at      | INSERT
+ pawpaw_app | public       | vaccination         | last_reminded_at      | SELECT
+ pawpaw_app | public       | vaccination         | last_reminded_at      | UPDATE
+ pawpaw_app | public       | vaccination         | next_due_date         | INSERT
+ pawpaw_app | public       | vaccination         | next_due_date         | SELECT
+ pawpaw_app | public       | vaccination         | next_due_date         | UPDATE
+ pawpaw_app | public       | vaccination         | notes                 | INSERT
+ pawpaw_app | public       | vaccination         | notes                 | SELECT
+ pawpaw_app | public       | vaccination         | notes                 | UPDATE
+ pawpaw_app | public       | vaccination         | pet_id                | INSERT
+ pawpaw_app | public       | vaccination         | pet_id                | SELECT
+ pawpaw_app | public       | vaccination         | pet_id                | UPDATE
+ pawpaw_app | public       | vaccination         | vaccination_id        | INSERT
+ pawpaw_app | public       | vaccination         | vaccination_id        | SELECT
+ pawpaw_app | public       | vaccination         | vaccination_id        | UPDATE
+ pawpaw_app | public       | vaccination         | vaccine_type          | INSERT
+ pawpaw_app | public       | vaccination         | vaccine_type          | SELECT
+ pawpaw_app | public       | vaccination         | vaccine_type          | UPDATE
+ pawpaw_app | public       | vaccination         | veterinarian_id       | INSERT
+ pawpaw_app | public       | vaccination         | veterinarian_id       | SELECT
+ pawpaw_app | public       | vaccination         | veterinarian_id       | UPDATE
+ pawpaw_app | public       | veterinarian        | email                 | INSERT
+ pawpaw_app | public       | veterinarian        | email                 | SELECT
+ pawpaw_app | public       | veterinarian        | email                 | UPDATE
+ pawpaw_app | public       | veterinarian        | license_number        | INSERT
+ pawpaw_app | public       | veterinarian        | license_number        | SELECT
+ pawpaw_app | public       | veterinarian        | license_number        | UPDATE
+ pawpaw_app | public       | veterinarian        | name                  | INSERT
+ pawpaw_app | public       | veterinarian        | name                  | SELECT
+ pawpaw_app | public       | veterinarian        | name                  | UPDATE
+ pawpaw_app | public       | veterinarian        | phone                 | INSERT
+ pawpaw_app | public       | veterinarian        | phone                 | SELECT
+ pawpaw_app | public       | veterinarian        | phone                 | UPDATE
+ pawpaw_app | public       | veterinarian        | specialization        | INSERT
+ pawpaw_app | public       | veterinarian        | specialization        | SELECT
+ pawpaw_app | public       | veterinarian        | specialization        | UPDATE
+ pawpaw_app | public       | veterinarian        | user_id               | INSERT
+ pawpaw_app | public       | veterinarian        | user_id               | SELECT
+ pawpaw_app | public       | veterinarian        | user_id               | UPDATE
+ pawpaw_app | public       | veterinarian        | veterinarian_id       | INSERT
+ pawpaw_app | public       | veterinarian        | veterinarian_id       | SELECT
+ pawpaw_app | public       | veterinarian        | veterinarian_id       | UPDATE
+(330 rows)
+
+

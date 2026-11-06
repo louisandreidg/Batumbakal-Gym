@@ -1,0 +1,553 @@
+     current_database      | current_user |                                 version                                 
+---------------------------+--------------+-------------------------------------------------------------------------
+ grp02_event_management_db | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+         schemaname         |       tablename       | tableowner  
+----------------------------+-----------------------+-------------
+ school_event_management_db | attendance            | event_owner
+ school_event_management_db | audit_log             | event_owner
+ school_event_management_db | event                 | event_owner
+ school_event_management_db | event_assignment      | event_owner
+ school_event_management_db | event_schedule        | event_owner
+ school_event_management_db | flyway_schema_history | event_owner
+ school_event_management_db | participant           | event_owner
+ school_event_management_db | role                  | event_owner
+ school_event_management_db | user_account          | event_owner
+ school_event_management_db | venue                 | event_owner
+(10 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema | sequence_name 
+-----------------+---------------
+(0 rows)
+
+      rolname       | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+--------------------+-------------+----------+-------------+---------------
+ event_app          | t           | f        | f           | f
+ event_owner        | t           | f        | f           | f
+ grp02_readonly     | t           | f        | f           | f
+ grp02_readonly_grp | f           | f        | f           | f
+ grp02_runtime_grp  | f           | f        | f           | f
+(5 rows)
+
+     member     |     group_role     
+----------------+--------------------
+ event_app      | grp02_runtime_grp
+ grp02_readonly | grp02_readonly_grp
+(2 rows)
+
+          datname          |  owner   |                                                  datacl                                                   
+---------------------------+----------+-----------------------------------------------------------------------------------------------------------
+ grp02_event_management_db | postgres | {postgres=CTc/postgres,event_owner=c/postgres,grp02_runtime_grp=c/postgres,grp02_readonly_grp=c/postgres}
+(1 row)
+
+      grantee       |        table_schema        |      table_name       | privilege_type 
+--------------------+----------------------------+-----------------------+----------------
+ event_owner        | school_event_management_db | attendance            | DELETE
+ event_owner        | school_event_management_db | attendance            | INSERT
+ event_owner        | school_event_management_db | attendance            | REFERENCES
+ event_owner        | school_event_management_db | attendance            | SELECT
+ event_owner        | school_event_management_db | attendance            | TRIGGER
+ event_owner        | school_event_management_db | attendance            | TRUNCATE
+ event_owner        | school_event_management_db | attendance            | UPDATE
+ event_owner        | school_event_management_db | audit_log             | DELETE
+ event_owner        | school_event_management_db | audit_log             | INSERT
+ event_owner        | school_event_management_db | audit_log             | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | SELECT
+ event_owner        | school_event_management_db | audit_log             | TRIGGER
+ event_owner        | school_event_management_db | audit_log             | TRUNCATE
+ event_owner        | school_event_management_db | audit_log             | UPDATE
+ event_owner        | school_event_management_db | event                 | DELETE
+ event_owner        | school_event_management_db | event                 | INSERT
+ event_owner        | school_event_management_db | event                 | REFERENCES
+ event_owner        | school_event_management_db | event                 | SELECT
+ event_owner        | school_event_management_db | event                 | TRIGGER
+ event_owner        | school_event_management_db | event                 | TRUNCATE
+ event_owner        | school_event_management_db | event                 | UPDATE
+ event_owner        | school_event_management_db | event_assignment      | DELETE
+ event_owner        | school_event_management_db | event_assignment      | INSERT
+ event_owner        | school_event_management_db | event_assignment      | REFERENCES
+ event_owner        | school_event_management_db | event_assignment      | SELECT
+ event_owner        | school_event_management_db | event_assignment      | TRIGGER
+ event_owner        | school_event_management_db | event_assignment      | TRUNCATE
+ event_owner        | school_event_management_db | event_assignment      | UPDATE
+ event_owner        | school_event_management_db | event_schedule        | DELETE
+ event_owner        | school_event_management_db | event_schedule        | INSERT
+ event_owner        | school_event_management_db | event_schedule        | REFERENCES
+ event_owner        | school_event_management_db | event_schedule        | SELECT
+ event_owner        | school_event_management_db | event_schedule        | TRIGGER
+ event_owner        | school_event_management_db | event_schedule        | TRUNCATE
+ event_owner        | school_event_management_db | event_schedule        | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | DELETE
+ event_owner        | school_event_management_db | flyway_schema_history | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | TRIGGER
+ event_owner        | school_event_management_db | flyway_schema_history | TRUNCATE
+ event_owner        | school_event_management_db | flyway_schema_history | UPDATE
+ event_owner        | school_event_management_db | participant           | DELETE
+ event_owner        | school_event_management_db | participant           | INSERT
+ event_owner        | school_event_management_db | participant           | REFERENCES
+ event_owner        | school_event_management_db | participant           | SELECT
+ event_owner        | school_event_management_db | participant           | TRIGGER
+ event_owner        | school_event_management_db | participant           | TRUNCATE
+ event_owner        | school_event_management_db | participant           | UPDATE
+ event_owner        | school_event_management_db | role                  | DELETE
+ event_owner        | school_event_management_db | role                  | INSERT
+ event_owner        | school_event_management_db | role                  | REFERENCES
+ event_owner        | school_event_management_db | role                  | SELECT
+ event_owner        | school_event_management_db | role                  | TRIGGER
+ event_owner        | school_event_management_db | role                  | TRUNCATE
+ event_owner        | school_event_management_db | role                  | UPDATE
+ event_owner        | school_event_management_db | user_account          | DELETE
+ event_owner        | school_event_management_db | user_account          | INSERT
+ event_owner        | school_event_management_db | user_account          | REFERENCES
+ event_owner        | school_event_management_db | user_account          | SELECT
+ event_owner        | school_event_management_db | user_account          | TRIGGER
+ event_owner        | school_event_management_db | user_account          | TRUNCATE
+ event_owner        | school_event_management_db | user_account          | UPDATE
+ event_owner        | school_event_management_db | venue                 | DELETE
+ event_owner        | school_event_management_db | venue                 | INSERT
+ event_owner        | school_event_management_db | venue                 | REFERENCES
+ event_owner        | school_event_management_db | venue                 | SELECT
+ event_owner        | school_event_management_db | venue                 | TRIGGER
+ event_owner        | school_event_management_db | venue                 | TRUNCATE
+ event_owner        | school_event_management_db | venue                 | UPDATE
+ grp02_readonly_grp | school_event_management_db | event                 | SELECT
+ grp02_readonly_grp | school_event_management_db | role                  | SELECT
+ grp02_readonly_grp | school_event_management_db | venue                 | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | DELETE
+ grp02_runtime_grp  | school_event_management_db | attendance            | INSERT
+ grp02_runtime_grp  | school_event_management_db | attendance            | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | UPDATE
+ grp02_runtime_grp  | school_event_management_db | audit_log             | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | DELETE
+ grp02_runtime_grp  | school_event_management_db | event                 | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | DELETE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | DELETE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | UPDATE
+ grp02_runtime_grp  | school_event_management_db | participant           | DELETE
+ grp02_runtime_grp  | school_event_management_db | participant           | INSERT
+ grp02_runtime_grp  | school_event_management_db | participant           | SELECT
+ grp02_runtime_grp  | school_event_management_db | participant           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | role                  | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | UPDATE
+ grp02_runtime_grp  | school_event_management_db | venue                 | DELETE
+ grp02_runtime_grp  | school_event_management_db | venue                 | INSERT
+ grp02_runtime_grp  | school_event_management_db | venue                 | SELECT
+ grp02_runtime_grp  | school_event_management_db | venue                 | UPDATE
+(103 rows)
+
+      grantee       |        table_schema        |      table_name       |    column_name     | privilege_type 
+--------------------+----------------------------+-----------------------+--------------------+----------------
+ event_owner        | school_event_management_db | attendance            | attendance_id      | INSERT
+ event_owner        | school_event_management_db | attendance            | attendance_id      | REFERENCES
+ event_owner        | school_event_management_db | attendance            | attendance_id      | SELECT
+ event_owner        | school_event_management_db | attendance            | attendance_id      | UPDATE
+ event_owner        | school_event_management_db | attendance            | attendance_status  | INSERT
+ event_owner        | school_event_management_db | attendance            | attendance_status  | REFERENCES
+ event_owner        | school_event_management_db | attendance            | attendance_status  | SELECT
+ event_owner        | school_event_management_db | attendance            | attendance_status  | UPDATE
+ event_owner        | school_event_management_db | attendance            | event_id           | INSERT
+ event_owner        | school_event_management_db | attendance            | event_id           | REFERENCES
+ event_owner        | school_event_management_db | attendance            | event_id           | SELECT
+ event_owner        | school_event_management_db | attendance            | event_id           | UPDATE
+ event_owner        | school_event_management_db | attendance            | participant_id     | INSERT
+ event_owner        | school_event_management_db | attendance            | participant_id     | REFERENCES
+ event_owner        | school_event_management_db | attendance            | participant_id     | SELECT
+ event_owner        | school_event_management_db | attendance            | participant_id     | UPDATE
+ event_owner        | school_event_management_db | attendance            | time_recorded      | INSERT
+ event_owner        | school_event_management_db | attendance            | time_recorded      | REFERENCES
+ event_owner        | school_event_management_db | attendance            | time_recorded      | SELECT
+ event_owner        | school_event_management_db | attendance            | time_recorded      | UPDATE
+ event_owner        | school_event_management_db | audit_log             | action_performed   | INSERT
+ event_owner        | school_event_management_db | audit_log             | action_performed   | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | action_performed   | SELECT
+ event_owner        | school_event_management_db | audit_log             | action_performed   | UPDATE
+ event_owner        | school_event_management_db | audit_log             | affected_record_id | INSERT
+ event_owner        | school_event_management_db | audit_log             | affected_record_id | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | affected_record_id | SELECT
+ event_owner        | school_event_management_db | audit_log             | affected_record_id | UPDATE
+ event_owner        | school_event_management_db | audit_log             | affected_table     | INSERT
+ event_owner        | school_event_management_db | audit_log             | affected_table     | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | affected_table     | SELECT
+ event_owner        | school_event_management_db | audit_log             | affected_table     | UPDATE
+ event_owner        | school_event_management_db | audit_log             | log_id             | INSERT
+ event_owner        | school_event_management_db | audit_log             | log_id             | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | log_id             | SELECT
+ event_owner        | school_event_management_db | audit_log             | log_id             | UPDATE
+ event_owner        | school_event_management_db | audit_log             | log_timestamp      | INSERT
+ event_owner        | school_event_management_db | audit_log             | log_timestamp      | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | log_timestamp      | SELECT
+ event_owner        | school_event_management_db | audit_log             | log_timestamp      | UPDATE
+ event_owner        | school_event_management_db | audit_log             | user_id            | INSERT
+ event_owner        | school_event_management_db | audit_log             | user_id            | REFERENCES
+ event_owner        | school_event_management_db | audit_log             | user_id            | SELECT
+ event_owner        | school_event_management_db | audit_log             | user_id            | UPDATE
+ event_owner        | school_event_management_db | event                 | description        | INSERT
+ event_owner        | school_event_management_db | event                 | description        | REFERENCES
+ event_owner        | school_event_management_db | event                 | description        | SELECT
+ event_owner        | school_event_management_db | event                 | description        | UPDATE
+ event_owner        | school_event_management_db | event                 | end_time           | INSERT
+ event_owner        | school_event_management_db | event                 | end_time           | REFERENCES
+ event_owner        | school_event_management_db | event                 | end_time           | SELECT
+ event_owner        | school_event_management_db | event                 | end_time           | UPDATE
+ event_owner        | school_event_management_db | event                 | event_date         | INSERT
+ event_owner        | school_event_management_db | event                 | event_date         | REFERENCES
+ event_owner        | school_event_management_db | event                 | event_date         | SELECT
+ event_owner        | school_event_management_db | event                 | event_date         | UPDATE
+ event_owner        | school_event_management_db | event                 | event_id           | INSERT
+ event_owner        | school_event_management_db | event                 | event_id           | REFERENCES
+ event_owner        | school_event_management_db | event                 | event_id           | SELECT
+ event_owner        | school_event_management_db | event                 | event_id           | UPDATE
+ event_owner        | school_event_management_db | event                 | event_name         | INSERT
+ event_owner        | school_event_management_db | event                 | event_name         | REFERENCES
+ event_owner        | school_event_management_db | event                 | event_name         | SELECT
+ event_owner        | school_event_management_db | event                 | event_name         | UPDATE
+ event_owner        | school_event_management_db | event                 | event_status       | INSERT
+ event_owner        | school_event_management_db | event                 | event_status       | REFERENCES
+ event_owner        | school_event_management_db | event                 | event_status       | SELECT
+ event_owner        | school_event_management_db | event                 | event_status       | UPDATE
+ event_owner        | school_event_management_db | event                 | organizer_id       | INSERT
+ event_owner        | school_event_management_db | event                 | organizer_id       | REFERENCES
+ event_owner        | school_event_management_db | event                 | organizer_id       | SELECT
+ event_owner        | school_event_management_db | event                 | organizer_id       | UPDATE
+ event_owner        | school_event_management_db | event                 | start_time         | INSERT
+ event_owner        | school_event_management_db | event                 | start_time         | REFERENCES
+ event_owner        | school_event_management_db | event                 | start_time         | SELECT
+ event_owner        | school_event_management_db | event                 | start_time         | UPDATE
+ event_owner        | school_event_management_db | event                 | venue_id           | INSERT
+ event_owner        | school_event_management_db | event                 | venue_id           | REFERENCES
+ event_owner        | school_event_management_db | event                 | venue_id           | SELECT
+ event_owner        | school_event_management_db | event                 | venue_id           | UPDATE
+ event_owner        | school_event_management_db | event_assignment      | assignment_id      | INSERT
+ event_owner        | school_event_management_db | event_assignment      | assignment_id      | REFERENCES
+ event_owner        | school_event_management_db | event_assignment      | assignment_id      | SELECT
+ event_owner        | school_event_management_db | event_assignment      | assignment_id      | UPDATE
+ event_owner        | school_event_management_db | event_assignment      | assignment_status  | INSERT
+ event_owner        | school_event_management_db | event_assignment      | assignment_status  | REFERENCES
+ event_owner        | school_event_management_db | event_assignment      | assignment_status  | SELECT
+ event_owner        | school_event_management_db | event_assignment      | assignment_status  | UPDATE
+ event_owner        | school_event_management_db | event_assignment      | event_id           | INSERT
+ event_owner        | school_event_management_db | event_assignment      | event_id           | REFERENCES
+ event_owner        | school_event_management_db | event_assignment      | event_id           | SELECT
+ event_owner        | school_event_management_db | event_assignment      | event_id           | UPDATE
+ event_owner        | school_event_management_db | event_assignment      | staff_name         | INSERT
+ event_owner        | school_event_management_db | event_assignment      | staff_name         | REFERENCES
+ event_owner        | school_event_management_db | event_assignment      | staff_name         | SELECT
+ event_owner        | school_event_management_db | event_assignment      | staff_name         | UPDATE
+ event_owner        | school_event_management_db | event_assignment      | staff_role         | INSERT
+ event_owner        | school_event_management_db | event_assignment      | staff_role         | REFERENCES
+ event_owner        | school_event_management_db | event_assignment      | staff_role         | SELECT
+ event_owner        | school_event_management_db | event_assignment      | staff_role         | UPDATE
+ event_owner        | school_event_management_db | event_schedule        | activity_name      | INSERT
+ event_owner        | school_event_management_db | event_schedule        | activity_name      | REFERENCES
+ event_owner        | school_event_management_db | event_schedule        | activity_name      | SELECT
+ event_owner        | school_event_management_db | event_schedule        | activity_name      | UPDATE
+ event_owner        | school_event_management_db | event_schedule        | end_time           | INSERT
+ event_owner        | school_event_management_db | event_schedule        | end_time           | REFERENCES
+ event_owner        | school_event_management_db | event_schedule        | end_time           | SELECT
+ event_owner        | school_event_management_db | event_schedule        | end_time           | UPDATE
+ event_owner        | school_event_management_db | event_schedule        | event_id           | INSERT
+ event_owner        | school_event_management_db | event_schedule        | event_id           | REFERENCES
+ event_owner        | school_event_management_db | event_schedule        | event_id           | SELECT
+ event_owner        | school_event_management_db | event_schedule        | event_id           | UPDATE
+ event_owner        | school_event_management_db | event_schedule        | schedule_id        | INSERT
+ event_owner        | school_event_management_db | event_schedule        | schedule_id        | REFERENCES
+ event_owner        | school_event_management_db | event_schedule        | schedule_id        | SELECT
+ event_owner        | school_event_management_db | event_schedule        | schedule_id        | UPDATE
+ event_owner        | school_event_management_db | event_schedule        | start_time         | INSERT
+ event_owner        | school_event_management_db | event_schedule        | start_time         | REFERENCES
+ event_owner        | school_event_management_db | event_schedule        | start_time         | SELECT
+ event_owner        | school_event_management_db | event_schedule        | start_time         | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | checksum           | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | checksum           | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | checksum           | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | checksum           | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | description        | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | description        | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | description        | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | description        | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | execution_time     | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | execution_time     | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | execution_time     | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | execution_time     | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | installed_by       | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | installed_by       | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | installed_by       | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | installed_by       | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | installed_on       | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | installed_on       | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | installed_on       | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | installed_on       | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | installed_rank     | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | installed_rank     | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | installed_rank     | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | installed_rank     | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | script             | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | script             | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | script             | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | script             | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | success            | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | success            | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | success            | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | success            | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | type               | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | type               | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | type               | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | type               | UPDATE
+ event_owner        | school_event_management_db | flyway_schema_history | version            | INSERT
+ event_owner        | school_event_management_db | flyway_schema_history | version            | REFERENCES
+ event_owner        | school_event_management_db | flyway_schema_history | version            | SELECT
+ event_owner        | school_event_management_db | flyway_schema_history | version            | UPDATE
+ event_owner        | school_event_management_db | participant           | first_name         | INSERT
+ event_owner        | school_event_management_db | participant           | first_name         | REFERENCES
+ event_owner        | school_event_management_db | participant           | first_name         | SELECT
+ event_owner        | school_event_management_db | participant           | first_name         | UPDATE
+ event_owner        | school_event_management_db | participant           | grade_level        | INSERT
+ event_owner        | school_event_management_db | participant           | grade_level        | REFERENCES
+ event_owner        | school_event_management_db | participant           | grade_level        | SELECT
+ event_owner        | school_event_management_db | participant           | grade_level        | UPDATE
+ event_owner        | school_event_management_db | participant           | last_name          | INSERT
+ event_owner        | school_event_management_db | participant           | last_name          | REFERENCES
+ event_owner        | school_event_management_db | participant           | last_name          | SELECT
+ event_owner        | school_event_management_db | participant           | last_name          | UPDATE
+ event_owner        | school_event_management_db | participant           | participant_id     | INSERT
+ event_owner        | school_event_management_db | participant           | participant_id     | REFERENCES
+ event_owner        | school_event_management_db | participant           | participant_id     | SELECT
+ event_owner        | school_event_management_db | participant           | participant_id     | UPDATE
+ event_owner        | school_event_management_db | participant           | student_number     | INSERT
+ event_owner        | school_event_management_db | participant           | student_number     | REFERENCES
+ event_owner        | school_event_management_db | participant           | student_number     | SELECT
+ event_owner        | school_event_management_db | participant           | student_number     | UPDATE
+ event_owner        | school_event_management_db | role                  | description        | INSERT
+ event_owner        | school_event_management_db | role                  | description        | REFERENCES
+ event_owner        | school_event_management_db | role                  | description        | SELECT
+ event_owner        | school_event_management_db | role                  | description        | UPDATE
+ event_owner        | school_event_management_db | role                  | role_id            | INSERT
+ event_owner        | school_event_management_db | role                  | role_id            | REFERENCES
+ event_owner        | school_event_management_db | role                  | role_id            | SELECT
+ event_owner        | school_event_management_db | role                  | role_id            | UPDATE
+ event_owner        | school_event_management_db | role                  | role_name          | INSERT
+ event_owner        | school_event_management_db | role                  | role_name          | REFERENCES
+ event_owner        | school_event_management_db | role                  | role_name          | SELECT
+ event_owner        | school_event_management_db | role                  | role_name          | UPDATE
+ event_owner        | school_event_management_db | user_account          | account_status     | INSERT
+ event_owner        | school_event_management_db | user_account          | account_status     | REFERENCES
+ event_owner        | school_event_management_db | user_account          | account_status     | SELECT
+ event_owner        | school_event_management_db | user_account          | account_status     | UPDATE
+ event_owner        | school_event_management_db | user_account          | email              | INSERT
+ event_owner        | school_event_management_db | user_account          | email              | REFERENCES
+ event_owner        | school_event_management_db | user_account          | email              | SELECT
+ event_owner        | school_event_management_db | user_account          | email              | UPDATE
+ event_owner        | school_event_management_db | user_account          | first_name         | INSERT
+ event_owner        | school_event_management_db | user_account          | first_name         | REFERENCES
+ event_owner        | school_event_management_db | user_account          | first_name         | SELECT
+ event_owner        | school_event_management_db | user_account          | first_name         | UPDATE
+ event_owner        | school_event_management_db | user_account          | last_name          | INSERT
+ event_owner        | school_event_management_db | user_account          | last_name          | REFERENCES
+ event_owner        | school_event_management_db | user_account          | last_name          | SELECT
+ event_owner        | school_event_management_db | user_account          | last_name          | UPDATE
+ event_owner        | school_event_management_db | user_account          | password_hash      | INSERT
+ event_owner        | school_event_management_db | user_account          | password_hash      | REFERENCES
+ event_owner        | school_event_management_db | user_account          | password_hash      | SELECT
+ event_owner        | school_event_management_db | user_account          | password_hash      | UPDATE
+ event_owner        | school_event_management_db | user_account          | role_id            | INSERT
+ event_owner        | school_event_management_db | user_account          | role_id            | REFERENCES
+ event_owner        | school_event_management_db | user_account          | role_id            | SELECT
+ event_owner        | school_event_management_db | user_account          | role_id            | UPDATE
+ event_owner        | school_event_management_db | user_account          | user_id            | INSERT
+ event_owner        | school_event_management_db | user_account          | user_id            | REFERENCES
+ event_owner        | school_event_management_db | user_account          | user_id            | SELECT
+ event_owner        | school_event_management_db | user_account          | user_id            | UPDATE
+ event_owner        | school_event_management_db | user_account          | username           | INSERT
+ event_owner        | school_event_management_db | user_account          | username           | REFERENCES
+ event_owner        | school_event_management_db | user_account          | username           | SELECT
+ event_owner        | school_event_management_db | user_account          | username           | UPDATE
+ event_owner        | school_event_management_db | venue                 | capacity           | INSERT
+ event_owner        | school_event_management_db | venue                 | capacity           | REFERENCES
+ event_owner        | school_event_management_db | venue                 | capacity           | SELECT
+ event_owner        | school_event_management_db | venue                 | capacity           | UPDATE
+ event_owner        | school_event_management_db | venue                 | location           | INSERT
+ event_owner        | school_event_management_db | venue                 | location           | REFERENCES
+ event_owner        | school_event_management_db | venue                 | location           | SELECT
+ event_owner        | school_event_management_db | venue                 | location           | UPDATE
+ event_owner        | school_event_management_db | venue                 | venue_id           | INSERT
+ event_owner        | school_event_management_db | venue                 | venue_id           | REFERENCES
+ event_owner        | school_event_management_db | venue                 | venue_id           | SELECT
+ event_owner        | school_event_management_db | venue                 | venue_id           | UPDATE
+ event_owner        | school_event_management_db | venue                 | venue_name         | INSERT
+ event_owner        | school_event_management_db | venue                 | venue_name         | REFERENCES
+ event_owner        | school_event_management_db | venue                 | venue_name         | SELECT
+ event_owner        | school_event_management_db | venue                 | venue_name         | UPDATE
+ grp02_readonly_grp | school_event_management_db | event                 | description        | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | end_time           | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | event_date         | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | event_id           | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | event_name         | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | event_status       | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | organizer_id       | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | start_time         | SELECT
+ grp02_readonly_grp | school_event_management_db | event                 | venue_id           | SELECT
+ grp02_readonly_grp | school_event_management_db | role                  | description        | SELECT
+ grp02_readonly_grp | school_event_management_db | role                  | role_id            | SELECT
+ grp02_readonly_grp | school_event_management_db | role                  | role_name          | SELECT
+ grp02_readonly_grp | school_event_management_db | venue                 | capacity           | SELECT
+ grp02_readonly_grp | school_event_management_db | venue                 | location           | SELECT
+ grp02_readonly_grp | school_event_management_db | venue                 | venue_id           | SELECT
+ grp02_readonly_grp | school_event_management_db | venue                 | venue_name         | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | attendance_id      | INSERT
+ grp02_runtime_grp  | school_event_management_db | attendance            | attendance_id      | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | attendance_id      | UPDATE
+ grp02_runtime_grp  | school_event_management_db | attendance            | attendance_status  | INSERT
+ grp02_runtime_grp  | school_event_management_db | attendance            | attendance_status  | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | attendance_status  | UPDATE
+ grp02_runtime_grp  | school_event_management_db | attendance            | event_id           | INSERT
+ grp02_runtime_grp  | school_event_management_db | attendance            | event_id           | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | event_id           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | attendance            | participant_id     | INSERT
+ grp02_runtime_grp  | school_event_management_db | attendance            | participant_id     | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | participant_id     | UPDATE
+ grp02_runtime_grp  | school_event_management_db | attendance            | time_recorded      | INSERT
+ grp02_runtime_grp  | school_event_management_db | attendance            | time_recorded      | SELECT
+ grp02_runtime_grp  | school_event_management_db | attendance            | time_recorded      | UPDATE
+ grp02_runtime_grp  | school_event_management_db | audit_log             | action_performed   | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | action_performed   | SELECT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | affected_record_id | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | affected_record_id | SELECT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | affected_table     | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | affected_table     | SELECT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | log_id             | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | log_id             | SELECT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | log_timestamp      | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | log_timestamp      | SELECT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | user_id            | INSERT
+ grp02_runtime_grp  | school_event_management_db | audit_log             | user_id            | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | description        | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | description        | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | description        | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | end_time           | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | end_time           | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | end_time           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | event_date         | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_date         | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_date         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | event_id           | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_id           | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_id           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | event_name         | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_name         | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_name         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | event_status       | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_status       | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | event_status       | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | organizer_id       | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | organizer_id       | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | organizer_id       | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | start_time         | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | start_time         | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | start_time         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event                 | venue_id           | INSERT
+ grp02_runtime_grp  | school_event_management_db | event                 | venue_id           | SELECT
+ grp02_runtime_grp  | school_event_management_db | event                 | venue_id           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | assignment_id      | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | assignment_id      | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | assignment_id      | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | assignment_status  | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | assignment_status  | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | assignment_status  | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | event_id           | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | event_id           | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | event_id           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | staff_name         | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | staff_name         | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | staff_name         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | staff_role         | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | staff_role         | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_assignment      | staff_role         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | activity_name      | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | activity_name      | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | activity_name      | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | end_time           | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | end_time           | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | end_time           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | event_id           | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | event_id           | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | event_id           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | schedule_id        | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | schedule_id        | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | schedule_id        | UPDATE
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | start_time         | INSERT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | start_time         | SELECT
+ grp02_runtime_grp  | school_event_management_db | event_schedule        | start_time         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | participant           | first_name         | INSERT
+ grp02_runtime_grp  | school_event_management_db | participant           | first_name         | SELECT
+ grp02_runtime_grp  | school_event_management_db | participant           | first_name         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | participant           | grade_level        | INSERT
+ grp02_runtime_grp  | school_event_management_db | participant           | grade_level        | SELECT
+ grp02_runtime_grp  | school_event_management_db | participant           | grade_level        | UPDATE
+ grp02_runtime_grp  | school_event_management_db | participant           | last_name          | INSERT
+ grp02_runtime_grp  | school_event_management_db | participant           | last_name          | SELECT
+ grp02_runtime_grp  | school_event_management_db | participant           | last_name          | UPDATE
+ grp02_runtime_grp  | school_event_management_db | participant           | participant_id     | INSERT
+ grp02_runtime_grp  | school_event_management_db | participant           | participant_id     | SELECT
+ grp02_runtime_grp  | school_event_management_db | participant           | participant_id     | UPDATE
+ grp02_runtime_grp  | school_event_management_db | participant           | student_number     | INSERT
+ grp02_runtime_grp  | school_event_management_db | participant           | student_number     | SELECT
+ grp02_runtime_grp  | school_event_management_db | participant           | student_number     | UPDATE
+ grp02_runtime_grp  | school_event_management_db | role                  | description        | SELECT
+ grp02_runtime_grp  | school_event_management_db | role                  | role_id            | SELECT
+ grp02_runtime_grp  | school_event_management_db | role                  | role_name          | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | account_status     | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | account_status     | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | account_status     | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | email              | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | email              | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | email              | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | first_name         | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | first_name         | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | first_name         | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | last_name          | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | last_name          | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | last_name          | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | password_hash      | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | password_hash      | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | password_hash      | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | role_id            | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | role_id            | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | role_id            | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | user_id            | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | user_id            | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | user_id            | UPDATE
+ grp02_runtime_grp  | school_event_management_db | user_account          | username           | INSERT
+ grp02_runtime_grp  | school_event_management_db | user_account          | username           | SELECT
+ grp02_runtime_grp  | school_event_management_db | user_account          | username           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | venue                 | capacity           | INSERT
+ grp02_runtime_grp  | school_event_management_db | venue                 | capacity           | SELECT
+ grp02_runtime_grp  | school_event_management_db | venue                 | capacity           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | venue                 | location           | INSERT
+ grp02_runtime_grp  | school_event_management_db | venue                 | location           | SELECT
+ grp02_runtime_grp  | school_event_management_db | venue                 | location           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | venue                 | venue_id           | INSERT
+ grp02_runtime_grp  | school_event_management_db | venue                 | venue_id           | SELECT
+ grp02_runtime_grp  | school_event_management_db | venue                 | venue_id           | UPDATE
+ grp02_runtime_grp  | school_event_management_db | venue                 | venue_name         | INSERT
+ grp02_runtime_grp  | school_event_management_db | venue                 | venue_name         | SELECT
+ grp02_runtime_grp  | school_event_management_db | venue                 | venue_name         | UPDATE
+(394 rows)
+
+

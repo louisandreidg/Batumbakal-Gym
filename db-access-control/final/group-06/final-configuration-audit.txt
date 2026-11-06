@@ -1,0 +1,1479 @@
+ current_database | current_user |                                 version                                 
+------------------+--------------+-------------------------------------------------------------------------
+ car_rental_db    | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |      tablename      | tableowner 
+------------+---------------------+------------
+ public     | audit_log           | postgres
+ public     | cancellation        | postgres
+ public     | customer            | postgres
+ public     | damage_fee          | postgres
+ public     | damage_incident     | postgres
+ public     | driver_license      | postgres
+ public     | inspection_item     | postgres
+ public     | inspection_photo    | postgres
+ public     | payment             | postgres
+ public     | rental              | postgres
+ public     | rental_rate         | postgres
+ public     | rental_terms        | postgres
+ public     | staff               | postgres
+ public     | vehicle             | postgres
+ public     | vehicle_category    | postgres
+ public     | vehicle_inspection  | postgres
+ public     | vehicle_maintenance | postgres
+(17 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema |             sequence_name              
+-----------------+----------------------------------------
+ public          | audit_log_audit_id_seq
+ public          | cancellation_cancellation_id_seq
+ public          | customer_customer_id_seq
+ public          | damage_fee_damage_fee_id_seq
+ public          | damage_incident_damage_id_seq
+ public          | driver_license_license_id_seq
+ public          | inspection_item_item_id_seq
+ public          | inspection_photo_photo_id_seq
+ public          | payment_payment_id_seq
+ public          | rental_rate_rate_id_seq
+ public          | rental_rental_id_seq
+ public          | rental_terms_terms_id_seq
+ public          | staff_staff_id_seq
+ public          | vehicle_category_category_id_seq
+ public          | vehicle_inspection_inspection_id_seq
+ public          | vehicle_maintenance_maintenance_id_seq
+ public          | vehicle_vehicle_id_seq
+(17 rows)
+
+     rolname      | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+------------------+-------------+----------+-------------+---------------
+ app_runtime      | t           | f        | f           | f
+ car_admin_grp    | f           | f        | f           | f
+ car_dba          | t           | f        | f           | f
+ car_readonly_grp | f           | f        | f           | f
+ car_report       | t           | f        | f           | f
+ car_runtime_grp  | f           | f        | f           | f
+(6 rows)
+
+    member     |    group_role    
+---------------+------------------
+ app_runtime   | car_runtime_grp
+ car_admin_grp | car_runtime_grp
+ car_dba       | car_admin_grp
+ car_report    | car_readonly_grp
+(4 rows)
+
+    datname    |  owner   |                                                 datacl                                                  
+---------------+----------+---------------------------------------------------------------------------------------------------------
+ car_rental_db | postgres | {postgres=CTc/postgres,car_runtime_grp=c/postgres,car_readonly_grp=c/postgres,car_admin_grp=c/postgres}
+(1 row)
+
+     grantee      | table_schema |     table_name      | privilege_type 
+------------------+--------------+---------------------+----------------
+ car_admin_grp    | public       | audit_log           | DELETE
+ car_admin_grp    | public       | audit_log           | INSERT
+ car_admin_grp    | public       | audit_log           | REFERENCES
+ car_admin_grp    | public       | audit_log           | SELECT
+ car_admin_grp    | public       | audit_log           | TRIGGER
+ car_admin_grp    | public       | audit_log           | TRUNCATE
+ car_admin_grp    | public       | audit_log           | UPDATE
+ car_admin_grp    | public       | cancellation        | DELETE
+ car_admin_grp    | public       | cancellation        | INSERT
+ car_admin_grp    | public       | cancellation        | REFERENCES
+ car_admin_grp    | public       | cancellation        | SELECT
+ car_admin_grp    | public       | cancellation        | TRIGGER
+ car_admin_grp    | public       | cancellation        | TRUNCATE
+ car_admin_grp    | public       | cancellation        | UPDATE
+ car_admin_grp    | public       | customer            | DELETE
+ car_admin_grp    | public       | customer            | INSERT
+ car_admin_grp    | public       | customer            | REFERENCES
+ car_admin_grp    | public       | customer            | SELECT
+ car_admin_grp    | public       | customer            | TRIGGER
+ car_admin_grp    | public       | customer            | TRUNCATE
+ car_admin_grp    | public       | customer            | UPDATE
+ car_admin_grp    | public       | damage_fee          | DELETE
+ car_admin_grp    | public       | damage_fee          | INSERT
+ car_admin_grp    | public       | damage_fee          | REFERENCES
+ car_admin_grp    | public       | damage_fee          | SELECT
+ car_admin_grp    | public       | damage_fee          | TRIGGER
+ car_admin_grp    | public       | damage_fee          | TRUNCATE
+ car_admin_grp    | public       | damage_fee          | UPDATE
+ car_admin_grp    | public       | damage_incident     | DELETE
+ car_admin_grp    | public       | damage_incident     | INSERT
+ car_admin_grp    | public       | damage_incident     | REFERENCES
+ car_admin_grp    | public       | damage_incident     | SELECT
+ car_admin_grp    | public       | damage_incident     | TRIGGER
+ car_admin_grp    | public       | damage_incident     | TRUNCATE
+ car_admin_grp    | public       | damage_incident     | UPDATE
+ car_admin_grp    | public       | driver_license      | DELETE
+ car_admin_grp    | public       | driver_license      | INSERT
+ car_admin_grp    | public       | driver_license      | REFERENCES
+ car_admin_grp    | public       | driver_license      | SELECT
+ car_admin_grp    | public       | driver_license      | TRIGGER
+ car_admin_grp    | public       | driver_license      | TRUNCATE
+ car_admin_grp    | public       | driver_license      | UPDATE
+ car_admin_grp    | public       | inspection_item     | DELETE
+ car_admin_grp    | public       | inspection_item     | INSERT
+ car_admin_grp    | public       | inspection_item     | REFERENCES
+ car_admin_grp    | public       | inspection_item     | SELECT
+ car_admin_grp    | public       | inspection_item     | TRIGGER
+ car_admin_grp    | public       | inspection_item     | TRUNCATE
+ car_admin_grp    | public       | inspection_item     | UPDATE
+ car_admin_grp    | public       | inspection_photo    | DELETE
+ car_admin_grp    | public       | inspection_photo    | INSERT
+ car_admin_grp    | public       | inspection_photo    | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | SELECT
+ car_admin_grp    | public       | inspection_photo    | TRIGGER
+ car_admin_grp    | public       | inspection_photo    | TRUNCATE
+ car_admin_grp    | public       | inspection_photo    | UPDATE
+ car_admin_grp    | public       | payment             | DELETE
+ car_admin_grp    | public       | payment             | INSERT
+ car_admin_grp    | public       | payment             | REFERENCES
+ car_admin_grp    | public       | payment             | SELECT
+ car_admin_grp    | public       | payment             | TRIGGER
+ car_admin_grp    | public       | payment             | TRUNCATE
+ car_admin_grp    | public       | payment             | UPDATE
+ car_admin_grp    | public       | rental              | DELETE
+ car_admin_grp    | public       | rental              | INSERT
+ car_admin_grp    | public       | rental              | REFERENCES
+ car_admin_grp    | public       | rental              | SELECT
+ car_admin_grp    | public       | rental              | TRIGGER
+ car_admin_grp    | public       | rental              | TRUNCATE
+ car_admin_grp    | public       | rental              | UPDATE
+ car_admin_grp    | public       | rental_rate         | DELETE
+ car_admin_grp    | public       | rental_rate         | INSERT
+ car_admin_grp    | public       | rental_rate         | REFERENCES
+ car_admin_grp    | public       | rental_rate         | SELECT
+ car_admin_grp    | public       | rental_rate         | TRIGGER
+ car_admin_grp    | public       | rental_rate         | TRUNCATE
+ car_admin_grp    | public       | rental_rate         | UPDATE
+ car_admin_grp    | public       | rental_terms        | DELETE
+ car_admin_grp    | public       | rental_terms        | INSERT
+ car_admin_grp    | public       | rental_terms        | REFERENCES
+ car_admin_grp    | public       | rental_terms        | SELECT
+ car_admin_grp    | public       | rental_terms        | TRIGGER
+ car_admin_grp    | public       | rental_terms        | TRUNCATE
+ car_admin_grp    | public       | rental_terms        | UPDATE
+ car_admin_grp    | public       | staff               | DELETE
+ car_admin_grp    | public       | staff               | INSERT
+ car_admin_grp    | public       | staff               | REFERENCES
+ car_admin_grp    | public       | staff               | SELECT
+ car_admin_grp    | public       | staff               | TRIGGER
+ car_admin_grp    | public       | staff               | TRUNCATE
+ car_admin_grp    | public       | staff               | UPDATE
+ car_admin_grp    | public       | vehicle             | DELETE
+ car_admin_grp    | public       | vehicle             | INSERT
+ car_admin_grp    | public       | vehicle             | REFERENCES
+ car_admin_grp    | public       | vehicle             | SELECT
+ car_admin_grp    | public       | vehicle             | TRIGGER
+ car_admin_grp    | public       | vehicle             | TRUNCATE
+ car_admin_grp    | public       | vehicle             | UPDATE
+ car_admin_grp    | public       | vehicle_category    | DELETE
+ car_admin_grp    | public       | vehicle_category    | INSERT
+ car_admin_grp    | public       | vehicle_category    | REFERENCES
+ car_admin_grp    | public       | vehicle_category    | SELECT
+ car_admin_grp    | public       | vehicle_category    | TRIGGER
+ car_admin_grp    | public       | vehicle_category    | TRUNCATE
+ car_admin_grp    | public       | vehicle_category    | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | DELETE
+ car_admin_grp    | public       | vehicle_inspection  | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | TRIGGER
+ car_admin_grp    | public       | vehicle_inspection  | TRUNCATE
+ car_admin_grp    | public       | vehicle_inspection  | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | DELETE
+ car_admin_grp    | public       | vehicle_maintenance | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | TRIGGER
+ car_admin_grp    | public       | vehicle_maintenance | TRUNCATE
+ car_admin_grp    | public       | vehicle_maintenance | UPDATE
+ car_readonly_grp | public       | audit_log           | SELECT
+ car_readonly_grp | public       | cancellation        | SELECT
+ car_readonly_grp | public       | damage_fee          | SELECT
+ car_readonly_grp | public       | damage_incident     | SELECT
+ car_readonly_grp | public       | driver_license      | SELECT
+ car_readonly_grp | public       | inspection_item     | SELECT
+ car_readonly_grp | public       | inspection_photo    | SELECT
+ car_readonly_grp | public       | payment             | SELECT
+ car_readonly_grp | public       | rental              | SELECT
+ car_readonly_grp | public       | rental_rate         | SELECT
+ car_readonly_grp | public       | rental_terms        | SELECT
+ car_readonly_grp | public       | vehicle             | SELECT
+ car_readonly_grp | public       | vehicle_category    | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | SELECT
+ car_runtime_grp  | public       | audit_log           | INSERT
+ car_runtime_grp  | public       | audit_log           | SELECT
+ car_runtime_grp  | public       | cancellation        | INSERT
+ car_runtime_grp  | public       | cancellation        | SELECT
+ car_runtime_grp  | public       | cancellation        | UPDATE
+ car_runtime_grp  | public       | customer            | INSERT
+ car_runtime_grp  | public       | customer            | SELECT
+ car_runtime_grp  | public       | customer            | UPDATE
+ car_runtime_grp  | public       | damage_fee          | INSERT
+ car_runtime_grp  | public       | damage_fee          | SELECT
+ car_runtime_grp  | public       | damage_fee          | UPDATE
+ car_runtime_grp  | public       | damage_incident     | INSERT
+ car_runtime_grp  | public       | damage_incident     | SELECT
+ car_runtime_grp  | public       | damage_incident     | UPDATE
+ car_runtime_grp  | public       | driver_license      | INSERT
+ car_runtime_grp  | public       | driver_license      | SELECT
+ car_runtime_grp  | public       | driver_license      | UPDATE
+ car_runtime_grp  | public       | inspection_item     | INSERT
+ car_runtime_grp  | public       | inspection_item     | SELECT
+ car_runtime_grp  | public       | inspection_item     | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | INSERT
+ car_runtime_grp  | public       | inspection_photo    | SELECT
+ car_runtime_grp  | public       | inspection_photo    | UPDATE
+ car_runtime_grp  | public       | payment             | INSERT
+ car_runtime_grp  | public       | payment             | SELECT
+ car_runtime_grp  | public       | payment             | UPDATE
+ car_runtime_grp  | public       | rental              | INSERT
+ car_runtime_grp  | public       | rental              | SELECT
+ car_runtime_grp  | public       | rental              | UPDATE
+ car_runtime_grp  | public       | rental_rate         | INSERT
+ car_runtime_grp  | public       | rental_rate         | SELECT
+ car_runtime_grp  | public       | rental_rate         | UPDATE
+ car_runtime_grp  | public       | rental_terms        | INSERT
+ car_runtime_grp  | public       | rental_terms        | SELECT
+ car_runtime_grp  | public       | rental_terms        | UPDATE
+ car_runtime_grp  | public       | staff               | INSERT
+ car_runtime_grp  | public       | staff               | SELECT
+ car_runtime_grp  | public       | staff               | UPDATE
+ car_runtime_grp  | public       | vehicle             | DELETE
+ car_runtime_grp  | public       | vehicle             | INSERT
+ car_runtime_grp  | public       | vehicle             | SELECT
+ car_runtime_grp  | public       | vehicle             | UPDATE
+ car_runtime_grp  | public       | vehicle_category    | INSERT
+ car_runtime_grp  | public       | vehicle_category    | SELECT
+ car_runtime_grp  | public       | vehicle_category    | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | UPDATE
+(185 rows)
+
+     grantee      | table_schema |     table_name      |       column_name        | privilege_type 
+------------------+--------------+---------------------+--------------------------+----------------
+ car_admin_grp    | public       | audit_log           | action_datetime          | INSERT
+ car_admin_grp    | public       | audit_log           | action_datetime          | REFERENCES
+ car_admin_grp    | public       | audit_log           | action_datetime          | SELECT
+ car_admin_grp    | public       | audit_log           | action_datetime          | UPDATE
+ car_admin_grp    | public       | audit_log           | action_description       | INSERT
+ car_admin_grp    | public       | audit_log           | action_description       | REFERENCES
+ car_admin_grp    | public       | audit_log           | action_description       | SELECT
+ car_admin_grp    | public       | audit_log           | action_description       | UPDATE
+ car_admin_grp    | public       | audit_log           | action_type              | INSERT
+ car_admin_grp    | public       | audit_log           | action_type              | REFERENCES
+ car_admin_grp    | public       | audit_log           | action_type              | SELECT
+ car_admin_grp    | public       | audit_log           | action_type              | UPDATE
+ car_admin_grp    | public       | audit_log           | audit_id                 | INSERT
+ car_admin_grp    | public       | audit_log           | audit_id                 | REFERENCES
+ car_admin_grp    | public       | audit_log           | audit_id                 | SELECT
+ car_admin_grp    | public       | audit_log           | audit_id                 | UPDATE
+ car_admin_grp    | public       | audit_log           | record_id                | INSERT
+ car_admin_grp    | public       | audit_log           | record_id                | REFERENCES
+ car_admin_grp    | public       | audit_log           | record_id                | SELECT
+ car_admin_grp    | public       | audit_log           | record_id                | UPDATE
+ car_admin_grp    | public       | audit_log           | staff_id                 | INSERT
+ car_admin_grp    | public       | audit_log           | staff_id                 | REFERENCES
+ car_admin_grp    | public       | audit_log           | staff_id                 | SELECT
+ car_admin_grp    | public       | audit_log           | staff_id                 | UPDATE
+ car_admin_grp    | public       | audit_log           | table_name               | INSERT
+ car_admin_grp    | public       | audit_log           | table_name               | REFERENCES
+ car_admin_grp    | public       | audit_log           | table_name               | SELECT
+ car_admin_grp    | public       | audit_log           | table_name               | UPDATE
+ car_admin_grp    | public       | cancellation        | cancellation_id          | INSERT
+ car_admin_grp    | public       | cancellation        | cancellation_id          | REFERENCES
+ car_admin_grp    | public       | cancellation        | cancellation_id          | SELECT
+ car_admin_grp    | public       | cancellation        | cancellation_id          | UPDATE
+ car_admin_grp    | public       | cancellation        | cancellation_reason      | INSERT
+ car_admin_grp    | public       | cancellation        | cancellation_reason      | REFERENCES
+ car_admin_grp    | public       | cancellation        | cancellation_reason      | SELECT
+ car_admin_grp    | public       | cancellation        | cancellation_reason      | UPDATE
+ car_admin_grp    | public       | cancellation        | cancelled_at             | INSERT
+ car_admin_grp    | public       | cancellation        | cancelled_at             | REFERENCES
+ car_admin_grp    | public       | cancellation        | cancelled_at             | SELECT
+ car_admin_grp    | public       | cancellation        | cancelled_at             | UPDATE
+ car_admin_grp    | public       | cancellation        | cancelled_by_customer_id | INSERT
+ car_admin_grp    | public       | cancellation        | cancelled_by_customer_id | REFERENCES
+ car_admin_grp    | public       | cancellation        | cancelled_by_customer_id | SELECT
+ car_admin_grp    | public       | cancellation        | cancelled_by_customer_id | UPDATE
+ car_admin_grp    | public       | cancellation        | cancelled_by_staff_id    | INSERT
+ car_admin_grp    | public       | cancellation        | cancelled_by_staff_id    | REFERENCES
+ car_admin_grp    | public       | cancellation        | cancelled_by_staff_id    | SELECT
+ car_admin_grp    | public       | cancellation        | cancelled_by_staff_id    | UPDATE
+ car_admin_grp    | public       | cancellation        | processed_at             | INSERT
+ car_admin_grp    | public       | cancellation        | processed_at             | REFERENCES
+ car_admin_grp    | public       | cancellation        | processed_at             | SELECT
+ car_admin_grp    | public       | cancellation        | processed_at             | UPDATE
+ car_admin_grp    | public       | cancellation        | refund_amount            | INSERT
+ car_admin_grp    | public       | cancellation        | refund_amount            | REFERENCES
+ car_admin_grp    | public       | cancellation        | refund_amount            | SELECT
+ car_admin_grp    | public       | cancellation        | refund_amount            | UPDATE
+ car_admin_grp    | public       | cancellation        | refund_eligible          | INSERT
+ car_admin_grp    | public       | cancellation        | refund_eligible          | REFERENCES
+ car_admin_grp    | public       | cancellation        | refund_eligible          | SELECT
+ car_admin_grp    | public       | cancellation        | refund_eligible          | UPDATE
+ car_admin_grp    | public       | cancellation        | refund_status            | INSERT
+ car_admin_grp    | public       | cancellation        | refund_status            | REFERENCES
+ car_admin_grp    | public       | cancellation        | refund_status            | SELECT
+ car_admin_grp    | public       | cancellation        | refund_status            | UPDATE
+ car_admin_grp    | public       | cancellation        | rental_id                | INSERT
+ car_admin_grp    | public       | cancellation        | rental_id                | REFERENCES
+ car_admin_grp    | public       | cancellation        | rental_id                | SELECT
+ car_admin_grp    | public       | cancellation        | rental_id                | UPDATE
+ car_admin_grp    | public       | customer            | account_status           | INSERT
+ car_admin_grp    | public       | customer            | account_status           | REFERENCES
+ car_admin_grp    | public       | customer            | account_status           | SELECT
+ car_admin_grp    | public       | customer            | account_status           | UPDATE
+ car_admin_grp    | public       | customer            | address                  | INSERT
+ car_admin_grp    | public       | customer            | address                  | REFERENCES
+ car_admin_grp    | public       | customer            | address                  | SELECT
+ car_admin_grp    | public       | customer            | address                  | UPDATE
+ car_admin_grp    | public       | customer            | created_at               | INSERT
+ car_admin_grp    | public       | customer            | created_at               | REFERENCES
+ car_admin_grp    | public       | customer            | created_at               | SELECT
+ car_admin_grp    | public       | customer            | created_at               | UPDATE
+ car_admin_grp    | public       | customer            | customer_id              | INSERT
+ car_admin_grp    | public       | customer            | customer_id              | REFERENCES
+ car_admin_grp    | public       | customer            | customer_id              | SELECT
+ car_admin_grp    | public       | customer            | customer_id              | UPDATE
+ car_admin_grp    | public       | customer            | email                    | INSERT
+ car_admin_grp    | public       | customer            | email                    | REFERENCES
+ car_admin_grp    | public       | customer            | email                    | SELECT
+ car_admin_grp    | public       | customer            | email                    | UPDATE
+ car_admin_grp    | public       | customer            | first_name               | INSERT
+ car_admin_grp    | public       | customer            | first_name               | REFERENCES
+ car_admin_grp    | public       | customer            | first_name               | SELECT
+ car_admin_grp    | public       | customer            | first_name               | UPDATE
+ car_admin_grp    | public       | customer            | last_name                | INSERT
+ car_admin_grp    | public       | customer            | last_name                | REFERENCES
+ car_admin_grp    | public       | customer            | last_name                | SELECT
+ car_admin_grp    | public       | customer            | last_name                | UPDATE
+ car_admin_grp    | public       | customer            | password_hash            | INSERT
+ car_admin_grp    | public       | customer            | password_hash            | REFERENCES
+ car_admin_grp    | public       | customer            | password_hash            | SELECT
+ car_admin_grp    | public       | customer            | password_hash            | UPDATE
+ car_admin_grp    | public       | customer            | phone_number             | INSERT
+ car_admin_grp    | public       | customer            | phone_number             | REFERENCES
+ car_admin_grp    | public       | customer            | phone_number             | SELECT
+ car_admin_grp    | public       | customer            | phone_number             | UPDATE
+ car_admin_grp    | public       | damage_fee          | amount                   | INSERT
+ car_admin_grp    | public       | damage_fee          | amount                   | REFERENCES
+ car_admin_grp    | public       | damage_fee          | amount                   | SELECT
+ car_admin_grp    | public       | damage_fee          | amount                   | UPDATE
+ car_admin_grp    | public       | damage_fee          | assessment_date          | INSERT
+ car_admin_grp    | public       | damage_fee          | assessment_date          | REFERENCES
+ car_admin_grp    | public       | damage_fee          | assessment_date          | SELECT
+ car_admin_grp    | public       | damage_fee          | assessment_date          | UPDATE
+ car_admin_grp    | public       | damage_fee          | damage_fee_id            | INSERT
+ car_admin_grp    | public       | damage_fee          | damage_fee_id            | REFERENCES
+ car_admin_grp    | public       | damage_fee          | damage_fee_id            | SELECT
+ car_admin_grp    | public       | damage_fee          | damage_fee_id            | UPDATE
+ car_admin_grp    | public       | damage_fee          | damage_id                | INSERT
+ car_admin_grp    | public       | damage_fee          | damage_id                | REFERENCES
+ car_admin_grp    | public       | damage_fee          | damage_id                | SELECT
+ car_admin_grp    | public       | damage_fee          | damage_id                | UPDATE
+ car_admin_grp    | public       | damage_fee          | dispute_reason           | INSERT
+ car_admin_grp    | public       | damage_fee          | dispute_reason           | REFERENCES
+ car_admin_grp    | public       | damage_fee          | dispute_reason           | SELECT
+ car_admin_grp    | public       | damage_fee          | dispute_reason           | UPDATE
+ car_admin_grp    | public       | damage_fee          | fee_status               | INSERT
+ car_admin_grp    | public       | damage_fee          | fee_status               | REFERENCES
+ car_admin_grp    | public       | damage_fee          | fee_status               | SELECT
+ car_admin_grp    | public       | damage_fee          | fee_status               | UPDATE
+ car_admin_grp    | public       | damage_fee          | resolution_notes         | INSERT
+ car_admin_grp    | public       | damage_fee          | resolution_notes         | REFERENCES
+ car_admin_grp    | public       | damage_fee          | resolution_notes         | SELECT
+ car_admin_grp    | public       | damage_fee          | resolution_notes         | UPDATE
+ car_admin_grp    | public       | damage_fee          | resolved_at              | INSERT
+ car_admin_grp    | public       | damage_fee          | resolved_at              | REFERENCES
+ car_admin_grp    | public       | damage_fee          | resolved_at              | SELECT
+ car_admin_grp    | public       | damage_fee          | resolved_at              | UPDATE
+ car_admin_grp    | public       | damage_incident     | damage_id                | INSERT
+ car_admin_grp    | public       | damage_incident     | damage_id                | REFERENCES
+ car_admin_grp    | public       | damage_incident     | damage_id                | SELECT
+ car_admin_grp    | public       | damage_incident     | damage_id                | UPDATE
+ car_admin_grp    | public       | damage_incident     | damage_type              | INSERT
+ car_admin_grp    | public       | damage_incident     | damage_type              | REFERENCES
+ car_admin_grp    | public       | damage_incident     | damage_type              | SELECT
+ car_admin_grp    | public       | damage_incident     | damage_type              | UPDATE
+ car_admin_grp    | public       | damage_incident     | description              | INSERT
+ car_admin_grp    | public       | damage_incident     | description              | REFERENCES
+ car_admin_grp    | public       | damage_incident     | description              | SELECT
+ car_admin_grp    | public       | damage_incident     | description              | UPDATE
+ car_admin_grp    | public       | damage_incident     | inspection_id            | INSERT
+ car_admin_grp    | public       | damage_incident     | inspection_id            | REFERENCES
+ car_admin_grp    | public       | damage_incident     | inspection_id            | SELECT
+ car_admin_grp    | public       | damage_incident     | inspection_id            | UPDATE
+ car_admin_grp    | public       | damage_incident     | location_on_vehicle      | INSERT
+ car_admin_grp    | public       | damage_incident     | location_on_vehicle      | REFERENCES
+ car_admin_grp    | public       | damage_incident     | location_on_vehicle      | SELECT
+ car_admin_grp    | public       | damage_incident     | location_on_vehicle      | UPDATE
+ car_admin_grp    | public       | damage_incident     | reported_at              | INSERT
+ car_admin_grp    | public       | damage_incident     | reported_at              | REFERENCES
+ car_admin_grp    | public       | damage_incident     | reported_at              | SELECT
+ car_admin_grp    | public       | damage_incident     | reported_at              | UPDATE
+ car_admin_grp    | public       | damage_incident     | resolved_at              | INSERT
+ car_admin_grp    | public       | damage_incident     | resolved_at              | REFERENCES
+ car_admin_grp    | public       | damage_incident     | resolved_at              | SELECT
+ car_admin_grp    | public       | damage_incident     | resolved_at              | UPDATE
+ car_admin_grp    | public       | damage_incident     | severity                 | INSERT
+ car_admin_grp    | public       | damage_incident     | severity                 | REFERENCES
+ car_admin_grp    | public       | damage_incident     | severity                 | SELECT
+ car_admin_grp    | public       | damage_incident     | severity                 | UPDATE
+ car_admin_grp    | public       | damage_incident     | status                   | INSERT
+ car_admin_grp    | public       | damage_incident     | status                   | REFERENCES
+ car_admin_grp    | public       | damage_incident     | status                   | SELECT
+ car_admin_grp    | public       | damage_incident     | status                   | UPDATE
+ car_admin_grp    | public       | driver_license      | customer_id              | INSERT
+ car_admin_grp    | public       | driver_license      | customer_id              | REFERENCES
+ car_admin_grp    | public       | driver_license      | customer_id              | SELECT
+ car_admin_grp    | public       | driver_license      | customer_id              | UPDATE
+ car_admin_grp    | public       | driver_license      | expiration_date          | INSERT
+ car_admin_grp    | public       | driver_license      | expiration_date          | REFERENCES
+ car_admin_grp    | public       | driver_license      | expiration_date          | SELECT
+ car_admin_grp    | public       | driver_license      | expiration_date          | UPDATE
+ car_admin_grp    | public       | driver_license      | issue_date               | INSERT
+ car_admin_grp    | public       | driver_license      | issue_date               | REFERENCES
+ car_admin_grp    | public       | driver_license      | issue_date               | SELECT
+ car_admin_grp    | public       | driver_license      | issue_date               | UPDATE
+ car_admin_grp    | public       | driver_license      | license_back_photo       | INSERT
+ car_admin_grp    | public       | driver_license      | license_back_photo       | REFERENCES
+ car_admin_grp    | public       | driver_license      | license_back_photo       | SELECT
+ car_admin_grp    | public       | driver_license      | license_back_photo       | UPDATE
+ car_admin_grp    | public       | driver_license      | license_front_photo      | INSERT
+ car_admin_grp    | public       | driver_license      | license_front_photo      | REFERENCES
+ car_admin_grp    | public       | driver_license      | license_front_photo      | SELECT
+ car_admin_grp    | public       | driver_license      | license_front_photo      | UPDATE
+ car_admin_grp    | public       | driver_license      | license_id               | INSERT
+ car_admin_grp    | public       | driver_license      | license_id               | REFERENCES
+ car_admin_grp    | public       | driver_license      | license_id               | SELECT
+ car_admin_grp    | public       | driver_license      | license_id               | UPDATE
+ car_admin_grp    | public       | driver_license      | license_number           | INSERT
+ car_admin_grp    | public       | driver_license      | license_number           | REFERENCES
+ car_admin_grp    | public       | driver_license      | license_number           | SELECT
+ car_admin_grp    | public       | driver_license      | license_number           | UPDATE
+ car_admin_grp    | public       | driver_license      | license_type             | INSERT
+ car_admin_grp    | public       | driver_license      | license_type             | REFERENCES
+ car_admin_grp    | public       | driver_license      | license_type             | SELECT
+ car_admin_grp    | public       | driver_license      | license_type             | UPDATE
+ car_admin_grp    | public       | driver_license      | rejection_reason         | INSERT
+ car_admin_grp    | public       | driver_license      | rejection_reason         | REFERENCES
+ car_admin_grp    | public       | driver_license      | rejection_reason         | SELECT
+ car_admin_grp    | public       | driver_license      | rejection_reason         | UPDATE
+ car_admin_grp    | public       | driver_license      | verification_status      | INSERT
+ car_admin_grp    | public       | driver_license      | verification_status      | REFERENCES
+ car_admin_grp    | public       | driver_license      | verification_status      | SELECT
+ car_admin_grp    | public       | driver_license      | verification_status      | UPDATE
+ car_admin_grp    | public       | driver_license      | verified_at              | INSERT
+ car_admin_grp    | public       | driver_license      | verified_at              | REFERENCES
+ car_admin_grp    | public       | driver_license      | verified_at              | SELECT
+ car_admin_grp    | public       | driver_license      | verified_at              | UPDATE
+ car_admin_grp    | public       | driver_license      | verified_by_staff_id     | INSERT
+ car_admin_grp    | public       | driver_license      | verified_by_staff_id     | REFERENCES
+ car_admin_grp    | public       | driver_license      | verified_by_staff_id     | SELECT
+ car_admin_grp    | public       | driver_license      | verified_by_staff_id     | UPDATE
+ car_admin_grp    | public       | inspection_item     | inspection_id            | INSERT
+ car_admin_grp    | public       | inspection_item     | inspection_id            | REFERENCES
+ car_admin_grp    | public       | inspection_item     | inspection_id            | SELECT
+ car_admin_grp    | public       | inspection_item     | inspection_id            | UPDATE
+ car_admin_grp    | public       | inspection_item     | item_condition           | INSERT
+ car_admin_grp    | public       | inspection_item     | item_condition           | REFERENCES
+ car_admin_grp    | public       | inspection_item     | item_condition           | SELECT
+ car_admin_grp    | public       | inspection_item     | item_condition           | UPDATE
+ car_admin_grp    | public       | inspection_item     | item_id                  | INSERT
+ car_admin_grp    | public       | inspection_item     | item_id                  | REFERENCES
+ car_admin_grp    | public       | inspection_item     | item_id                  | SELECT
+ car_admin_grp    | public       | inspection_item     | item_id                  | UPDATE
+ car_admin_grp    | public       | inspection_item     | item_name                | INSERT
+ car_admin_grp    | public       | inspection_item     | item_name                | REFERENCES
+ car_admin_grp    | public       | inspection_item     | item_name                | SELECT
+ car_admin_grp    | public       | inspection_item     | item_name                | UPDATE
+ car_admin_grp    | public       | inspection_item     | notes                    | INSERT
+ car_admin_grp    | public       | inspection_item     | notes                    | REFERENCES
+ car_admin_grp    | public       | inspection_item     | notes                    | SELECT
+ car_admin_grp    | public       | inspection_item     | notes                    | UPDATE
+ car_admin_grp    | public       | inspection_photo    | inspection_id            | INSERT
+ car_admin_grp    | public       | inspection_photo    | inspection_id            | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | inspection_id            | SELECT
+ car_admin_grp    | public       | inspection_photo    | inspection_id            | UPDATE
+ car_admin_grp    | public       | inspection_photo    | photo_description        | INSERT
+ car_admin_grp    | public       | inspection_photo    | photo_description        | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | photo_description        | SELECT
+ car_admin_grp    | public       | inspection_photo    | photo_description        | UPDATE
+ car_admin_grp    | public       | inspection_photo    | photo_id                 | INSERT
+ car_admin_grp    | public       | inspection_photo    | photo_id                 | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | photo_id                 | SELECT
+ car_admin_grp    | public       | inspection_photo    | photo_id                 | UPDATE
+ car_admin_grp    | public       | inspection_photo    | photo_path               | INSERT
+ car_admin_grp    | public       | inspection_photo    | photo_path               | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | photo_path               | SELECT
+ car_admin_grp    | public       | inspection_photo    | photo_path               | UPDATE
+ car_admin_grp    | public       | inspection_photo    | uploaded_at              | INSERT
+ car_admin_grp    | public       | inspection_photo    | uploaded_at              | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | uploaded_at              | SELECT
+ car_admin_grp    | public       | inspection_photo    | uploaded_at              | UPDATE
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_customer_id  | INSERT
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_customer_id  | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_customer_id  | SELECT
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_customer_id  | UPDATE
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_staff_id     | INSERT
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_staff_id     | REFERENCES
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_staff_id     | SELECT
+ car_admin_grp    | public       | inspection_photo    | uploaded_by_staff_id     | UPDATE
+ car_admin_grp    | public       | payment             | amount                   | INSERT
+ car_admin_grp    | public       | payment             | amount                   | REFERENCES
+ car_admin_grp    | public       | payment             | amount                   | SELECT
+ car_admin_grp    | public       | payment             | amount                   | UPDATE
+ car_admin_grp    | public       | payment             | damage_fee_id            | INSERT
+ car_admin_grp    | public       | payment             | damage_fee_id            | REFERENCES
+ car_admin_grp    | public       | payment             | damage_fee_id            | SELECT
+ car_admin_grp    | public       | payment             | damage_fee_id            | UPDATE
+ car_admin_grp    | public       | payment             | payment_code             | INSERT
+ car_admin_grp    | public       | payment             | payment_code             | REFERENCES
+ car_admin_grp    | public       | payment             | payment_code             | SELECT
+ car_admin_grp    | public       | payment             | payment_code             | UPDATE
+ car_admin_grp    | public       | payment             | payment_date             | INSERT
+ car_admin_grp    | public       | payment             | payment_date             | REFERENCES
+ car_admin_grp    | public       | payment             | payment_date             | SELECT
+ car_admin_grp    | public       | payment             | payment_date             | UPDATE
+ car_admin_grp    | public       | payment             | payment_id               | INSERT
+ car_admin_grp    | public       | payment             | payment_id               | REFERENCES
+ car_admin_grp    | public       | payment             | payment_id               | SELECT
+ car_admin_grp    | public       | payment             | payment_id               | UPDATE
+ car_admin_grp    | public       | payment             | payment_method           | INSERT
+ car_admin_grp    | public       | payment             | payment_method           | REFERENCES
+ car_admin_grp    | public       | payment             | payment_method           | SELECT
+ car_admin_grp    | public       | payment             | payment_method           | UPDATE
+ car_admin_grp    | public       | payment             | payment_status           | INSERT
+ car_admin_grp    | public       | payment             | payment_status           | REFERENCES
+ car_admin_grp    | public       | payment             | payment_status           | SELECT
+ car_admin_grp    | public       | payment             | payment_status           | UPDATE
+ car_admin_grp    | public       | payment             | proof_path               | INSERT
+ car_admin_grp    | public       | payment             | proof_path               | REFERENCES
+ car_admin_grp    | public       | payment             | proof_path               | SELECT
+ car_admin_grp    | public       | payment             | proof_path               | UPDATE
+ car_admin_grp    | public       | payment             | receipt_number           | INSERT
+ car_admin_grp    | public       | payment             | receipt_number           | REFERENCES
+ car_admin_grp    | public       | payment             | receipt_number           | SELECT
+ car_admin_grp    | public       | payment             | receipt_number           | UPDATE
+ car_admin_grp    | public       | payment             | received_by              | INSERT
+ car_admin_grp    | public       | payment             | received_by              | REFERENCES
+ car_admin_grp    | public       | payment             | received_by              | SELECT
+ car_admin_grp    | public       | payment             | received_by              | UPDATE
+ car_admin_grp    | public       | payment             | reference_number         | INSERT
+ car_admin_grp    | public       | payment             | reference_number         | REFERENCES
+ car_admin_grp    | public       | payment             | reference_number         | SELECT
+ car_admin_grp    | public       | payment             | reference_number         | UPDATE
+ car_admin_grp    | public       | payment             | rental_id                | INSERT
+ car_admin_grp    | public       | payment             | rental_id                | REFERENCES
+ car_admin_grp    | public       | payment             | rental_id                | SELECT
+ car_admin_grp    | public       | payment             | rental_id                | UPDATE
+ car_admin_grp    | public       | rental              | actual_return_datetime   | INSERT
+ car_admin_grp    | public       | rental              | actual_return_datetime   | REFERENCES
+ car_admin_grp    | public       | rental              | actual_return_datetime   | SELECT
+ car_admin_grp    | public       | rental              | actual_return_datetime   | UPDATE
+ car_admin_grp    | public       | rental              | approved_at              | INSERT
+ car_admin_grp    | public       | rental              | approved_at              | REFERENCES
+ car_admin_grp    | public       | rental              | approved_at              | SELECT
+ car_admin_grp    | public       | rental              | approved_at              | UPDATE
+ car_admin_grp    | public       | rental              | created_at               | INSERT
+ car_admin_grp    | public       | rental              | created_at               | REFERENCES
+ car_admin_grp    | public       | rental              | created_at               | SELECT
+ car_admin_grp    | public       | rental              | created_at               | UPDATE
+ car_admin_grp    | public       | rental              | customer_id              | INSERT
+ car_admin_grp    | public       | rental              | customer_id              | REFERENCES
+ car_admin_grp    | public       | rental              | customer_id              | SELECT
+ car_admin_grp    | public       | rental              | customer_id              | UPDATE
+ car_admin_grp    | public       | rental              | estimated_cost           | INSERT
+ car_admin_grp    | public       | rental              | estimated_cost           | REFERENCES
+ car_admin_grp    | public       | rental              | estimated_cost           | SELECT
+ car_admin_grp    | public       | rental              | estimated_cost           | UPDATE
+ car_admin_grp    | public       | rental              | final_cost               | INSERT
+ car_admin_grp    | public       | rental              | final_cost               | REFERENCES
+ car_admin_grp    | public       | rental              | final_cost               | SELECT
+ car_admin_grp    | public       | rental              | final_cost               | UPDATE
+ car_admin_grp    | public       | rental              | late_fee                 | INSERT
+ car_admin_grp    | public       | rental              | late_fee                 | REFERENCES
+ car_admin_grp    | public       | rental              | late_fee                 | SELECT
+ car_admin_grp    | public       | rental              | late_fee                 | UPDATE
+ car_admin_grp    | public       | rental              | late_fee_status          | INSERT
+ car_admin_grp    | public       | rental              | late_fee_status          | REFERENCES
+ car_admin_grp    | public       | rental              | late_fee_status          | SELECT
+ car_admin_grp    | public       | rental              | late_fee_status          | UPDATE
+ car_admin_grp    | public       | rental              | pickup_datetime          | INSERT
+ car_admin_grp    | public       | rental              | pickup_datetime          | REFERENCES
+ car_admin_grp    | public       | rental              | pickup_datetime          | SELECT
+ car_admin_grp    | public       | rental              | pickup_datetime          | UPDATE
+ car_admin_grp    | public       | rental              | pickup_fee               | INSERT
+ car_admin_grp    | public       | rental              | pickup_fee               | REFERENCES
+ car_admin_grp    | public       | rental              | pickup_fee               | SELECT
+ car_admin_grp    | public       | rental              | pickup_fee               | UPDATE
+ car_admin_grp    | public       | rental              | pickup_location          | INSERT
+ car_admin_grp    | public       | rental              | pickup_location          | REFERENCES
+ car_admin_grp    | public       | rental              | pickup_location          | SELECT
+ car_admin_grp    | public       | rental              | pickup_location          | UPDATE
+ car_admin_grp    | public       | rental              | pickup_location_type     | INSERT
+ car_admin_grp    | public       | rental              | pickup_location_type     | REFERENCES
+ car_admin_grp    | public       | rental              | pickup_location_type     | SELECT
+ car_admin_grp    | public       | rental              | pickup_location_type     | UPDATE
+ car_admin_grp    | public       | rental              | rate_id                  | INSERT
+ car_admin_grp    | public       | rental              | rate_id                  | REFERENCES
+ car_admin_grp    | public       | rental              | rate_id                  | SELECT
+ car_admin_grp    | public       | rental              | rate_id                  | UPDATE
+ car_admin_grp    | public       | rental              | rental_id                | INSERT
+ car_admin_grp    | public       | rental              | rental_id                | REFERENCES
+ car_admin_grp    | public       | rental              | rental_id                | SELECT
+ car_admin_grp    | public       | rental              | rental_id                | UPDATE
+ car_admin_grp    | public       | rental              | rental_status            | INSERT
+ car_admin_grp    | public       | rental              | rental_status            | REFERENCES
+ car_admin_grp    | public       | rental              | rental_status            | SELECT
+ car_admin_grp    | public       | rental              | rental_status            | UPDATE
+ car_admin_grp    | public       | rental              | return_datetime          | INSERT
+ car_admin_grp    | public       | rental              | return_datetime          | REFERENCES
+ car_admin_grp    | public       | rental              | return_datetime          | SELECT
+ car_admin_grp    | public       | rental              | return_datetime          | UPDATE
+ car_admin_grp    | public       | rental              | return_fee               | INSERT
+ car_admin_grp    | public       | rental              | return_fee               | REFERENCES
+ car_admin_grp    | public       | rental              | return_fee               | SELECT
+ car_admin_grp    | public       | rental              | return_fee               | UPDATE
+ car_admin_grp    | public       | rental              | return_location          | INSERT
+ car_admin_grp    | public       | rental              | return_location          | REFERENCES
+ car_admin_grp    | public       | rental              | return_location          | SELECT
+ car_admin_grp    | public       | rental              | return_location          | UPDATE
+ car_admin_grp    | public       | rental              | return_location_type     | INSERT
+ car_admin_grp    | public       | rental              | return_location_type     | REFERENCES
+ car_admin_grp    | public       | rental              | return_location_type     | SELECT
+ car_admin_grp    | public       | rental              | return_location_type     | UPDATE
+ car_admin_grp    | public       | rental              | vehicle_id               | INSERT
+ car_admin_grp    | public       | rental              | vehicle_id               | REFERENCES
+ car_admin_grp    | public       | rental              | vehicle_id               | SELECT
+ car_admin_grp    | public       | rental              | vehicle_id               | UPDATE
+ car_admin_grp    | public       | rental_rate         | category_id              | INSERT
+ car_admin_grp    | public       | rental_rate         | category_id              | REFERENCES
+ car_admin_grp    | public       | rental_rate         | category_id              | SELECT
+ car_admin_grp    | public       | rental_rate         | category_id              | UPDATE
+ car_admin_grp    | public       | rental_rate         | rate_amount              | INSERT
+ car_admin_grp    | public       | rental_rate         | rate_amount              | REFERENCES
+ car_admin_grp    | public       | rental_rate         | rate_amount              | SELECT
+ car_admin_grp    | public       | rental_rate         | rate_amount              | UPDATE
+ car_admin_grp    | public       | rental_rate         | rate_id                  | INSERT
+ car_admin_grp    | public       | rental_rate         | rate_id                  | REFERENCES
+ car_admin_grp    | public       | rental_rate         | rate_id                  | SELECT
+ car_admin_grp    | public       | rental_rate         | rate_id                  | UPDATE
+ car_admin_grp    | public       | rental_rate         | rate_status              | INSERT
+ car_admin_grp    | public       | rental_rate         | rate_status              | REFERENCES
+ car_admin_grp    | public       | rental_rate         | rate_status              | SELECT
+ car_admin_grp    | public       | rental_rate         | rate_status              | UPDATE
+ car_admin_grp    | public       | rental_rate         | rental_period_type       | INSERT
+ car_admin_grp    | public       | rental_rate         | rental_period_type       | REFERENCES
+ car_admin_grp    | public       | rental_rate         | rental_period_type       | SELECT
+ car_admin_grp    | public       | rental_rate         | rental_period_type       | UPDATE
+ car_admin_grp    | public       | rental_terms        | accepted                 | INSERT
+ car_admin_grp    | public       | rental_terms        | accepted                 | REFERENCES
+ car_admin_grp    | public       | rental_terms        | accepted                 | SELECT
+ car_admin_grp    | public       | rental_terms        | accepted                 | UPDATE
+ car_admin_grp    | public       | rental_terms        | accepted_at              | INSERT
+ car_admin_grp    | public       | rental_terms        | accepted_at              | REFERENCES
+ car_admin_grp    | public       | rental_terms        | accepted_at              | SELECT
+ car_admin_grp    | public       | rental_terms        | accepted_at              | UPDATE
+ car_admin_grp    | public       | rental_terms        | rental_id                | INSERT
+ car_admin_grp    | public       | rental_terms        | rental_id                | REFERENCES
+ car_admin_grp    | public       | rental_terms        | rental_id                | SELECT
+ car_admin_grp    | public       | rental_terms        | rental_id                | UPDATE
+ car_admin_grp    | public       | rental_terms        | terms_id                 | INSERT
+ car_admin_grp    | public       | rental_terms        | terms_id                 | REFERENCES
+ car_admin_grp    | public       | rental_terms        | terms_id                 | SELECT
+ car_admin_grp    | public       | rental_terms        | terms_id                 | UPDATE
+ car_admin_grp    | public       | rental_terms        | terms_text               | INSERT
+ car_admin_grp    | public       | rental_terms        | terms_text               | REFERENCES
+ car_admin_grp    | public       | rental_terms        | terms_text               | SELECT
+ car_admin_grp    | public       | rental_terms        | terms_text               | UPDATE
+ car_admin_grp    | public       | rental_terms        | terms_version            | INSERT
+ car_admin_grp    | public       | rental_terms        | terms_version            | REFERENCES
+ car_admin_grp    | public       | rental_terms        | terms_version            | SELECT
+ car_admin_grp    | public       | rental_terms        | terms_version            | UPDATE
+ car_admin_grp    | public       | staff               | account_status           | INSERT
+ car_admin_grp    | public       | staff               | account_status           | REFERENCES
+ car_admin_grp    | public       | staff               | account_status           | SELECT
+ car_admin_grp    | public       | staff               | account_status           | UPDATE
+ car_admin_grp    | public       | staff               | created_at               | INSERT
+ car_admin_grp    | public       | staff               | created_at               | REFERENCES
+ car_admin_grp    | public       | staff               | created_at               | SELECT
+ car_admin_grp    | public       | staff               | created_at               | UPDATE
+ car_admin_grp    | public       | staff               | email                    | INSERT
+ car_admin_grp    | public       | staff               | email                    | REFERENCES
+ car_admin_grp    | public       | staff               | email                    | SELECT
+ car_admin_grp    | public       | staff               | email                    | UPDATE
+ car_admin_grp    | public       | staff               | first_name               | INSERT
+ car_admin_grp    | public       | staff               | first_name               | REFERENCES
+ car_admin_grp    | public       | staff               | first_name               | SELECT
+ car_admin_grp    | public       | staff               | first_name               | UPDATE
+ car_admin_grp    | public       | staff               | last_name                | INSERT
+ car_admin_grp    | public       | staff               | last_name                | REFERENCES
+ car_admin_grp    | public       | staff               | last_name                | SELECT
+ car_admin_grp    | public       | staff               | last_name                | UPDATE
+ car_admin_grp    | public       | staff               | password_hash            | INSERT
+ car_admin_grp    | public       | staff               | password_hash            | REFERENCES
+ car_admin_grp    | public       | staff               | password_hash            | SELECT
+ car_admin_grp    | public       | staff               | password_hash            | UPDATE
+ car_admin_grp    | public       | staff               | role                     | INSERT
+ car_admin_grp    | public       | staff               | role                     | REFERENCES
+ car_admin_grp    | public       | staff               | role                     | SELECT
+ car_admin_grp    | public       | staff               | role                     | UPDATE
+ car_admin_grp    | public       | staff               | staff_id                 | INSERT
+ car_admin_grp    | public       | staff               | staff_id                 | REFERENCES
+ car_admin_grp    | public       | staff               | staff_id                 | SELECT
+ car_admin_grp    | public       | staff               | staff_id                 | UPDATE
+ car_admin_grp    | public       | vehicle             | category_id              | INSERT
+ car_admin_grp    | public       | vehicle             | category_id              | REFERENCES
+ car_admin_grp    | public       | vehicle             | category_id              | SELECT
+ car_admin_grp    | public       | vehicle             | category_id              | UPDATE
+ car_admin_grp    | public       | vehicle             | color                    | INSERT
+ car_admin_grp    | public       | vehicle             | color                    | REFERENCES
+ car_admin_grp    | public       | vehicle             | color                    | SELECT
+ car_admin_grp    | public       | vehicle             | color                    | UPDATE
+ car_admin_grp    | public       | vehicle             | fuel_type                | INSERT
+ car_admin_grp    | public       | vehicle             | fuel_type                | REFERENCES
+ car_admin_grp    | public       | vehicle             | fuel_type                | SELECT
+ car_admin_grp    | public       | vehicle             | fuel_type                | UPDATE
+ car_admin_grp    | public       | vehicle             | make                     | INSERT
+ car_admin_grp    | public       | vehicle             | make                     | REFERENCES
+ car_admin_grp    | public       | vehicle             | make                     | SELECT
+ car_admin_grp    | public       | vehicle             | make                     | UPDATE
+ car_admin_grp    | public       | vehicle             | mileage                  | INSERT
+ car_admin_grp    | public       | vehicle             | mileage                  | REFERENCES
+ car_admin_grp    | public       | vehicle             | mileage                  | SELECT
+ car_admin_grp    | public       | vehicle             | mileage                  | UPDATE
+ car_admin_grp    | public       | vehicle             | model                    | INSERT
+ car_admin_grp    | public       | vehicle             | model                    | REFERENCES
+ car_admin_grp    | public       | vehicle             | model                    | SELECT
+ car_admin_grp    | public       | vehicle             | model                    | UPDATE
+ car_admin_grp    | public       | vehicle             | plate_number             | INSERT
+ car_admin_grp    | public       | vehicle             | plate_number             | REFERENCES
+ car_admin_grp    | public       | vehicle             | plate_number             | SELECT
+ car_admin_grp    | public       | vehicle             | plate_number             | UPDATE
+ car_admin_grp    | public       | vehicle             | seating_capacity         | INSERT
+ car_admin_grp    | public       | vehicle             | seating_capacity         | REFERENCES
+ car_admin_grp    | public       | vehicle             | seating_capacity         | SELECT
+ car_admin_grp    | public       | vehicle             | seating_capacity         | UPDATE
+ car_admin_grp    | public       | vehicle             | status                   | INSERT
+ car_admin_grp    | public       | vehicle             | status                   | REFERENCES
+ car_admin_grp    | public       | vehicle             | status                   | SELECT
+ car_admin_grp    | public       | vehicle             | status                   | UPDATE
+ car_admin_grp    | public       | vehicle             | unit_rate_adjustment     | INSERT
+ car_admin_grp    | public       | vehicle             | unit_rate_adjustment     | REFERENCES
+ car_admin_grp    | public       | vehicle             | unit_rate_adjustment     | SELECT
+ car_admin_grp    | public       | vehicle             | unit_rate_adjustment     | UPDATE
+ car_admin_grp    | public       | vehicle             | vehicle_id               | INSERT
+ car_admin_grp    | public       | vehicle             | vehicle_id               | REFERENCES
+ car_admin_grp    | public       | vehicle             | vehicle_id               | SELECT
+ car_admin_grp    | public       | vehicle             | vehicle_id               | UPDATE
+ car_admin_grp    | public       | vehicle             | year                     | INSERT
+ car_admin_grp    | public       | vehicle             | year                     | REFERENCES
+ car_admin_grp    | public       | vehicle             | year                     | SELECT
+ car_admin_grp    | public       | vehicle             | year                     | UPDATE
+ car_admin_grp    | public       | vehicle_category    | category_id              | INSERT
+ car_admin_grp    | public       | vehicle_category    | category_id              | REFERENCES
+ car_admin_grp    | public       | vehicle_category    | category_id              | SELECT
+ car_admin_grp    | public       | vehicle_category    | category_id              | UPDATE
+ car_admin_grp    | public       | vehicle_category    | category_name            | INSERT
+ car_admin_grp    | public       | vehicle_category    | category_name            | REFERENCES
+ car_admin_grp    | public       | vehicle_category    | category_name            | SELECT
+ car_admin_grp    | public       | vehicle_category    | category_name            | UPDATE
+ car_admin_grp    | public       | vehicle_category    | category_status          | INSERT
+ car_admin_grp    | public       | vehicle_category    | category_status          | REFERENCES
+ car_admin_grp    | public       | vehicle_category    | category_status          | SELECT
+ car_admin_grp    | public       | vehicle_category    | category_status          | UPDATE
+ car_admin_grp    | public       | vehicle_category    | description              | INSERT
+ car_admin_grp    | public       | vehicle_category    | description              | REFERENCES
+ car_admin_grp    | public       | vehicle_category    | description              | SELECT
+ car_admin_grp    | public       | vehicle_category    | description              | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | condition_notes          | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | condition_notes          | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | condition_notes          | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | condition_notes          | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | customer_notes           | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | customer_notes           | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | customer_notes           | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | customer_notes           | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | fuel_level               | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | fuel_level               | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | fuel_level               | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | fuel_level               | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | inspection_datetime      | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | inspection_datetime      | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | inspection_datetime      | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | inspection_datetime      | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | inspection_id            | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | inspection_id            | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | inspection_id            | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | inspection_id            | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | inspection_type          | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | inspection_type          | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | inspection_type          | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | inspection_type          | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | mileage                  | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | mileage                  | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | mileage                  | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | mileage                  | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_customer_id | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_customer_id | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_customer_id | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_customer_id | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_staff_id    | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_staff_id    | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_staff_id    | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | performed_by_staff_id    | UPDATE
+ car_admin_grp    | public       | vehicle_inspection  | rental_id                | INSERT
+ car_admin_grp    | public       | vehicle_inspection  | rental_id                | REFERENCES
+ car_admin_grp    | public       | vehicle_inspection  | rental_id                | SELECT
+ car_admin_grp    | public       | vehicle_inspection  | rental_id                | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | completed_date           | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | completed_date           | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | completed_date           | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | completed_date           | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | cost                     | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | cost                     | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | cost                     | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | cost                     | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | description              | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | description              | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | description              | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | description              | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_date         | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_date         | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_date         | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_date         | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_id           | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_id           | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_id           | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_id           | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_type         | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_type         | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_type         | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | maintenance_type         | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | notes                    | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | notes                    | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | notes                    | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | notes                    | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | status                   | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | status                   | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | status                   | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | status                   | UPDATE
+ car_admin_grp    | public       | vehicle_maintenance | vehicle_id               | INSERT
+ car_admin_grp    | public       | vehicle_maintenance | vehicle_id               | REFERENCES
+ car_admin_grp    | public       | vehicle_maintenance | vehicle_id               | SELECT
+ car_admin_grp    | public       | vehicle_maintenance | vehicle_id               | UPDATE
+ car_readonly_grp | public       | audit_log           | action_datetime          | SELECT
+ car_readonly_grp | public       | audit_log           | action_description       | SELECT
+ car_readonly_grp | public       | audit_log           | action_type              | SELECT
+ car_readonly_grp | public       | audit_log           | audit_id                 | SELECT
+ car_readonly_grp | public       | audit_log           | record_id                | SELECT
+ car_readonly_grp | public       | audit_log           | staff_id                 | SELECT
+ car_readonly_grp | public       | audit_log           | table_name               | SELECT
+ car_readonly_grp | public       | cancellation        | cancellation_id          | SELECT
+ car_readonly_grp | public       | cancellation        | cancellation_reason      | SELECT
+ car_readonly_grp | public       | cancellation        | cancelled_at             | SELECT
+ car_readonly_grp | public       | cancellation        | cancelled_by_customer_id | SELECT
+ car_readonly_grp | public       | cancellation        | cancelled_by_staff_id    | SELECT
+ car_readonly_grp | public       | cancellation        | processed_at             | SELECT
+ car_readonly_grp | public       | cancellation        | refund_amount            | SELECT
+ car_readonly_grp | public       | cancellation        | refund_eligible          | SELECT
+ car_readonly_grp | public       | cancellation        | refund_status            | SELECT
+ car_readonly_grp | public       | cancellation        | rental_id                | SELECT
+ car_readonly_grp | public       | customer            | account_status           | SELECT
+ car_readonly_grp | public       | customer            | created_at               | SELECT
+ car_readonly_grp | public       | customer            | customer_id              | SELECT
+ car_readonly_grp | public       | customer            | first_name               | SELECT
+ car_readonly_grp | public       | customer            | last_name                | SELECT
+ car_readonly_grp | public       | damage_fee          | amount                   | SELECT
+ car_readonly_grp | public       | damage_fee          | assessment_date          | SELECT
+ car_readonly_grp | public       | damage_fee          | damage_fee_id            | SELECT
+ car_readonly_grp | public       | damage_fee          | damage_id                | SELECT
+ car_readonly_grp | public       | damage_fee          | dispute_reason           | SELECT
+ car_readonly_grp | public       | damage_fee          | fee_status               | SELECT
+ car_readonly_grp | public       | damage_fee          | resolution_notes         | SELECT
+ car_readonly_grp | public       | damage_fee          | resolved_at              | SELECT
+ car_readonly_grp | public       | damage_incident     | damage_id                | SELECT
+ car_readonly_grp | public       | damage_incident     | damage_type              | SELECT
+ car_readonly_grp | public       | damage_incident     | description              | SELECT
+ car_readonly_grp | public       | damage_incident     | inspection_id            | SELECT
+ car_readonly_grp | public       | damage_incident     | location_on_vehicle      | SELECT
+ car_readonly_grp | public       | damage_incident     | reported_at              | SELECT
+ car_readonly_grp | public       | damage_incident     | resolved_at              | SELECT
+ car_readonly_grp | public       | damage_incident     | severity                 | SELECT
+ car_readonly_grp | public       | damage_incident     | status                   | SELECT
+ car_readonly_grp | public       | driver_license      | customer_id              | SELECT
+ car_readonly_grp | public       | driver_license      | expiration_date          | SELECT
+ car_readonly_grp | public       | driver_license      | issue_date               | SELECT
+ car_readonly_grp | public       | driver_license      | license_back_photo       | SELECT
+ car_readonly_grp | public       | driver_license      | license_front_photo      | SELECT
+ car_readonly_grp | public       | driver_license      | license_id               | SELECT
+ car_readonly_grp | public       | driver_license      | license_number           | SELECT
+ car_readonly_grp | public       | driver_license      | license_type             | SELECT
+ car_readonly_grp | public       | driver_license      | rejection_reason         | SELECT
+ car_readonly_grp | public       | driver_license      | verification_status      | SELECT
+ car_readonly_grp | public       | driver_license      | verified_at              | SELECT
+ car_readonly_grp | public       | driver_license      | verified_by_staff_id     | SELECT
+ car_readonly_grp | public       | inspection_item     | inspection_id            | SELECT
+ car_readonly_grp | public       | inspection_item     | item_condition           | SELECT
+ car_readonly_grp | public       | inspection_item     | item_id                  | SELECT
+ car_readonly_grp | public       | inspection_item     | item_name                | SELECT
+ car_readonly_grp | public       | inspection_item     | notes                    | SELECT
+ car_readonly_grp | public       | inspection_photo    | inspection_id            | SELECT
+ car_readonly_grp | public       | inspection_photo    | photo_description        | SELECT
+ car_readonly_grp | public       | inspection_photo    | photo_id                 | SELECT
+ car_readonly_grp | public       | inspection_photo    | photo_path               | SELECT
+ car_readonly_grp | public       | inspection_photo    | uploaded_at              | SELECT
+ car_readonly_grp | public       | inspection_photo    | uploaded_by_customer_id  | SELECT
+ car_readonly_grp | public       | inspection_photo    | uploaded_by_staff_id     | SELECT
+ car_readonly_grp | public       | payment             | amount                   | SELECT
+ car_readonly_grp | public       | payment             | damage_fee_id            | SELECT
+ car_readonly_grp | public       | payment             | payment_code             | SELECT
+ car_readonly_grp | public       | payment             | payment_date             | SELECT
+ car_readonly_grp | public       | payment             | payment_id               | SELECT
+ car_readonly_grp | public       | payment             | payment_method           | SELECT
+ car_readonly_grp | public       | payment             | payment_status           | SELECT
+ car_readonly_grp | public       | payment             | proof_path               | SELECT
+ car_readonly_grp | public       | payment             | receipt_number           | SELECT
+ car_readonly_grp | public       | payment             | received_by              | SELECT
+ car_readonly_grp | public       | payment             | reference_number         | SELECT
+ car_readonly_grp | public       | payment             | rental_id                | SELECT
+ car_readonly_grp | public       | rental              | actual_return_datetime   | SELECT
+ car_readonly_grp | public       | rental              | approved_at              | SELECT
+ car_readonly_grp | public       | rental              | created_at               | SELECT
+ car_readonly_grp | public       | rental              | customer_id              | SELECT
+ car_readonly_grp | public       | rental              | estimated_cost           | SELECT
+ car_readonly_grp | public       | rental              | final_cost               | SELECT
+ car_readonly_grp | public       | rental              | late_fee                 | SELECT
+ car_readonly_grp | public       | rental              | late_fee_status          | SELECT
+ car_readonly_grp | public       | rental              | pickup_datetime          | SELECT
+ car_readonly_grp | public       | rental              | pickup_fee               | SELECT
+ car_readonly_grp | public       | rental              | pickup_location          | SELECT
+ car_readonly_grp | public       | rental              | pickup_location_type     | SELECT
+ car_readonly_grp | public       | rental              | rate_id                  | SELECT
+ car_readonly_grp | public       | rental              | rental_id                | SELECT
+ car_readonly_grp | public       | rental              | rental_status            | SELECT
+ car_readonly_grp | public       | rental              | return_datetime          | SELECT
+ car_readonly_grp | public       | rental              | return_fee               | SELECT
+ car_readonly_grp | public       | rental              | return_location          | SELECT
+ car_readonly_grp | public       | rental              | return_location_type     | SELECT
+ car_readonly_grp | public       | rental              | vehicle_id               | SELECT
+ car_readonly_grp | public       | rental_rate         | category_id              | SELECT
+ car_readonly_grp | public       | rental_rate         | rate_amount              | SELECT
+ car_readonly_grp | public       | rental_rate         | rate_id                  | SELECT
+ car_readonly_grp | public       | rental_rate         | rate_status              | SELECT
+ car_readonly_grp | public       | rental_rate         | rental_period_type       | SELECT
+ car_readonly_grp | public       | rental_terms        | accepted                 | SELECT
+ car_readonly_grp | public       | rental_terms        | accepted_at              | SELECT
+ car_readonly_grp | public       | rental_terms        | rental_id                | SELECT
+ car_readonly_grp | public       | rental_terms        | terms_id                 | SELECT
+ car_readonly_grp | public       | rental_terms        | terms_text               | SELECT
+ car_readonly_grp | public       | rental_terms        | terms_version            | SELECT
+ car_readonly_grp | public       | staff               | account_status           | SELECT
+ car_readonly_grp | public       | staff               | created_at               | SELECT
+ car_readonly_grp | public       | staff               | first_name               | SELECT
+ car_readonly_grp | public       | staff               | last_name                | SELECT
+ car_readonly_grp | public       | staff               | role                     | SELECT
+ car_readonly_grp | public       | staff               | staff_id                 | SELECT
+ car_readonly_grp | public       | vehicle             | category_id              | SELECT
+ car_readonly_grp | public       | vehicle             | color                    | SELECT
+ car_readonly_grp | public       | vehicle             | fuel_type                | SELECT
+ car_readonly_grp | public       | vehicle             | make                     | SELECT
+ car_readonly_grp | public       | vehicle             | mileage                  | SELECT
+ car_readonly_grp | public       | vehicle             | model                    | SELECT
+ car_readonly_grp | public       | vehicle             | plate_number             | SELECT
+ car_readonly_grp | public       | vehicle             | seating_capacity         | SELECT
+ car_readonly_grp | public       | vehicle             | status                   | SELECT
+ car_readonly_grp | public       | vehicle             | unit_rate_adjustment     | SELECT
+ car_readonly_grp | public       | vehicle             | vehicle_id               | SELECT
+ car_readonly_grp | public       | vehicle             | year                     | SELECT
+ car_readonly_grp | public       | vehicle_category    | category_id              | SELECT
+ car_readonly_grp | public       | vehicle_category    | category_name            | SELECT
+ car_readonly_grp | public       | vehicle_category    | category_status          | SELECT
+ car_readonly_grp | public       | vehicle_category    | description              | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | condition_notes          | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | customer_notes           | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | fuel_level               | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | inspection_datetime      | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | inspection_id            | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | inspection_type          | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | mileage                  | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | performed_by_customer_id | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | performed_by_staff_id    | SELECT
+ car_readonly_grp | public       | vehicle_inspection  | rental_id                | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | completed_date           | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | cost                     | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | description              | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | maintenance_date         | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | maintenance_id           | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | maintenance_type         | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | notes                    | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | status                   | SELECT
+ car_readonly_grp | public       | vehicle_maintenance | vehicle_id               | SELECT
+ car_runtime_grp  | public       | audit_log           | action_datetime          | INSERT
+ car_runtime_grp  | public       | audit_log           | action_datetime          | SELECT
+ car_runtime_grp  | public       | audit_log           | action_description       | INSERT
+ car_runtime_grp  | public       | audit_log           | action_description       | SELECT
+ car_runtime_grp  | public       | audit_log           | action_type              | INSERT
+ car_runtime_grp  | public       | audit_log           | action_type              | SELECT
+ car_runtime_grp  | public       | audit_log           | audit_id                 | INSERT
+ car_runtime_grp  | public       | audit_log           | audit_id                 | SELECT
+ car_runtime_grp  | public       | audit_log           | record_id                | INSERT
+ car_runtime_grp  | public       | audit_log           | record_id                | SELECT
+ car_runtime_grp  | public       | audit_log           | staff_id                 | INSERT
+ car_runtime_grp  | public       | audit_log           | staff_id                 | SELECT
+ car_runtime_grp  | public       | audit_log           | table_name               | INSERT
+ car_runtime_grp  | public       | audit_log           | table_name               | SELECT
+ car_runtime_grp  | public       | cancellation        | cancellation_id          | INSERT
+ car_runtime_grp  | public       | cancellation        | cancellation_id          | SELECT
+ car_runtime_grp  | public       | cancellation        | cancellation_id          | UPDATE
+ car_runtime_grp  | public       | cancellation        | cancellation_reason      | INSERT
+ car_runtime_grp  | public       | cancellation        | cancellation_reason      | SELECT
+ car_runtime_grp  | public       | cancellation        | cancellation_reason      | UPDATE
+ car_runtime_grp  | public       | cancellation        | cancelled_at             | INSERT
+ car_runtime_grp  | public       | cancellation        | cancelled_at             | SELECT
+ car_runtime_grp  | public       | cancellation        | cancelled_at             | UPDATE
+ car_runtime_grp  | public       | cancellation        | cancelled_by_customer_id | INSERT
+ car_runtime_grp  | public       | cancellation        | cancelled_by_customer_id | SELECT
+ car_runtime_grp  | public       | cancellation        | cancelled_by_customer_id | UPDATE
+ car_runtime_grp  | public       | cancellation        | cancelled_by_staff_id    | INSERT
+ car_runtime_grp  | public       | cancellation        | cancelled_by_staff_id    | SELECT
+ car_runtime_grp  | public       | cancellation        | cancelled_by_staff_id    | UPDATE
+ car_runtime_grp  | public       | cancellation        | processed_at             | INSERT
+ car_runtime_grp  | public       | cancellation        | processed_at             | SELECT
+ car_runtime_grp  | public       | cancellation        | processed_at             | UPDATE
+ car_runtime_grp  | public       | cancellation        | refund_amount            | INSERT
+ car_runtime_grp  | public       | cancellation        | refund_amount            | SELECT
+ car_runtime_grp  | public       | cancellation        | refund_amount            | UPDATE
+ car_runtime_grp  | public       | cancellation        | refund_eligible          | INSERT
+ car_runtime_grp  | public       | cancellation        | refund_eligible          | SELECT
+ car_runtime_grp  | public       | cancellation        | refund_eligible          | UPDATE
+ car_runtime_grp  | public       | cancellation        | refund_status            | INSERT
+ car_runtime_grp  | public       | cancellation        | refund_status            | SELECT
+ car_runtime_grp  | public       | cancellation        | refund_status            | UPDATE
+ car_runtime_grp  | public       | cancellation        | rental_id                | INSERT
+ car_runtime_grp  | public       | cancellation        | rental_id                | SELECT
+ car_runtime_grp  | public       | cancellation        | rental_id                | UPDATE
+ car_runtime_grp  | public       | customer            | account_status           | INSERT
+ car_runtime_grp  | public       | customer            | account_status           | SELECT
+ car_runtime_grp  | public       | customer            | account_status           | UPDATE
+ car_runtime_grp  | public       | customer            | address                  | INSERT
+ car_runtime_grp  | public       | customer            | address                  | SELECT
+ car_runtime_grp  | public       | customer            | address                  | UPDATE
+ car_runtime_grp  | public       | customer            | created_at               | INSERT
+ car_runtime_grp  | public       | customer            | created_at               | SELECT
+ car_runtime_grp  | public       | customer            | created_at               | UPDATE
+ car_runtime_grp  | public       | customer            | customer_id              | INSERT
+ car_runtime_grp  | public       | customer            | customer_id              | SELECT
+ car_runtime_grp  | public       | customer            | customer_id              | UPDATE
+ car_runtime_grp  | public       | customer            | email                    | INSERT
+ car_runtime_grp  | public       | customer            | email                    | SELECT
+ car_runtime_grp  | public       | customer            | email                    | UPDATE
+ car_runtime_grp  | public       | customer            | first_name               | INSERT
+ car_runtime_grp  | public       | customer            | first_name               | SELECT
+ car_runtime_grp  | public       | customer            | first_name               | UPDATE
+ car_runtime_grp  | public       | customer            | last_name                | INSERT
+ car_runtime_grp  | public       | customer            | last_name                | SELECT
+ car_runtime_grp  | public       | customer            | last_name                | UPDATE
+ car_runtime_grp  | public       | customer            | password_hash            | INSERT
+ car_runtime_grp  | public       | customer            | password_hash            | SELECT
+ car_runtime_grp  | public       | customer            | password_hash            | UPDATE
+ car_runtime_grp  | public       | customer            | phone_number             | INSERT
+ car_runtime_grp  | public       | customer            | phone_number             | SELECT
+ car_runtime_grp  | public       | customer            | phone_number             | UPDATE
+ car_runtime_grp  | public       | damage_fee          | amount                   | INSERT
+ car_runtime_grp  | public       | damage_fee          | amount                   | SELECT
+ car_runtime_grp  | public       | damage_fee          | amount                   | UPDATE
+ car_runtime_grp  | public       | damage_fee          | assessment_date          | INSERT
+ car_runtime_grp  | public       | damage_fee          | assessment_date          | SELECT
+ car_runtime_grp  | public       | damage_fee          | assessment_date          | UPDATE
+ car_runtime_grp  | public       | damage_fee          | damage_fee_id            | INSERT
+ car_runtime_grp  | public       | damage_fee          | damage_fee_id            | SELECT
+ car_runtime_grp  | public       | damage_fee          | damage_fee_id            | UPDATE
+ car_runtime_grp  | public       | damage_fee          | damage_id                | INSERT
+ car_runtime_grp  | public       | damage_fee          | damage_id                | SELECT
+ car_runtime_grp  | public       | damage_fee          | damage_id                | UPDATE
+ car_runtime_grp  | public       | damage_fee          | dispute_reason           | INSERT
+ car_runtime_grp  | public       | damage_fee          | dispute_reason           | SELECT
+ car_runtime_grp  | public       | damage_fee          | dispute_reason           | UPDATE
+ car_runtime_grp  | public       | damage_fee          | fee_status               | INSERT
+ car_runtime_grp  | public       | damage_fee          | fee_status               | SELECT
+ car_runtime_grp  | public       | damage_fee          | fee_status               | UPDATE
+ car_runtime_grp  | public       | damage_fee          | resolution_notes         | INSERT
+ car_runtime_grp  | public       | damage_fee          | resolution_notes         | SELECT
+ car_runtime_grp  | public       | damage_fee          | resolution_notes         | UPDATE
+ car_runtime_grp  | public       | damage_fee          | resolved_at              | INSERT
+ car_runtime_grp  | public       | damage_fee          | resolved_at              | SELECT
+ car_runtime_grp  | public       | damage_fee          | resolved_at              | UPDATE
+ car_runtime_grp  | public       | damage_incident     | damage_id                | INSERT
+ car_runtime_grp  | public       | damage_incident     | damage_id                | SELECT
+ car_runtime_grp  | public       | damage_incident     | damage_id                | UPDATE
+ car_runtime_grp  | public       | damage_incident     | damage_type              | INSERT
+ car_runtime_grp  | public       | damage_incident     | damage_type              | SELECT
+ car_runtime_grp  | public       | damage_incident     | damage_type              | UPDATE
+ car_runtime_grp  | public       | damage_incident     | description              | INSERT
+ car_runtime_grp  | public       | damage_incident     | description              | SELECT
+ car_runtime_grp  | public       | damage_incident     | description              | UPDATE
+ car_runtime_grp  | public       | damage_incident     | inspection_id            | INSERT
+ car_runtime_grp  | public       | damage_incident     | inspection_id            | SELECT
+ car_runtime_grp  | public       | damage_incident     | inspection_id            | UPDATE
+ car_runtime_grp  | public       | damage_incident     | location_on_vehicle      | INSERT
+ car_runtime_grp  | public       | damage_incident     | location_on_vehicle      | SELECT
+ car_runtime_grp  | public       | damage_incident     | location_on_vehicle      | UPDATE
+ car_runtime_grp  | public       | damage_incident     | reported_at              | INSERT
+ car_runtime_grp  | public       | damage_incident     | reported_at              | SELECT
+ car_runtime_grp  | public       | damage_incident     | reported_at              | UPDATE
+ car_runtime_grp  | public       | damage_incident     | resolved_at              | INSERT
+ car_runtime_grp  | public       | damage_incident     | resolved_at              | SELECT
+ car_runtime_grp  | public       | damage_incident     | resolved_at              | UPDATE
+ car_runtime_grp  | public       | damage_incident     | severity                 | INSERT
+ car_runtime_grp  | public       | damage_incident     | severity                 | SELECT
+ car_runtime_grp  | public       | damage_incident     | severity                 | UPDATE
+ car_runtime_grp  | public       | damage_incident     | status                   | INSERT
+ car_runtime_grp  | public       | damage_incident     | status                   | SELECT
+ car_runtime_grp  | public       | damage_incident     | status                   | UPDATE
+ car_runtime_grp  | public       | driver_license      | customer_id              | INSERT
+ car_runtime_grp  | public       | driver_license      | customer_id              | SELECT
+ car_runtime_grp  | public       | driver_license      | customer_id              | UPDATE
+ car_runtime_grp  | public       | driver_license      | expiration_date          | INSERT
+ car_runtime_grp  | public       | driver_license      | expiration_date          | SELECT
+ car_runtime_grp  | public       | driver_license      | expiration_date          | UPDATE
+ car_runtime_grp  | public       | driver_license      | issue_date               | INSERT
+ car_runtime_grp  | public       | driver_license      | issue_date               | SELECT
+ car_runtime_grp  | public       | driver_license      | issue_date               | UPDATE
+ car_runtime_grp  | public       | driver_license      | license_back_photo       | INSERT
+ car_runtime_grp  | public       | driver_license      | license_back_photo       | SELECT
+ car_runtime_grp  | public       | driver_license      | license_back_photo       | UPDATE
+ car_runtime_grp  | public       | driver_license      | license_front_photo      | INSERT
+ car_runtime_grp  | public       | driver_license      | license_front_photo      | SELECT
+ car_runtime_grp  | public       | driver_license      | license_front_photo      | UPDATE
+ car_runtime_grp  | public       | driver_license      | license_id               | INSERT
+ car_runtime_grp  | public       | driver_license      | license_id               | SELECT
+ car_runtime_grp  | public       | driver_license      | license_id               | UPDATE
+ car_runtime_grp  | public       | driver_license      | license_number           | INSERT
+ car_runtime_grp  | public       | driver_license      | license_number           | SELECT
+ car_runtime_grp  | public       | driver_license      | license_number           | UPDATE
+ car_runtime_grp  | public       | driver_license      | license_type             | INSERT
+ car_runtime_grp  | public       | driver_license      | license_type             | SELECT
+ car_runtime_grp  | public       | driver_license      | license_type             | UPDATE
+ car_runtime_grp  | public       | driver_license      | rejection_reason         | INSERT
+ car_runtime_grp  | public       | driver_license      | rejection_reason         | SELECT
+ car_runtime_grp  | public       | driver_license      | rejection_reason         | UPDATE
+ car_runtime_grp  | public       | driver_license      | verification_status      | INSERT
+ car_runtime_grp  | public       | driver_license      | verification_status      | SELECT
+ car_runtime_grp  | public       | driver_license      | verification_status      | UPDATE
+ car_runtime_grp  | public       | driver_license      | verified_at              | INSERT
+ car_runtime_grp  | public       | driver_license      | verified_at              | SELECT
+ car_runtime_grp  | public       | driver_license      | verified_at              | UPDATE
+ car_runtime_grp  | public       | driver_license      | verified_by_staff_id     | INSERT
+ car_runtime_grp  | public       | driver_license      | verified_by_staff_id     | SELECT
+ car_runtime_grp  | public       | driver_license      | verified_by_staff_id     | UPDATE
+ car_runtime_grp  | public       | inspection_item     | inspection_id            | INSERT
+ car_runtime_grp  | public       | inspection_item     | inspection_id            | SELECT
+ car_runtime_grp  | public       | inspection_item     | inspection_id            | UPDATE
+ car_runtime_grp  | public       | inspection_item     | item_condition           | INSERT
+ car_runtime_grp  | public       | inspection_item     | item_condition           | SELECT
+ car_runtime_grp  | public       | inspection_item     | item_condition           | UPDATE
+ car_runtime_grp  | public       | inspection_item     | item_id                  | INSERT
+ car_runtime_grp  | public       | inspection_item     | item_id                  | SELECT
+ car_runtime_grp  | public       | inspection_item     | item_id                  | UPDATE
+ car_runtime_grp  | public       | inspection_item     | item_name                | INSERT
+ car_runtime_grp  | public       | inspection_item     | item_name                | SELECT
+ car_runtime_grp  | public       | inspection_item     | item_name                | UPDATE
+ car_runtime_grp  | public       | inspection_item     | notes                    | INSERT
+ car_runtime_grp  | public       | inspection_item     | notes                    | SELECT
+ car_runtime_grp  | public       | inspection_item     | notes                    | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | inspection_id            | INSERT
+ car_runtime_grp  | public       | inspection_photo    | inspection_id            | SELECT
+ car_runtime_grp  | public       | inspection_photo    | inspection_id            | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | photo_description        | INSERT
+ car_runtime_grp  | public       | inspection_photo    | photo_description        | SELECT
+ car_runtime_grp  | public       | inspection_photo    | photo_description        | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | photo_id                 | INSERT
+ car_runtime_grp  | public       | inspection_photo    | photo_id                 | SELECT
+ car_runtime_grp  | public       | inspection_photo    | photo_id                 | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | photo_path               | INSERT
+ car_runtime_grp  | public       | inspection_photo    | photo_path               | SELECT
+ car_runtime_grp  | public       | inspection_photo    | photo_path               | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | uploaded_at              | INSERT
+ car_runtime_grp  | public       | inspection_photo    | uploaded_at              | SELECT
+ car_runtime_grp  | public       | inspection_photo    | uploaded_at              | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | uploaded_by_customer_id  | INSERT
+ car_runtime_grp  | public       | inspection_photo    | uploaded_by_customer_id  | SELECT
+ car_runtime_grp  | public       | inspection_photo    | uploaded_by_customer_id  | UPDATE
+ car_runtime_grp  | public       | inspection_photo    | uploaded_by_staff_id     | INSERT
+ car_runtime_grp  | public       | inspection_photo    | uploaded_by_staff_id     | SELECT
+ car_runtime_grp  | public       | inspection_photo    | uploaded_by_staff_id     | UPDATE
+ car_runtime_grp  | public       | payment             | amount                   | INSERT
+ car_runtime_grp  | public       | payment             | amount                   | SELECT
+ car_runtime_grp  | public       | payment             | amount                   | UPDATE
+ car_runtime_grp  | public       | payment             | damage_fee_id            | INSERT
+ car_runtime_grp  | public       | payment             | damage_fee_id            | SELECT
+ car_runtime_grp  | public       | payment             | damage_fee_id            | UPDATE
+ car_runtime_grp  | public       | payment             | payment_code             | INSERT
+ car_runtime_grp  | public       | payment             | payment_code             | SELECT
+ car_runtime_grp  | public       | payment             | payment_code             | UPDATE
+ car_runtime_grp  | public       | payment             | payment_date             | INSERT
+ car_runtime_grp  | public       | payment             | payment_date             | SELECT
+ car_runtime_grp  | public       | payment             | payment_date             | UPDATE
+ car_runtime_grp  | public       | payment             | payment_id               | INSERT
+ car_runtime_grp  | public       | payment             | payment_id               | SELECT
+ car_runtime_grp  | public       | payment             | payment_id               | UPDATE
+ car_runtime_grp  | public       | payment             | payment_method           | INSERT
+ car_runtime_grp  | public       | payment             | payment_method           | SELECT
+ car_runtime_grp  | public       | payment             | payment_method           | UPDATE
+ car_runtime_grp  | public       | payment             | payment_status           | INSERT
+ car_runtime_grp  | public       | payment             | payment_status           | SELECT
+ car_runtime_grp  | public       | payment             | payment_status           | UPDATE
+ car_runtime_grp  | public       | payment             | proof_path               | INSERT
+ car_runtime_grp  | public       | payment             | proof_path               | SELECT
+ car_runtime_grp  | public       | payment             | proof_path               | UPDATE
+ car_runtime_grp  | public       | payment             | receipt_number           | INSERT
+ car_runtime_grp  | public       | payment             | receipt_number           | SELECT
+ car_runtime_grp  | public       | payment             | receipt_number           | UPDATE
+ car_runtime_grp  | public       | payment             | received_by              | INSERT
+ car_runtime_grp  | public       | payment             | received_by              | SELECT
+ car_runtime_grp  | public       | payment             | received_by              | UPDATE
+ car_runtime_grp  | public       | payment             | reference_number         | INSERT
+ car_runtime_grp  | public       | payment             | reference_number         | SELECT
+ car_runtime_grp  | public       | payment             | reference_number         | UPDATE
+ car_runtime_grp  | public       | payment             | rental_id                | INSERT
+ car_runtime_grp  | public       | payment             | rental_id                | SELECT
+ car_runtime_grp  | public       | payment             | rental_id                | UPDATE
+ car_runtime_grp  | public       | rental              | actual_return_datetime   | INSERT
+ car_runtime_grp  | public       | rental              | actual_return_datetime   | SELECT
+ car_runtime_grp  | public       | rental              | actual_return_datetime   | UPDATE
+ car_runtime_grp  | public       | rental              | approved_at              | INSERT
+ car_runtime_grp  | public       | rental              | approved_at              | SELECT
+ car_runtime_grp  | public       | rental              | approved_at              | UPDATE
+ car_runtime_grp  | public       | rental              | created_at               | INSERT
+ car_runtime_grp  | public       | rental              | created_at               | SELECT
+ car_runtime_grp  | public       | rental              | created_at               | UPDATE
+ car_runtime_grp  | public       | rental              | customer_id              | INSERT
+ car_runtime_grp  | public       | rental              | customer_id              | SELECT
+ car_runtime_grp  | public       | rental              | customer_id              | UPDATE
+ car_runtime_grp  | public       | rental              | estimated_cost           | INSERT
+ car_runtime_grp  | public       | rental              | estimated_cost           | SELECT
+ car_runtime_grp  | public       | rental              | estimated_cost           | UPDATE
+ car_runtime_grp  | public       | rental              | final_cost               | INSERT
+ car_runtime_grp  | public       | rental              | final_cost               | SELECT
+ car_runtime_grp  | public       | rental              | final_cost               | UPDATE
+ car_runtime_grp  | public       | rental              | late_fee                 | INSERT
+ car_runtime_grp  | public       | rental              | late_fee                 | SELECT
+ car_runtime_grp  | public       | rental              | late_fee                 | UPDATE
+ car_runtime_grp  | public       | rental              | late_fee_status          | INSERT
+ car_runtime_grp  | public       | rental              | late_fee_status          | SELECT
+ car_runtime_grp  | public       | rental              | late_fee_status          | UPDATE
+ car_runtime_grp  | public       | rental              | pickup_datetime          | INSERT
+ car_runtime_grp  | public       | rental              | pickup_datetime          | SELECT
+ car_runtime_grp  | public       | rental              | pickup_datetime          | UPDATE
+ car_runtime_grp  | public       | rental              | pickup_fee               | INSERT
+ car_runtime_grp  | public       | rental              | pickup_fee               | SELECT
+ car_runtime_grp  | public       | rental              | pickup_fee               | UPDATE
+ car_runtime_grp  | public       | rental              | pickup_location          | INSERT
+ car_runtime_grp  | public       | rental              | pickup_location          | SELECT
+ car_runtime_grp  | public       | rental              | pickup_location          | UPDATE
+ car_runtime_grp  | public       | rental              | pickup_location_type     | INSERT
+ car_runtime_grp  | public       | rental              | pickup_location_type     | SELECT
+ car_runtime_grp  | public       | rental              | pickup_location_type     | UPDATE
+ car_runtime_grp  | public       | rental              | rate_id                  | INSERT
+ car_runtime_grp  | public       | rental              | rate_id                  | SELECT
+ car_runtime_grp  | public       | rental              | rate_id                  | UPDATE
+ car_runtime_grp  | public       | rental              | rental_id                | INSERT
+ car_runtime_grp  | public       | rental              | rental_id                | SELECT
+ car_runtime_grp  | public       | rental              | rental_id                | UPDATE
+ car_runtime_grp  | public       | rental              | rental_status            | INSERT
+ car_runtime_grp  | public       | rental              | rental_status            | SELECT
+ car_runtime_grp  | public       | rental              | rental_status            | UPDATE
+ car_runtime_grp  | public       | rental              | return_datetime          | INSERT
+ car_runtime_grp  | public       | rental              | return_datetime          | SELECT
+ car_runtime_grp  | public       | rental              | return_datetime          | UPDATE
+ car_runtime_grp  | public       | rental              | return_fee               | INSERT
+ car_runtime_grp  | public       | rental              | return_fee               | SELECT
+ car_runtime_grp  | public       | rental              | return_fee               | UPDATE
+ car_runtime_grp  | public       | rental              | return_location          | INSERT
+ car_runtime_grp  | public       | rental              | return_location          | SELECT
+ car_runtime_grp  | public       | rental              | return_location          | UPDATE
+ car_runtime_grp  | public       | rental              | return_location_type     | INSERT
+ car_runtime_grp  | public       | rental              | return_location_type     | SELECT
+ car_runtime_grp  | public       | rental              | return_location_type     | UPDATE
+ car_runtime_grp  | public       | rental              | vehicle_id               | INSERT
+ car_runtime_grp  | public       | rental              | vehicle_id               | SELECT
+ car_runtime_grp  | public       | rental              | vehicle_id               | UPDATE
+ car_runtime_grp  | public       | rental_rate         | category_id              | INSERT
+ car_runtime_grp  | public       | rental_rate         | category_id              | SELECT
+ car_runtime_grp  | public       | rental_rate         | category_id              | UPDATE
+ car_runtime_grp  | public       | rental_rate         | rate_amount              | INSERT
+ car_runtime_grp  | public       | rental_rate         | rate_amount              | SELECT
+ car_runtime_grp  | public       | rental_rate         | rate_amount              | UPDATE
+ car_runtime_grp  | public       | rental_rate         | rate_id                  | INSERT
+ car_runtime_grp  | public       | rental_rate         | rate_id                  | SELECT
+ car_runtime_grp  | public       | rental_rate         | rate_id                  | UPDATE
+ car_runtime_grp  | public       | rental_rate         | rate_status              | INSERT
+ car_runtime_grp  | public       | rental_rate         | rate_status              | SELECT
+ car_runtime_grp  | public       | rental_rate         | rate_status              | UPDATE
+ car_runtime_grp  | public       | rental_rate         | rental_period_type       | INSERT
+ car_runtime_grp  | public       | rental_rate         | rental_period_type       | SELECT
+ car_runtime_grp  | public       | rental_rate         | rental_period_type       | UPDATE
+ car_runtime_grp  | public       | rental_terms        | accepted                 | INSERT
+ car_runtime_grp  | public       | rental_terms        | accepted                 | SELECT
+ car_runtime_grp  | public       | rental_terms        | accepted                 | UPDATE
+ car_runtime_grp  | public       | rental_terms        | accepted_at              | INSERT
+ car_runtime_grp  | public       | rental_terms        | accepted_at              | SELECT
+ car_runtime_grp  | public       | rental_terms        | accepted_at              | UPDATE
+ car_runtime_grp  | public       | rental_terms        | rental_id                | INSERT
+ car_runtime_grp  | public       | rental_terms        | rental_id                | SELECT
+ car_runtime_grp  | public       | rental_terms        | rental_id                | UPDATE
+ car_runtime_grp  | public       | rental_terms        | terms_id                 | INSERT
+ car_runtime_grp  | public       | rental_terms        | terms_id                 | SELECT
+ car_runtime_grp  | public       | rental_terms        | terms_id                 | UPDATE
+ car_runtime_grp  | public       | rental_terms        | terms_text               | INSERT
+ car_runtime_grp  | public       | rental_terms        | terms_text               | SELECT
+ car_runtime_grp  | public       | rental_terms        | terms_text               | UPDATE
+ car_runtime_grp  | public       | rental_terms        | terms_version            | INSERT
+ car_runtime_grp  | public       | rental_terms        | terms_version            | SELECT
+ car_runtime_grp  | public       | rental_terms        | terms_version            | UPDATE
+ car_runtime_grp  | public       | staff               | account_status           | INSERT
+ car_runtime_grp  | public       | staff               | account_status           | SELECT
+ car_runtime_grp  | public       | staff               | account_status           | UPDATE
+ car_runtime_grp  | public       | staff               | created_at               | INSERT
+ car_runtime_grp  | public       | staff               | created_at               | SELECT
+ car_runtime_grp  | public       | staff               | created_at               | UPDATE
+ car_runtime_grp  | public       | staff               | email                    | INSERT
+ car_runtime_grp  | public       | staff               | email                    | SELECT
+ car_runtime_grp  | public       | staff               | email                    | UPDATE
+ car_runtime_grp  | public       | staff               | first_name               | INSERT
+ car_runtime_grp  | public       | staff               | first_name               | SELECT
+ car_runtime_grp  | public       | staff               | first_name               | UPDATE
+ car_runtime_grp  | public       | staff               | last_name                | INSERT
+ car_runtime_grp  | public       | staff               | last_name                | SELECT
+ car_runtime_grp  | public       | staff               | last_name                | UPDATE
+ car_runtime_grp  | public       | staff               | password_hash            | INSERT
+ car_runtime_grp  | public       | staff               | password_hash            | SELECT
+ car_runtime_grp  | public       | staff               | password_hash            | UPDATE
+ car_runtime_grp  | public       | staff               | role                     | INSERT
+ car_runtime_grp  | public       | staff               | role                     | SELECT
+ car_runtime_grp  | public       | staff               | role                     | UPDATE
+ car_runtime_grp  | public       | staff               | staff_id                 | INSERT
+ car_runtime_grp  | public       | staff               | staff_id                 | SELECT
+ car_runtime_grp  | public       | staff               | staff_id                 | UPDATE
+ car_runtime_grp  | public       | vehicle             | category_id              | INSERT
+ car_runtime_grp  | public       | vehicle             | category_id              | SELECT
+ car_runtime_grp  | public       | vehicle             | category_id              | UPDATE
+ car_runtime_grp  | public       | vehicle             | color                    | INSERT
+ car_runtime_grp  | public       | vehicle             | color                    | SELECT
+ car_runtime_grp  | public       | vehicle             | color                    | UPDATE
+ car_runtime_grp  | public       | vehicle             | fuel_type                | INSERT
+ car_runtime_grp  | public       | vehicle             | fuel_type                | SELECT
+ car_runtime_grp  | public       | vehicle             | fuel_type                | UPDATE
+ car_runtime_grp  | public       | vehicle             | make                     | INSERT
+ car_runtime_grp  | public       | vehicle             | make                     | SELECT
+ car_runtime_grp  | public       | vehicle             | make                     | UPDATE
+ car_runtime_grp  | public       | vehicle             | mileage                  | INSERT
+ car_runtime_grp  | public       | vehicle             | mileage                  | SELECT
+ car_runtime_grp  | public       | vehicle             | mileage                  | UPDATE
+ car_runtime_grp  | public       | vehicle             | model                    | INSERT
+ car_runtime_grp  | public       | vehicle             | model                    | SELECT
+ car_runtime_grp  | public       | vehicle             | model                    | UPDATE
+ car_runtime_grp  | public       | vehicle             | plate_number             | INSERT
+ car_runtime_grp  | public       | vehicle             | plate_number             | SELECT
+ car_runtime_grp  | public       | vehicle             | plate_number             | UPDATE
+ car_runtime_grp  | public       | vehicle             | seating_capacity         | INSERT
+ car_runtime_grp  | public       | vehicle             | seating_capacity         | SELECT
+ car_runtime_grp  | public       | vehicle             | seating_capacity         | UPDATE
+ car_runtime_grp  | public       | vehicle             | status                   | INSERT
+ car_runtime_grp  | public       | vehicle             | status                   | SELECT
+ car_runtime_grp  | public       | vehicle             | status                   | UPDATE
+ car_runtime_grp  | public       | vehicle             | unit_rate_adjustment     | INSERT
+ car_runtime_grp  | public       | vehicle             | unit_rate_adjustment     | SELECT
+ car_runtime_grp  | public       | vehicle             | unit_rate_adjustment     | UPDATE
+ car_runtime_grp  | public       | vehicle             | vehicle_id               | INSERT
+ car_runtime_grp  | public       | vehicle             | vehicle_id               | SELECT
+ car_runtime_grp  | public       | vehicle             | vehicle_id               | UPDATE
+ car_runtime_grp  | public       | vehicle             | year                     | INSERT
+ car_runtime_grp  | public       | vehicle             | year                     | SELECT
+ car_runtime_grp  | public       | vehicle             | year                     | UPDATE
+ car_runtime_grp  | public       | vehicle_category    | category_id              | INSERT
+ car_runtime_grp  | public       | vehicle_category    | category_id              | SELECT
+ car_runtime_grp  | public       | vehicle_category    | category_id              | UPDATE
+ car_runtime_grp  | public       | vehicle_category    | category_name            | INSERT
+ car_runtime_grp  | public       | vehicle_category    | category_name            | SELECT
+ car_runtime_grp  | public       | vehicle_category    | category_name            | UPDATE
+ car_runtime_grp  | public       | vehicle_category    | category_status          | INSERT
+ car_runtime_grp  | public       | vehicle_category    | category_status          | SELECT
+ car_runtime_grp  | public       | vehicle_category    | category_status          | UPDATE
+ car_runtime_grp  | public       | vehicle_category    | description              | INSERT
+ car_runtime_grp  | public       | vehicle_category    | description              | SELECT
+ car_runtime_grp  | public       | vehicle_category    | description              | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | condition_notes          | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | condition_notes          | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | condition_notes          | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | customer_notes           | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | customer_notes           | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | customer_notes           | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | fuel_level               | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | fuel_level               | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | fuel_level               | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_datetime      | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_datetime      | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_datetime      | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_id            | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_id            | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_id            | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_type          | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_type          | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | inspection_type          | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | mileage                  | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | mileage                  | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | mileage                  | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | performed_by_customer_id | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | performed_by_customer_id | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | performed_by_customer_id | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | performed_by_staff_id    | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | performed_by_staff_id    | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | performed_by_staff_id    | UPDATE
+ car_runtime_grp  | public       | vehicle_inspection  | rental_id                | INSERT
+ car_runtime_grp  | public       | vehicle_inspection  | rental_id                | SELECT
+ car_runtime_grp  | public       | vehicle_inspection  | rental_id                | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | completed_date           | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | completed_date           | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | completed_date           | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | cost                     | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | cost                     | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | cost                     | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | description              | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | description              | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | description              | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_date         | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_date         | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_date         | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_id           | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_id           | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_id           | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_type         | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_type         | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | maintenance_type         | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | notes                    | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | notes                    | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | notes                    | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | status                   | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | status                   | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | status                   | UPDATE
+ car_runtime_grp  | public       | vehicle_maintenance | vehicle_id               | INSERT
+ car_runtime_grp  | public       | vehicle_maintenance | vehicle_id               | SELECT
+ car_runtime_grp  | public       | vehicle_maintenance | vehicle_id               | UPDATE
+(1211 rows)
+
+

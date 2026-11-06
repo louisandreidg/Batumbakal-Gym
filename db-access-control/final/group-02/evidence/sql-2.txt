@@ -1,0 +1,14 @@
+\set VERBOSITY verbose
+BEGIN;
+BEGIN
+SET LOCAL search_path=school_event_management_db,public;
+SET
+SELECT count(*) FROM user_account;
+ count 
+-------
+     3
+(1 row)
+
+ROLLBACK;
+ROLLBACK
+

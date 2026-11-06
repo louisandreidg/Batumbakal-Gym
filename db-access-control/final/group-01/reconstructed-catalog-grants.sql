@@ -1,0 +1,59 @@
+-- Reconstructed from PostgreSQL catalogs on 2026-11-06; NOT an original execution transcript.
+-- Fresh dedicated test environment only, after the original schema/seed. Existing roles cause errors; inspect instead of overwriting.
+-- Assign LOGIN passwords securely using psql password prompts; no password is embedded.
+-- Ownership, future-object defaults, functions and connection policy require separate review. This is an ACL snapshot, not a complete security installer.
+CREATE ROLE dropboxed_app LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE;
+GRANT TEMPORARY ON DATABASE dropboxed_db TO PUBLIC;
+GRANT CONNECT ON DATABASE dropboxed_db TO PUBLIC;
+GRANT CONNECT ON DATABASE dropboxed_db TO dropboxed_app;
+GRANT USAGE ON SCHEMA public TO PUBLIC;
+GRANT USAGE ON SCHEMA dropboxed TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.attachments TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.complaint_assignments TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.complaint_categories TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.complaints TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.locations TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.staff TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.status_logs TO dropboxed_app;
+GRANT DELETE ON TABLE dropboxed.users TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.attachments TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.complaint_assignments TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.complaint_categories TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.complaints TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.locations TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.staff TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.status_logs TO dropboxed_app;
+GRANT INSERT ON TABLE dropboxed.users TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.attachments TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.complaint_assignments TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.complaint_categories TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.complaints TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.locations TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.staff TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.status_logs TO dropboxed_app;
+GRANT SELECT ON TABLE dropboxed.users TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.attachments TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.complaint_assignments TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.complaint_categories TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.complaints TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.locations TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.staff TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.status_logs TO dropboxed_app;
+GRANT UPDATE ON TABLE dropboxed.users TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.attachments_attachment_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.complaint_assignments_assignment_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.complaint_categories_category_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.complaints_complaint_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.locations_location_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.staff_staff_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.status_logs_status_log_id_seq TO dropboxed_app;
+GRANT SELECT ON SEQUENCE dropboxed.users_user_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.attachments_attachment_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.complaint_assignments_assignment_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.complaint_categories_category_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.complaints_complaint_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.locations_location_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.staff_staff_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.status_logs_status_log_id_seq TO dropboxed_app;
+GRANT USAGE ON SEQUENCE dropboxed.users_user_id_seq TO dropboxed_app;
+

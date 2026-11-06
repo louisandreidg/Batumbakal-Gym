@@ -1,0 +1,8 @@
+# BEGIN Activity4 UniSync - localhost only
+local grp10_unisyncdb unisync_app,unisync_dba,unisync_auditor scram-sha-256
+host grp10_unisyncdb unisync_app,unisync_dba,unisync_auditor 127.0.0.1/32 scram-sha-256
+host grp10_unisyncdb unisync_app,unisync_dba,unisync_auditor ::1/128 scram-sha-256
+local all unisync_app,unisync_dba,unisync_auditor reject
+host all unisync_app,unisync_dba,unisync_auditor 0.0.0.0/0 reject
+host all unisync_app,unisync_dba,unisync_auditor ::/0 reject
+# END Activity4 UniSync

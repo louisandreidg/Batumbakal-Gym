@@ -1,0 +1,17 @@
+[
+  {
+    "operation": "Create test vehicle",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "operation": "Update test vehicle",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "operation": "Delete unused test vehicle",
+    "status": 200,
+    "passed": true
+  }
+]

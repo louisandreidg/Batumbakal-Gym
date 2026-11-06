@@ -1,0 +1,468 @@
+ current_database  | current_user |                                 version                                 
+-------------------+--------------+-------------------------------------------------------------------------
+ grp07_applicantdb | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |       tablename       | tableowner  
+------------+-----------------------+-------------
+ public     | applicant             | grp07_owner
+ public     | applicant_requirement | grp07_owner
+ public     | application           | grp07_owner
+ public     | application_status    | grp07_owner
+ public     | department            | grp07_owner
+ public     | interview             | grp07_owner
+ public     | position              | grp07_owner
+ public     | requirement           | grp07_owner
+(8 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema |          sequence_name           
+-----------------+----------------------------------
+ public          | applicant_applicant_id_seq
+ public          | application_application_id_seq
+ public          | application_status_status_id_seq
+ public          | department_department_id_seq
+ public          | interview_interview_id_seq
+ public          | position_position_id_seq
+ public          | requirement_requirement_id_seq
+(7 rows)
+
+      rolname       | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+--------------------+-------------+----------+-------------+---------------
+ grp07_app          | t           | f        | f           | f
+ grp07_owner        | t           | f        | f           | f
+ grp07_readonly     | t           | f        | f           | f
+ grp07_readonly_grp | f           | f        | f           | f
+ grp07_runtime_grp  | f           | f        | f           | f
+(5 rows)
+
+     member     |     group_role     
+----------------+--------------------
+ grp07_app      | grp07_runtime_grp
+ grp07_readonly | grp07_readonly_grp
+(2 rows)
+
+      datname      |    owner    |                                             datacl                                             
+-------------------+-------------+------------------------------------------------------------------------------------------------
+ grp07_applicantdb | grp07_owner | {grp07_owner=CTc/grp07_owner,grp07_runtime_grp=c/grp07_owner,grp07_readonly_grp=c/grp07_owner}
+(1 row)
+
+      grantee       | table_schema |      table_name       | privilege_type 
+--------------------+--------------+-----------------------+----------------
+ grp07_owner        | public       | applicant             | DELETE
+ grp07_owner        | public       | applicant             | INSERT
+ grp07_owner        | public       | applicant             | REFERENCES
+ grp07_owner        | public       | applicant             | SELECT
+ grp07_owner        | public       | applicant             | TRIGGER
+ grp07_owner        | public       | applicant             | TRUNCATE
+ grp07_owner        | public       | applicant             | UPDATE
+ grp07_owner        | public       | applicant_requirement | DELETE
+ grp07_owner        | public       | applicant_requirement | INSERT
+ grp07_owner        | public       | applicant_requirement | REFERENCES
+ grp07_owner        | public       | applicant_requirement | SELECT
+ grp07_owner        | public       | applicant_requirement | TRIGGER
+ grp07_owner        | public       | applicant_requirement | TRUNCATE
+ grp07_owner        | public       | applicant_requirement | UPDATE
+ grp07_owner        | public       | application           | DELETE
+ grp07_owner        | public       | application           | INSERT
+ grp07_owner        | public       | application           | REFERENCES
+ grp07_owner        | public       | application           | SELECT
+ grp07_owner        | public       | application           | TRIGGER
+ grp07_owner        | public       | application           | TRUNCATE
+ grp07_owner        | public       | application           | UPDATE
+ grp07_owner        | public       | application_status    | DELETE
+ grp07_owner        | public       | application_status    | INSERT
+ grp07_owner        | public       | application_status    | REFERENCES
+ grp07_owner        | public       | application_status    | SELECT
+ grp07_owner        | public       | application_status    | TRIGGER
+ grp07_owner        | public       | application_status    | TRUNCATE
+ grp07_owner        | public       | application_status    | UPDATE
+ grp07_owner        | public       | department            | DELETE
+ grp07_owner        | public       | department            | INSERT
+ grp07_owner        | public       | department            | REFERENCES
+ grp07_owner        | public       | department            | SELECT
+ grp07_owner        | public       | department            | TRIGGER
+ grp07_owner        | public       | department            | TRUNCATE
+ grp07_owner        | public       | department            | UPDATE
+ grp07_owner        | public       | interview             | DELETE
+ grp07_owner        | public       | interview             | INSERT
+ grp07_owner        | public       | interview             | REFERENCES
+ grp07_owner        | public       | interview             | SELECT
+ grp07_owner        | public       | interview             | TRIGGER
+ grp07_owner        | public       | interview             | TRUNCATE
+ grp07_owner        | public       | interview             | UPDATE
+ grp07_owner        | public       | position              | DELETE
+ grp07_owner        | public       | position              | INSERT
+ grp07_owner        | public       | position              | REFERENCES
+ grp07_owner        | public       | position              | SELECT
+ grp07_owner        | public       | position              | TRIGGER
+ grp07_owner        | public       | position              | TRUNCATE
+ grp07_owner        | public       | position              | UPDATE
+ grp07_owner        | public       | requirement           | DELETE
+ grp07_owner        | public       | requirement           | INSERT
+ grp07_owner        | public       | requirement           | REFERENCES
+ grp07_owner        | public       | requirement           | SELECT
+ grp07_owner        | public       | requirement           | TRIGGER
+ grp07_owner        | public       | requirement           | TRUNCATE
+ grp07_owner        | public       | requirement           | UPDATE
+ grp07_readonly_grp | public       | applicant             | SELECT
+ grp07_readonly_grp | public       | applicant_requirement | SELECT
+ grp07_readonly_grp | public       | application           | SELECT
+ grp07_readonly_grp | public       | application_status    | SELECT
+ grp07_readonly_grp | public       | department            | SELECT
+ grp07_readonly_grp | public       | interview             | SELECT
+ grp07_readonly_grp | public       | position              | SELECT
+ grp07_readonly_grp | public       | requirement           | SELECT
+ grp07_runtime_grp  | public       | applicant             | DELETE
+ grp07_runtime_grp  | public       | applicant             | INSERT
+ grp07_runtime_grp  | public       | applicant             | SELECT
+ grp07_runtime_grp  | public       | applicant             | UPDATE
+ grp07_runtime_grp  | public       | applicant_requirement | DELETE
+ grp07_runtime_grp  | public       | applicant_requirement | INSERT
+ grp07_runtime_grp  | public       | applicant_requirement | SELECT
+ grp07_runtime_grp  | public       | applicant_requirement | UPDATE
+ grp07_runtime_grp  | public       | application           | DELETE
+ grp07_runtime_grp  | public       | application           | INSERT
+ grp07_runtime_grp  | public       | application           | SELECT
+ grp07_runtime_grp  | public       | application           | UPDATE
+ grp07_runtime_grp  | public       | application_status    | SELECT
+ grp07_runtime_grp  | public       | department            | DELETE
+ grp07_runtime_grp  | public       | department            | INSERT
+ grp07_runtime_grp  | public       | department            | SELECT
+ grp07_runtime_grp  | public       | department            | UPDATE
+ grp07_runtime_grp  | public       | interview             | DELETE
+ grp07_runtime_grp  | public       | interview             | INSERT
+ grp07_runtime_grp  | public       | interview             | SELECT
+ grp07_runtime_grp  | public       | interview             | UPDATE
+ grp07_runtime_grp  | public       | position              | DELETE
+ grp07_runtime_grp  | public       | position              | INSERT
+ grp07_runtime_grp  | public       | position              | SELECT
+ grp07_runtime_grp  | public       | position              | UPDATE
+ grp07_runtime_grp  | public       | requirement           | DELETE
+ grp07_runtime_grp  | public       | requirement           | INSERT
+ grp07_runtime_grp  | public       | requirement           | SELECT
+ grp07_runtime_grp  | public       | requirement           | UPDATE
+(93 rows)
+
+      grantee       | table_schema |      table_name       |   column_name    | privilege_type 
+--------------------+--------------+-----------------------+------------------+----------------
+ grp07_owner        | public       | applicant             | address          | INSERT
+ grp07_owner        | public       | applicant             | address          | REFERENCES
+ grp07_owner        | public       | applicant             | address          | SELECT
+ grp07_owner        | public       | applicant             | address          | UPDATE
+ grp07_owner        | public       | applicant             | applicant_id     | INSERT
+ grp07_owner        | public       | applicant             | applicant_id     | REFERENCES
+ grp07_owner        | public       | applicant             | applicant_id     | SELECT
+ grp07_owner        | public       | applicant             | applicant_id     | UPDATE
+ grp07_owner        | public       | applicant             | created_at       | INSERT
+ grp07_owner        | public       | applicant             | created_at       | REFERENCES
+ grp07_owner        | public       | applicant             | created_at       | SELECT
+ grp07_owner        | public       | applicant             | created_at       | UPDATE
+ grp07_owner        | public       | applicant             | date_of_birth    | INSERT
+ grp07_owner        | public       | applicant             | date_of_birth    | REFERENCES
+ grp07_owner        | public       | applicant             | date_of_birth    | SELECT
+ grp07_owner        | public       | applicant             | date_of_birth    | UPDATE
+ grp07_owner        | public       | applicant             | email            | INSERT
+ grp07_owner        | public       | applicant             | email            | REFERENCES
+ grp07_owner        | public       | applicant             | email            | SELECT
+ grp07_owner        | public       | applicant             | email            | UPDATE
+ grp07_owner        | public       | applicant             | first_name       | INSERT
+ grp07_owner        | public       | applicant             | first_name       | REFERENCES
+ grp07_owner        | public       | applicant             | first_name       | SELECT
+ grp07_owner        | public       | applicant             | first_name       | UPDATE
+ grp07_owner        | public       | applicant             | last_name        | INSERT
+ grp07_owner        | public       | applicant             | last_name        | REFERENCES
+ grp07_owner        | public       | applicant             | last_name        | SELECT
+ grp07_owner        | public       | applicant             | last_name        | UPDATE
+ grp07_owner        | public       | applicant             | phone            | INSERT
+ grp07_owner        | public       | applicant             | phone            | REFERENCES
+ grp07_owner        | public       | applicant             | phone            | SELECT
+ grp07_owner        | public       | applicant             | phone            | UPDATE
+ grp07_owner        | public       | applicant_requirement | applicant_id     | INSERT
+ grp07_owner        | public       | applicant_requirement | applicant_id     | REFERENCES
+ grp07_owner        | public       | applicant_requirement | applicant_id     | SELECT
+ grp07_owner        | public       | applicant_requirement | applicant_id     | UPDATE
+ grp07_owner        | public       | applicant_requirement | remarks          | INSERT
+ grp07_owner        | public       | applicant_requirement | remarks          | REFERENCES
+ grp07_owner        | public       | applicant_requirement | remarks          | SELECT
+ grp07_owner        | public       | applicant_requirement | remarks          | UPDATE
+ grp07_owner        | public       | applicant_requirement | requirement_id   | INSERT
+ grp07_owner        | public       | applicant_requirement | requirement_id   | REFERENCES
+ grp07_owner        | public       | applicant_requirement | requirement_id   | SELECT
+ grp07_owner        | public       | applicant_requirement | requirement_id   | UPDATE
+ grp07_owner        | public       | applicant_requirement | status           | INSERT
+ grp07_owner        | public       | applicant_requirement | status           | REFERENCES
+ grp07_owner        | public       | applicant_requirement | status           | SELECT
+ grp07_owner        | public       | applicant_requirement | status           | UPDATE
+ grp07_owner        | public       | applicant_requirement | submitted_date   | INSERT
+ grp07_owner        | public       | applicant_requirement | submitted_date   | REFERENCES
+ grp07_owner        | public       | applicant_requirement | submitted_date   | SELECT
+ grp07_owner        | public       | applicant_requirement | submitted_date   | UPDATE
+ grp07_owner        | public       | application           | applicant_id     | INSERT
+ grp07_owner        | public       | application           | applicant_id     | REFERENCES
+ grp07_owner        | public       | application           | applicant_id     | SELECT
+ grp07_owner        | public       | application           | applicant_id     | UPDATE
+ grp07_owner        | public       | application           | application_date | INSERT
+ grp07_owner        | public       | application           | application_date | REFERENCES
+ grp07_owner        | public       | application           | application_date | SELECT
+ grp07_owner        | public       | application           | application_date | UPDATE
+ grp07_owner        | public       | application           | application_id   | INSERT
+ grp07_owner        | public       | application           | application_id   | REFERENCES
+ grp07_owner        | public       | application           | application_id   | SELECT
+ grp07_owner        | public       | application           | application_id   | UPDATE
+ grp07_owner        | public       | application           | position_id      | INSERT
+ grp07_owner        | public       | application           | position_id      | REFERENCES
+ grp07_owner        | public       | application           | position_id      | SELECT
+ grp07_owner        | public       | application           | position_id      | UPDATE
+ grp07_owner        | public       | application           | status_id        | INSERT
+ grp07_owner        | public       | application           | status_id        | REFERENCES
+ grp07_owner        | public       | application           | status_id        | SELECT
+ grp07_owner        | public       | application           | status_id        | UPDATE
+ grp07_owner        | public       | application_status    | description      | INSERT
+ grp07_owner        | public       | application_status    | description      | REFERENCES
+ grp07_owner        | public       | application_status    | description      | SELECT
+ grp07_owner        | public       | application_status    | description      | UPDATE
+ grp07_owner        | public       | application_status    | status_id        | INSERT
+ grp07_owner        | public       | application_status    | status_id        | REFERENCES
+ grp07_owner        | public       | application_status    | status_id        | SELECT
+ grp07_owner        | public       | application_status    | status_id        | UPDATE
+ grp07_owner        | public       | application_status    | status_name      | INSERT
+ grp07_owner        | public       | application_status    | status_name      | REFERENCES
+ grp07_owner        | public       | application_status    | status_name      | SELECT
+ grp07_owner        | public       | application_status    | status_name      | UPDATE
+ grp07_owner        | public       | department            | department_id    | INSERT
+ grp07_owner        | public       | department            | department_id    | REFERENCES
+ grp07_owner        | public       | department            | department_id    | SELECT
+ grp07_owner        | public       | department            | department_id    | UPDATE
+ grp07_owner        | public       | department            | department_name  | INSERT
+ grp07_owner        | public       | department            | department_name  | REFERENCES
+ grp07_owner        | public       | department            | department_name  | SELECT
+ grp07_owner        | public       | department            | department_name  | UPDATE
+ grp07_owner        | public       | department            | description      | INSERT
+ grp07_owner        | public       | department            | description      | REFERENCES
+ grp07_owner        | public       | department            | description      | SELECT
+ grp07_owner        | public       | department            | description      | UPDATE
+ grp07_owner        | public       | interview             | application_id   | INSERT
+ grp07_owner        | public       | interview             | application_id   | REFERENCES
+ grp07_owner        | public       | interview             | application_id   | SELECT
+ grp07_owner        | public       | interview             | application_id   | UPDATE
+ grp07_owner        | public       | interview             | interview_date   | INSERT
+ grp07_owner        | public       | interview             | interview_date   | REFERENCES
+ grp07_owner        | public       | interview             | interview_date   | SELECT
+ grp07_owner        | public       | interview             | interview_date   | UPDATE
+ grp07_owner        | public       | interview             | interview_id     | INSERT
+ grp07_owner        | public       | interview             | interview_id     | REFERENCES
+ grp07_owner        | public       | interview             | interview_id     | SELECT
+ grp07_owner        | public       | interview             | interview_id     | UPDATE
+ grp07_owner        | public       | interview             | interview_type   | INSERT
+ grp07_owner        | public       | interview             | interview_type   | REFERENCES
+ grp07_owner        | public       | interview             | interview_type   | SELECT
+ grp07_owner        | public       | interview             | interview_type   | UPDATE
+ grp07_owner        | public       | interview             | notes            | INSERT
+ grp07_owner        | public       | interview             | notes            | REFERENCES
+ grp07_owner        | public       | interview             | notes            | SELECT
+ grp07_owner        | public       | interview             | notes            | UPDATE
+ grp07_owner        | public       | interview             | results          | INSERT
+ grp07_owner        | public       | interview             | results          | REFERENCES
+ grp07_owner        | public       | interview             | results          | SELECT
+ grp07_owner        | public       | interview             | results          | UPDATE
+ grp07_owner        | public       | position              | department_id    | INSERT
+ grp07_owner        | public       | position              | department_id    | REFERENCES
+ grp07_owner        | public       | position              | department_id    | SELECT
+ grp07_owner        | public       | position              | department_id    | UPDATE
+ grp07_owner        | public       | position              | description      | INSERT
+ grp07_owner        | public       | position              | description      | REFERENCES
+ grp07_owner        | public       | position              | description      | SELECT
+ grp07_owner        | public       | position              | description      | UPDATE
+ grp07_owner        | public       | position              | employment_type  | INSERT
+ grp07_owner        | public       | position              | employment_type  | REFERENCES
+ grp07_owner        | public       | position              | employment_type  | SELECT
+ grp07_owner        | public       | position              | employment_type  | UPDATE
+ grp07_owner        | public       | position              | position_id      | INSERT
+ grp07_owner        | public       | position              | position_id      | REFERENCES
+ grp07_owner        | public       | position              | position_id      | SELECT
+ grp07_owner        | public       | position              | position_id      | UPDATE
+ grp07_owner        | public       | position              | position_title   | INSERT
+ grp07_owner        | public       | position              | position_title   | REFERENCES
+ grp07_owner        | public       | position              | position_title   | SELECT
+ grp07_owner        | public       | position              | position_title   | UPDATE
+ grp07_owner        | public       | position              | status           | INSERT
+ grp07_owner        | public       | position              | status           | REFERENCES
+ grp07_owner        | public       | position              | status           | SELECT
+ grp07_owner        | public       | position              | status           | UPDATE
+ grp07_owner        | public       | requirement           | description      | INSERT
+ grp07_owner        | public       | requirement           | description      | REFERENCES
+ grp07_owner        | public       | requirement           | description      | SELECT
+ grp07_owner        | public       | requirement           | description      | UPDATE
+ grp07_owner        | public       | requirement           | is_required      | INSERT
+ grp07_owner        | public       | requirement           | is_required      | REFERENCES
+ grp07_owner        | public       | requirement           | is_required      | SELECT
+ grp07_owner        | public       | requirement           | is_required      | UPDATE
+ grp07_owner        | public       | requirement           | requirement_id   | INSERT
+ grp07_owner        | public       | requirement           | requirement_id   | REFERENCES
+ grp07_owner        | public       | requirement           | requirement_id   | SELECT
+ grp07_owner        | public       | requirement           | requirement_id   | UPDATE
+ grp07_owner        | public       | requirement           | requirement_name | INSERT
+ grp07_owner        | public       | requirement           | requirement_name | REFERENCES
+ grp07_owner        | public       | requirement           | requirement_name | SELECT
+ grp07_owner        | public       | requirement           | requirement_name | UPDATE
+ grp07_readonly_grp | public       | applicant             | address          | SELECT
+ grp07_readonly_grp | public       | applicant             | applicant_id     | SELECT
+ grp07_readonly_grp | public       | applicant             | created_at       | SELECT
+ grp07_readonly_grp | public       | applicant             | date_of_birth    | SELECT
+ grp07_readonly_grp | public       | applicant             | email            | SELECT
+ grp07_readonly_grp | public       | applicant             | first_name       | SELECT
+ grp07_readonly_grp | public       | applicant             | last_name        | SELECT
+ grp07_readonly_grp | public       | applicant             | phone            | SELECT
+ grp07_readonly_grp | public       | applicant_requirement | applicant_id     | SELECT
+ grp07_readonly_grp | public       | applicant_requirement | remarks          | SELECT
+ grp07_readonly_grp | public       | applicant_requirement | requirement_id   | SELECT
+ grp07_readonly_grp | public       | applicant_requirement | status           | SELECT
+ grp07_readonly_grp | public       | applicant_requirement | submitted_date   | SELECT
+ grp07_readonly_grp | public       | application           | applicant_id     | SELECT
+ grp07_readonly_grp | public       | application           | application_date | SELECT
+ grp07_readonly_grp | public       | application           | application_id   | SELECT
+ grp07_readonly_grp | public       | application           | position_id      | SELECT
+ grp07_readonly_grp | public       | application           | status_id        | SELECT
+ grp07_readonly_grp | public       | application_status    | description      | SELECT
+ grp07_readonly_grp | public       | application_status    | status_id        | SELECT
+ grp07_readonly_grp | public       | application_status    | status_name      | SELECT
+ grp07_readonly_grp | public       | department            | department_id    | SELECT
+ grp07_readonly_grp | public       | department            | department_name  | SELECT
+ grp07_readonly_grp | public       | department            | description      | SELECT
+ grp07_readonly_grp | public       | interview             | application_id   | SELECT
+ grp07_readonly_grp | public       | interview             | interview_date   | SELECT
+ grp07_readonly_grp | public       | interview             | interview_id     | SELECT
+ grp07_readonly_grp | public       | interview             | interview_type   | SELECT
+ grp07_readonly_grp | public       | interview             | notes            | SELECT
+ grp07_readonly_grp | public       | interview             | results          | SELECT
+ grp07_readonly_grp | public       | position              | department_id    | SELECT
+ grp07_readonly_grp | public       | position              | description      | SELECT
+ grp07_readonly_grp | public       | position              | employment_type  | SELECT
+ grp07_readonly_grp | public       | position              | position_id      | SELECT
+ grp07_readonly_grp | public       | position              | position_title   | SELECT
+ grp07_readonly_grp | public       | position              | status           | SELECT
+ grp07_readonly_grp | public       | requirement           | description      | SELECT
+ grp07_readonly_grp | public       | requirement           | is_required      | SELECT
+ grp07_readonly_grp | public       | requirement           | requirement_id   | SELECT
+ grp07_readonly_grp | public       | requirement           | requirement_name | SELECT
+ grp07_runtime_grp  | public       | applicant             | address          | INSERT
+ grp07_runtime_grp  | public       | applicant             | address          | SELECT
+ grp07_runtime_grp  | public       | applicant             | address          | UPDATE
+ grp07_runtime_grp  | public       | applicant             | applicant_id     | INSERT
+ grp07_runtime_grp  | public       | applicant             | applicant_id     | SELECT
+ grp07_runtime_grp  | public       | applicant             | applicant_id     | UPDATE
+ grp07_runtime_grp  | public       | applicant             | created_at       | INSERT
+ grp07_runtime_grp  | public       | applicant             | created_at       | SELECT
+ grp07_runtime_grp  | public       | applicant             | created_at       | UPDATE
+ grp07_runtime_grp  | public       | applicant             | date_of_birth    | INSERT
+ grp07_runtime_grp  | public       | applicant             | date_of_birth    | SELECT
+ grp07_runtime_grp  | public       | applicant             | date_of_birth    | UPDATE
+ grp07_runtime_grp  | public       | applicant             | email            | INSERT
+ grp07_runtime_grp  | public       | applicant             | email            | SELECT
+ grp07_runtime_grp  | public       | applicant             | email            | UPDATE
+ grp07_runtime_grp  | public       | applicant             | first_name       | INSERT
+ grp07_runtime_grp  | public       | applicant             | first_name       | SELECT
+ grp07_runtime_grp  | public       | applicant             | first_name       | UPDATE
+ grp07_runtime_grp  | public       | applicant             | last_name        | INSERT
+ grp07_runtime_grp  | public       | applicant             | last_name        | SELECT
+ grp07_runtime_grp  | public       | applicant             | last_name        | UPDATE
+ grp07_runtime_grp  | public       | applicant             | phone            | INSERT
+ grp07_runtime_grp  | public       | applicant             | phone            | SELECT
+ grp07_runtime_grp  | public       | applicant             | phone            | UPDATE
+ grp07_runtime_grp  | public       | applicant_requirement | applicant_id     | INSERT
+ grp07_runtime_grp  | public       | applicant_requirement | applicant_id     | SELECT
+ grp07_runtime_grp  | public       | applicant_requirement | applicant_id     | UPDATE
+ grp07_runtime_grp  | public       | applicant_requirement | remarks          | INSERT
+ grp07_runtime_grp  | public       | applicant_requirement | remarks          | SELECT
+ grp07_runtime_grp  | public       | applicant_requirement | remarks          | UPDATE
+ grp07_runtime_grp  | public       | applicant_requirement | requirement_id   | INSERT
+ grp07_runtime_grp  | public       | applicant_requirement | requirement_id   | SELECT
+ grp07_runtime_grp  | public       | applicant_requirement | requirement_id   | UPDATE
+ grp07_runtime_grp  | public       | applicant_requirement | status           | INSERT
+ grp07_runtime_grp  | public       | applicant_requirement | status           | SELECT
+ grp07_runtime_grp  | public       | applicant_requirement | status           | UPDATE
+ grp07_runtime_grp  | public       | applicant_requirement | submitted_date   | INSERT
+ grp07_runtime_grp  | public       | applicant_requirement | submitted_date   | SELECT
+ grp07_runtime_grp  | public       | applicant_requirement | submitted_date   | UPDATE
+ grp07_runtime_grp  | public       | application           | applicant_id     | INSERT
+ grp07_runtime_grp  | public       | application           | applicant_id     | SELECT
+ grp07_runtime_grp  | public       | application           | applicant_id     | UPDATE
+ grp07_runtime_grp  | public       | application           | application_date | INSERT
+ grp07_runtime_grp  | public       | application           | application_date | SELECT
+ grp07_runtime_grp  | public       | application           | application_date | UPDATE
+ grp07_runtime_grp  | public       | application           | application_id   | INSERT
+ grp07_runtime_grp  | public       | application           | application_id   | SELECT
+ grp07_runtime_grp  | public       | application           | application_id   | UPDATE
+ grp07_runtime_grp  | public       | application           | position_id      | INSERT
+ grp07_runtime_grp  | public       | application           | position_id      | SELECT
+ grp07_runtime_grp  | public       | application           | position_id      | UPDATE
+ grp07_runtime_grp  | public       | application           | status_id        | INSERT
+ grp07_runtime_grp  | public       | application           | status_id        | SELECT
+ grp07_runtime_grp  | public       | application           | status_id        | UPDATE
+ grp07_runtime_grp  | public       | application_status    | description      | SELECT
+ grp07_runtime_grp  | public       | application_status    | status_id        | SELECT
+ grp07_runtime_grp  | public       | application_status    | status_name      | SELECT
+ grp07_runtime_grp  | public       | department            | department_id    | INSERT
+ grp07_runtime_grp  | public       | department            | department_id    | SELECT
+ grp07_runtime_grp  | public       | department            | department_id    | UPDATE
+ grp07_runtime_grp  | public       | department            | department_name  | INSERT
+ grp07_runtime_grp  | public       | department            | department_name  | SELECT
+ grp07_runtime_grp  | public       | department            | department_name  | UPDATE
+ grp07_runtime_grp  | public       | department            | description      | INSERT
+ grp07_runtime_grp  | public       | department            | description      | SELECT
+ grp07_runtime_grp  | public       | department            | description      | UPDATE
+ grp07_runtime_grp  | public       | interview             | application_id   | INSERT
+ grp07_runtime_grp  | public       | interview             | application_id   | SELECT
+ grp07_runtime_grp  | public       | interview             | application_id   | UPDATE
+ grp07_runtime_grp  | public       | interview             | interview_date   | INSERT
+ grp07_runtime_grp  | public       | interview             | interview_date   | SELECT
+ grp07_runtime_grp  | public       | interview             | interview_date   | UPDATE
+ grp07_runtime_grp  | public       | interview             | interview_id     | INSERT
+ grp07_runtime_grp  | public       | interview             | interview_id     | SELECT
+ grp07_runtime_grp  | public       | interview             | interview_id     | UPDATE
+ grp07_runtime_grp  | public       | interview             | interview_type   | INSERT
+ grp07_runtime_grp  | public       | interview             | interview_type   | SELECT
+ grp07_runtime_grp  | public       | interview             | interview_type   | UPDATE
+ grp07_runtime_grp  | public       | interview             | notes            | INSERT
+ grp07_runtime_grp  | public       | interview             | notes            | SELECT
+ grp07_runtime_grp  | public       | interview             | notes            | UPDATE
+ grp07_runtime_grp  | public       | interview             | results          | INSERT
+ grp07_runtime_grp  | public       | interview             | results          | SELECT
+ grp07_runtime_grp  | public       | interview             | results          | UPDATE
+ grp07_runtime_grp  | public       | position              | department_id    | INSERT
+ grp07_runtime_grp  | public       | position              | department_id    | SELECT
+ grp07_runtime_grp  | public       | position              | department_id    | UPDATE
+ grp07_runtime_grp  | public       | position              | description      | INSERT
+ grp07_runtime_grp  | public       | position              | description      | SELECT
+ grp07_runtime_grp  | public       | position              | description      | UPDATE
+ grp07_runtime_grp  | public       | position              | employment_type  | INSERT
+ grp07_runtime_grp  | public       | position              | employment_type  | SELECT
+ grp07_runtime_grp  | public       | position              | employment_type  | UPDATE
+ grp07_runtime_grp  | public       | position              | position_id      | INSERT
+ grp07_runtime_grp  | public       | position              | position_id      | SELECT
+ grp07_runtime_grp  | public       | position              | position_id      | UPDATE
+ grp07_runtime_grp  | public       | position              | position_title   | INSERT
+ grp07_runtime_grp  | public       | position              | position_title   | SELECT
+ grp07_runtime_grp  | public       | position              | position_title   | UPDATE
+ grp07_runtime_grp  | public       | position              | status           | INSERT
+ grp07_runtime_grp  | public       | position              | status           | SELECT
+ grp07_runtime_grp  | public       | position              | status           | UPDATE
+ grp07_runtime_grp  | public       | requirement           | description      | INSERT
+ grp07_runtime_grp  | public       | requirement           | description      | SELECT
+ grp07_runtime_grp  | public       | requirement           | description      | UPDATE
+ grp07_runtime_grp  | public       | requirement           | is_required      | INSERT
+ grp07_runtime_grp  | public       | requirement           | is_required      | SELECT
+ grp07_runtime_grp  | public       | requirement           | is_required      | UPDATE
+ grp07_runtime_grp  | public       | requirement           | requirement_id   | INSERT
+ grp07_runtime_grp  | public       | requirement           | requirement_id   | SELECT
+ grp07_runtime_grp  | public       | requirement           | requirement_id   | UPDATE
+ grp07_runtime_grp  | public       | requirement           | requirement_name | INSERT
+ grp07_runtime_grp  | public       | requirement           | requirement_name | SELECT
+ grp07_runtime_grp  | public       | requirement           | requirement_name | UPDATE
+(314 rows)
+
+

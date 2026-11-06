@@ -1,0 +1,647 @@
+ current_database | current_user |                                 version                                 
+------------------+--------------+-------------------------------------------------------------------------
+ ReserveIT        | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |      tablename       |   tableowner    
+------------+----------------------+-----------------
+ public     | app_user             | reserveit_owner
+ public     | department           | reserveit_owner
+ public     | material             | reserveit_owner
+ public     | penalty              | reserveit_owner
+ public     | reservation          | reserveit_owner
+ public     | reservation_material | reserveit_owner
+ public     | room                 | reserveit_owner
+ public     | staff                | reserveit_owner
+(8 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema |         sequence_name          
+-----------------+--------------------------------
+ public          | app_user_user_id_seq
+ public          | department_department_id_seq
+ public          | material_material_id_seq
+ public          | penalty_penalty_id_seq
+ public          | reservation_reservation_id_seq
+ public          | room_room_id_seq
+ public          | staff_staff_id_seq
+(7 rows)
+
+      rolname       | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+--------------------+-------------+----------+-------------+---------------
+ app_admin_grp      | f           | f        | f           | f
+ app_readonly_grp   | f           | f        | f           | f
+ app_runtime_grp    | f           | f        | f           | f
+ reserveit_app      | t           | f        | f           | f
+ reserveit_dba      | t           | f        | f           | f
+ reserveit_owner    | t           | f        | f           | f
+ reserveit_reporter | t           | f        | f           | f
+(7 rows)
+
+       member       |    group_role    
+--------------------+------------------
+ reserveit_app      | app_runtime_grp
+ reserveit_dba      | app_admin_grp
+ reserveit_reporter | app_readonly_grp
+(3 rows)
+
+  datname  |      owner      |                                                                   datacl                                                                   
+-----------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------
+ ReserveIT | reserveit_owner | {reserveit_owner=CTc/reserveit_owner,app_runtime_grp=c/reserveit_owner,app_readonly_grp=c/reserveit_owner,app_admin_grp=c/reserveit_owner}
+(1 row)
+
+     grantee      | table_schema |      table_name      | privilege_type 
+------------------+--------------+----------------------+----------------
+ app_admin_grp    | public       | app_user             | DELETE
+ app_admin_grp    | public       | app_user             | INSERT
+ app_admin_grp    | public       | app_user             | SELECT
+ app_admin_grp    | public       | app_user             | UPDATE
+ app_admin_grp    | public       | department           | DELETE
+ app_admin_grp    | public       | department           | INSERT
+ app_admin_grp    | public       | department           | SELECT
+ app_admin_grp    | public       | department           | UPDATE
+ app_admin_grp    | public       | material             | DELETE
+ app_admin_grp    | public       | material             | INSERT
+ app_admin_grp    | public       | material             | SELECT
+ app_admin_grp    | public       | material             | UPDATE
+ app_admin_grp    | public       | penalty              | DELETE
+ app_admin_grp    | public       | penalty              | INSERT
+ app_admin_grp    | public       | penalty              | SELECT
+ app_admin_grp    | public       | penalty              | UPDATE
+ app_admin_grp    | public       | reservation          | DELETE
+ app_admin_grp    | public       | reservation          | INSERT
+ app_admin_grp    | public       | reservation          | SELECT
+ app_admin_grp    | public       | reservation          | UPDATE
+ app_admin_grp    | public       | reservation_material | DELETE
+ app_admin_grp    | public       | reservation_material | INSERT
+ app_admin_grp    | public       | reservation_material | SELECT
+ app_admin_grp    | public       | reservation_material | UPDATE
+ app_admin_grp    | public       | room                 | DELETE
+ app_admin_grp    | public       | room                 | INSERT
+ app_admin_grp    | public       | room                 | SELECT
+ app_admin_grp    | public       | room                 | UPDATE
+ app_admin_grp    | public       | staff                | DELETE
+ app_admin_grp    | public       | staff                | INSERT
+ app_admin_grp    | public       | staff                | SELECT
+ app_admin_grp    | public       | staff                | UPDATE
+ app_readonly_grp | public       | department           | SELECT
+ app_readonly_grp | public       | material             | SELECT
+ app_readonly_grp | public       | penalty              | SELECT
+ app_readonly_grp | public       | reservation          | SELECT
+ app_readonly_grp | public       | reservation_material | SELECT
+ app_readonly_grp | public       | room                 | SELECT
+ app_runtime_grp  | public       | app_user             | INSERT
+ app_runtime_grp  | public       | app_user             | SELECT
+ app_runtime_grp  | public       | department           | INSERT
+ app_runtime_grp  | public       | department           | SELECT
+ app_runtime_grp  | public       | material             | DELETE
+ app_runtime_grp  | public       | material             | INSERT
+ app_runtime_grp  | public       | material             | SELECT
+ app_runtime_grp  | public       | penalty              | INSERT
+ app_runtime_grp  | public       | penalty              | SELECT
+ app_runtime_grp  | public       | reservation          | INSERT
+ app_runtime_grp  | public       | reservation          | SELECT
+ app_runtime_grp  | public       | reservation_material | INSERT
+ app_runtime_grp  | public       | reservation_material | SELECT
+ app_runtime_grp  | public       | room                 | DELETE
+ app_runtime_grp  | public       | room                 | INSERT
+ app_runtime_grp  | public       | room                 | SELECT
+ app_runtime_grp  | public       | staff                | INSERT
+ app_runtime_grp  | public       | staff                | SELECT
+ reserveit_owner  | public       | app_user             | DELETE
+ reserveit_owner  | public       | app_user             | INSERT
+ reserveit_owner  | public       | app_user             | REFERENCES
+ reserveit_owner  | public       | app_user             | SELECT
+ reserveit_owner  | public       | app_user             | TRIGGER
+ reserveit_owner  | public       | app_user             | TRUNCATE
+ reserveit_owner  | public       | app_user             | UPDATE
+ reserveit_owner  | public       | department           | DELETE
+ reserveit_owner  | public       | department           | INSERT
+ reserveit_owner  | public       | department           | REFERENCES
+ reserveit_owner  | public       | department           | SELECT
+ reserveit_owner  | public       | department           | TRIGGER
+ reserveit_owner  | public       | department           | TRUNCATE
+ reserveit_owner  | public       | department           | UPDATE
+ reserveit_owner  | public       | material             | DELETE
+ reserveit_owner  | public       | material             | INSERT
+ reserveit_owner  | public       | material             | REFERENCES
+ reserveit_owner  | public       | material             | SELECT
+ reserveit_owner  | public       | material             | TRIGGER
+ reserveit_owner  | public       | material             | TRUNCATE
+ reserveit_owner  | public       | material             | UPDATE
+ reserveit_owner  | public       | penalty              | DELETE
+ reserveit_owner  | public       | penalty              | INSERT
+ reserveit_owner  | public       | penalty              | REFERENCES
+ reserveit_owner  | public       | penalty              | SELECT
+ reserveit_owner  | public       | penalty              | TRIGGER
+ reserveit_owner  | public       | penalty              | TRUNCATE
+ reserveit_owner  | public       | penalty              | UPDATE
+ reserveit_owner  | public       | reservation          | DELETE
+ reserveit_owner  | public       | reservation          | INSERT
+ reserveit_owner  | public       | reservation          | REFERENCES
+ reserveit_owner  | public       | reservation          | SELECT
+ reserveit_owner  | public       | reservation          | TRIGGER
+ reserveit_owner  | public       | reservation          | TRUNCATE
+ reserveit_owner  | public       | reservation          | UPDATE
+ reserveit_owner  | public       | reservation_material | DELETE
+ reserveit_owner  | public       | reservation_material | INSERT
+ reserveit_owner  | public       | reservation_material | REFERENCES
+ reserveit_owner  | public       | reservation_material | SELECT
+ reserveit_owner  | public       | reservation_material | TRIGGER
+ reserveit_owner  | public       | reservation_material | TRUNCATE
+ reserveit_owner  | public       | reservation_material | UPDATE
+ reserveit_owner  | public       | room                 | DELETE
+ reserveit_owner  | public       | room                 | INSERT
+ reserveit_owner  | public       | room                 | REFERENCES
+ reserveit_owner  | public       | room                 | SELECT
+ reserveit_owner  | public       | room                 | TRIGGER
+ reserveit_owner  | public       | room                 | TRUNCATE
+ reserveit_owner  | public       | room                 | UPDATE
+ reserveit_owner  | public       | staff                | DELETE
+ reserveit_owner  | public       | staff                | INSERT
+ reserveit_owner  | public       | staff                | REFERENCES
+ reserveit_owner  | public       | staff                | SELECT
+ reserveit_owner  | public       | staff                | TRIGGER
+ reserveit_owner  | public       | staff                | TRUNCATE
+ reserveit_owner  | public       | staff                | UPDATE
+(112 rows)
+
+     grantee      | table_schema |      table_name      |    column_name     | privilege_type 
+------------------+--------------+----------------------+--------------------+----------------
+ app_admin_grp    | public       | app_user             | department_id      | INSERT
+ app_admin_grp    | public       | app_user             | department_id      | SELECT
+ app_admin_grp    | public       | app_user             | department_id      | UPDATE
+ app_admin_grp    | public       | app_user             | email              | INSERT
+ app_admin_grp    | public       | app_user             | email              | SELECT
+ app_admin_grp    | public       | app_user             | email              | UPDATE
+ app_admin_grp    | public       | app_user             | first_name         | INSERT
+ app_admin_grp    | public       | app_user             | first_name         | SELECT
+ app_admin_grp    | public       | app_user             | first_name         | UPDATE
+ app_admin_grp    | public       | app_user             | last_name          | INSERT
+ app_admin_grp    | public       | app_user             | last_name          | SELECT
+ app_admin_grp    | public       | app_user             | last_name          | UPDATE
+ app_admin_grp    | public       | app_user             | password_hash      | INSERT
+ app_admin_grp    | public       | app_user             | password_hash      | SELECT
+ app_admin_grp    | public       | app_user             | password_hash      | UPDATE
+ app_admin_grp    | public       | app_user             | role               | INSERT
+ app_admin_grp    | public       | app_user             | role               | SELECT
+ app_admin_grp    | public       | app_user             | role               | UPDATE
+ app_admin_grp    | public       | app_user             | status             | INSERT
+ app_admin_grp    | public       | app_user             | status             | SELECT
+ app_admin_grp    | public       | app_user             | status             | UPDATE
+ app_admin_grp    | public       | app_user             | user_id            | INSERT
+ app_admin_grp    | public       | app_user             | user_id            | SELECT
+ app_admin_grp    | public       | app_user             | user_id            | UPDATE
+ app_admin_grp    | public       | department           | department_id      | INSERT
+ app_admin_grp    | public       | department           | department_id      | SELECT
+ app_admin_grp    | public       | department           | department_id      | UPDATE
+ app_admin_grp    | public       | department           | department_name    | INSERT
+ app_admin_grp    | public       | department           | department_name    | SELECT
+ app_admin_grp    | public       | department           | department_name    | UPDATE
+ app_admin_grp    | public       | material             | available_quantity | INSERT
+ app_admin_grp    | public       | material             | available_quantity | SELECT
+ app_admin_grp    | public       | material             | available_quantity | UPDATE
+ app_admin_grp    | public       | material             | category           | INSERT
+ app_admin_grp    | public       | material             | category           | SELECT
+ app_admin_grp    | public       | material             | category           | UPDATE
+ app_admin_grp    | public       | material             | material_id        | INSERT
+ app_admin_grp    | public       | material             | material_id        | SELECT
+ app_admin_grp    | public       | material             | material_id        | UPDATE
+ app_admin_grp    | public       | material             | material_name      | INSERT
+ app_admin_grp    | public       | material             | material_name      | SELECT
+ app_admin_grp    | public       | material             | material_name      | UPDATE
+ app_admin_grp    | public       | material             | total_quantity     | INSERT
+ app_admin_grp    | public       | material             | total_quantity     | SELECT
+ app_admin_grp    | public       | material             | total_quantity     | UPDATE
+ app_admin_grp    | public       | penalty              | amount             | INSERT
+ app_admin_grp    | public       | penalty              | amount             | SELECT
+ app_admin_grp    | public       | penalty              | amount             | UPDATE
+ app_admin_grp    | public       | penalty              | issue_date         | INSERT
+ app_admin_grp    | public       | penalty              | issue_date         | SELECT
+ app_admin_grp    | public       | penalty              | issue_date         | UPDATE
+ app_admin_grp    | public       | penalty              | paid_date          | INSERT
+ app_admin_grp    | public       | penalty              | paid_date          | SELECT
+ app_admin_grp    | public       | penalty              | paid_date          | UPDATE
+ app_admin_grp    | public       | penalty              | paid_status        | INSERT
+ app_admin_grp    | public       | penalty              | paid_status        | SELECT
+ app_admin_grp    | public       | penalty              | paid_status        | UPDATE
+ app_admin_grp    | public       | penalty              | penalty_id         | INSERT
+ app_admin_grp    | public       | penalty              | penalty_id         | SELECT
+ app_admin_grp    | public       | penalty              | penalty_id         | UPDATE
+ app_admin_grp    | public       | penalty              | reason             | INSERT
+ app_admin_grp    | public       | penalty              | reason             | SELECT
+ app_admin_grp    | public       | penalty              | reason             | UPDATE
+ app_admin_grp    | public       | penalty              | reservation_id     | INSERT
+ app_admin_grp    | public       | penalty              | reservation_id     | SELECT
+ app_admin_grp    | public       | penalty              | reservation_id     | UPDATE
+ app_admin_grp    | public       | reservation          | end_time           | INSERT
+ app_admin_grp    | public       | reservation          | end_time           | SELECT
+ app_admin_grp    | public       | reservation          | end_time           | UPDATE
+ app_admin_grp    | public       | reservation          | purpose            | INSERT
+ app_admin_grp    | public       | reservation          | purpose            | SELECT
+ app_admin_grp    | public       | reservation          | purpose            | UPDATE
+ app_admin_grp    | public       | reservation          | reservation_date   | INSERT
+ app_admin_grp    | public       | reservation          | reservation_date   | SELECT
+ app_admin_grp    | public       | reservation          | reservation_date   | UPDATE
+ app_admin_grp    | public       | reservation          | reservation_id     | INSERT
+ app_admin_grp    | public       | reservation          | reservation_id     | SELECT
+ app_admin_grp    | public       | reservation          | reservation_id     | UPDATE
+ app_admin_grp    | public       | reservation          | room_id            | INSERT
+ app_admin_grp    | public       | reservation          | room_id            | SELECT
+ app_admin_grp    | public       | reservation          | room_id            | UPDATE
+ app_admin_grp    | public       | reservation          | staff_id           | INSERT
+ app_admin_grp    | public       | reservation          | staff_id           | SELECT
+ app_admin_grp    | public       | reservation          | staff_id           | UPDATE
+ app_admin_grp    | public       | reservation          | start_time         | INSERT
+ app_admin_grp    | public       | reservation          | start_time         | SELECT
+ app_admin_grp    | public       | reservation          | start_time         | UPDATE
+ app_admin_grp    | public       | reservation          | status             | INSERT
+ app_admin_grp    | public       | reservation          | status             | SELECT
+ app_admin_grp    | public       | reservation          | status             | UPDATE
+ app_admin_grp    | public       | reservation          | user_id            | INSERT
+ app_admin_grp    | public       | reservation          | user_id            | SELECT
+ app_admin_grp    | public       | reservation          | user_id            | UPDATE
+ app_admin_grp    | public       | reservation_material | material_id        | INSERT
+ app_admin_grp    | public       | reservation_material | material_id        | SELECT
+ app_admin_grp    | public       | reservation_material | material_id        | UPDATE
+ app_admin_grp    | public       | reservation_material | quantity_requested | INSERT
+ app_admin_grp    | public       | reservation_material | quantity_requested | SELECT
+ app_admin_grp    | public       | reservation_material | quantity_requested | UPDATE
+ app_admin_grp    | public       | reservation_material | reservation_id     | INSERT
+ app_admin_grp    | public       | reservation_material | reservation_id     | SELECT
+ app_admin_grp    | public       | reservation_material | reservation_id     | UPDATE
+ app_admin_grp    | public       | room                 | building           | INSERT
+ app_admin_grp    | public       | room                 | building           | SELECT
+ app_admin_grp    | public       | room                 | building           | UPDATE
+ app_admin_grp    | public       | room                 | capacity           | INSERT
+ app_admin_grp    | public       | room                 | capacity           | SELECT
+ app_admin_grp    | public       | room                 | capacity           | UPDATE
+ app_admin_grp    | public       | room                 | room_id            | INSERT
+ app_admin_grp    | public       | room                 | room_id            | SELECT
+ app_admin_grp    | public       | room                 | room_id            | UPDATE
+ app_admin_grp    | public       | room                 | room_name          | INSERT
+ app_admin_grp    | public       | room                 | room_name          | SELECT
+ app_admin_grp    | public       | room                 | room_name          | UPDATE
+ app_admin_grp    | public       | room                 | room_type          | INSERT
+ app_admin_grp    | public       | room                 | room_type          | SELECT
+ app_admin_grp    | public       | room                 | room_type          | UPDATE
+ app_admin_grp    | public       | room                 | status             | INSERT
+ app_admin_grp    | public       | room                 | status             | SELECT
+ app_admin_grp    | public       | room                 | status             | UPDATE
+ app_admin_grp    | public       | staff                | email              | INSERT
+ app_admin_grp    | public       | staff                | email              | SELECT
+ app_admin_grp    | public       | staff                | email              | UPDATE
+ app_admin_grp    | public       | staff                | full_name          | INSERT
+ app_admin_grp    | public       | staff                | full_name          | SELECT
+ app_admin_grp    | public       | staff                | full_name          | UPDATE
+ app_admin_grp    | public       | staff                | password_hash      | INSERT
+ app_admin_grp    | public       | staff                | password_hash      | SELECT
+ app_admin_grp    | public       | staff                | password_hash      | UPDATE
+ app_admin_grp    | public       | staff                | role               | INSERT
+ app_admin_grp    | public       | staff                | role               | SELECT
+ app_admin_grp    | public       | staff                | role               | UPDATE
+ app_admin_grp    | public       | staff                | staff_id           | INSERT
+ app_admin_grp    | public       | staff                | staff_id           | SELECT
+ app_admin_grp    | public       | staff                | staff_id           | UPDATE
+ app_admin_grp    | public       | staff                | status             | INSERT
+ app_admin_grp    | public       | staff                | status             | SELECT
+ app_admin_grp    | public       | staff                | status             | UPDATE
+ app_readonly_grp | public       | app_user             | department_id      | SELECT
+ app_readonly_grp | public       | app_user             | first_name         | SELECT
+ app_readonly_grp | public       | app_user             | last_name          | SELECT
+ app_readonly_grp | public       | app_user             | role               | SELECT
+ app_readonly_grp | public       | app_user             | status             | SELECT
+ app_readonly_grp | public       | app_user             | user_id            | SELECT
+ app_readonly_grp | public       | department           | department_id      | SELECT
+ app_readonly_grp | public       | department           | department_name    | SELECT
+ app_readonly_grp | public       | material             | available_quantity | SELECT
+ app_readonly_grp | public       | material             | category           | SELECT
+ app_readonly_grp | public       | material             | material_id        | SELECT
+ app_readonly_grp | public       | material             | material_name      | SELECT
+ app_readonly_grp | public       | material             | total_quantity     | SELECT
+ app_readonly_grp | public       | penalty              | amount             | SELECT
+ app_readonly_grp | public       | penalty              | issue_date         | SELECT
+ app_readonly_grp | public       | penalty              | paid_date          | SELECT
+ app_readonly_grp | public       | penalty              | paid_status        | SELECT
+ app_readonly_grp | public       | penalty              | penalty_id         | SELECT
+ app_readonly_grp | public       | penalty              | reason             | SELECT
+ app_readonly_grp | public       | penalty              | reservation_id     | SELECT
+ app_readonly_grp | public       | reservation          | end_time           | SELECT
+ app_readonly_grp | public       | reservation          | purpose            | SELECT
+ app_readonly_grp | public       | reservation          | reservation_date   | SELECT
+ app_readonly_grp | public       | reservation          | reservation_id     | SELECT
+ app_readonly_grp | public       | reservation          | room_id            | SELECT
+ app_readonly_grp | public       | reservation          | staff_id           | SELECT
+ app_readonly_grp | public       | reservation          | start_time         | SELECT
+ app_readonly_grp | public       | reservation          | status             | SELECT
+ app_readonly_grp | public       | reservation          | user_id            | SELECT
+ app_readonly_grp | public       | reservation_material | material_id        | SELECT
+ app_readonly_grp | public       | reservation_material | quantity_requested | SELECT
+ app_readonly_grp | public       | reservation_material | reservation_id     | SELECT
+ app_readonly_grp | public       | room                 | building           | SELECT
+ app_readonly_grp | public       | room                 | capacity           | SELECT
+ app_readonly_grp | public       | room                 | room_id            | SELECT
+ app_readonly_grp | public       | room                 | room_name          | SELECT
+ app_readonly_grp | public       | room                 | room_type          | SELECT
+ app_readonly_grp | public       | room                 | status             | SELECT
+ app_readonly_grp | public       | staff                | full_name          | SELECT
+ app_readonly_grp | public       | staff                | role               | SELECT
+ app_readonly_grp | public       | staff                | staff_id           | SELECT
+ app_readonly_grp | public       | staff                | status             | SELECT
+ app_runtime_grp  | public       | app_user             | department_id      | INSERT
+ app_runtime_grp  | public       | app_user             | department_id      | SELECT
+ app_runtime_grp  | public       | app_user             | email              | INSERT
+ app_runtime_grp  | public       | app_user             | email              | SELECT
+ app_runtime_grp  | public       | app_user             | first_name         | INSERT
+ app_runtime_grp  | public       | app_user             | first_name         | SELECT
+ app_runtime_grp  | public       | app_user             | last_name          | INSERT
+ app_runtime_grp  | public       | app_user             | last_name          | SELECT
+ app_runtime_grp  | public       | app_user             | password_hash      | INSERT
+ app_runtime_grp  | public       | app_user             | password_hash      | SELECT
+ app_runtime_grp  | public       | app_user             | role               | INSERT
+ app_runtime_grp  | public       | app_user             | role               | SELECT
+ app_runtime_grp  | public       | app_user             | status             | INSERT
+ app_runtime_grp  | public       | app_user             | status             | SELECT
+ app_runtime_grp  | public       | app_user             | status             | UPDATE
+ app_runtime_grp  | public       | app_user             | user_id            | INSERT
+ app_runtime_grp  | public       | app_user             | user_id            | SELECT
+ app_runtime_grp  | public       | department           | department_id      | INSERT
+ app_runtime_grp  | public       | department           | department_id      | SELECT
+ app_runtime_grp  | public       | department           | department_name    | INSERT
+ app_runtime_grp  | public       | department           | department_name    | SELECT
+ app_runtime_grp  | public       | material             | available_quantity | INSERT
+ app_runtime_grp  | public       | material             | available_quantity | SELECT
+ app_runtime_grp  | public       | material             | available_quantity | UPDATE
+ app_runtime_grp  | public       | material             | category           | INSERT
+ app_runtime_grp  | public       | material             | category           | SELECT
+ app_runtime_grp  | public       | material             | category           | UPDATE
+ app_runtime_grp  | public       | material             | material_id        | INSERT
+ app_runtime_grp  | public       | material             | material_id        | SELECT
+ app_runtime_grp  | public       | material             | material_name      | INSERT
+ app_runtime_grp  | public       | material             | material_name      | SELECT
+ app_runtime_grp  | public       | material             | material_name      | UPDATE
+ app_runtime_grp  | public       | material             | total_quantity     | INSERT
+ app_runtime_grp  | public       | material             | total_quantity     | SELECT
+ app_runtime_grp  | public       | material             | total_quantity     | UPDATE
+ app_runtime_grp  | public       | penalty              | amount             | INSERT
+ app_runtime_grp  | public       | penalty              | amount             | SELECT
+ app_runtime_grp  | public       | penalty              | issue_date         | INSERT
+ app_runtime_grp  | public       | penalty              | issue_date         | SELECT
+ app_runtime_grp  | public       | penalty              | paid_date          | INSERT
+ app_runtime_grp  | public       | penalty              | paid_date          | SELECT
+ app_runtime_grp  | public       | penalty              | paid_date          | UPDATE
+ app_runtime_grp  | public       | penalty              | paid_status        | INSERT
+ app_runtime_grp  | public       | penalty              | paid_status        | SELECT
+ app_runtime_grp  | public       | penalty              | paid_status        | UPDATE
+ app_runtime_grp  | public       | penalty              | penalty_id         | INSERT
+ app_runtime_grp  | public       | penalty              | penalty_id         | SELECT
+ app_runtime_grp  | public       | penalty              | reason             | INSERT
+ app_runtime_grp  | public       | penalty              | reason             | SELECT
+ app_runtime_grp  | public       | penalty              | reservation_id     | INSERT
+ app_runtime_grp  | public       | penalty              | reservation_id     | SELECT
+ app_runtime_grp  | public       | reservation          | end_time           | INSERT
+ app_runtime_grp  | public       | reservation          | end_time           | SELECT
+ app_runtime_grp  | public       | reservation          | purpose            | INSERT
+ app_runtime_grp  | public       | reservation          | purpose            | SELECT
+ app_runtime_grp  | public       | reservation          | reservation_date   | INSERT
+ app_runtime_grp  | public       | reservation          | reservation_date   | SELECT
+ app_runtime_grp  | public       | reservation          | reservation_id     | INSERT
+ app_runtime_grp  | public       | reservation          | reservation_id     | SELECT
+ app_runtime_grp  | public       | reservation          | room_id            | INSERT
+ app_runtime_grp  | public       | reservation          | room_id            | SELECT
+ app_runtime_grp  | public       | reservation          | staff_id           | INSERT
+ app_runtime_grp  | public       | reservation          | staff_id           | SELECT
+ app_runtime_grp  | public       | reservation          | staff_id           | UPDATE
+ app_runtime_grp  | public       | reservation          | start_time         | INSERT
+ app_runtime_grp  | public       | reservation          | start_time         | SELECT
+ app_runtime_grp  | public       | reservation          | status             | INSERT
+ app_runtime_grp  | public       | reservation          | status             | SELECT
+ app_runtime_grp  | public       | reservation          | status             | UPDATE
+ app_runtime_grp  | public       | reservation          | user_id            | INSERT
+ app_runtime_grp  | public       | reservation          | user_id            | SELECT
+ app_runtime_grp  | public       | reservation_material | material_id        | INSERT
+ app_runtime_grp  | public       | reservation_material | material_id        | SELECT
+ app_runtime_grp  | public       | reservation_material | quantity_requested | INSERT
+ app_runtime_grp  | public       | reservation_material | quantity_requested | SELECT
+ app_runtime_grp  | public       | reservation_material | reservation_id     | INSERT
+ app_runtime_grp  | public       | reservation_material | reservation_id     | SELECT
+ app_runtime_grp  | public       | room                 | building           | INSERT
+ app_runtime_grp  | public       | room                 | building           | SELECT
+ app_runtime_grp  | public       | room                 | building           | UPDATE
+ app_runtime_grp  | public       | room                 | capacity           | INSERT
+ app_runtime_grp  | public       | room                 | capacity           | SELECT
+ app_runtime_grp  | public       | room                 | capacity           | UPDATE
+ app_runtime_grp  | public       | room                 | room_id            | INSERT
+ app_runtime_grp  | public       | room                 | room_id            | SELECT
+ app_runtime_grp  | public       | room                 | room_name          | INSERT
+ app_runtime_grp  | public       | room                 | room_name          | SELECT
+ app_runtime_grp  | public       | room                 | room_name          | UPDATE
+ app_runtime_grp  | public       | room                 | room_type          | INSERT
+ app_runtime_grp  | public       | room                 | room_type          | SELECT
+ app_runtime_grp  | public       | room                 | room_type          | UPDATE
+ app_runtime_grp  | public       | room                 | status             | INSERT
+ app_runtime_grp  | public       | room                 | status             | SELECT
+ app_runtime_grp  | public       | room                 | status             | UPDATE
+ app_runtime_grp  | public       | staff                | email              | INSERT
+ app_runtime_grp  | public       | staff                | email              | SELECT
+ app_runtime_grp  | public       | staff                | full_name          | INSERT
+ app_runtime_grp  | public       | staff                | full_name          | SELECT
+ app_runtime_grp  | public       | staff                | password_hash      | INSERT
+ app_runtime_grp  | public       | staff                | password_hash      | SELECT
+ app_runtime_grp  | public       | staff                | role               | INSERT
+ app_runtime_grp  | public       | staff                | role               | SELECT
+ app_runtime_grp  | public       | staff                | staff_id           | INSERT
+ app_runtime_grp  | public       | staff                | staff_id           | SELECT
+ app_runtime_grp  | public       | staff                | status             | INSERT
+ app_runtime_grp  | public       | staff                | status             | SELECT
+ app_runtime_grp  | public       | staff                | status             | UPDATE
+ reserveit_owner  | public       | app_user             | department_id      | INSERT
+ reserveit_owner  | public       | app_user             | department_id      | REFERENCES
+ reserveit_owner  | public       | app_user             | department_id      | SELECT
+ reserveit_owner  | public       | app_user             | department_id      | UPDATE
+ reserveit_owner  | public       | app_user             | email              | INSERT
+ reserveit_owner  | public       | app_user             | email              | REFERENCES
+ reserveit_owner  | public       | app_user             | email              | SELECT
+ reserveit_owner  | public       | app_user             | email              | UPDATE
+ reserveit_owner  | public       | app_user             | first_name         | INSERT
+ reserveit_owner  | public       | app_user             | first_name         | REFERENCES
+ reserveit_owner  | public       | app_user             | first_name         | SELECT
+ reserveit_owner  | public       | app_user             | first_name         | UPDATE
+ reserveit_owner  | public       | app_user             | last_name          | INSERT
+ reserveit_owner  | public       | app_user             | last_name          | REFERENCES
+ reserveit_owner  | public       | app_user             | last_name          | SELECT
+ reserveit_owner  | public       | app_user             | last_name          | UPDATE
+ reserveit_owner  | public       | app_user             | password_hash      | INSERT
+ reserveit_owner  | public       | app_user             | password_hash      | REFERENCES
+ reserveit_owner  | public       | app_user             | password_hash      | SELECT
+ reserveit_owner  | public       | app_user             | password_hash      | UPDATE
+ reserveit_owner  | public       | app_user             | role               | INSERT
+ reserveit_owner  | public       | app_user             | role               | REFERENCES
+ reserveit_owner  | public       | app_user             | role               | SELECT
+ reserveit_owner  | public       | app_user             | role               | UPDATE
+ reserveit_owner  | public       | app_user             | status             | INSERT
+ reserveit_owner  | public       | app_user             | status             | REFERENCES
+ reserveit_owner  | public       | app_user             | status             | SELECT
+ reserveit_owner  | public       | app_user             | status             | UPDATE
+ reserveit_owner  | public       | app_user             | user_id            | INSERT
+ reserveit_owner  | public       | app_user             | user_id            | REFERENCES
+ reserveit_owner  | public       | app_user             | user_id            | SELECT
+ reserveit_owner  | public       | app_user             | user_id            | UPDATE
+ reserveit_owner  | public       | department           | department_id      | INSERT
+ reserveit_owner  | public       | department           | department_id      | REFERENCES
+ reserveit_owner  | public       | department           | department_id      | SELECT
+ reserveit_owner  | public       | department           | department_id      | UPDATE
+ reserveit_owner  | public       | department           | department_name    | INSERT
+ reserveit_owner  | public       | department           | department_name    | REFERENCES
+ reserveit_owner  | public       | department           | department_name    | SELECT
+ reserveit_owner  | public       | department           | department_name    | UPDATE
+ reserveit_owner  | public       | material             | available_quantity | INSERT
+ reserveit_owner  | public       | material             | available_quantity | REFERENCES
+ reserveit_owner  | public       | material             | available_quantity | SELECT
+ reserveit_owner  | public       | material             | available_quantity | UPDATE
+ reserveit_owner  | public       | material             | category           | INSERT
+ reserveit_owner  | public       | material             | category           | REFERENCES
+ reserveit_owner  | public       | material             | category           | SELECT
+ reserveit_owner  | public       | material             | category           | UPDATE
+ reserveit_owner  | public       | material             | material_id        | INSERT
+ reserveit_owner  | public       | material             | material_id        | REFERENCES
+ reserveit_owner  | public       | material             | material_id        | SELECT
+ reserveit_owner  | public       | material             | material_id        | UPDATE
+ reserveit_owner  | public       | material             | material_name      | INSERT
+ reserveit_owner  | public       | material             | material_name      | REFERENCES
+ reserveit_owner  | public       | material             | material_name      | SELECT
+ reserveit_owner  | public       | material             | material_name      | UPDATE
+ reserveit_owner  | public       | material             | total_quantity     | INSERT
+ reserveit_owner  | public       | material             | total_quantity     | REFERENCES
+ reserveit_owner  | public       | material             | total_quantity     | SELECT
+ reserveit_owner  | public       | material             | total_quantity     | UPDATE
+ reserveit_owner  | public       | penalty              | amount             | INSERT
+ reserveit_owner  | public       | penalty              | amount             | REFERENCES
+ reserveit_owner  | public       | penalty              | amount             | SELECT
+ reserveit_owner  | public       | penalty              | amount             | UPDATE
+ reserveit_owner  | public       | penalty              | issue_date         | INSERT
+ reserveit_owner  | public       | penalty              | issue_date         | REFERENCES
+ reserveit_owner  | public       | penalty              | issue_date         | SELECT
+ reserveit_owner  | public       | penalty              | issue_date         | UPDATE
+ reserveit_owner  | public       | penalty              | paid_date          | INSERT
+ reserveit_owner  | public       | penalty              | paid_date          | REFERENCES
+ reserveit_owner  | public       | penalty              | paid_date          | SELECT
+ reserveit_owner  | public       | penalty              | paid_date          | UPDATE
+ reserveit_owner  | public       | penalty              | paid_status        | INSERT
+ reserveit_owner  | public       | penalty              | paid_status        | REFERENCES
+ reserveit_owner  | public       | penalty              | paid_status        | SELECT
+ reserveit_owner  | public       | penalty              | paid_status        | UPDATE
+ reserveit_owner  | public       | penalty              | penalty_id         | INSERT
+ reserveit_owner  | public       | penalty              | penalty_id         | REFERENCES
+ reserveit_owner  | public       | penalty              | penalty_id         | SELECT
+ reserveit_owner  | public       | penalty              | penalty_id         | UPDATE
+ reserveit_owner  | public       | penalty              | reason             | INSERT
+ reserveit_owner  | public       | penalty              | reason             | REFERENCES
+ reserveit_owner  | public       | penalty              | reason             | SELECT
+ reserveit_owner  | public       | penalty              | reason             | UPDATE
+ reserveit_owner  | public       | penalty              | reservation_id     | INSERT
+ reserveit_owner  | public       | penalty              | reservation_id     | REFERENCES
+ reserveit_owner  | public       | penalty              | reservation_id     | SELECT
+ reserveit_owner  | public       | penalty              | reservation_id     | UPDATE
+ reserveit_owner  | public       | reservation          | end_time           | INSERT
+ reserveit_owner  | public       | reservation          | end_time           | REFERENCES
+ reserveit_owner  | public       | reservation          | end_time           | SELECT
+ reserveit_owner  | public       | reservation          | end_time           | UPDATE
+ reserveit_owner  | public       | reservation          | purpose            | INSERT
+ reserveit_owner  | public       | reservation          | purpose            | REFERENCES
+ reserveit_owner  | public       | reservation          | purpose            | SELECT
+ reserveit_owner  | public       | reservation          | purpose            | UPDATE
+ reserveit_owner  | public       | reservation          | reservation_date   | INSERT
+ reserveit_owner  | public       | reservation          | reservation_date   | REFERENCES
+ reserveit_owner  | public       | reservation          | reservation_date   | SELECT
+ reserveit_owner  | public       | reservation          | reservation_date   | UPDATE
+ reserveit_owner  | public       | reservation          | reservation_id     | INSERT
+ reserveit_owner  | public       | reservation          | reservation_id     | REFERENCES
+ reserveit_owner  | public       | reservation          | reservation_id     | SELECT
+ reserveit_owner  | public       | reservation          | reservation_id     | UPDATE
+ reserveit_owner  | public       | reservation          | room_id            | INSERT
+ reserveit_owner  | public       | reservation          | room_id            | REFERENCES
+ reserveit_owner  | public       | reservation          | room_id            | SELECT
+ reserveit_owner  | public       | reservation          | room_id            | UPDATE
+ reserveit_owner  | public       | reservation          | staff_id           | INSERT
+ reserveit_owner  | public       | reservation          | staff_id           | REFERENCES
+ reserveit_owner  | public       | reservation          | staff_id           | SELECT
+ reserveit_owner  | public       | reservation          | staff_id           | UPDATE
+ reserveit_owner  | public       | reservation          | start_time         | INSERT
+ reserveit_owner  | public       | reservation          | start_time         | REFERENCES
+ reserveit_owner  | public       | reservation          | start_time         | SELECT
+ reserveit_owner  | public       | reservation          | start_time         | UPDATE
+ reserveit_owner  | public       | reservation          | status             | INSERT
+ reserveit_owner  | public       | reservation          | status             | REFERENCES
+ reserveit_owner  | public       | reservation          | status             | SELECT
+ reserveit_owner  | public       | reservation          | status             | UPDATE
+ reserveit_owner  | public       | reservation          | user_id            | INSERT
+ reserveit_owner  | public       | reservation          | user_id            | REFERENCES
+ reserveit_owner  | public       | reservation          | user_id            | SELECT
+ reserveit_owner  | public       | reservation          | user_id            | UPDATE
+ reserveit_owner  | public       | reservation_material | material_id        | INSERT
+ reserveit_owner  | public       | reservation_material | material_id        | REFERENCES
+ reserveit_owner  | public       | reservation_material | material_id        | SELECT
+ reserveit_owner  | public       | reservation_material | material_id        | UPDATE
+ reserveit_owner  | public       | reservation_material | quantity_requested | INSERT
+ reserveit_owner  | public       | reservation_material | quantity_requested | REFERENCES
+ reserveit_owner  | public       | reservation_material | quantity_requested | SELECT
+ reserveit_owner  | public       | reservation_material | quantity_requested | UPDATE
+ reserveit_owner  | public       | reservation_material | reservation_id     | INSERT
+ reserveit_owner  | public       | reservation_material | reservation_id     | REFERENCES
+ reserveit_owner  | public       | reservation_material | reservation_id     | SELECT
+ reserveit_owner  | public       | reservation_material | reservation_id     | UPDATE
+ reserveit_owner  | public       | room                 | building           | INSERT
+ reserveit_owner  | public       | room                 | building           | REFERENCES
+ reserveit_owner  | public       | room                 | building           | SELECT
+ reserveit_owner  | public       | room                 | building           | UPDATE
+ reserveit_owner  | public       | room                 | capacity           | INSERT
+ reserveit_owner  | public       | room                 | capacity           | REFERENCES
+ reserveit_owner  | public       | room                 | capacity           | SELECT
+ reserveit_owner  | public       | room                 | capacity           | UPDATE
+ reserveit_owner  | public       | room                 | room_id            | INSERT
+ reserveit_owner  | public       | room                 | room_id            | REFERENCES
+ reserveit_owner  | public       | room                 | room_id            | SELECT
+ reserveit_owner  | public       | room                 | room_id            | UPDATE
+ reserveit_owner  | public       | room                 | room_name          | INSERT
+ reserveit_owner  | public       | room                 | room_name          | REFERENCES
+ reserveit_owner  | public       | room                 | room_name          | SELECT
+ reserveit_owner  | public       | room                 | room_name          | UPDATE
+ reserveit_owner  | public       | room                 | room_type          | INSERT
+ reserveit_owner  | public       | room                 | room_type          | REFERENCES
+ reserveit_owner  | public       | room                 | room_type          | SELECT
+ reserveit_owner  | public       | room                 | room_type          | UPDATE
+ reserveit_owner  | public       | room                 | status             | INSERT
+ reserveit_owner  | public       | room                 | status             | REFERENCES
+ reserveit_owner  | public       | room                 | status             | SELECT
+ reserveit_owner  | public       | room                 | status             | UPDATE
+ reserveit_owner  | public       | staff                | email              | INSERT
+ reserveit_owner  | public       | staff                | email              | REFERENCES
+ reserveit_owner  | public       | staff                | email              | SELECT
+ reserveit_owner  | public       | staff                | email              | UPDATE
+ reserveit_owner  | public       | staff                | full_name          | INSERT
+ reserveit_owner  | public       | staff                | full_name          | REFERENCES
+ reserveit_owner  | public       | staff                | full_name          | SELECT
+ reserveit_owner  | public       | staff                | full_name          | UPDATE
+ reserveit_owner  | public       | staff                | password_hash      | INSERT
+ reserveit_owner  | public       | staff                | password_hash      | REFERENCES
+ reserveit_owner  | public       | staff                | password_hash      | SELECT
+ reserveit_owner  | public       | staff                | password_hash      | UPDATE
+ reserveit_owner  | public       | staff                | role               | INSERT
+ reserveit_owner  | public       | staff                | role               | REFERENCES
+ reserveit_owner  | public       | staff                | role               | SELECT
+ reserveit_owner  | public       | staff                | role               | UPDATE
+ reserveit_owner  | public       | staff                | staff_id           | INSERT
+ reserveit_owner  | public       | staff                | staff_id           | REFERENCES
+ reserveit_owner  | public       | staff                | staff_id           | SELECT
+ reserveit_owner  | public       | staff                | staff_id           | UPDATE
+ reserveit_owner  | public       | staff                | status             | INSERT
+ reserveit_owner  | public       | staff                | status             | REFERENCES
+ reserveit_owner  | public       | staff                | status             | SELECT
+ reserveit_owner  | public       | staff                | status             | UPDATE
+(471 rows)
+
+

@@ -1,0 +1,187 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24381 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] --------------------< com.carrental:car-rental-app >--------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/4.1.2/spring-boot-starter-security-4.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/4.1.2/spring-boot-starter-validation-4.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-api/0.12.6/jjwt-api-0.12.6.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-impl/0.12.6/jjwt-impl-0.12.6.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-mail/4.1.2/spring-boot-starter-mail-4.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-mail/4.1.2/spring-boot-starter-mail-4.1.2.pom (2.3 kB at 4.5 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/4.1.2/spring-boot-starter-validation-4.1.2.pom (2.3 kB at 4.6 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-impl/0.12.6/jjwt-impl-0.12.6.pom (2.5 kB at 5.0 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/4.1.2/spring-boot-starter-security-4.1.2.pom (2.5 kB at 4.9 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-api/0.12.6/jjwt-api-0.12.6.pom (1.8 kB at 3.4 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-root/0.12.6/jjwt-root-0.12.6.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-jackson/0.12.6/jjwt-jackson-0.12.6.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation-test/4.1.2/spring-boot-starter-validation-test-4.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation-test/4.1.2/spring-boot-starter-validation-test-4.1.2.pom (2.3 kB at 31 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-jackson/0.12.6/jjwt-jackson-0.12.6.pom (2.9 kB at 35 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-root/0.12.6/jjwt-root-0.12.6.pom (37 kB at 418 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-security/4.1.2/spring-boot-security-4.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-mail/4.1.2/spring-boot-mail-4.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.pom (2.4 kB at 28 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-security/4.1.2/spring-boot-security-4.1.2.pom (2.4 kB at 31 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-mail/4.1.2/spring-boot-mail-4.1.2.pom (2.6 kB at 33 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/7.1.2/spring-security-config-7.1.2.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/7.1.2/spring-security-web-7.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.pom (5.0 kB at 59 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.10/spring-context-support-7.0.10.pom
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/mail/jakarta.mail-api/2.1.5/jakarta.mail-api-2.1.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/7.1.2/spring-security-config-7.1.2.pom (2.8 kB at 34 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/7.1.2/spring-security-web-7.1.2.pom (3.2 kB at 40 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-mail/2.0.5/angus-mail-2.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.10/spring-context-support-7.0.10.pom (2.4 kB at 27 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/mail/jakarta.mail-api/2.1.5/jakarta.mail-api-2.1.5.pom (22 kB at 248 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-mail/2.0.5/angus-mail-2.0.5.pom (8.0 kB at 96 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/all/2.0.5/all-2.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/all/2.0.5/all-2.0.5.pom (32 kB at 377 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.pom (23 kB at 271 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.21.7/jackson-base-2.21.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.21.7/jackson-base-2.21.7.pom (13 kB at 163 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.pom (9.7 kB at 85 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/7.1.2/spring-security-core-7.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/7.1.2/spring-security-core-7.1.2.pom (3.2 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/7.1.2/spring-security-crypto-7.1.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/7.1.2/spring-security-crypto-7.1.2.pom (2.1 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/4.1.2/spring-boot-starter-validation-4.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/4.1.2/spring-boot-starter-validation-4.1.2.jar (4.8 kB at 65 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-mail/4.1.2/spring-boot-starter-mail-4.1.2.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/4.1.2/spring-boot-starter-security-4.1.2.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-api/0.12.6/jjwt-api-0.12.6.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-impl/0.12.6/jjwt-impl-0.12.6.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-jackson/0.12.6/jjwt-jackson-0.12.6.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/4.1.2/spring-boot-starter-security-4.1.2.jar (4.7 kB at 61 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation-test/4.1.2/spring-boot-starter-validation-test-4.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-jackson/0.12.6/jjwt-jackson-0.12.6.jar (9.4 kB at 122 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-mail/4.1.2/spring-boot-starter-mail-4.1.2.jar (4.8 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-security/4.1.2/spring-boot-security-4.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.jar (15 kB at 99 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-mail/4.1.2/spring-boot-mail-4.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation-test/4.1.2/spring-boot-starter-validation-test-4.1.2.jar (4.8 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-api/0.12.6/jjwt-api-0.12.6.jar (140 kB at 877 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-security/4.1.2/spring-boot-security-4.1.2.jar (101 kB at 463 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/7.1.2/spring-security-config-7.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-mail/4.1.2/spring-boot-mail-4.1.2.jar (24 kB at 99 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/7.1.2/spring-security-web-7.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jsonwebtoken/jjwt-impl/0.12.6/jjwt-impl-0.12.6.jar (473 kB at 1.9 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.10/spring-context-support-7.0.10.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context-support/7.0.10/spring-context-support-7.0.10.jar (178 kB at 448 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/mail/jakarta.mail-api/2.1.5/jakarta.mail-api-2.1.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/7.1.2/spring-security-web-7.1.2.jar (933 kB at 2.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-mail/2.0.5/angus-mail-2.0.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.jar (1.7 MB at 3.9 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.jar (1.4 MB at 3.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/7.1.2/spring-security-core-7.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/7.1.2/spring-security-config-7.1.2.jar (2.1 MB at 4.1 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/7.1.2/spring-security-crypto-7.1.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/mail/jakarta.mail-api/2.1.5/jakarta.mail-api-2.1.5.jar (237 kB at 445 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/7.1.2/spring-security-core-7.1.2.jar (641 kB at 1.1 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-mail/2.0.5/angus-mail-2.0.5.jar (501 kB at 866 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/7.1.2/spring-security-crypto-7.1.2.jar (119 kB at 197 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.jar (595 kB at 961 kB/s)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ car-rental-app ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ car-rental-app ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 33 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Application/src/main/java/com/carrental/car_rental_app/web/ApiExceptionHandler.java: C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\Car_Rental_Management_System\Application\src\main\java\com\carrental\car_rental_app\web\ApiExceptionHandler.java uses or overrides a deprecated API.
+[INFO] /C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Application/src/main/java/com/carrental/car_rental_app/web/ApiExceptionHandler.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ car-rental-app ---
+[INFO] skip non existing resourceDirectory C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\Car_Rental_Management_System\Application\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ car-rental-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ car-rental-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.carrental.car_rental_app.CarRentalAppApplicationTests
+22:59:55.497 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.carrental.car_rental_app.CarRentalAppApplicationTests]: CarRentalAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:59:55.609 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.carrental.car_rental_app.CarRentalAppApplication for test class com.carrental.car_rental_app.CarRentalAppApplicationTests
+22:59:55.727 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.carrental.car_rental_app.CarRentalAppApplicationTests]: CarRentalAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:59:55.730 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.carrental.car_rental_app.CarRentalAppApplication for test class com.carrental.car_rental_app.CarRentalAppApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-06T22:59:56.083+08:00  INFO 8120 --- [car-rental-app] [           main] c.c.c.CarRentalAppApplicationTests       : Starting CarRentalAppApplicationTests using Java 25.0.4.1 with PID 8120 (started by thedi in C:\Users\thedi\Documents\Codex\2026-11-06\files-mentioned-by-the-user-school\work\Car_Rental_Management_System\Application)
+2026-11-06T22:59:56.085+08:00  INFO 8120 --- [car-rental-app] [           main] c.c.c.CarRentalAppApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2026-11-06T22:59:56.927+08:00  INFO 8120 --- [car-rental-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-06T22:59:56.955+08:00  INFO 8120 --- [car-rental-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+2026-11-06T22:59:57.465+08:00  INFO 8120 --- [car-rental-app] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-06T22:59:57.567+08:00  INFO 8120 --- [car-rental-app] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-06T22:59:58.297+08:00  INFO 8120 --- [car-rental-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-06T22:59:58.347+08:00  INFO 8120 --- [car-rental-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-06T22:59:58.609+08:00  INFO 8120 --- [car-rental-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d654b5f
+2026-11-06T22:59:58.610+08:00  INFO 8120 --- [car-rental-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-06T22:59:58.705+08:00  INFO 8120 --- [car-rental-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/car_rental_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: car_rental_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-06T22:59:59.372+08:00  INFO 8120 --- [car-rental-app] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-06T22:59:59.384+08:00  INFO 8120 --- [car-rental-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-06T22:59:59.427+08:00  WARN 8120 --- [car-rental-app] [           main] c.c.car_rental_app.security.JwtService   : JWT_SECRET is not set. Using a random secret for this run; everyone will be logged out when the app restarts. Set the JWT_SECRET environment variable (32+ random characters) to keep sessions across restarts.
+2026-11-06T22:59:59.915+08:00  WARN 8120 --- [car-rental-app] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-06T23:00:00.051+08:00  WARN 8120 --- [car-rental-app] [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+[Generated development security password omitted]
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-06T23:00:00.058+08:00  INFO 8120 --- [car-rental-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-06T23:00:00.246+08:00  INFO 8120 --- [car-rental-app] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: URL [file:../Frontend/index.html]
+2026-11-06T23:00:00.798+08:00  INFO 8120 --- [car-rental-app] [           main] c.c.c.CarRentalAppApplicationTests       : Started CarRentalAppApplicationTests in 4.975 seconds (process running for 6.114)
+2026-11-06T23:00:00.825+08:00  WARN 8120 --- [car-rental-app] [           main] c.c.car_rental_app.support.EmailService  : MAIL: no email is set up, so confirmation emails are NOT sent. Set MAIL_USERNAME and MAIL_PASSWORD (Gmail App Password), or BREVO_API_KEY and MAIL_FROM. The confirmation link is printed here instead.
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\thedi\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.15\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.972 s -- in com.carrental.car_rental_app.CarRentalAppApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.060 s
+[INFO] Finished at: 2026-11-06T23:00:01+08:00
+[INFO] ------------------------------------------------------------------------

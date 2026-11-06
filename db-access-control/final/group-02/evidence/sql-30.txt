@@ -1,0 +1,9 @@
+\set VERBOSITY verbose
+BEGIN;
+BEGIN
+SET LOCAL search_path=school_event_management_db,public;
+SET
+INSERT INTO school_event_management_db.role(role_name) VALUES ('probe');
+ERROR:  42501: permission denied for table role
+LOCATION:  aclcheck_error, aclchk.c:2795
+

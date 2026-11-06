@@ -1,0 +1,710 @@
+  current_database  | current_user |                                 version                                 
+--------------------+--------------+-------------------------------------------------------------------------
+ grp10_shioricafedb | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+    schemaname     |           tablename            | tableowner 
+-------------------+--------------------------------+------------
+ shioricafe_schema | category                       | postgres
+ shioricafe_schema | customer                       | postgres
+ shioricafe_schema | menu_item                      | postgres
+ shioricafe_schema | order                          | postgres
+ shioricafe_schema | order_discount                 | postgres
+ shioricafe_schema | order_discount_allocation      | postgres
+ shioricafe_schema | order_item                     | postgres
+ shioricafe_schema | payment_attempt                | postgres
+ shioricafe_schema | payment_refund                 | postgres
+ shioricafe_schema | payment_refund_item_allocation | postgres
+ shioricafe_schema | payment_reversal               | postgres
+ shioricafe_schema | payment_transaction            | postgres
+ shioricafe_schema | provider_event                 | postgres
+ shioricafe_schema | reservation                    | postgres
+ shioricafe_schema | staff                          | postgres
+ shioricafe_schema | store_credit_ledger            | postgres
+ shioricafe_schema | table                          | postgres
+(17 rows)
+
+    schemaname     |       viewname       
+-------------------+----------------------
+ shioricafe_schema | v_order_item_summary
+ shioricafe_schema | v_order_summary
+ shioricafe_schema | v_payment_summary
+(3 rows)
+
+ sequence_schema | sequence_name 
+-----------------+---------------
+(0 rows)
+
+       rolname       | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+---------------------+-------------+----------+-------------+---------------
+ shiori_app          | t           | f        | f           | f
+ shiori_readonly_grp | f           | f        | f           | f
+ shiori_report       | t           | f        | f           | f
+ shiori_runtime_grp  | f           | f        | f           | f
+(4 rows)
+
+    member     |     group_role      
+---------------+---------------------
+ shiori_app    | shiori_runtime_grp
+ shiori_report | shiori_readonly_grp
+(2 rows)
+
+      datname       |  owner   |                                        datacl                                        
+--------------------+----------+--------------------------------------------------------------------------------------
+ grp10_shioricafedb | postgres | {postgres=CTc/postgres,shiori_runtime_grp=c/postgres,shiori_readonly_grp=c/postgres}
+(1 row)
+
+       grantee       |   table_schema    |           table_name           | privilege_type 
+---------------------+-------------------+--------------------------------+----------------
+ shiori_readonly_grp | shioricafe_schema | category                       | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | DELETE
+ shiori_runtime_grp  | shioricafe_schema | category                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | category                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | DELETE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | DELETE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | DELETE
+ shiori_runtime_grp  | shioricafe_schema | order                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | DELETE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | DELETE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | DELETE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | DELETE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | DELETE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | DELETE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | DELETE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | DELETE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | DELETE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | DELETE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | DELETE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | DELETE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | DELETE
+ shiori_runtime_grp  | shioricafe_schema | table                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | DELETE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | DELETE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | DELETE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | UPDATE
+(84 rows)
+
+       grantee       |   table_schema    |           table_name           |             column_name              | privilege_type 
+---------------------+-------------------+--------------------------------+--------------------------------------+----------------
+ shiori_readonly_grp | shioricafe_schema | category                       | category_id                          | SELECT
+ shiori_readonly_grp | shioricafe_schema | category                       | category_name                        | SELECT
+ shiori_readonly_grp | shioricafe_schema | category                       | created_at                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | category                       | is_drink_category                    | SELECT
+ shiori_readonly_grp | shioricafe_schema | category                       | updated_at                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | category_id                          | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | created_at                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | current_price                        | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | description                          | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | is_active                            | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | item_name                            | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | menu_item_id                         | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | stock_status                         | SELECT
+ shiori_readonly_grp | shioricafe_schema | menu_item                      | updated_at                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | amenities                            | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | capacity                             | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | created_at                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | operational_status                   | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | table_id                             | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | table_number                         | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | table_type                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | table                          | updated_at                           | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | amount                               | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | captured_at                          | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | currency                             | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | order_id                             | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | payment_method                       | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | payment_transaction_id               | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | reservation_extension_id             | SELECT
+ shiori_readonly_grp | shioricafe_schema | v_payment_summary              | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | category_id                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | category                       | category_id                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | category_id                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | category                       | category_name                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | category                       | category_name                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | category_name                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | category                       | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | category                       | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | category                       | is_drink_category                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | category                       | is_drink_category                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | is_drink_category                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | category                       | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | category                       | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | category                       | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | customer_id                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | customer_id                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | customer_id                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | email                                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | email                                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | email                                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | full_name                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | full_name                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | full_name                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | password_hash                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | password_hash                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | password_hash                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | phone                                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | phone                                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | phone                                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | customer                       | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | customer                       | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | category_id                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | category_id                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | category_id                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | current_price                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | current_price                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | current_price                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | description                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | description                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | description                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | is_active                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | is_active                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | is_active                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | item_name                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | item_name                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | item_name                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | menu_item_id                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | menu_item_id                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | menu_item_id                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | stock_status                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | stock_status                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | stock_status                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | menu_item                      | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | gross_order_amount                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | gross_order_amount                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | gross_order_amount                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | order_type                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | order_type                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | order_type                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | preparation_status                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | preparation_status                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | preparation_status                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | reservation_id                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | reservation_id                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | reservation_id                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | table_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | table_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | table_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order                          | voided_at                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order                          | voided_at                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order                          | voided_at                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | order_discount_id                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | order_discount_id                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | order_discount_id                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount                 | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | allocated_amount                     | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | allocated_amount                     | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | allocated_amount                     | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_discount_allocation_id         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_discount_allocation_id         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_discount_allocation_id         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_discount_id                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_discount_id                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_discount_id                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_item_id                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_item_id                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_discount_allocation      | order_item_id                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | is_drink_category_at_purchase        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | is_drink_category_at_purchase        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | is_drink_category_at_purchase        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | item_name_at_purchase                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | item_name_at_purchase                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | item_name_at_purchase                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | line_gross_amount                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | line_gross_amount                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | line_gross_amount                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | menu_item_id                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | menu_item_id                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | menu_item_id                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | order_item_id                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | order_item_id                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | order_item_id                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | quantity                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | quantity                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | quantity                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | unit_price_at_purchase               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | unit_price_at_purchase               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | order_item                     | unit_price_at_purchase               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | payment_attempt_id                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | payment_attempt_id                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | payment_attempt_id                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | provider                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | provider                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | provider                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | provider_reference                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | provider_reference                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | provider_reference                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | reservation_extension_id             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | reservation_extension_id             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | reservation_extension_id             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | status                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | status                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_attempt                | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | confirmed_at                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | confirmed_at                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | confirmed_at                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | payment_refund_id                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | payment_refund_id                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | payment_refund_id                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | payment_transaction_id               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | payment_transaction_id               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | payment_transaction_id               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | provider_refund_reference            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | provider_refund_reference            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | provider_refund_reference            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | reason                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | reason                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | reason                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | status                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund                 | status                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | allocated_amount                     | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | allocated_amount                     | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | allocated_amount                     | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | order_item_id                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | order_item_id                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | order_item_id                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | payment_refund_id                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | payment_refund_id                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | payment_refund_id                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | payment_refund_item_allocation_id    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | payment_refund_item_allocation_id    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_refund_item_allocation | payment_refund_item_allocation_id    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | confirmed_at                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | confirmed_at                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | confirmed_at                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | payment_reversal_id                  | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | payment_reversal_id                  | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | payment_reversal_id                  | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | payment_transaction_id               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | payment_transaction_id               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | payment_transaction_id               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | reason                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | reason                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | reason                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | status                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_reversal               | status                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | captured_at                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | captured_at                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | captured_at                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_attempt_id                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_attempt_id                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_attempt_id                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_method                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_method                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_method                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_transaction_id               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_transaction_id               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | payment_transaction_id               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | reservation_extension_id             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | reservation_extension_id             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | reservation_extension_id             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | status                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | status                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | transaction_reference                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | transaction_reference                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | payment_transaction            | transaction_reference                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | event_type                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | event_type                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | event_type                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | payload                              | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | payload                              | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | payload                              | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | processed_at                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | processed_at                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | processed_at                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | processing_status                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | processing_status                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | processing_status                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider_event_id                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider_event_id                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider_event_id                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider_event_reference             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider_event_reference             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | provider_event_reference             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | received_at                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | received_at                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | provider_event                 | received_at                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | attendance_confirmed_at              | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | attendance_confirmed_at              | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | attendance_confirmed_at              | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | cancellation_reason                  | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | cancellation_reason                  | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | cancellation_reason                  | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | cancelled_at                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | cancelled_at                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | cancelled_at                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checked_in_at                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checked_in_at                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checked_in_at                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checked_in_by_staff_id               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checked_in_by_staff_id               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checked_in_by_staff_id               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checkin_followup_sent_at             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checkin_followup_sent_at             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | checkin_followup_sent_at             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | completed_at                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | completed_at                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | completed_at                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | completed_by_staff_id                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | completed_by_staff_id                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | completed_by_staff_id                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | customer_id                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | customer_id                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | customer_id                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | extension_count                      | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | extension_count                      | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | extension_count                      | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | is_walkin                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | is_walkin                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | is_walkin                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | party_size                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | party_size                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | party_size                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reminder_sent_at                     | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reminder_sent_at                     | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reminder_sent_at                     | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | required_minimum_amount              | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | required_minimum_amount              | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | required_minimum_amount              | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_end_at                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_end_at                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_end_at                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_id                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_id                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_id                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_start_at                 | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_start_at                 | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | reservation_start_at                 | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_acknowledged_at          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_acknowledged_at          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_acknowledged_at          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_acknowledged_by_staff_id | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_acknowledged_by_staff_id | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_acknowledged_by_staff_id | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_required                 | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_required                 | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | seat_notice_required                 | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | status                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | status                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | table_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | table_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | table_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | reservation                    | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | created_by_staff_id                  | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | created_by_staff_id                  | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | created_by_staff_id                  | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | email                                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | email                                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | email                                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | full_name                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | full_name                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | full_name                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | password_hash                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | password_hash                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | password_hash                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | role                                 | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | role                                 | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | role                                 | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | staff_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | staff_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | staff_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | staff                          | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | staff                          | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | customer_id                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | customer_id                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | customer_id                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | description                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | description                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | description                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | reference_number                     | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | reference_number                     | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | reference_number                     | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | reservation_id                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | reservation_id                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | reservation_id                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | store_credit_ledger_id               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | store_credit_ledger_id               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | store_credit_ledger_id               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | transaction_type                     | INSERT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | transaction_type                     | SELECT
+ shiori_runtime_grp  | shioricafe_schema | store_credit_ledger            | transaction_type                     | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | amenities                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | amenities                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | amenities                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | capacity                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | capacity                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | capacity                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | operational_status                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | operational_status                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | operational_status                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_number                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_number                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_number                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_type                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_type                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | table_type                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | table                          | updated_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | table                          | updated_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | table                          | updated_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | is_drink_category_at_purchase        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | is_drink_category_at_purchase        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | is_drink_category_at_purchase        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | item_name_at_purchase                | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | item_name_at_purchase                | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | item_name_at_purchase                | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | line_gross_amount                    | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | line_gross_amount                    | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | line_gross_amount                    | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | menu_item_id                         | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | menu_item_id                         | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | menu_item_id                         | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | order_item_id                        | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | order_item_id                        | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | order_item_id                        | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | quantity                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | quantity                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | quantity                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | unit_price_at_purchase               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | unit_price_at_purchase               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_item_summary           | unit_price_at_purchase               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | created_at                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | created_at                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | created_at                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | gross_order_amount                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | gross_order_amount                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | gross_order_amount                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | order_type                           | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | order_type                           | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | order_type                           | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | preparation_status                   | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | preparation_status                   | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | preparation_status                   | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | reservation_id                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | reservation_id                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | reservation_id                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | table_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | table_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | table_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | voided_at                            | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | voided_at                            | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_order_summary                | voided_at                            | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | amount                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | amount                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | amount                               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | captured_at                          | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | captured_at                          | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | captured_at                          | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | currency                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | currency                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | currency                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | order_id                             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | order_id                             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | order_id                             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | payment_method                       | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | payment_method                       | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | payment_method                       | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | payment_transaction_id               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | payment_transaction_id               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | payment_transaction_id               | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | reservation_extension_id             | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | reservation_extension_id             | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | reservation_extension_id             | UPDATE
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | status                               | INSERT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | status                               | SELECT
+ shiori_runtime_grp  | shioricafe_schema | v_payment_summary              | status                               | UPDATE
+(561 rows)
+
+

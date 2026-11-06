@@ -1,0 +1,34 @@
+ current_database 
+------------------
+ grp03_projectdb
+(1 row)
+
+        tablename        | tableowner 
+-------------------------+------------
+ appointments            | postgres
+ billing                 | postgres
+ deleted_records         | postgres
+ doctors                 | postgres
+ medical_notes           | postgres
+ patient_password_resets | postgres
+ patients                | postgres
+ prescriptions           | postgres
+ specialties             | postgres
+ staff_password_resets   | postgres
+ staff_users             | postgres
+(11 rows)
+
+     rolname     | rolsuper | rolcreatedb | rolcreaterole 
+-----------------+----------+-------------+---------------
+ hb_app          | f        | f           | f
+ hb_report       | f        | f           | f
+ hb_maintenance  | f        | f           | f
+ shiori_app      | f        | f           | f
+ shiori_report   | f        | f           | f
+ catering_app    | f        | f           | f
+ catering_report | f        | f           | f
+ app_runtime     | f        | f           | f
+ car_report      | f        | f           | f
+ car_dba         | f        | f           | f
+(10 rows)
+

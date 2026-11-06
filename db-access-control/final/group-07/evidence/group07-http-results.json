@@ -1,0 +1,112 @@
+[
+  {
+    "test": "GET dashboard",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET applicants",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET applications",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET positions",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET departments",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET requirements",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET interviews",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET status",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET applicant_form",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET department_form",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET position_form",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET requirement_form",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET application_form",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET interview_form",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "GET applicant_requirements",
+    "status": 200,
+    "passed": true
+  },
+  {
+    "test": "POST department Activity4 Test Department",
+    "status": 200,
+    "passed": true,
+    "message": "Department created successfully"
+  },
+  {
+    "test": "POST department Activity4 Test Department",
+    "status": 200,
+    "passed": true,
+    "message": "already exists"
+  },
+  {
+    "test": "POST department ",
+    "status": 200,
+    "passed": true,
+    "message": "Department name is required"
+  },
+  {
+    "test": "POST without CSRF",
+    "status": 419,
+    "passed": true
+  },
+  {
+    "test": "department_save",
+    "status": 200,
+    "passed": true,
+    "message": "Department updated successfully"
+  },
+  {
+    "test": "department_delete",
+    "status": 200,
+    "passed": true,
+    "message": "Department deleted successfully"
+  }
+]

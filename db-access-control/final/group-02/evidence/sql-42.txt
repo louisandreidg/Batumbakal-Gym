@@ -1,0 +1,5 @@
+\set VERBOSITY verbose
+CREATE DATABASE grp02_permission_probe;
+ERROR:  42501: permission denied to create database
+LOCATION:  createdb, dbcommands.c:979
+

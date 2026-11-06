@@ -1,0 +1,227 @@
+ current_database | current_user |                                 version                                 
+------------------+--------------+-------------------------------------------------------------------------
+ dropboxed_db     | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |       tablename       | tableowner 
+------------+-----------------------+------------
+ dropboxed  | attachments           | postgres
+ dropboxed  | complaint_assignments | postgres
+ dropboxed  | complaint_categories  | postgres
+ dropboxed  | complaints            | postgres
+ dropboxed  | locations             | postgres
+ dropboxed  | staff                 | postgres
+ dropboxed  | status_logs           | postgres
+ dropboxed  | users                 | postgres
+(8 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema | sequence_name 
+-----------------+---------------
+(0 rows)
+
+    rolname    | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+---------------+-------------+----------+-------------+---------------
+ dropboxed_app | t           | f        | f           | f
+(1 row)
+
+ member | group_role 
+--------+------------
+(0 rows)
+
+   datname    |  owner   |                            datacl                             
+--------------+----------+---------------------------------------------------------------
+ dropboxed_db | postgres | {=Tc/postgres,postgres=CTc/postgres,dropboxed_app=c/postgres}
+(1 row)
+
+    grantee    | table_schema |      table_name       | privilege_type 
+---------------+--------------+-----------------------+----------------
+ dropboxed_app | dropboxed    | attachments           | DELETE
+ dropboxed_app | dropboxed    | attachments           | INSERT
+ dropboxed_app | dropboxed    | attachments           | SELECT
+ dropboxed_app | dropboxed    | attachments           | UPDATE
+ dropboxed_app | dropboxed    | complaint_assignments | DELETE
+ dropboxed_app | dropboxed    | complaint_assignments | INSERT
+ dropboxed_app | dropboxed    | complaint_assignments | SELECT
+ dropboxed_app | dropboxed    | complaint_assignments | UPDATE
+ dropboxed_app | dropboxed    | complaint_categories  | DELETE
+ dropboxed_app | dropboxed    | complaint_categories  | INSERT
+ dropboxed_app | dropboxed    | complaint_categories  | SELECT
+ dropboxed_app | dropboxed    | complaint_categories  | UPDATE
+ dropboxed_app | dropboxed    | complaints            | DELETE
+ dropboxed_app | dropboxed    | complaints            | INSERT
+ dropboxed_app | dropboxed    | complaints            | SELECT
+ dropboxed_app | dropboxed    | complaints            | UPDATE
+ dropboxed_app | dropboxed    | locations             | DELETE
+ dropboxed_app | dropboxed    | locations             | INSERT
+ dropboxed_app | dropboxed    | locations             | SELECT
+ dropboxed_app | dropboxed    | locations             | UPDATE
+ dropboxed_app | dropboxed    | staff                 | DELETE
+ dropboxed_app | dropboxed    | staff                 | INSERT
+ dropboxed_app | dropboxed    | staff                 | SELECT
+ dropboxed_app | dropboxed    | staff                 | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | DELETE
+ dropboxed_app | dropboxed    | status_logs           | INSERT
+ dropboxed_app | dropboxed    | status_logs           | SELECT
+ dropboxed_app | dropboxed    | status_logs           | UPDATE
+ dropboxed_app | dropboxed    | users                 | DELETE
+ dropboxed_app | dropboxed    | users                 | INSERT
+ dropboxed_app | dropboxed    | users                 | SELECT
+ dropboxed_app | dropboxed    | users                 | UPDATE
+(32 rows)
+
+    grantee    | table_schema |      table_name       |   column_name   | privilege_type 
+---------------+--------------+-----------------------+-----------------+----------------
+ dropboxed_app | dropboxed    | attachments           | attachment_id   | INSERT
+ dropboxed_app | dropboxed    | attachments           | attachment_id   | SELECT
+ dropboxed_app | dropboxed    | attachments           | attachment_id   | UPDATE
+ dropboxed_app | dropboxed    | attachments           | complaint_id    | INSERT
+ dropboxed_app | dropboxed    | attachments           | complaint_id    | SELECT
+ dropboxed_app | dropboxed    | attachments           | complaint_id    | UPDATE
+ dropboxed_app | dropboxed    | attachments           | file_name       | INSERT
+ dropboxed_app | dropboxed    | attachments           | file_name       | SELECT
+ dropboxed_app | dropboxed    | attachments           | file_name       | UPDATE
+ dropboxed_app | dropboxed    | attachments           | file_path       | INSERT
+ dropboxed_app | dropboxed    | attachments           | file_path       | SELECT
+ dropboxed_app | dropboxed    | attachments           | file_path       | UPDATE
+ dropboxed_app | dropboxed    | attachments           | file_size_bytes | INSERT
+ dropboxed_app | dropboxed    | attachments           | file_size_bytes | SELECT
+ dropboxed_app | dropboxed    | attachments           | file_size_bytes | UPDATE
+ dropboxed_app | dropboxed    | attachments           | file_type       | INSERT
+ dropboxed_app | dropboxed    | attachments           | file_type       | SELECT
+ dropboxed_app | dropboxed    | attachments           | file_type       | UPDATE
+ dropboxed_app | dropboxed    | attachments           | uploaded_at     | INSERT
+ dropboxed_app | dropboxed    | attachments           | uploaded_at     | SELECT
+ dropboxed_app | dropboxed    | attachments           | uploaded_at     | UPDATE
+ dropboxed_app | dropboxed    | complaint_assignments | assigned_at     | INSERT
+ dropboxed_app | dropboxed    | complaint_assignments | assigned_at     | SELECT
+ dropboxed_app | dropboxed    | complaint_assignments | assigned_at     | UPDATE
+ dropboxed_app | dropboxed    | complaint_assignments | assignment_id   | INSERT
+ dropboxed_app | dropboxed    | complaint_assignments | assignment_id   | SELECT
+ dropboxed_app | dropboxed    | complaint_assignments | assignment_id   | UPDATE
+ dropboxed_app | dropboxed    | complaint_assignments | complaint_id    | INSERT
+ dropboxed_app | dropboxed    | complaint_assignments | complaint_id    | SELECT
+ dropboxed_app | dropboxed    | complaint_assignments | complaint_id    | UPDATE
+ dropboxed_app | dropboxed    | complaint_assignments | staff_id        | INSERT
+ dropboxed_app | dropboxed    | complaint_assignments | staff_id        | SELECT
+ dropboxed_app | dropboxed    | complaint_assignments | staff_id        | UPDATE
+ dropboxed_app | dropboxed    | complaint_categories  | category_id     | INSERT
+ dropboxed_app | dropboxed    | complaint_categories  | category_id     | SELECT
+ dropboxed_app | dropboxed    | complaint_categories  | category_id     | UPDATE
+ dropboxed_app | dropboxed    | complaint_categories  | category_name   | INSERT
+ dropboxed_app | dropboxed    | complaint_categories  | category_name   | SELECT
+ dropboxed_app | dropboxed    | complaint_categories  | category_name   | UPDATE
+ dropboxed_app | dropboxed    | complaint_categories  | description     | INSERT
+ dropboxed_app | dropboxed    | complaint_categories  | description     | SELECT
+ dropboxed_app | dropboxed    | complaint_categories  | description     | UPDATE
+ dropboxed_app | dropboxed    | complaints            | category_id     | INSERT
+ dropboxed_app | dropboxed    | complaints            | category_id     | SELECT
+ dropboxed_app | dropboxed    | complaints            | category_id     | UPDATE
+ dropboxed_app | dropboxed    | complaints            | complaint_id    | INSERT
+ dropboxed_app | dropboxed    | complaints            | complaint_id    | SELECT
+ dropboxed_app | dropboxed    | complaints            | complaint_id    | UPDATE
+ dropboxed_app | dropboxed    | complaints            | description     | INSERT
+ dropboxed_app | dropboxed    | complaints            | description     | SELECT
+ dropboxed_app | dropboxed    | complaints            | description     | UPDATE
+ dropboxed_app | dropboxed    | complaints            | flag_reason     | INSERT
+ dropboxed_app | dropboxed    | complaints            | flag_reason     | SELECT
+ dropboxed_app | dropboxed    | complaints            | flag_reason     | UPDATE
+ dropboxed_app | dropboxed    | complaints            | is_flagged      | INSERT
+ dropboxed_app | dropboxed    | complaints            | is_flagged      | SELECT
+ dropboxed_app | dropboxed    | complaints            | is_flagged      | UPDATE
+ dropboxed_app | dropboxed    | complaints            | location_id     | INSERT
+ dropboxed_app | dropboxed    | complaints            | location_id     | SELECT
+ dropboxed_app | dropboxed    | complaints            | location_id     | UPDATE
+ dropboxed_app | dropboxed    | complaints            | resolved_at     | INSERT
+ dropboxed_app | dropboxed    | complaints            | resolved_at     | SELECT
+ dropboxed_app | dropboxed    | complaints            | resolved_at     | UPDATE
+ dropboxed_app | dropboxed    | complaints            | status          | INSERT
+ dropboxed_app | dropboxed    | complaints            | status          | SELECT
+ dropboxed_app | dropboxed    | complaints            | status          | UPDATE
+ dropboxed_app | dropboxed    | complaints            | submitted_at    | INSERT
+ dropboxed_app | dropboxed    | complaints            | submitted_at    | SELECT
+ dropboxed_app | dropboxed    | complaints            | submitted_at    | UPDATE
+ dropboxed_app | dropboxed    | complaints            | user_id         | INSERT
+ dropboxed_app | dropboxed    | complaints            | user_id         | SELECT
+ dropboxed_app | dropboxed    | complaints            | user_id         | UPDATE
+ dropboxed_app | dropboxed    | locations             | barangay        | INSERT
+ dropboxed_app | dropboxed    | locations             | barangay        | SELECT
+ dropboxed_app | dropboxed    | locations             | barangay        | UPDATE
+ dropboxed_app | dropboxed    | locations             | city            | INSERT
+ dropboxed_app | dropboxed    | locations             | city            | SELECT
+ dropboxed_app | dropboxed    | locations             | city            | UPDATE
+ dropboxed_app | dropboxed    | locations             | house_number    | INSERT
+ dropboxed_app | dropboxed    | locations             | house_number    | SELECT
+ dropboxed_app | dropboxed    | locations             | house_number    | UPDATE
+ dropboxed_app | dropboxed    | locations             | location_id     | INSERT
+ dropboxed_app | dropboxed    | locations             | location_id     | SELECT
+ dropboxed_app | dropboxed    | locations             | location_id     | UPDATE
+ dropboxed_app | dropboxed    | locations             | postal_code     | INSERT
+ dropboxed_app | dropboxed    | locations             | postal_code     | SELECT
+ dropboxed_app | dropboxed    | locations             | postal_code     | UPDATE
+ dropboxed_app | dropboxed    | locations             | street          | INSERT
+ dropboxed_app | dropboxed    | locations             | street          | SELECT
+ dropboxed_app | dropboxed    | locations             | street          | UPDATE
+ dropboxed_app | dropboxed    | staff                 | account_status  | INSERT
+ dropboxed_app | dropboxed    | staff                 | account_status  | SELECT
+ dropboxed_app | dropboxed    | staff                 | account_status  | UPDATE
+ dropboxed_app | dropboxed    | staff                 | created_at      | INSERT
+ dropboxed_app | dropboxed    | staff                 | created_at      | SELECT
+ dropboxed_app | dropboxed    | staff                 | created_at      | UPDATE
+ dropboxed_app | dropboxed    | staff                 | email           | INSERT
+ dropboxed_app | dropboxed    | staff                 | email           | SELECT
+ dropboxed_app | dropboxed    | staff                 | email           | UPDATE
+ dropboxed_app | dropboxed    | staff                 | full_name       | INSERT
+ dropboxed_app | dropboxed    | staff                 | full_name       | SELECT
+ dropboxed_app | dropboxed    | staff                 | full_name       | UPDATE
+ dropboxed_app | dropboxed    | staff                 | password_hash   | INSERT
+ dropboxed_app | dropboxed    | staff                 | password_hash   | SELECT
+ dropboxed_app | dropboxed    | staff                 | password_hash   | UPDATE
+ dropboxed_app | dropboxed    | staff                 | staff_id        | INSERT
+ dropboxed_app | dropboxed    | staff                 | staff_id        | SELECT
+ dropboxed_app | dropboxed    | staff                 | staff_id        | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | complaint_id    | INSERT
+ dropboxed_app | dropboxed    | status_logs           | complaint_id    | SELECT
+ dropboxed_app | dropboxed    | status_logs           | complaint_id    | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | remarks         | INSERT
+ dropboxed_app | dropboxed    | status_logs           | remarks         | SELECT
+ dropboxed_app | dropboxed    | status_logs           | remarks         | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | staff_id        | INSERT
+ dropboxed_app | dropboxed    | status_logs           | staff_id        | SELECT
+ dropboxed_app | dropboxed    | status_logs           | staff_id        | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | status          | INSERT
+ dropboxed_app | dropboxed    | status_logs           | status          | SELECT
+ dropboxed_app | dropboxed    | status_logs           | status          | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | status_log_id   | INSERT
+ dropboxed_app | dropboxed    | status_logs           | status_log_id   | SELECT
+ dropboxed_app | dropboxed    | status_logs           | status_log_id   | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | updated_at      | INSERT
+ dropboxed_app | dropboxed    | status_logs           | updated_at      | SELECT
+ dropboxed_app | dropboxed    | status_logs           | updated_at      | UPDATE
+ dropboxed_app | dropboxed    | users                 | account_status  | INSERT
+ dropboxed_app | dropboxed    | users                 | account_status  | SELECT
+ dropboxed_app | dropboxed    | users                 | account_status  | UPDATE
+ dropboxed_app | dropboxed    | users                 | created_at      | INSERT
+ dropboxed_app | dropboxed    | users                 | created_at      | SELECT
+ dropboxed_app | dropboxed    | users                 | created_at      | UPDATE
+ dropboxed_app | dropboxed    | users                 | email           | INSERT
+ dropboxed_app | dropboxed    | users                 | email           | SELECT
+ dropboxed_app | dropboxed    | users                 | email           | UPDATE
+ dropboxed_app | dropboxed    | users                 | full_name       | INSERT
+ dropboxed_app | dropboxed    | users                 | full_name       | SELECT
+ dropboxed_app | dropboxed    | users                 | full_name       | UPDATE
+ dropboxed_app | dropboxed    | users                 | password_hash   | INSERT
+ dropboxed_app | dropboxed    | users                 | password_hash   | SELECT
+ dropboxed_app | dropboxed    | users                 | password_hash   | UPDATE
+ dropboxed_app | dropboxed    | users                 | phone_number    | INSERT
+ dropboxed_app | dropboxed    | users                 | phone_number    | SELECT
+ dropboxed_app | dropboxed    | users                 | phone_number    | UPDATE
+ dropboxed_app | dropboxed    | users                 | user_id         | INSERT
+ dropboxed_app | dropboxed    | users                 | user_id         | SELECT
+ dropboxed_app | dropboxed    | users                 | user_id         | UPDATE
+(147 rows)
+
+

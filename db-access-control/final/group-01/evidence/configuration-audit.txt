@@ -1,0 +1,62 @@
+ current_database | current_user 
+------------------+--------------
+ dropboxed_db     | postgres
+(1 row)
+
+       tablename       | tableowner 
+-----------------------+------------
+ attachments           | postgres
+ complaint_assignments | postgres
+ complaint_categories  | postgres
+ complaints            | postgres
+ locations             | postgres
+ staff                 | postgres
+ status_logs           | postgres
+ users                 | postgres
+(8 rows)
+
+       member       |     group_role     
+--------------------+--------------------
+ grp07_app          | grp07_runtime_grp
+ grp07_readonly     | grp07_readonly_grp
+ reserveit_app      | app_runtime_grp
+ reserveit_reporter | app_readonly_grp
+ reserveit_dba      | app_admin_grp
+(5 rows)
+
+    grantee    | table_schema |      table_name       | privilege_type 
+---------------+--------------+-----------------------+----------------
+ dropboxed_app | dropboxed    | attachments           | DELETE
+ dropboxed_app | dropboxed    | attachments           | INSERT
+ dropboxed_app | dropboxed    | attachments           | SELECT
+ dropboxed_app | dropboxed    | attachments           | UPDATE
+ dropboxed_app | dropboxed    | complaint_assignments | DELETE
+ dropboxed_app | dropboxed    | complaint_assignments | INSERT
+ dropboxed_app | dropboxed    | complaint_assignments | SELECT
+ dropboxed_app | dropboxed    | complaint_assignments | UPDATE
+ dropboxed_app | dropboxed    | complaint_categories  | DELETE
+ dropboxed_app | dropboxed    | complaint_categories  | INSERT
+ dropboxed_app | dropboxed    | complaint_categories  | SELECT
+ dropboxed_app | dropboxed    | complaint_categories  | UPDATE
+ dropboxed_app | dropboxed    | complaints            | DELETE
+ dropboxed_app | dropboxed    | complaints            | INSERT
+ dropboxed_app | dropboxed    | complaints            | SELECT
+ dropboxed_app | dropboxed    | complaints            | UPDATE
+ dropboxed_app | dropboxed    | locations             | DELETE
+ dropboxed_app | dropboxed    | locations             | INSERT
+ dropboxed_app | dropboxed    | locations             | SELECT
+ dropboxed_app | dropboxed    | locations             | UPDATE
+ dropboxed_app | dropboxed    | staff                 | DELETE
+ dropboxed_app | dropboxed    | staff                 | INSERT
+ dropboxed_app | dropboxed    | staff                 | SELECT
+ dropboxed_app | dropboxed    | staff                 | UPDATE
+ dropboxed_app | dropboxed    | status_logs           | DELETE
+ dropboxed_app | dropboxed    | status_logs           | INSERT
+ dropboxed_app | dropboxed    | status_logs           | SELECT
+ dropboxed_app | dropboxed    | status_logs           | UPDATE
+ dropboxed_app | dropboxed    | users                 | DELETE
+ dropboxed_app | dropboxed    | users                 | INSERT
+ dropboxed_app | dropboxed    | users                 | SELECT
+ dropboxed_app | dropboxed    | users                 | UPDATE
+(32 rows)
+

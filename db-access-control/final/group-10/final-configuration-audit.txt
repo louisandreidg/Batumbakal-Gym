@@ -1,0 +1,574 @@
+ current_database | current_user |                                 version                                 
+------------------+--------------+-------------------------------------------------------------------------
+ grp10_unisyncdb  | postgres     | PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+(1 row)
+
+ schemaname |   tablename    | tableowner 
+------------+----------------+------------
+ public     | account        | postgres
+ public     | event          | postgres
+ public     | event_schedule | postgres
+ public     | membership     | postgres
+ public     | notification   | postgres
+ public     | organization   | postgres
+ public     | registration   | postgres
+ public     | venue          | postgres
+(8 rows)
+
+ schemaname | viewname 
+------------+----------
+(0 rows)
+
+ sequence_schema |          sequence_name           
+-----------------+----------------------------------
+ public          | account_account_id_seq
+ public          | event_event_id_seq
+ public          | event_schedule_schedule_id_seq
+ public          | membership_membership_id_seq
+ public          | notification_notification_id_seq
+ public          | organization_organization_id_seq
+ public          | registration_registration_id_seq
+ public          | venue_venue_id_seq
+(8 rows)
+
+       rolname        | rolcanlogin | rolsuper | rolcreatedb | rolcreaterole 
+----------------------+-------------+----------+-------------+---------------
+ unisync_admin_grp    | f           | f        | f           | f
+ unisync_app          | t           | f        | f           | f
+ unisync_auditor      | t           | f        | f           | f
+ unisync_dba          | t           | f        | f           | f
+ unisync_readonly_grp | f           | f        | f           | f
+ unisync_runtime_grp  | f           | f        | f           | f
+(6 rows)
+
+     member      |      group_role      
+-----------------+----------------------
+ unisync_app     | unisync_runtime_grp
+ unisync_auditor | unisync_readonly_grp
+ unisync_dba     | unisync_admin_grp
+(3 rows)
+
+     datname     |  owner   |                                                       datacl                                                        
+-----------------+----------+---------------------------------------------------------------------------------------------------------------------
+ grp10_unisyncdb | postgres | {postgres=CTc/postgres,unisync_admin_grp=c/postgres,unisync_runtime_grp=c/postgres,unisync_readonly_grp=c/postgres}
+(1 row)
+
+       grantee        | table_schema |   table_name   | privilege_type 
+----------------------+--------------+----------------+----------------
+ unisync_admin_grp    | public       | account        | DELETE
+ unisync_admin_grp    | public       | account        | INSERT
+ unisync_admin_grp    | public       | account        | REFERENCES
+ unisync_admin_grp    | public       | account        | SELECT
+ unisync_admin_grp    | public       | account        | TRIGGER
+ unisync_admin_grp    | public       | account        | TRUNCATE
+ unisync_admin_grp    | public       | account        | UPDATE
+ unisync_admin_grp    | public       | event          | DELETE
+ unisync_admin_grp    | public       | event          | INSERT
+ unisync_admin_grp    | public       | event          | REFERENCES
+ unisync_admin_grp    | public       | event          | SELECT
+ unisync_admin_grp    | public       | event          | TRIGGER
+ unisync_admin_grp    | public       | event          | TRUNCATE
+ unisync_admin_grp    | public       | event          | UPDATE
+ unisync_admin_grp    | public       | event_schedule | DELETE
+ unisync_admin_grp    | public       | event_schedule | INSERT
+ unisync_admin_grp    | public       | event_schedule | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | SELECT
+ unisync_admin_grp    | public       | event_schedule | TRIGGER
+ unisync_admin_grp    | public       | event_schedule | TRUNCATE
+ unisync_admin_grp    | public       | event_schedule | UPDATE
+ unisync_admin_grp    | public       | membership     | DELETE
+ unisync_admin_grp    | public       | membership     | INSERT
+ unisync_admin_grp    | public       | membership     | REFERENCES
+ unisync_admin_grp    | public       | membership     | SELECT
+ unisync_admin_grp    | public       | membership     | TRIGGER
+ unisync_admin_grp    | public       | membership     | TRUNCATE
+ unisync_admin_grp    | public       | membership     | UPDATE
+ unisync_admin_grp    | public       | notification   | DELETE
+ unisync_admin_grp    | public       | notification   | INSERT
+ unisync_admin_grp    | public       | notification   | REFERENCES
+ unisync_admin_grp    | public       | notification   | SELECT
+ unisync_admin_grp    | public       | notification   | TRIGGER
+ unisync_admin_grp    | public       | notification   | TRUNCATE
+ unisync_admin_grp    | public       | notification   | UPDATE
+ unisync_admin_grp    | public       | organization   | DELETE
+ unisync_admin_grp    | public       | organization   | INSERT
+ unisync_admin_grp    | public       | organization   | REFERENCES
+ unisync_admin_grp    | public       | organization   | SELECT
+ unisync_admin_grp    | public       | organization   | TRIGGER
+ unisync_admin_grp    | public       | organization   | TRUNCATE
+ unisync_admin_grp    | public       | organization   | UPDATE
+ unisync_admin_grp    | public       | registration   | DELETE
+ unisync_admin_grp    | public       | registration   | INSERT
+ unisync_admin_grp    | public       | registration   | REFERENCES
+ unisync_admin_grp    | public       | registration   | SELECT
+ unisync_admin_grp    | public       | registration   | TRIGGER
+ unisync_admin_grp    | public       | registration   | TRUNCATE
+ unisync_admin_grp    | public       | registration   | UPDATE
+ unisync_admin_grp    | public       | venue          | DELETE
+ unisync_admin_grp    | public       | venue          | INSERT
+ unisync_admin_grp    | public       | venue          | REFERENCES
+ unisync_admin_grp    | public       | venue          | SELECT
+ unisync_admin_grp    | public       | venue          | TRIGGER
+ unisync_admin_grp    | public       | venue          | TRUNCATE
+ unisync_admin_grp    | public       | venue          | UPDATE
+ unisync_readonly_grp | public       | event          | SELECT
+ unisync_readonly_grp | public       | event_schedule | SELECT
+ unisync_readonly_grp | public       | membership     | SELECT
+ unisync_readonly_grp | public       | notification   | SELECT
+ unisync_readonly_grp | public       | organization   | SELECT
+ unisync_readonly_grp | public       | registration   | SELECT
+ unisync_readonly_grp | public       | venue          | SELECT
+ unisync_runtime_grp  | public       | account        | INSERT
+ unisync_runtime_grp  | public       | account        | SELECT
+ unisync_runtime_grp  | public       | account        | UPDATE
+ unisync_runtime_grp  | public       | event          | INSERT
+ unisync_runtime_grp  | public       | event          | SELECT
+ unisync_runtime_grp  | public       | event          | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | INSERT
+ unisync_runtime_grp  | public       | event_schedule | SELECT
+ unisync_runtime_grp  | public       | event_schedule | UPDATE
+ unisync_runtime_grp  | public       | membership     | INSERT
+ unisync_runtime_grp  | public       | membership     | SELECT
+ unisync_runtime_grp  | public       | membership     | UPDATE
+ unisync_runtime_grp  | public       | notification   | INSERT
+ unisync_runtime_grp  | public       | notification   | SELECT
+ unisync_runtime_grp  | public       | notification   | UPDATE
+ unisync_runtime_grp  | public       | organization   | INSERT
+ unisync_runtime_grp  | public       | organization   | SELECT
+ unisync_runtime_grp  | public       | organization   | UPDATE
+ unisync_runtime_grp  | public       | registration   | INSERT
+ unisync_runtime_grp  | public       | registration   | SELECT
+ unisync_runtime_grp  | public       | registration   | UPDATE
+ unisync_runtime_grp  | public       | venue          | INSERT
+ unisync_runtime_grp  | public       | venue          | SELECT
+ unisync_runtime_grp  | public       | venue          | UPDATE
+(87 rows)
+
+       grantee        | table_schema |   table_name   |     column_name      | privilege_type 
+----------------------+--------------+----------------+----------------------+----------------
+ unisync_admin_grp    | public       | account        | account_id           | INSERT
+ unisync_admin_grp    | public       | account        | account_id           | REFERENCES
+ unisync_admin_grp    | public       | account        | account_id           | SELECT
+ unisync_admin_grp    | public       | account        | account_id           | UPDATE
+ unisync_admin_grp    | public       | account        | account_name         | INSERT
+ unisync_admin_grp    | public       | account        | account_name         | REFERENCES
+ unisync_admin_grp    | public       | account        | account_name         | SELECT
+ unisync_admin_grp    | public       | account        | account_name         | UPDATE
+ unisync_admin_grp    | public       | account        | account_status       | INSERT
+ unisync_admin_grp    | public       | account        | account_status       | REFERENCES
+ unisync_admin_grp    | public       | account        | account_status       | SELECT
+ unisync_admin_grp    | public       | account        | account_status       | UPDATE
+ unisync_admin_grp    | public       | account        | avatar_url           | INSERT
+ unisync_admin_grp    | public       | account        | avatar_url           | REFERENCES
+ unisync_admin_grp    | public       | account        | avatar_url           | SELECT
+ unisync_admin_grp    | public       | account        | avatar_url           | UPDATE
+ unisync_admin_grp    | public       | account        | email                | INSERT
+ unisync_admin_grp    | public       | account        | email                | REFERENCES
+ unisync_admin_grp    | public       | account        | email                | SELECT
+ unisync_admin_grp    | public       | account        | email                | UPDATE
+ unisync_admin_grp    | public       | account        | password_hash        | INSERT
+ unisync_admin_grp    | public       | account        | password_hash        | REFERENCES
+ unisync_admin_grp    | public       | account        | password_hash        | SELECT
+ unisync_admin_grp    | public       | account        | password_hash        | UPDATE
+ unisync_admin_grp    | public       | event          | description          | INSERT
+ unisync_admin_grp    | public       | event          | description          | REFERENCES
+ unisync_admin_grp    | public       | event          | description          | SELECT
+ unisync_admin_grp    | public       | event          | description          | UPDATE
+ unisync_admin_grp    | public       | event          | event_id             | INSERT
+ unisync_admin_grp    | public       | event          | event_id             | REFERENCES
+ unisync_admin_grp    | public       | event          | event_id             | SELECT
+ unisync_admin_grp    | public       | event          | event_id             | UPDATE
+ unisync_admin_grp    | public       | event          | event_image          | INSERT
+ unisync_admin_grp    | public       | event          | event_image          | REFERENCES
+ unisync_admin_grp    | public       | event          | event_image          | SELECT
+ unisync_admin_grp    | public       | event          | event_image          | UPDATE
+ unisync_admin_grp    | public       | event          | event_name           | INSERT
+ unisync_admin_grp    | public       | event          | event_name           | REFERENCES
+ unisync_admin_grp    | public       | event          | event_name           | SELECT
+ unisync_admin_grp    | public       | event          | event_name           | UPDATE
+ unisync_admin_grp    | public       | event          | organization_id      | INSERT
+ unisync_admin_grp    | public       | event          | organization_id      | REFERENCES
+ unisync_admin_grp    | public       | event          | organization_id      | SELECT
+ unisync_admin_grp    | public       | event          | organization_id      | UPDATE
+ unisync_admin_grp    | public       | event          | status               | INSERT
+ unisync_admin_grp    | public       | event          | status               | REFERENCES
+ unisync_admin_grp    | public       | event          | status               | SELECT
+ unisync_admin_grp    | public       | event          | status               | UPDATE
+ unisync_admin_grp    | public       | event_schedule | end_time             | INSERT
+ unisync_admin_grp    | public       | event_schedule | end_time             | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | end_time             | SELECT
+ unisync_admin_grp    | public       | event_schedule | end_time             | UPDATE
+ unisync_admin_grp    | public       | event_schedule | event_date           | INSERT
+ unisync_admin_grp    | public       | event_schedule | event_date           | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | event_date           | SELECT
+ unisync_admin_grp    | public       | event_schedule | event_date           | UPDATE
+ unisync_admin_grp    | public       | event_schedule | event_id             | INSERT
+ unisync_admin_grp    | public       | event_schedule | event_id             | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | event_id             | SELECT
+ unisync_admin_grp    | public       | event_schedule | event_id             | UPDATE
+ unisync_admin_grp    | public       | event_schedule | schedule_id          | INSERT
+ unisync_admin_grp    | public       | event_schedule | schedule_id          | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | schedule_id          | SELECT
+ unisync_admin_grp    | public       | event_schedule | schedule_id          | UPDATE
+ unisync_admin_grp    | public       | event_schedule | start_time           | INSERT
+ unisync_admin_grp    | public       | event_schedule | start_time           | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | start_time           | SELECT
+ unisync_admin_grp    | public       | event_schedule | start_time           | UPDATE
+ unisync_admin_grp    | public       | event_schedule | status               | INSERT
+ unisync_admin_grp    | public       | event_schedule | status               | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | status               | SELECT
+ unisync_admin_grp    | public       | event_schedule | status               | UPDATE
+ unisync_admin_grp    | public       | event_schedule | venue_id             | INSERT
+ unisync_admin_grp    | public       | event_schedule | venue_id             | REFERENCES
+ unisync_admin_grp    | public       | event_schedule | venue_id             | SELECT
+ unisync_admin_grp    | public       | event_schedule | venue_id             | UPDATE
+ unisync_admin_grp    | public       | membership     | account_id           | INSERT
+ unisync_admin_grp    | public       | membership     | account_id           | REFERENCES
+ unisync_admin_grp    | public       | membership     | account_id           | SELECT
+ unisync_admin_grp    | public       | membership     | account_id           | UPDATE
+ unisync_admin_grp    | public       | membership     | membership_date      | INSERT
+ unisync_admin_grp    | public       | membership     | membership_date      | REFERENCES
+ unisync_admin_grp    | public       | membership     | membership_date      | SELECT
+ unisync_admin_grp    | public       | membership     | membership_date      | UPDATE
+ unisync_admin_grp    | public       | membership     | membership_id        | INSERT
+ unisync_admin_grp    | public       | membership     | membership_id        | REFERENCES
+ unisync_admin_grp    | public       | membership     | membership_id        | SELECT
+ unisync_admin_grp    | public       | membership     | membership_id        | UPDATE
+ unisync_admin_grp    | public       | membership     | organization_id      | INSERT
+ unisync_admin_grp    | public       | membership     | organization_id      | REFERENCES
+ unisync_admin_grp    | public       | membership     | organization_id      | SELECT
+ unisync_admin_grp    | public       | membership     | organization_id      | UPDATE
+ unisync_admin_grp    | public       | membership     | role                 | INSERT
+ unisync_admin_grp    | public       | membership     | role                 | REFERENCES
+ unisync_admin_grp    | public       | membership     | role                 | SELECT
+ unisync_admin_grp    | public       | membership     | role                 | UPDATE
+ unisync_admin_grp    | public       | membership     | status               | INSERT
+ unisync_admin_grp    | public       | membership     | status               | REFERENCES
+ unisync_admin_grp    | public       | membership     | status               | SELECT
+ unisync_admin_grp    | public       | membership     | status               | UPDATE
+ unisync_admin_grp    | public       | notification   | account_id           | INSERT
+ unisync_admin_grp    | public       | notification   | account_id           | REFERENCES
+ unisync_admin_grp    | public       | notification   | account_id           | SELECT
+ unisync_admin_grp    | public       | notification   | account_id           | UPDATE
+ unisync_admin_grp    | public       | notification   | created_at           | INSERT
+ unisync_admin_grp    | public       | notification   | created_at           | REFERENCES
+ unisync_admin_grp    | public       | notification   | created_at           | SELECT
+ unisync_admin_grp    | public       | notification   | created_at           | UPDATE
+ unisync_admin_grp    | public       | notification   | event_id             | INSERT
+ unisync_admin_grp    | public       | notification   | event_id             | REFERENCES
+ unisync_admin_grp    | public       | notification   | event_id             | SELECT
+ unisync_admin_grp    | public       | notification   | event_id             | UPDATE
+ unisync_admin_grp    | public       | notification   | is_read              | INSERT
+ unisync_admin_grp    | public       | notification   | is_read              | REFERENCES
+ unisync_admin_grp    | public       | notification   | is_read              | SELECT
+ unisync_admin_grp    | public       | notification   | is_read              | UPDATE
+ unisync_admin_grp    | public       | notification   | notification_id      | INSERT
+ unisync_admin_grp    | public       | notification   | notification_id      | REFERENCES
+ unisync_admin_grp    | public       | notification   | notification_id      | SELECT
+ unisync_admin_grp    | public       | notification   | notification_id      | UPDATE
+ unisync_admin_grp    | public       | notification   | notification_message | INSERT
+ unisync_admin_grp    | public       | notification   | notification_message | REFERENCES
+ unisync_admin_grp    | public       | notification   | notification_message | SELECT
+ unisync_admin_grp    | public       | notification   | notification_message | UPDATE
+ unisync_admin_grp    | public       | notification   | organization_id      | INSERT
+ unisync_admin_grp    | public       | notification   | organization_id      | REFERENCES
+ unisync_admin_grp    | public       | notification   | organization_id      | SELECT
+ unisync_admin_grp    | public       | notification   | organization_id      | UPDATE
+ unisync_admin_grp    | public       | notification   | status               | INSERT
+ unisync_admin_grp    | public       | notification   | status               | REFERENCES
+ unisync_admin_grp    | public       | notification   | status               | SELECT
+ unisync_admin_grp    | public       | notification   | status               | UPDATE
+ unisync_admin_grp    | public       | organization   | avatar_url           | INSERT
+ unisync_admin_grp    | public       | organization   | avatar_url           | REFERENCES
+ unisync_admin_grp    | public       | organization   | avatar_url           | SELECT
+ unisync_admin_grp    | public       | organization   | avatar_url           | UPDATE
+ unisync_admin_grp    | public       | organization   | banner_url           | INSERT
+ unisync_admin_grp    | public       | organization   | banner_url           | REFERENCES
+ unisync_admin_grp    | public       | organization   | banner_url           | SELECT
+ unisync_admin_grp    | public       | organization   | banner_url           | UPDATE
+ unisync_admin_grp    | public       | organization   | description          | INSERT
+ unisync_admin_grp    | public       | organization   | description          | REFERENCES
+ unisync_admin_grp    | public       | organization   | description          | SELECT
+ unisync_admin_grp    | public       | organization   | description          | UPDATE
+ unisync_admin_grp    | public       | organization   | organization_id      | INSERT
+ unisync_admin_grp    | public       | organization   | organization_id      | REFERENCES
+ unisync_admin_grp    | public       | organization   | organization_id      | SELECT
+ unisync_admin_grp    | public       | organization   | organization_id      | UPDATE
+ unisync_admin_grp    | public       | organization   | organization_name    | INSERT
+ unisync_admin_grp    | public       | organization   | organization_name    | REFERENCES
+ unisync_admin_grp    | public       | organization   | organization_name    | SELECT
+ unisync_admin_grp    | public       | organization   | organization_name    | UPDATE
+ unisync_admin_grp    | public       | organization   | status               | INSERT
+ unisync_admin_grp    | public       | organization   | status               | REFERENCES
+ unisync_admin_grp    | public       | organization   | status               | SELECT
+ unisync_admin_grp    | public       | organization   | status               | UPDATE
+ unisync_admin_grp    | public       | organization   | university_name      | INSERT
+ unisync_admin_grp    | public       | organization   | university_name      | REFERENCES
+ unisync_admin_grp    | public       | organization   | university_name      | SELECT
+ unisync_admin_grp    | public       | organization   | university_name      | UPDATE
+ unisync_admin_grp    | public       | registration   | account_id           | INSERT
+ unisync_admin_grp    | public       | registration   | account_id           | REFERENCES
+ unisync_admin_grp    | public       | registration   | account_id           | SELECT
+ unisync_admin_grp    | public       | registration   | account_id           | UPDATE
+ unisync_admin_grp    | public       | registration   | event_id             | INSERT
+ unisync_admin_grp    | public       | registration   | event_id             | REFERENCES
+ unisync_admin_grp    | public       | registration   | event_id             | SELECT
+ unisync_admin_grp    | public       | registration   | event_id             | UPDATE
+ unisync_admin_grp    | public       | registration   | registration_date    | INSERT
+ unisync_admin_grp    | public       | registration   | registration_date    | REFERENCES
+ unisync_admin_grp    | public       | registration   | registration_date    | SELECT
+ unisync_admin_grp    | public       | registration   | registration_date    | UPDATE
+ unisync_admin_grp    | public       | registration   | registration_id      | INSERT
+ unisync_admin_grp    | public       | registration   | registration_id      | REFERENCES
+ unisync_admin_grp    | public       | registration   | registration_id      | SELECT
+ unisync_admin_grp    | public       | registration   | registration_id      | UPDATE
+ unisync_admin_grp    | public       | registration   | status               | INSERT
+ unisync_admin_grp    | public       | registration   | status               | REFERENCES
+ unisync_admin_grp    | public       | registration   | status               | SELECT
+ unisync_admin_grp    | public       | registration   | status               | UPDATE
+ unisync_admin_grp    | public       | venue          | account_id           | INSERT
+ unisync_admin_grp    | public       | venue          | account_id           | REFERENCES
+ unisync_admin_grp    | public       | venue          | account_id           | SELECT
+ unisync_admin_grp    | public       | venue          | account_id           | UPDATE
+ unisync_admin_grp    | public       | venue          | capacity             | INSERT
+ unisync_admin_grp    | public       | venue          | capacity             | REFERENCES
+ unisync_admin_grp    | public       | venue          | capacity             | SELECT
+ unisync_admin_grp    | public       | venue          | capacity             | UPDATE
+ unisync_admin_grp    | public       | venue          | latitude             | INSERT
+ unisync_admin_grp    | public       | venue          | latitude             | REFERENCES
+ unisync_admin_grp    | public       | venue          | latitude             | SELECT
+ unisync_admin_grp    | public       | venue          | latitude             | UPDATE
+ unisync_admin_grp    | public       | venue          | location             | INSERT
+ unisync_admin_grp    | public       | venue          | location             | REFERENCES
+ unisync_admin_grp    | public       | venue          | location             | SELECT
+ unisync_admin_grp    | public       | venue          | location             | UPDATE
+ unisync_admin_grp    | public       | venue          | longitude            | INSERT
+ unisync_admin_grp    | public       | venue          | longitude            | REFERENCES
+ unisync_admin_grp    | public       | venue          | longitude            | SELECT
+ unisync_admin_grp    | public       | venue          | longitude            | UPDATE
+ unisync_admin_grp    | public       | venue          | status               | INSERT
+ unisync_admin_grp    | public       | venue          | status               | REFERENCES
+ unisync_admin_grp    | public       | venue          | status               | SELECT
+ unisync_admin_grp    | public       | venue          | status               | UPDATE
+ unisync_admin_grp    | public       | venue          | venue_id             | INSERT
+ unisync_admin_grp    | public       | venue          | venue_id             | REFERENCES
+ unisync_admin_grp    | public       | venue          | venue_id             | SELECT
+ unisync_admin_grp    | public       | venue          | venue_id             | UPDATE
+ unisync_admin_grp    | public       | venue          | venue_name           | INSERT
+ unisync_admin_grp    | public       | venue          | venue_name           | REFERENCES
+ unisync_admin_grp    | public       | venue          | venue_name           | SELECT
+ unisync_admin_grp    | public       | venue          | venue_name           | UPDATE
+ unisync_readonly_grp | public       | account        | account_id           | SELECT
+ unisync_readonly_grp | public       | account        | account_name         | SELECT
+ unisync_readonly_grp | public       | account        | account_status       | SELECT
+ unisync_readonly_grp | public       | account        | avatar_url           | SELECT
+ unisync_readonly_grp | public       | account        | email                | SELECT
+ unisync_readonly_grp | public       | event          | description          | SELECT
+ unisync_readonly_grp | public       | event          | event_id             | SELECT
+ unisync_readonly_grp | public       | event          | event_image          | SELECT
+ unisync_readonly_grp | public       | event          | event_name           | SELECT
+ unisync_readonly_grp | public       | event          | organization_id      | SELECT
+ unisync_readonly_grp | public       | event          | status               | SELECT
+ unisync_readonly_grp | public       | event_schedule | end_time             | SELECT
+ unisync_readonly_grp | public       | event_schedule | event_date           | SELECT
+ unisync_readonly_grp | public       | event_schedule | event_id             | SELECT
+ unisync_readonly_grp | public       | event_schedule | schedule_id          | SELECT
+ unisync_readonly_grp | public       | event_schedule | start_time           | SELECT
+ unisync_readonly_grp | public       | event_schedule | status               | SELECT
+ unisync_readonly_grp | public       | event_schedule | venue_id             | SELECT
+ unisync_readonly_grp | public       | membership     | account_id           | SELECT
+ unisync_readonly_grp | public       | membership     | membership_date      | SELECT
+ unisync_readonly_grp | public       | membership     | membership_id        | SELECT
+ unisync_readonly_grp | public       | membership     | organization_id      | SELECT
+ unisync_readonly_grp | public       | membership     | role                 | SELECT
+ unisync_readonly_grp | public       | membership     | status               | SELECT
+ unisync_readonly_grp | public       | notification   | account_id           | SELECT
+ unisync_readonly_grp | public       | notification   | created_at           | SELECT
+ unisync_readonly_grp | public       | notification   | event_id             | SELECT
+ unisync_readonly_grp | public       | notification   | is_read              | SELECT
+ unisync_readonly_grp | public       | notification   | notification_id      | SELECT
+ unisync_readonly_grp | public       | notification   | notification_message | SELECT
+ unisync_readonly_grp | public       | notification   | organization_id      | SELECT
+ unisync_readonly_grp | public       | notification   | status               | SELECT
+ unisync_readonly_grp | public       | organization   | avatar_url           | SELECT
+ unisync_readonly_grp | public       | organization   | banner_url           | SELECT
+ unisync_readonly_grp | public       | organization   | description          | SELECT
+ unisync_readonly_grp | public       | organization   | organization_id      | SELECT
+ unisync_readonly_grp | public       | organization   | organization_name    | SELECT
+ unisync_readonly_grp | public       | organization   | status               | SELECT
+ unisync_readonly_grp | public       | organization   | university_name      | SELECT
+ unisync_readonly_grp | public       | registration   | account_id           | SELECT
+ unisync_readonly_grp | public       | registration   | event_id             | SELECT
+ unisync_readonly_grp | public       | registration   | registration_date    | SELECT
+ unisync_readonly_grp | public       | registration   | registration_id      | SELECT
+ unisync_readonly_grp | public       | registration   | status               | SELECT
+ unisync_readonly_grp | public       | venue          | account_id           | SELECT
+ unisync_readonly_grp | public       | venue          | capacity             | SELECT
+ unisync_readonly_grp | public       | venue          | latitude             | SELECT
+ unisync_readonly_grp | public       | venue          | location             | SELECT
+ unisync_readonly_grp | public       | venue          | longitude            | SELECT
+ unisync_readonly_grp | public       | venue          | status               | SELECT
+ unisync_readonly_grp | public       | venue          | venue_id             | SELECT
+ unisync_readonly_grp | public       | venue          | venue_name           | SELECT
+ unisync_runtime_grp  | public       | account        | account_id           | INSERT
+ unisync_runtime_grp  | public       | account        | account_id           | SELECT
+ unisync_runtime_grp  | public       | account        | account_id           | UPDATE
+ unisync_runtime_grp  | public       | account        | account_name         | INSERT
+ unisync_runtime_grp  | public       | account        | account_name         | SELECT
+ unisync_runtime_grp  | public       | account        | account_name         | UPDATE
+ unisync_runtime_grp  | public       | account        | account_status       | INSERT
+ unisync_runtime_grp  | public       | account        | account_status       | SELECT
+ unisync_runtime_grp  | public       | account        | account_status       | UPDATE
+ unisync_runtime_grp  | public       | account        | avatar_url           | INSERT
+ unisync_runtime_grp  | public       | account        | avatar_url           | SELECT
+ unisync_runtime_grp  | public       | account        | avatar_url           | UPDATE
+ unisync_runtime_grp  | public       | account        | email                | INSERT
+ unisync_runtime_grp  | public       | account        | email                | SELECT
+ unisync_runtime_grp  | public       | account        | email                | UPDATE
+ unisync_runtime_grp  | public       | account        | password_hash        | INSERT
+ unisync_runtime_grp  | public       | account        | password_hash        | SELECT
+ unisync_runtime_grp  | public       | account        | password_hash        | UPDATE
+ unisync_runtime_grp  | public       | event          | description          | INSERT
+ unisync_runtime_grp  | public       | event          | description          | SELECT
+ unisync_runtime_grp  | public       | event          | description          | UPDATE
+ unisync_runtime_grp  | public       | event          | event_id             | INSERT
+ unisync_runtime_grp  | public       | event          | event_id             | SELECT
+ unisync_runtime_grp  | public       | event          | event_id             | UPDATE
+ unisync_runtime_grp  | public       | event          | event_image          | INSERT
+ unisync_runtime_grp  | public       | event          | event_image          | SELECT
+ unisync_runtime_grp  | public       | event          | event_image          | UPDATE
+ unisync_runtime_grp  | public       | event          | event_name           | INSERT
+ unisync_runtime_grp  | public       | event          | event_name           | SELECT
+ unisync_runtime_grp  | public       | event          | event_name           | UPDATE
+ unisync_runtime_grp  | public       | event          | organization_id      | INSERT
+ unisync_runtime_grp  | public       | event          | organization_id      | SELECT
+ unisync_runtime_grp  | public       | event          | organization_id      | UPDATE
+ unisync_runtime_grp  | public       | event          | status               | INSERT
+ unisync_runtime_grp  | public       | event          | status               | SELECT
+ unisync_runtime_grp  | public       | event          | status               | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | end_time             | INSERT
+ unisync_runtime_grp  | public       | event_schedule | end_time             | SELECT
+ unisync_runtime_grp  | public       | event_schedule | end_time             | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | event_date           | INSERT
+ unisync_runtime_grp  | public       | event_schedule | event_date           | SELECT
+ unisync_runtime_grp  | public       | event_schedule | event_date           | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | event_id             | INSERT
+ unisync_runtime_grp  | public       | event_schedule | event_id             | SELECT
+ unisync_runtime_grp  | public       | event_schedule | event_id             | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | schedule_id          | INSERT
+ unisync_runtime_grp  | public       | event_schedule | schedule_id          | SELECT
+ unisync_runtime_grp  | public       | event_schedule | schedule_id          | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | start_time           | INSERT
+ unisync_runtime_grp  | public       | event_schedule | start_time           | SELECT
+ unisync_runtime_grp  | public       | event_schedule | start_time           | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | status               | INSERT
+ unisync_runtime_grp  | public       | event_schedule | status               | SELECT
+ unisync_runtime_grp  | public       | event_schedule | status               | UPDATE
+ unisync_runtime_grp  | public       | event_schedule | venue_id             | INSERT
+ unisync_runtime_grp  | public       | event_schedule | venue_id             | SELECT
+ unisync_runtime_grp  | public       | event_schedule | venue_id             | UPDATE
+ unisync_runtime_grp  | public       | membership     | account_id           | INSERT
+ unisync_runtime_grp  | public       | membership     | account_id           | SELECT
+ unisync_runtime_grp  | public       | membership     | account_id           | UPDATE
+ unisync_runtime_grp  | public       | membership     | membership_date      | INSERT
+ unisync_runtime_grp  | public       | membership     | membership_date      | SELECT
+ unisync_runtime_grp  | public       | membership     | membership_date      | UPDATE
+ unisync_runtime_grp  | public       | membership     | membership_id        | INSERT
+ unisync_runtime_grp  | public       | membership     | membership_id        | SELECT
+ unisync_runtime_grp  | public       | membership     | membership_id        | UPDATE
+ unisync_runtime_grp  | public       | membership     | organization_id      | INSERT
+ unisync_runtime_grp  | public       | membership     | organization_id      | SELECT
+ unisync_runtime_grp  | public       | membership     | organization_id      | UPDATE
+ unisync_runtime_grp  | public       | membership     | role                 | INSERT
+ unisync_runtime_grp  | public       | membership     | role                 | SELECT
+ unisync_runtime_grp  | public       | membership     | role                 | UPDATE
+ unisync_runtime_grp  | public       | membership     | status               | INSERT
+ unisync_runtime_grp  | public       | membership     | status               | SELECT
+ unisync_runtime_grp  | public       | membership     | status               | UPDATE
+ unisync_runtime_grp  | public       | notification   | account_id           | INSERT
+ unisync_runtime_grp  | public       | notification   | account_id           | SELECT
+ unisync_runtime_grp  | public       | notification   | account_id           | UPDATE
+ unisync_runtime_grp  | public       | notification   | created_at           | INSERT
+ unisync_runtime_grp  | public       | notification   | created_at           | SELECT
+ unisync_runtime_grp  | public       | notification   | created_at           | UPDATE
+ unisync_runtime_grp  | public       | notification   | event_id             | INSERT
+ unisync_runtime_grp  | public       | notification   | event_id             | SELECT
+ unisync_runtime_grp  | public       | notification   | event_id             | UPDATE
+ unisync_runtime_grp  | public       | notification   | is_read              | INSERT
+ unisync_runtime_grp  | public       | notification   | is_read              | SELECT
+ unisync_runtime_grp  | public       | notification   | is_read              | UPDATE
+ unisync_runtime_grp  | public       | notification   | notification_id      | INSERT
+ unisync_runtime_grp  | public       | notification   | notification_id      | SELECT
+ unisync_runtime_grp  | public       | notification   | notification_id      | UPDATE
+ unisync_runtime_grp  | public       | notification   | notification_message | INSERT
+ unisync_runtime_grp  | public       | notification   | notification_message | SELECT
+ unisync_runtime_grp  | public       | notification   | notification_message | UPDATE
+ unisync_runtime_grp  | public       | notification   | organization_id      | INSERT
+ unisync_runtime_grp  | public       | notification   | organization_id      | SELECT
+ unisync_runtime_grp  | public       | notification   | organization_id      | UPDATE
+ unisync_runtime_grp  | public       | notification   | status               | INSERT
+ unisync_runtime_grp  | public       | notification   | status               | SELECT
+ unisync_runtime_grp  | public       | notification   | status               | UPDATE
+ unisync_runtime_grp  | public       | organization   | avatar_url           | INSERT
+ unisync_runtime_grp  | public       | organization   | avatar_url           | SELECT
+ unisync_runtime_grp  | public       | organization   | avatar_url           | UPDATE
+ unisync_runtime_grp  | public       | organization   | banner_url           | INSERT
+ unisync_runtime_grp  | public       | organization   | banner_url           | SELECT
+ unisync_runtime_grp  | public       | organization   | banner_url           | UPDATE
+ unisync_runtime_grp  | public       | organization   | description          | INSERT
+ unisync_runtime_grp  | public       | organization   | description          | SELECT
+ unisync_runtime_grp  | public       | organization   | description          | UPDATE
+ unisync_runtime_grp  | public       | organization   | organization_id      | INSERT
+ unisync_runtime_grp  | public       | organization   | organization_id      | SELECT
+ unisync_runtime_grp  | public       | organization   | organization_id      | UPDATE
+ unisync_runtime_grp  | public       | organization   | organization_name    | INSERT
+ unisync_runtime_grp  | public       | organization   | organization_name    | SELECT
+ unisync_runtime_grp  | public       | organization   | organization_name    | UPDATE
+ unisync_runtime_grp  | public       | organization   | status               | INSERT
+ unisync_runtime_grp  | public       | organization   | status               | SELECT
+ unisync_runtime_grp  | public       | organization   | status               | UPDATE
+ unisync_runtime_grp  | public       | organization   | university_name      | INSERT
+ unisync_runtime_grp  | public       | organization   | university_name      | SELECT
+ unisync_runtime_grp  | public       | organization   | university_name      | UPDATE
+ unisync_runtime_grp  | public       | registration   | account_id           | INSERT
+ unisync_runtime_grp  | public       | registration   | account_id           | SELECT
+ unisync_runtime_grp  | public       | registration   | account_id           | UPDATE
+ unisync_runtime_grp  | public       | registration   | event_id             | INSERT
+ unisync_runtime_grp  | public       | registration   | event_id             | SELECT
+ unisync_runtime_grp  | public       | registration   | event_id             | UPDATE
+ unisync_runtime_grp  | public       | registration   | registration_date    | INSERT
+ unisync_runtime_grp  | public       | registration   | registration_date    | SELECT
+ unisync_runtime_grp  | public       | registration   | registration_date    | UPDATE
+ unisync_runtime_grp  | public       | registration   | registration_id      | INSERT
+ unisync_runtime_grp  | public       | registration   | registration_id      | SELECT
+ unisync_runtime_grp  | public       | registration   | registration_id      | UPDATE
+ unisync_runtime_grp  | public       | registration   | status               | INSERT
+ unisync_runtime_grp  | public       | registration   | status               | SELECT
+ unisync_runtime_grp  | public       | registration   | status               | UPDATE
+ unisync_runtime_grp  | public       | venue          | account_id           | INSERT
+ unisync_runtime_grp  | public       | venue          | account_id           | SELECT
+ unisync_runtime_grp  | public       | venue          | account_id           | UPDATE
+ unisync_runtime_grp  | public       | venue          | capacity             | INSERT
+ unisync_runtime_grp  | public       | venue          | capacity             | SELECT
+ unisync_runtime_grp  | public       | venue          | capacity             | UPDATE
+ unisync_runtime_grp  | public       | venue          | latitude             | INSERT
+ unisync_runtime_grp  | public       | venue          | latitude             | SELECT
+ unisync_runtime_grp  | public       | venue          | latitude             | UPDATE
+ unisync_runtime_grp  | public       | venue          | location             | INSERT
+ unisync_runtime_grp  | public       | venue          | location             | SELECT
+ unisync_runtime_grp  | public       | venue          | location             | UPDATE
+ unisync_runtime_grp  | public       | venue          | longitude            | INSERT
+ unisync_runtime_grp  | public       | venue          | longitude            | SELECT
+ unisync_runtime_grp  | public       | venue          | longitude            | UPDATE
+ unisync_runtime_grp  | public       | venue          | status               | INSERT
+ unisync_runtime_grp  | public       | venue          | status               | SELECT
+ unisync_runtime_grp  | public       | venue          | status               | UPDATE
+ unisync_runtime_grp  | public       | venue          | venue_id             | INSERT
+ unisync_runtime_grp  | public       | venue          | venue_id             | SELECT
+ unisync_runtime_grp  | public       | venue          | venue_id             | UPDATE
+ unisync_runtime_grp  | public       | venue          | venue_name           | INSERT
+ unisync_runtime_grp  | public       | venue          | venue_name           | SELECT
+ unisync_runtime_grp  | public       | venue          | venue_name           | UPDATE
+(423 rows)
+
+

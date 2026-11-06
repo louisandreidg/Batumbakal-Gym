@@ -1,0 +1,52 @@
+BEGIN
+INSERT 0 4
+INSERT 0 4
+INSERT 0 8
+INSERT 0 4
+INSERT 0 2
+INSERT 0 1
+COMMIT
+psql:C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Database/payment_proof.sql:5: NOTICE:  column "proof_path" of relation "payment" already exists, skipping
+ALTER TABLE
+psql:C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Database/payment_codes.sql:7: NOTICE:  column "payment_code" of relation "payment" already exists, skipping
+ALTER TABLE
+psql:C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Database/payment_codes.sql:8: NOTICE:  column "received_by" of relation "payment" already exists, skipping
+ALTER TABLE
+UPDATE 0
+DO
+psql:C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Database/damage_dispute_resolution.sql:2: NOTICE:  column "resolution_notes" of relation "damage_fee" already exists, skipping
+ALTER TABLE
+CREATE TABLE
+psql:C:/Users/thedi/Documents/Codex/2026-11-06/files-mentioned-by-the-user-school/work/Car_Rental_Management_System/Database/inspection_checklist.sql:10: NOTICE:  relation "inspection_item" already exists, skipping
+DO
+REVOKE
+REVOKE
+DO
+GRANT
+GRANT
+GRANT
+REVOKE
+GRANT
+GRANT
+REVOKE
+GRANT
+GRANT
+GRANT ROLE
+GRANT
+GRANT
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+CREATE ROLE
+CREATE ROLE
+CREATE ROLE
+REVOKE
+GRANT
+GRANT
+CREATE TABLE
+ALTER TABLE
+CREATE INDEX
+GRANT
+REVOKE
+GRANT
+GRANT
