@@ -1,0 +1,17 @@
+# BEGIN Activity4 Additional - localhost only
+local grp03_projectdb hb_app,hb_report,hb_maintenance scram-sha-256
+host grp03_projectdb hb_app,hb_report,hb_maintenance 127.0.0.1/32 scram-sha-256
+host grp03_projectdb hb_app,hb_report,hb_maintenance ::1/128 scram-sha-256
+local grp10_shioricafedb shiori_app,shiori_report scram-sha-256
+host grp10_shioricafedb shiori_app,shiori_report 127.0.0.1/32 scram-sha-256
+host grp10_shioricafedb shiori_app,shiori_report ::1/128 scram-sha-256
+local car_rental_db app_runtime,car_report,car_dba scram-sha-256
+host car_rental_db app_runtime,car_report,car_dba 127.0.0.1/32 scram-sha-256
+host car_rental_db app_runtime,car_report,car_dba ::1/128 scram-sha-256
+local catering_management_db catering_app,catering_report scram-sha-256
+host catering_management_db catering_app,catering_report 127.0.0.1/32 scram-sha-256
+host catering_management_db catering_app,catering_report ::1/128 scram-sha-256
+local all hb_app,hb_report,hb_maintenance,shiori_app,shiori_report,app_runtime,car_report,car_dba,catering_app,catering_report reject
+host all hb_app,hb_report,hb_maintenance,shiori_app,shiori_report,app_runtime,car_report,car_dba,catering_app,catering_report 0.0.0.0/0 reject
+host all hb_app,hb_report,hb_maintenance,shiori_app,shiori_report,app_runtime,car_report,car_dba,catering_app,catering_report ::/0 reject
+# END Activity4 Additional

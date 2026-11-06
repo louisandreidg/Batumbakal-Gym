@@ -1,3 +1,5 @@
+> Latest retests: see [additional testing results](additional-testing-2026-11-06/README.md). SHIORI now connects to PostgreSQL but has cashier test failures; its earlier Failed assessment and the existing PDF apply to the older snapshot. The consolidated PDF is pending the remaining testing.
+
 # Group 09 Activity 4 submission
 
 Date: 6 November 2026

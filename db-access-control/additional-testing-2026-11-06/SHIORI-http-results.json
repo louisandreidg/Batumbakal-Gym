@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "databaseError": false
+  },
+  {
+    "path": "/admin/index.php",
+    "status": 200,
+    "databaseError": false
+  },
+  {
+    "path": "/admin/pos.php",
+    "status": 200,
+    "databaseError": false
+  },
+  {
+    "path": "/admin/orders.php",
+    "status": 200,
+    "databaseError": false
+  },
+  {
+    "path": "/admin/reservations.php",
+    "status": 200,
+    "databaseError": false
+  },
+  {
+    "path": "/admin/cashier/queue.php",
+    "status": 200,
+    "databaseError": false
+  }
+]
