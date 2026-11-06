@@ -1,0 +1,9 @@
+INFO:  analyzing "school_event_management_db.event"
+INFO:  "event": scanned 1 of 1 pages, containing 0 live rows and 50 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  finished analyzing table "grp02_event_management_db.school_event_management_db.event"
+avg read rate: 4.464 MB/s, avg write rate: 3.348 MB/s
+buffer usage: 483 hits, 4 reads, 3 dirtied
+WAL usage: 5 records, 3 full page images, 20301 bytes, 0 buffers full
+system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.00 s
+ANALYZE
+

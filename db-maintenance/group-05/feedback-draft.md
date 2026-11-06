@@ -1,0 +1,5 @@
+# Owner feedback draft not sent
+
+G05 SHIORI Cafe: Activity 5 local review on 7 November 2026. Local snapshot: 9894 kB; 17 tables, 49 indexes, 3 views. Other sessions visible: 0; visible blocked sessions: 0. Database deadlocks counter: 0; checksum failures counter: 0. Autovacuum is on. These counters are cumulative and a single snapshot does not establish sustained health. Maintenance: Withheld - existing account lacks MAINTAIN/ownership; proposed commands supplied. The occupancy query scans reservations and probes customer by index. This is reasonable for the small sample. If confirmed bookings become large, evaluate a selective status/time access path against real workload; a new index adds storage and booking-write cost. Maintenance is not currently authorized for this account. Ask the owner to grant table-scoped MAINTAIN to a dedicated NOLOGIN maintenance group and login; keep the application/reporting account unchanged. Logging limits: historical shared lines usually omit database/account attribution. No production or load-test claim is made.
+
+Prepared with AI assistance from the linked local evidence. Review before sending.

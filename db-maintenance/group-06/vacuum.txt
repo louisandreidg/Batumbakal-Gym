@@ -1,0 +1,25 @@
+INFO:  vacuuming "car_rental_db.public.vehicle"
+INFO:  finished vacuuming "car_rental_db.public.vehicle": index scans: 1
+pages: 0 removed, 1 remain, 1 scanned (100.00% of total), 0 eagerly scanned
+tuples: 2 removed, 8 remain, 0 are dead but not yet removable
+removable cutoff: 1529, which was 0 XIDs old when operation ended
+new relfrozenxid: 1384, which is 132 XIDs ahead of previous value
+frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+visibility map: 1 pages set all-visible, 0 pages set all-frozen (0 were all-visible)
+index scan needed: 1 pages from table (100.00% of total) had 1 dead item identifiers removed
+index "vehicle_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "vehicle_plate_number_key": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "idx_vehicle_status": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+avg read rate: 0.000 MB/s, avg write rate: 7.876 MB/s
+buffer usage: 106 hits, 0 reads, 7 dirtied
+WAL usage: 10 records, 7 full page images, 34327 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+INFO:  analyzing "public.vehicle"
+INFO:  "vehicle": scanned 1 of 1 pages, containing 8 live rows and 0 dead rows; 8 rows in sample, 8 estimated total rows
+INFO:  finished analyzing table "car_rental_db.public.vehicle"
+avg read rate: 0.000 MB/s, avg write rate: 2.604 MB/s
+buffer usage: 365 hits, 0 reads, 1 dirtied
+WAL usage: 28 records, 1 full page images, 9734 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+

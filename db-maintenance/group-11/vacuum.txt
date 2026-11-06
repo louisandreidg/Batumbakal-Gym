@@ -1,0 +1,28 @@
+INFO:  vacuuming "ReserveIT.public.reservation"
+INFO:  finished vacuuming "ReserveIT.public.reservation": index scans: 1
+pages: 0 removed, 1 remain, 1 scanned (100.00% of total), 0 eagerly scanned
+tuples: 8 removed, 8 remain, 0 are dead but not yet removable
+removable cutoff: 1535, which was 0 XIDs old when operation ended
+new relfrozenxid: 1045, which is 8 XIDs ahead of previous value
+frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+visibility map: 1 pages set all-visible, 0 pages set all-frozen (0 were all-visible)
+index scan needed: 1 pages from table (100.00% of total) had 8 dead item identifiers removed
+index "reservation_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "no_overlapping_approved_reservations": pages: 1 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "idx_reservation_room": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "idx_reservation_date": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "idx_reservation_status": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "idx_reservation_user": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+avg read rate: 1.752 MB/s, avg write rate: 2.920 MB/s
+buffer usage: 164 hits, 6 reads, 10 dirtied
+WAL usage: 13 records, 10 full page images, 34928 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.02 s
+INFO:  analyzing "public.reservation"
+INFO:  "reservation": scanned 1 of 1 pages, containing 8 live rows and 0 dead rows; 8 rows in sample, 8 estimated total rows
+INFO:  finished analyzing table "ReserveIT.public.reservation"
+avg read rate: 2.604 MB/s, avg write rate: 2.604 MB/s
+buffer usage: 440 hits, 1 reads, 1 dirtied
+WAL usage: 22 records, 1 full page images, 7173 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+

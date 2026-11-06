@@ -1,0 +1,9 @@
+INFO:  analyzing "public.registration"
+INFO:  "registration": scanned 8 of 8 pages, containing 946 live rows and 1 dead rows; 946 rows in sample, 946 estimated total rows
+INFO:  finished analyzing table "grp10_unisyncdb.public.registration"
+avg read rate: 0.000 MB/s, avg write rate: 17.188 MB/s
+buffer usage: 420 hits, 0 reads, 11 dirtied
+WAL usage: 22 records, 10 full page images, 78603 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+ANALYZE
+

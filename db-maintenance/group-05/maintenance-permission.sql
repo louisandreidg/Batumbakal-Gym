@@ -1,0 +1,1 @@
+SELECT jsonb_build_object('account',current_user,'target','shioricafe_schema.reservation','database_owner',current_user=pg_get_userbyid(datdba),'maintain',has_table_privilege('shioricafe_schema.reservation','MAINTAIN'),'pg_maintain',pg_has_role(current_user,'pg_maintain','USAGE')) FROM pg_database WHERE datname=current_database();

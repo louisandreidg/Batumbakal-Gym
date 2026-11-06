@@ -1,0 +1,5 @@
+.env
+*.env
+*.clixml
+*secrets*
+!**/*.log

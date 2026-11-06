@@ -1,0 +1,1 @@
+EXPLAIN (FORMAT JSON) SELECT r.table_id,r.reservation_start_at,r.reservation_end_at,c.full_name AS guest_name FROM shioricafe_schema.reservation r LEFT JOIN shioricafe_schema.customer c ON r.customer_id=c.customer_id WHERE r.status='Confirmed' AND CURRENT_TIMESTAMP>=r.reservation_start_at AND CURRENT_TIMESTAMP<r.reservation_end_at;

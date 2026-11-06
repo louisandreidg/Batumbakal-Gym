@@ -1,0 +1,2 @@
+{"target": "public.department", "account": "grp07_owner", "maintain": true, "pg_maintain": false, "database_owner": true}
+

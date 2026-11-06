@@ -1,0 +1,5 @@
+# Owner feedback draft not sent
+
+G11 ReserveIT: Activity 5 local review on 7 November 2026. Local snapshot: 9062 kB; 8 tables, 19 indexes, 0 views. Other sessions visible: 0; visible blocked sessions: 0. Database deadlocks counter: 0; checksum failures counter: 0. Autovacuum is on. These counters are cumulative and a single snapshot does not establish sustained health. Maintenance: ANALYZE and ordinary VACUUM on public.reservation; 2026-11-07. The dashboard groups all reservations by status. A sequential scan with aggregation is reasonable because every row contributes. ANALYZE corrected the estimate for this small table. An extra status index is not justified merely by the scan; consider summaries only after measuring realistic volumes. Review remaining tables after bulk test writes; only the selected table and explicitly listed related inputs were maintained. Logging limits: historical shared lines usually omit database/account attribution. No production or load-test claim is made.
+
+Prepared with AI assistance from the linked local evidence. Review before sending.

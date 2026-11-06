@@ -1,0 +1,37 @@
+INFO:  vacuuming "grp03_projectdb.public.appointments"
+INFO:  finished vacuuming "grp03_projectdb.public.appointments": index scans: 1
+pages: 0 removed, 1 remain, 1 scanned (100.00% of total), 0 eagerly scanned
+tuples: 3 removed, 2 remain, 0 are dead but not yet removable
+removable cutoff: 1527, which was 0 XIDs old when operation ended
+new relfrozenxid: 1150, which is 16 XIDs ahead of previous value
+frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+visibility map: 1 pages set all-visible, 0 pages set all-frozen (0 were all-visible)
+index scan needed: 1 pages from table (100.00% of total) had 3 dead item identifiers removed
+index "appointments_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "appointments_doctor_slot": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+avg read rate: 0.000 MB/s, avg write rate: 13.783 MB/s
+buffer usage: 86 hits, 0 reads, 6 dirtied
+WAL usage: 9 records, 6 full page images, 33724 bytes, 0 buffers full
+system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.00 s
+INFO:  vacuuming "grp03_projectdb.pg_toast.pg_toast_19300"
+INFO:  finished vacuuming "grp03_projectdb.pg_toast.pg_toast_19300": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total), 0 eagerly scanned
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 1527, which was 0 XIDs old when operation ended
+new relfrozenxid: 1527, which is 354 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+visibility map: 0 pages set all-visible, 0 pages set all-frozen (0 were all-visible)
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+avg read rate: 8.719 MB/s, avg write rate: 8.719 MB/s
+buffer usage: 27 hits, 1 reads, 1 dirtied
+WAL usage: 1 records, 1 full page images, 8279 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+INFO:  analyzing "public.appointments"
+INFO:  "appointments": scanned 1 of 1 pages, containing 2 live rows and 0 dead rows; 2 rows in sample, 2 estimated total rows
+INFO:  finished analyzing table "grp03_projectdb.public.appointments"
+avg read rate: 0.000 MB/s, avg write rate: 3.906 MB/s
+buffer usage: 351 hits, 0 reads, 1 dirtied
+WAL usage: 10 records, 1 full page images, 4986 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+

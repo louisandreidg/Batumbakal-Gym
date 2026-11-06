@@ -1,0 +1,31 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Sort",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 23.60,
+      "Total Cost": 24.28,
+      "Plan Rows": 270,
+      "Plan Width": 270,
+      "Disabled": false,
+      "Sort Key": ["package_id"],
+      "Plans": [
+        {
+          "Node Type": "Seq Scan",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Relation Name": "package",
+          "Alias": "package",
+          "Startup Cost": 0.00,
+          "Total Cost": 12.70,
+          "Plan Rows": 270,
+          "Plan Width": 270,
+          "Disabled": false
+        }
+      ]
+    }
+  }
+]
+

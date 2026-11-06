@@ -1,0 +1,9 @@
+INFO:  analyzing "public.reservation"
+INFO:  "reservation": scanned 1 of 1 pages, containing 8 live rows and 8 dead rows; 8 rows in sample, 8 estimated total rows
+INFO:  finished analyzing table "ReserveIT.public.reservation"
+avg read rate: 8.789 MB/s, avg write rate: 8.789 MB/s
+buffer usage: 566 hits, 9 reads, 9 dirtied
+WAL usage: 29 records, 9 full page images, 48752 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+ANALYZE
+

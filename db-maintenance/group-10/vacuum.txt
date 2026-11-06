@@ -1,0 +1,22 @@
+INFO:  vacuuming "grp10_unisyncdb.public.registration"
+INFO:  finished vacuuming "grp10_unisyncdb.public.registration": index scans: 0
+pages: 0 removed, 8 remain, 8 scanned (100.00% of total), 0 eagerly scanned
+tuples: 1 removed, 946 remain, 0 are dead but not yet removable
+removable cutoff: 1533, which was 0 XIDs old when operation ended
+new relfrozenxid: 1479, which is 1 XIDs ahead of previous value
+frozen: 1 pages from table (12.50% of total) had 9 tuples frozen
+visibility map: 8 pages set all-visible, 1 pages set all-frozen (0 were all-visible)
+index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+avg read rate: 0.000 MB/s, avg write rate: 25.372 MB/s
+buffer usage: 112 hits, 0 reads, 12 dirtied
+WAL usage: 13 records, 12 full page images, 91463 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+INFO:  analyzing "public.registration"
+INFO:  "registration": scanned 8 of 8 pages, containing 946 live rows and 0 dead rows; 946 rows in sample, 946 estimated total rows
+INFO:  finished analyzing table "grp10_unisyncdb.public.registration"
+avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 310 hits, 0 reads, 0 dirtied
+WAL usage: 9 records, 0 full page images, 1158 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+

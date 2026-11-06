@@ -1,0 +1,1 @@
+EXPLAIN (FORMAT JSON) SELECT d.department_id,d.department_name,d.description,COUNT(p.position_id) AS position_count FROM public.department d LEFT JOIN public.position p ON p.department_id=d.department_id GROUP BY d.department_id,d.department_name,d.description ORDER BY d.department_name LIMIT 10 OFFSET 0;

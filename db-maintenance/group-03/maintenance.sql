@@ -1,0 +1,3 @@
+-- NOT EXECUTED. Intended Activity 4 credentials are unavailable.
+-- Authenticate and verify ownership/MAINTAIN before choosing a real target.
+-- No administrator account was substituted and no database was reset.

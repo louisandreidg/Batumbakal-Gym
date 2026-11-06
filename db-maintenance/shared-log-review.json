@@ -1,0 +1,89 @@
+{
+  "review_date": "2026-11-07",
+  "access": "Read-only filesystem review using the authorized local Windows account; restricted database accounts could not inspect log_directory.",
+  "scope": "Available shared server log files dated 2026-11-06 and 2026-11-07. Severity lines only; SQL statements and parameter details excluded.",
+  "attribution": "Configured log_line_prefix is %t only; shared lines do not identify database/account reliably. Do not assign a shared event to a project without its separate execution record.",
+  "files": [
+    {
+      "name": "postgresql-2026-11-06_000000.log",
+      "bytes_at_listing": 32429,
+      "reviewed_characters": 32429
+    },
+    {
+      "name": "postgresql-2026-11-06_222517.log",
+      "bytes_at_listing": 19956,
+      "reviewed_characters": 19956
+    },
+    {
+      "name": "postgresql-2026-11-07_000000.log",
+      "bytes_at_listing": 0,
+      "reviewed_characters": 5273
+    }
+  ],
+  "categories": {
+    "locking": 0,
+    "reliability": 0,
+    "connection": 62,
+    "permission": 152,
+    "constraint": 10,
+    "schema": 2
+  },
+  "examples": [
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "permission",
+      "line": "2026-11-06 00:10:34 CST ERROR:  permission denied for schema public at character 14"
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "connection",
+      "line": "2026-11-06 00:29:07 CST FATAL:  password authentication failed for user \"pawpaw_app\""
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "connection",
+      "line": "2026-11-06 00:29:07 CST FATAL:  password authentication failed for user \"pawpaw_app\""
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "schema",
+      "line": "2026-11-06 00:37:46 CST ERROR:  schema \"dropboxed\" does not exist"
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "permission",
+      "line": "2026-11-06 00:45:24 CST ERROR:  permission denied for schema dropboxed at character 14"
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "constraint",
+      "line": "2026-11-06 01:16:37 CST ERROR:  update or delete on table \"venue\" violates foreign key constraint \"event_venue_id_fkey\" on table \"event\""
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "constraint",
+      "line": "2026-11-06 01:16:37 CST ERROR:  update or delete on table \"participant\" violates foreign key constraint \"attendance_participant_id_fkey\" on table \"attendance\""
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "constraint",
+      "line": "2026-11-06 01:16:37 CST ERROR:  update or delete on table \"event\" violates foreign key constraint \"attendance_event_id_fkey\" on table \"attendance\""
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "permission",
+      "line": "2026-11-06 01:19:09 CST ERROR:  permission denied for schema school_event_management_db at character 14"
+    },
+    {
+      "file": "postgresql-2026-11-06_000000.log",
+      "category": "connection",
+      "line": "2026-11-06 01:22:43 CST FATAL:  pg_hba.conf rejects connection for host \"::1\", user \"event_app\", database \"dropboxed_db\", no encryption"
+    },
+    {
+      "file": "postgresql-2026-11-06_222517.log",
+      "category": "schema",
+      "line": "2026-11-06 22:57:52 CST ERROR:  there is no unique constraint matching given keys for referenced table \"staff\""
+    }
+  ],
+  "limits": "Counts are matching severity lines in the selected files, not distinct incidents. Errors may be deliberate Activity 4/5 probes. Active logs can grow after this read. Unmatched errors and earlier logs are outside this review. No general slow-query conclusion is possible from this sample."
+}

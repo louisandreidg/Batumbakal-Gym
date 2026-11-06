@@ -1,0 +1,41 @@
+INFO:  vacuuming "grp02_event_management_db.school_event_management_db.event"
+INFO:  table "event": truncated 1 to 0 pages
+INFO:  finished vacuuming "grp02_event_management_db.school_event_management_db.event": index scans: 1
+pages: 1 removed, 0 remain, 1 scanned (100.00% of total), 0 eagerly scanned
+tuples: 50 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 1525, which was 1 XIDs old when operation ended
+new relfrozenxid: 1525, which is 664 XIDs ahead of previous value
+frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+visibility map: 1 pages set all-visible, 1 pages set all-frozen (0 were all-visible)
+index scan needed: 1 pages from table (100.00% of total) had 48 dead item identifiers removed
+index "event_pkey": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "ex_event_venue_no_overlap": pages: 1 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "ix_event_organizer_id": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "ix_event_venue_id": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+index "ix_event_event_date": pages: 2 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+avg read rate: 1.439 MB/s, avg write rate: 3.598 MB/s
+buffer usage: 140 hits, 4 reads, 10 dirtied
+WAL usage: 14 records, 10 full page images, 34296 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.01 s, elapsed: 0.02 s
+INFO:  vacuuming "grp02_event_management_db.pg_toast.pg_toast_17837"
+INFO:  finished vacuuming "grp02_event_management_db.pg_toast.pg_toast_17837": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total), 0 eagerly scanned
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 1526, which was 0 XIDs old when operation ended
+new relfrozenxid: 1526, which is 665 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+visibility map: 0 pages set all-visible, 0 pages set all-frozen (0 were all-visible)
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+avg read rate: 6.061 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 27 hits, 1 reads, 0 dirtied
+WAL usage: 1 records, 0 full page images, 258 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+INFO:  analyzing "school_event_management_db.event"
+INFO:  "event": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  finished analyzing table "grp02_event_management_db.school_event_management_db.event"
+avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 368 hits, 0 reads, 0 dirtied
+WAL usage: 0 records, 0 full page images, 0 bytes, 0 buffers full
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+

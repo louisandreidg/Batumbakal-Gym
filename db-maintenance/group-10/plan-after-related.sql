@@ -1,0 +1,1 @@
+EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT COUNT(*) FROM public.registration r INNER JOIN public.event e ON r.event_id=e.event_id INNER JOIN public.organization o ON e.organization_id=o.organization_id WHERE r.account_id=1 AND r.status='active' AND e.status<>'deleted' AND o.status='active' AND o.organization_name ILIKE '%%';

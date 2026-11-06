@@ -1,0 +1,1 @@
+SELECT jsonb_build_object('account',current_user,'target','public.department','database_owner',current_user=pg_get_userbyid(datdba),'maintain',has_table_privilege('public.department','MAINTAIN'),'pg_maintain',pg_has_role(current_user,'pg_maintain','USAGE')) FROM pg_database WHERE datname=current_database();

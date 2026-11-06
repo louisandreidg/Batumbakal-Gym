@@ -1,0 +1,2 @@
+grp07_applicantdb|grp07_readonly|PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit
+

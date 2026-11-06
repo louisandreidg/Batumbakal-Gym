@@ -1,0 +1,2 @@
+{"target": "public.registration", "account": "unisync_dba", "maintain": true, "pg_maintain": false, "database_owner": false}
+

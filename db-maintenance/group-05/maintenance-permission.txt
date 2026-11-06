@@ -1,0 +1,2 @@
+{"target": "shioricafe_schema.reservation", "account": "shiori_app", "maintain": false, "pg_maintain": false, "database_owner": false}
+

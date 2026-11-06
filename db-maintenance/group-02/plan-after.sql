@@ -1,0 +1,1 @@
+EXPLAIN (ANALYZE,BUFFERS,FORMAT JSON) SELECT count(*) FROM school_event_management_db.event e WHERE e.venue_id=1 AND e.event_date=CURRENT_DATE AND e.event_status<>'Cancelled' AND e.start_time<TIME '17:00' AND e.end_time>TIME '08:00' AND e.event_id<>0;
