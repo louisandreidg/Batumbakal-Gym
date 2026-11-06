@@ -1,3 +1,5 @@
+> UniSync (G10) testing is recorded in [group-10-unisync](group-10-unisync/README.md). Group labels from the instructor roster are HealthBridge G04, SHIORI G05, Car Rental G06, Catering G08 and UniSync G10. Older SHIORI references under group-10 are historical mislabels; use this corrected roster for final consolidation.
+
 > Latest retests: see [additional testing results](additional-testing-2026-11-06/README.md). SHIORI now connects to PostgreSQL but has cashier test failures; its earlier Failed assessment and the existing PDF apply to the older snapshot. The consolidated PDF is pending the remaining testing.
 
 # Group 09 Activity 4 submission
