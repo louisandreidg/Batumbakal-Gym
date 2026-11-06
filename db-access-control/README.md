@@ -1,3 +1,4 @@
+> Group-supplied Activity 4 documentation: [Casilan and de Guzman report](Activity4-Progress-Report-Casilan-de-Guzman.pdf). Added unchanged from the PDF supplied on 7 November 2026. The final/ folder retains the supporting SQL, test evidence and earlier generated report.
 # Group 09 - Activity 4
 
 The latest consolidated submission is in **[final/](final/README.md)**.
