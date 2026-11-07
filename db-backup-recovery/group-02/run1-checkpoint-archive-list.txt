@@ -1,0 +1,118 @@
+;
+; Archive created at 2026-11-07 01:49:09
+;     dbname: a6_g02_restore_20261107
+;     TOC Entries: 107
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+8; 2615 23243 SCHEMA - activity6_probe a6_g02_restore
+5435; 0 0 ACL - SCHEMA public pg_database_owner
+7; 2615 22325 SCHEMA - school_event_management_db a6_g02_restore
+5436; 0 0 ACL - SCHEMA school_event_management_db a6_g02_restore
+2; 3079 22326 EXTENSION - btree_gist 
+5437; 0 0 COMMENT - EXTENSION btree_gist 
+241; 1259 23244 TABLE activity6_probe recovery_record a6_g02_restore
+222; 1259 23052 TABLE school_event_management_db attendance a6_g02_restore
+5438; 0 0 ACL school_event_management_db TABLE attendance a6_g02_restore
+223; 1259 23062 SEQUENCE school_event_management_db attendance_attendance_id_seq a6_g02_restore
+5439; 0 0 ACL school_event_management_db SEQUENCE attendance_attendance_id_seq a6_g02_restore
+224; 1259 23063 TABLE school_event_management_db audit_log a6_g02_restore
+5440; 0 0 ACL school_event_management_db TABLE audit_log a6_g02_restore
+225; 1259 23074 SEQUENCE school_event_management_db audit_log_log_id_seq a6_g02_restore
+5441; 0 0 ACL school_event_management_db SEQUENCE audit_log_log_id_seq a6_g02_restore
+226; 1259 23075 TABLE school_event_management_db event a6_g02_restore
+5442; 0 0 ACL school_event_management_db TABLE event a6_g02_restore
+227; 1259 23090 TABLE school_event_management_db event_assignment a6_g02_restore
+5443; 0 0 ACL school_event_management_db TABLE event_assignment a6_g02_restore
+228; 1259 23098 SEQUENCE school_event_management_db event_assignment_assignment_id_seq a6_g02_restore
+5444; 0 0 ACL school_event_management_db SEQUENCE event_assignment_assignment_id_seq a6_g02_restore
+229; 1259 23099 SEQUENCE school_event_management_db event_event_id_seq a6_g02_restore
+5445; 0 0 ACL school_event_management_db SEQUENCE event_event_id_seq a6_g02_restore
+230; 1259 23100 TABLE school_event_management_db event_schedule a6_g02_restore
+5446; 0 0 ACL school_event_management_db TABLE event_schedule a6_g02_restore
+231; 1259 23109 SEQUENCE school_event_management_db event_schedule_schedule_id_seq a6_g02_restore
+5447; 0 0 ACL school_event_management_db SEQUENCE event_schedule_schedule_id_seq a6_g02_restore
+232; 1259 23110 TABLE school_event_management_db flyway_schema_history a6_g02_restore
+5448; 0 0 ACL school_event_management_db TABLE flyway_schema_history a6_g02_restore
+233; 1259 23124 TABLE school_event_management_db participant a6_g02_restore
+5449; 0 0 ACL school_event_management_db TABLE participant a6_g02_restore
+234; 1259 23131 SEQUENCE school_event_management_db participant_participant_id_seq a6_g02_restore
+5450; 0 0 ACL school_event_management_db SEQUENCE participant_participant_id_seq a6_g02_restore
+235; 1259 23132 TABLE school_event_management_db role a6_g02_restore
+5451; 0 0 ACL school_event_management_db TABLE role a6_g02_restore
+236; 1259 23137 SEQUENCE school_event_management_db role_role_id_seq a6_g02_restore
+5452; 0 0 ACL school_event_management_db SEQUENCE role_role_id_seq a6_g02_restore
+237; 1259 23138 TABLE school_event_management_db user_account a6_g02_restore
+5453; 0 0 ACL school_event_management_db TABLE user_account a6_g02_restore
+238; 1259 23152 SEQUENCE school_event_management_db user_account_user_id_seq a6_g02_restore
+5454; 0 0 ACL school_event_management_db SEQUENCE user_account_user_id_seq a6_g02_restore
+239; 1259 23153 TABLE school_event_management_db venue a6_g02_restore
+5455; 0 0 ACL school_event_management_db TABLE venue a6_g02_restore
+240; 1259 23160 SEQUENCE school_event_management_db venue_venue_id_seq a6_g02_restore
+5456; 0 0 ACL school_event_management_db SEQUENCE venue_venue_id_seq a6_g02_restore
+5427; 0 23244 TABLE DATA activity6_probe recovery_record a6_g02_restore
+5408; 0 23052 TABLE DATA school_event_management_db attendance a6_g02_restore
+5410; 0 23063 TABLE DATA school_event_management_db audit_log a6_g02_restore
+5412; 0 23075 TABLE DATA school_event_management_db event a6_g02_restore
+5413; 0 23090 TABLE DATA school_event_management_db event_assignment a6_g02_restore
+5416; 0 23100 TABLE DATA school_event_management_db event_schedule a6_g02_restore
+5418; 0 23110 TABLE DATA school_event_management_db flyway_schema_history a6_g02_restore
+5419; 0 23124 TABLE DATA school_event_management_db participant a6_g02_restore
+5421; 0 23132 TABLE DATA school_event_management_db role a6_g02_restore
+5423; 0 23138 TABLE DATA school_event_management_db user_account a6_g02_restore
+5425; 0 23153 TABLE DATA school_event_management_db venue a6_g02_restore
+5457; 0 0 SEQUENCE SET school_event_management_db attendance_attendance_id_seq a6_g02_restore
+5458; 0 0 SEQUENCE SET school_event_management_db audit_log_log_id_seq a6_g02_restore
+5459; 0 0 SEQUENCE SET school_event_management_db event_assignment_assignment_id_seq a6_g02_restore
+5460; 0 0 SEQUENCE SET school_event_management_db event_event_id_seq a6_g02_restore
+5461; 0 0 SEQUENCE SET school_event_management_db event_schedule_schedule_id_seq a6_g02_restore
+5462; 0 0 SEQUENCE SET school_event_management_db participant_participant_id_seq a6_g02_restore
+5463; 0 0 SEQUENCE SET school_event_management_db role_role_id_seq a6_g02_restore
+5464; 0 0 SEQUENCE SET school_event_management_db user_account_user_id_seq a6_g02_restore
+5465; 0 0 SEQUENCE SET school_event_management_db venue_venue_id_seq a6_g02_restore
+5250; 2606 23254 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g02_restore
+5252; 2606 23252 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g02_restore
+5208; 2606 23162 CONSTRAINT school_event_management_db attendance attendance_pkey a6_g02_restore
+5213; 2606 23164 CONSTRAINT school_event_management_db audit_log audit_log_pkey a6_g02_restore
+5224; 2606 23166 CONSTRAINT school_event_management_db event_assignment event_assignment_pkey a6_g02_restore
+5217; 2606 23168 CONSTRAINT school_event_management_db event event_pkey a6_g02_restore
+5227; 2606 23170 CONSTRAINT school_event_management_db event_schedule event_schedule_pkey a6_g02_restore
+5219; 2606 23172 CONSTRAINT school_event_management_db event ex_event_venue_no_overlap a6_g02_restore
+5230; 2606 23174 CONSTRAINT school_event_management_db flyway_schema_history flyway_schema_history_pk a6_g02_restore
+5233; 2606 23176 CONSTRAINT school_event_management_db participant participant_pkey a6_g02_restore
+5237; 2606 23178 CONSTRAINT school_event_management_db role role_pkey a6_g02_restore
+5211; 2606 23180 CONSTRAINT school_event_management_db attendance uq_attendance_event_participant a6_g02_restore
+5235; 2606 23182 CONSTRAINT school_event_management_db participant uq_participant_student_number a6_g02_restore
+5239; 2606 23184 CONSTRAINT school_event_management_db role uq_role_name a6_g02_restore
+5246; 2606 23186 CONSTRAINT school_event_management_db venue uq_venue_name a6_g02_restore
+5244; 2606 23188 CONSTRAINT school_event_management_db user_account user_account_pkey a6_g02_restore
+5248; 2606 23190 CONSTRAINT school_event_management_db venue venue_pkey a6_g02_restore
+5231; 1259 23191 INDEX school_event_management_db flyway_schema_history_s_idx a6_g02_restore
+5209; 1259 23192 INDEX school_event_management_db ix_attendance_participant_id a6_g02_restore
+5214; 1259 23193 INDEX school_event_management_db ix_audit_log_timestamp a6_g02_restore
+5215; 1259 23194 INDEX school_event_management_db ix_audit_log_user_id a6_g02_restore
+5225; 1259 23195 INDEX school_event_management_db ix_event_assignment_event_id a6_g02_restore
+5220; 1259 23196 INDEX school_event_management_db ix_event_event_date a6_g02_restore
+5221; 1259 23197 INDEX school_event_management_db ix_event_organizer_id a6_g02_restore
+5228; 1259 23198 INDEX school_event_management_db ix_event_schedule_event_id a6_g02_restore
+5222; 1259 23199 INDEX school_event_management_db ix_event_venue_id a6_g02_restore
+5240; 1259 23200 INDEX school_event_management_db ix_user_account_role_id a6_g02_restore
+5241; 1259 23201 INDEX school_event_management_db uq_user_account_email_lower a6_g02_restore
+5242; 1259 23202 INDEX school_event_management_db uq_user_account_username_lower a6_g02_restore
+5253; 2606 23203 FK CONSTRAINT school_event_management_db attendance attendance_event_id_fkey a6_g02_restore
+5254; 2606 23208 FK CONSTRAINT school_event_management_db attendance attendance_participant_id_fkey a6_g02_restore
+5255; 2606 23213 FK CONSTRAINT school_event_management_db audit_log audit_log_user_id_fkey a6_g02_restore
+5258; 2606 23218 FK CONSTRAINT school_event_management_db event_assignment event_assignment_event_id_fkey a6_g02_restore
+5256; 2606 23223 FK CONSTRAINT school_event_management_db event event_organizer_id_fkey a6_g02_restore
+5259; 2606 23228 FK CONSTRAINT school_event_management_db event_schedule event_schedule_event_id_fkey a6_g02_restore
+5257; 2606 23233 FK CONSTRAINT school_event_management_db event event_venue_id_fkey a6_g02_restore
+5260; 2606 23238 FK CONSTRAINT school_event_management_db user_account user_account_role_id_fkey a6_g02_restore
+

@@ -1,0 +1,120 @@
+;
+; Archive created at 2026-11-07 01:47:08
+;     dbname: dropboxed_db
+;     TOC Entries: 109
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+5; 2615 16843 SCHEMA - dropboxed postgres
+5123; 0 0 COMMENT - SCHEMA dropboxed postgres
+5124; 0 0 ACL - SCHEMA dropboxed postgres
+5125; 0 0 ACL - SCHEMA public pg_database_owner
+235; 1259 16992 TABLE dropboxed attachments postgres
+5126; 0 0 COMMENT dropboxed TABLE attachments postgres
+5127; 0 0 COMMENT dropboxed COLUMN attachments.file_path postgres
+5128; 0 0 COMMENT dropboxed COLUMN attachments.file_type postgres
+5129; 0 0 ACL dropboxed TABLE attachments postgres
+234; 1259 16991 SEQUENCE dropboxed attachments_attachment_id_seq postgres
+5130; 0 0 ACL dropboxed SEQUENCE attachments_attachment_id_seq postgres
+231; 1259 16944 TABLE dropboxed complaint_assignments postgres
+5131; 0 0 COMMENT dropboxed TABLE complaint_assignments postgres
+5132; 0 0 ACL dropboxed TABLE complaint_assignments postgres
+230; 1259 16943 SEQUENCE dropboxed complaint_assignments_assignment_id_seq postgres
+5133; 0 0 ACL dropboxed SEQUENCE complaint_assignments_assignment_id_seq postgres
+225; 1259 16883 TABLE dropboxed complaint_categories postgres
+5134; 0 0 COMMENT dropboxed TABLE complaint_categories postgres
+5135; 0 0 ACL dropboxed TABLE complaint_categories postgres
+224; 1259 16882 SEQUENCE dropboxed complaint_categories_category_id_seq postgres
+5136; 0 0 ACL dropboxed SEQUENCE complaint_categories_category_id_seq postgres
+229; 1259 16906 TABLE dropboxed complaints postgres
+5137; 0 0 COMMENT dropboxed TABLE complaints postgres
+5138; 0 0 COMMENT dropboxed COLUMN complaints.status postgres
+5139; 0 0 COMMENT dropboxed COLUMN complaints.is_flagged postgres
+5140; 0 0 COMMENT dropboxed COLUMN complaints.flag_reason postgres
+5141; 0 0 COMMENT dropboxed COLUMN complaints.resolved_at postgres
+5142; 0 0 ACL dropboxed TABLE complaints postgres
+228; 1259 16905 SEQUENCE dropboxed complaints_complaint_id_seq postgres
+5143; 0 0 ACL dropboxed SEQUENCE complaints_complaint_id_seq postgres
+227; 1259 16895 TABLE dropboxed locations postgres
+5144; 0 0 COMMENT dropboxed TABLE locations postgres
+5145; 0 0 COMMENT dropboxed COLUMN locations.barangay postgres
+5146; 0 0 ACL dropboxed TABLE locations postgres
+226; 1259 16894 SEQUENCE dropboxed locations_location_id_seq postgres
+5147; 0 0 ACL dropboxed SEQUENCE locations_location_id_seq postgres
+223; 1259 16864 TABLE dropboxed staff postgres
+5148; 0 0 COMMENT dropboxed TABLE staff postgres
+5149; 0 0 COMMENT dropboxed COLUMN staff.email postgres
+5150; 0 0 COMMENT dropboxed COLUMN staff.password_hash postgres
+5151; 0 0 COMMENT dropboxed COLUMN staff.account_status postgres
+5152; 0 0 ACL dropboxed TABLE staff postgres
+222; 1259 16863 SEQUENCE dropboxed staff_staff_id_seq postgres
+5153; 0 0 ACL dropboxed SEQUENCE staff_staff_id_seq postgres
+233; 1259 16967 TABLE dropboxed status_logs postgres
+5154; 0 0 COMMENT dropboxed TABLE status_logs postgres
+5155; 0 0 COMMENT dropboxed COLUMN status_logs.staff_id postgres
+5156; 0 0 ACL dropboxed TABLE status_logs postgres
+232; 1259 16966 SEQUENCE dropboxed status_logs_status_log_id_seq postgres
+5157; 0 0 ACL dropboxed SEQUENCE status_logs_status_log_id_seq postgres
+221; 1259 16845 TABLE dropboxed users postgres
+5158; 0 0 COMMENT dropboxed TABLE users postgres
+5159; 0 0 COMMENT dropboxed COLUMN users.email postgres
+5160; 0 0 COMMENT dropboxed COLUMN users.password_hash postgres
+5161; 0 0 COMMENT dropboxed COLUMN users.account_status postgres
+5162; 0 0 ACL dropboxed TABLE users postgres
+220; 1259 16844 SEQUENCE dropboxed users_user_id_seq postgres
+5163; 0 0 ACL dropboxed SEQUENCE users_user_id_seq postgres
+5115; 0 16992 TABLE DATA dropboxed attachments postgres
+5111; 0 16944 TABLE DATA dropboxed complaint_assignments postgres
+5105; 0 16883 TABLE DATA dropboxed complaint_categories postgres
+5109; 0 16906 TABLE DATA dropboxed complaints postgres
+5107; 0 16895 TABLE DATA dropboxed locations postgres
+5103; 0 16864 TABLE DATA dropboxed staff postgres
+5113; 0 16967 TABLE DATA dropboxed status_logs postgres
+5101; 0 16845 TABLE DATA dropboxed users postgres
+5164; 0 0 SEQUENCE SET dropboxed attachments_attachment_id_seq postgres
+5165; 0 0 SEQUENCE SET dropboxed complaint_assignments_assignment_id_seq postgres
+5166; 0 0 SEQUENCE SET dropboxed complaint_categories_category_id_seq postgres
+5167; 0 0 SEQUENCE SET dropboxed complaints_complaint_id_seq postgres
+5168; 0 0 SEQUENCE SET dropboxed locations_location_id_seq postgres
+5169; 0 0 SEQUENCE SET dropboxed staff_staff_id_seq postgres
+5170; 0 0 SEQUENCE SET dropboxed status_logs_status_log_id_seq postgres
+5171; 0 0 SEQUENCE SET dropboxed users_user_id_seq postgres
+4944; 2606 17008 CONSTRAINT dropboxed attachments pk_attachments postgres
+4935; 2606 16953 CONSTRAINT dropboxed complaint_assignments pk_complaint_assignments postgres
+4920; 2606 16891 CONSTRAINT dropboxed complaint_categories pk_complaint_categories postgres
+4932; 2606 16927 CONSTRAINT dropboxed complaints pk_complaints postgres
+4925; 2606 16904 CONSTRAINT dropboxed locations pk_locations postgres
+4916; 2606 16879 CONSTRAINT dropboxed staff pk_staff postgres
+4941; 2606 16980 CONSTRAINT dropboxed status_logs pk_status_logs postgres
+4912; 2606 16860 CONSTRAINT dropboxed users pk_users postgres
+4937; 2606 16955 CONSTRAINT dropboxed complaint_assignments uq_complaint_assignments_complaint_staff postgres
+4922; 2606 16893 CONSTRAINT dropboxed complaint_categories uq_complaint_categories_name postgres
+4918; 2606 16881 CONSTRAINT dropboxed staff uq_staff_email postgres
+4914; 2606 16862 CONSTRAINT dropboxed users uq_users_email postgres
+4942; 1259 17022 INDEX dropboxed idx_attachments_complaint_id postgres
+4933; 1259 17019 INDEX dropboxed idx_complaint_assignments_staff_id postgres
+4926; 1259 17015 INDEX dropboxed idx_complaints_category_id postgres
+4927; 1259 17016 INDEX dropboxed idx_complaints_location_id postgres
+4928; 1259 17017 INDEX dropboxed idx_complaints_status postgres
+4929; 1259 17018 INDEX dropboxed idx_complaints_submitted_at postgres
+4930; 1259 17014 INDEX dropboxed idx_complaints_user_id postgres
+4923; 1259 17023 INDEX dropboxed idx_locations_barangay postgres
+4938; 1259 17020 INDEX dropboxed idx_status_logs_complaint_id postgres
+4939; 1259 17021 INDEX dropboxed idx_status_logs_staff_id postgres
+4952; 2606 17009 FK CONSTRAINT dropboxed attachments fk_attachments_complaint postgres
+4948; 2606 16956 FK CONSTRAINT dropboxed complaint_assignments fk_complaint_assignments_complaint postgres
+4949; 2606 16961 FK CONSTRAINT dropboxed complaint_assignments fk_complaint_assignments_staff postgres
+4945; 2606 16933 FK CONSTRAINT dropboxed complaints fk_complaints_category postgres
+4946; 2606 16938 FK CONSTRAINT dropboxed complaints fk_complaints_location postgres
+4947; 2606 16928 FK CONSTRAINT dropboxed complaints fk_complaints_user postgres
+4950; 2606 16981 FK CONSTRAINT dropboxed status_logs fk_status_logs_complaint postgres
+4951; 2606 16986 FK CONSTRAINT dropboxed status_logs fk_status_logs_staff postgres
+

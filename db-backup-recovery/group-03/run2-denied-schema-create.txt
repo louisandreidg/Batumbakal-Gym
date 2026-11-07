@@ -1,0 +1,4 @@
+ERROR:  permission denied for schema public
+LINE 1: CREATE TABLE "public".activity6_denied_probe(id int);
+                     ^
+

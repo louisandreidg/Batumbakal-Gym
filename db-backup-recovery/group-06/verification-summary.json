@@ -1,0 +1,33 @@
+{
+  "group": "06",
+  "counts": {
+    "tables": 17,
+    "table_rows": 26,
+    "sequences": 17,
+    "constraints": 171,
+    "primary_keys": 17,
+    "foreign_keys": 25,
+    "indexes": 38,
+    "views": 0,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "137d9c80eeb18de8f9e1aceaa76c48b5",
+    "kind": "data",
+    "name": "public.audit_log",
+    "rows": 3
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "06",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:31.0335200+08:00"
+  },
+  "application_connection": null,
+  "latest_run": "run2",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G06-20261107"
+}

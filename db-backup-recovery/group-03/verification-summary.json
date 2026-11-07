@@ -1,0 +1,42 @@
+{
+  "group": "03",
+  "counts": {
+    "tables": 14,
+    "table_rows": 9,
+    "sequences": 12,
+    "constraints": 118,
+    "primary_keys": 14,
+    "foreign_keys": 16,
+    "indexes": 23,
+    "views": 0,
+    "user_functions": 1
+  },
+  "selected_table": {
+    "md5": "7245c5344108aacebadd75d84363d468",
+    "kind": "data",
+    "name": "public.service",
+    "rows": 9
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "03",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:30.0948470+08:00"
+  },
+  "application_connection": {
+    "group": "03",
+    "method": "Original Node.js connection module",
+    "database": "a6_g03_restore_20261107",
+    "account": "a6_g03_verify",
+    "exit_code": 0,
+    "passed": true,
+    "output": "{\"database\":\"a6_g03_restore_20261107\",\"account\":\"a6_g03_verify\"}\r\n",
+    "checked_at": "2026-11-07T01:54:59.6195872+08:00"
+  },
+  "latest_run": "run2",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G03-20261107"
+}

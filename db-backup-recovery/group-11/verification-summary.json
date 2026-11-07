@@ -1,0 +1,33 @@
+{
+  "group": "11",
+  "counts": {
+    "tables": 8,
+    "table_rows": 45,
+    "sequences": 7,
+    "constraints": 86,
+    "primary_keys": 8,
+    "foreign_keys": 7,
+    "indexes": 19,
+    "views": 0,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "ce916e08d22dc891370ec1494fa35061",
+    "kind": "data",
+    "name": "public.app_user",
+    "rows": 4
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "11",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:32.2280951+08:00"
+  },
+  "application_connection": null,
+  "latest_run": "run2",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G11-20261107"
+}

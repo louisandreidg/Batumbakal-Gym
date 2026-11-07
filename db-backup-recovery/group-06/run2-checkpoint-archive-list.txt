@@ -1,0 +1,234 @@
+;
+; Archive created at 2026-11-07 01:51:59
+;     dbname: a6_g06_restore_20261107
+;     TOC Entries: 223
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+6; 2615 36077 SCHEMA - activity6_probe a6_g06_restore
+5293; 0 0 ACL - SCHEMA public pg_database_owner
+254; 1259 36078 TABLE activity6_probe recovery_record a6_g06_restore
+220; 1259 35624 TABLE public audit_log a6_g06_restore
+5294; 0 0 ACL public TABLE audit_log a6_g06_restore
+221; 1259 35635 SEQUENCE public audit_log_audit_id_seq a6_g06_restore
+5295; 0 0 SEQUENCE OWNED BY public audit_log_audit_id_seq a6_g06_restore
+5296; 0 0 ACL public SEQUENCE audit_log_audit_id_seq a6_g06_restore
+222; 1259 35636 TABLE public cancellation a6_g06_restore
+5297; 0 0 ACL public TABLE cancellation a6_g06_restore
+223; 1259 35650 SEQUENCE public cancellation_cancellation_id_seq a6_g06_restore
+5298; 0 0 SEQUENCE OWNED BY public cancellation_cancellation_id_seq a6_g06_restore
+5299; 0 0 ACL public SEQUENCE cancellation_cancellation_id_seq a6_g06_restore
+224; 1259 35651 TABLE public customer a6_g06_restore
+5300; 0 0 ACL public TABLE customer a6_g06_restore
+5301; 0 0 ACL public COLUMN customer.customer_id a6_g06_restore
+5302; 0 0 ACL public COLUMN customer.first_name a6_g06_restore
+5303; 0 0 ACL public COLUMN customer.last_name a6_g06_restore
+5304; 0 0 ACL public COLUMN customer.account_status a6_g06_restore
+5305; 0 0 ACL public COLUMN customer.created_at a6_g06_restore
+225; 1259 35666 SEQUENCE public customer_customer_id_seq a6_g06_restore
+5306; 0 0 SEQUENCE OWNED BY public customer_customer_id_seq a6_g06_restore
+5307; 0 0 ACL public SEQUENCE customer_customer_id_seq a6_g06_restore
+226; 1259 35667 TABLE public damage_fee a6_g06_restore
+5308; 0 0 ACL public TABLE damage_fee a6_g06_restore
+227; 1259 35680 SEQUENCE public damage_fee_damage_fee_id_seq a6_g06_restore
+5309; 0 0 SEQUENCE OWNED BY public damage_fee_damage_fee_id_seq a6_g06_restore
+5310; 0 0 ACL public SEQUENCE damage_fee_damage_fee_id_seq a6_g06_restore
+228; 1259 35681 TABLE public damage_incident a6_g06_restore
+5311; 0 0 ACL public TABLE damage_incident a6_g06_restore
+229; 1259 35693 SEQUENCE public damage_incident_damage_id_seq a6_g06_restore
+5312; 0 0 SEQUENCE OWNED BY public damage_incident_damage_id_seq a6_g06_restore
+5313; 0 0 ACL public SEQUENCE damage_incident_damage_id_seq a6_g06_restore
+230; 1259 35694 TABLE public driver_license a6_g06_restore
+5314; 0 0 ACL public TABLE driver_license a6_g06_restore
+231; 1259 35710 SEQUENCE public driver_license_license_id_seq a6_g06_restore
+5315; 0 0 SEQUENCE OWNED BY public driver_license_license_id_seq a6_g06_restore
+5316; 0 0 ACL public SEQUENCE driver_license_license_id_seq a6_g06_restore
+232; 1259 35711 TABLE public inspection_item a6_g06_restore
+5317; 0 0 ACL public TABLE inspection_item a6_g06_restore
+233; 1259 35720 SEQUENCE public inspection_item_item_id_seq a6_g06_restore
+5318; 0 0 SEQUENCE OWNED BY public inspection_item_item_id_seq a6_g06_restore
+5319; 0 0 ACL public SEQUENCE inspection_item_item_id_seq a6_g06_restore
+234; 1259 35721 TABLE public inspection_photo a6_g06_restore
+5320; 0 0 ACL public TABLE inspection_photo a6_g06_restore
+235; 1259 35732 SEQUENCE public inspection_photo_photo_id_seq a6_g06_restore
+5321; 0 0 SEQUENCE OWNED BY public inspection_photo_photo_id_seq a6_g06_restore
+5322; 0 0 ACL public SEQUENCE inspection_photo_photo_id_seq a6_g06_restore
+236; 1259 35733 TABLE public payment a6_g06_restore
+5323; 0 0 ACL public TABLE payment a6_g06_restore
+237; 1259 35746 SEQUENCE public payment_payment_id_seq a6_g06_restore
+5324; 0 0 SEQUENCE OWNED BY public payment_payment_id_seq a6_g06_restore
+5325; 0 0 ACL public SEQUENCE payment_payment_id_seq a6_g06_restore
+238; 1259 35747 TABLE public rental a6_g06_restore
+5326; 0 0 ACL public TABLE rental a6_g06_restore
+239; 1259 35775 TABLE public rental_rate a6_g06_restore
+5327; 0 0 ACL public TABLE rental_rate a6_g06_restore
+240; 1259 35785 SEQUENCE public rental_rate_rate_id_seq a6_g06_restore
+5328; 0 0 SEQUENCE OWNED BY public rental_rate_rate_id_seq a6_g06_restore
+5329; 0 0 ACL public SEQUENCE rental_rate_rate_id_seq a6_g06_restore
+241; 1259 35786 SEQUENCE public rental_rental_id_seq a6_g06_restore
+5330; 0 0 SEQUENCE OWNED BY public rental_rental_id_seq a6_g06_restore
+5331; 0 0 ACL public SEQUENCE rental_rental_id_seq a6_g06_restore
+242; 1259 35787 TABLE public rental_terms a6_g06_restore
+5332; 0 0 ACL public TABLE rental_terms a6_g06_restore
+243; 1259 35799 SEQUENCE public rental_terms_terms_id_seq a6_g06_restore
+5333; 0 0 SEQUENCE OWNED BY public rental_terms_terms_id_seq a6_g06_restore
+5334; 0 0 ACL public SEQUENCE rental_terms_terms_id_seq a6_g06_restore
+244; 1259 35800 TABLE public staff a6_g06_restore
+5335; 0 0 ACL public TABLE staff a6_g06_restore
+5336; 0 0 ACL public COLUMN staff.staff_id a6_g06_restore
+5337; 0 0 ACL public COLUMN staff.first_name a6_g06_restore
+5338; 0 0 ACL public COLUMN staff.last_name a6_g06_restore
+5339; 0 0 ACL public COLUMN staff.role a6_g06_restore
+5340; 0 0 ACL public COLUMN staff.account_status a6_g06_restore
+5341; 0 0 ACL public COLUMN staff.created_at a6_g06_restore
+245; 1259 35816 SEQUENCE public staff_staff_id_seq a6_g06_restore
+5342; 0 0 SEQUENCE OWNED BY public staff_staff_id_seq a6_g06_restore
+5343; 0 0 ACL public SEQUENCE staff_staff_id_seq a6_g06_restore
+246; 1259 35817 TABLE public vehicle a6_g06_restore
+5344; 0 0 ACL public TABLE vehicle a6_g06_restore
+247; 1259 35832 TABLE public vehicle_category a6_g06_restore
+5345; 0 0 ACL public TABLE vehicle_category a6_g06_restore
+248; 1259 35841 SEQUENCE public vehicle_category_category_id_seq a6_g06_restore
+5346; 0 0 SEQUENCE OWNED BY public vehicle_category_category_id_seq a6_g06_restore
+5347; 0 0 ACL public SEQUENCE vehicle_category_category_id_seq a6_g06_restore
+249; 1259 35842 TABLE public vehicle_inspection a6_g06_restore
+5348; 0 0 ACL public TABLE vehicle_inspection a6_g06_restore
+250; 1259 35854 SEQUENCE public vehicle_inspection_inspection_id_seq a6_g06_restore
+5349; 0 0 SEQUENCE OWNED BY public vehicle_inspection_inspection_id_seq a6_g06_restore
+5350; 0 0 ACL public SEQUENCE vehicle_inspection_inspection_id_seq a6_g06_restore
+251; 1259 35855 TABLE public vehicle_maintenance a6_g06_restore
+5351; 0 0 ACL public TABLE vehicle_maintenance a6_g06_restore
+252; 1259 35867 SEQUENCE public vehicle_maintenance_maintenance_id_seq a6_g06_restore
+5352; 0 0 SEQUENCE OWNED BY public vehicle_maintenance_maintenance_id_seq a6_g06_restore
+5353; 0 0 ACL public SEQUENCE vehicle_maintenance_maintenance_id_seq a6_g06_restore
+253; 1259 35868 SEQUENCE public vehicle_vehicle_id_seq a6_g06_restore
+5354; 0 0 SEQUENCE OWNED BY public vehicle_vehicle_id_seq a6_g06_restore
+5355; 0 0 ACL public SEQUENCE vehicle_vehicle_id_seq a6_g06_restore
+4943; 2604 35869 DEFAULT public audit_log audit_id a6_g06_restore
+4945; 2604 35870 DEFAULT public cancellation cancellation_id a6_g06_restore
+4948; 2604 35871 DEFAULT public customer customer_id a6_g06_restore
+4951; 2604 35872 DEFAULT public damage_fee damage_fee_id a6_g06_restore
+4954; 2604 35873 DEFAULT public damage_incident damage_id a6_g06_restore
+4957; 2604 35874 DEFAULT public driver_license license_id a6_g06_restore
+4959; 2604 35875 DEFAULT public inspection_item item_id a6_g06_restore
+4960; 2604 35876 DEFAULT public inspection_photo photo_id a6_g06_restore
+4962; 2604 35877 DEFAULT public payment payment_id a6_g06_restore
+4965; 2604 35878 DEFAULT public rental rental_id a6_g06_restore
+4971; 2604 35879 DEFAULT public rental_rate rate_id a6_g06_restore
+4973; 2604 35880 DEFAULT public rental_terms terms_id a6_g06_restore
+4975; 2604 35881 DEFAULT public staff staff_id a6_g06_restore
+4978; 2604 35882 DEFAULT public vehicle vehicle_id a6_g06_restore
+4981; 2604 35883 DEFAULT public vehicle_category category_id a6_g06_restore
+4983; 2604 35884 DEFAULT public vehicle_inspection inspection_id a6_g06_restore
+4985; 2604 35885 DEFAULT public vehicle_maintenance maintenance_id a6_g06_restore
+5285; 0 36078 TABLE DATA activity6_probe recovery_record a6_g06_restore
+5251; 0 35624 TABLE DATA public audit_log a6_g06_restore
+5253; 0 35636 TABLE DATA public cancellation a6_g06_restore
+5255; 0 35651 TABLE DATA public customer a6_g06_restore
+5257; 0 35667 TABLE DATA public damage_fee a6_g06_restore
+5259; 0 35681 TABLE DATA public damage_incident a6_g06_restore
+5261; 0 35694 TABLE DATA public driver_license a6_g06_restore
+5263; 0 35711 TABLE DATA public inspection_item a6_g06_restore
+5265; 0 35721 TABLE DATA public inspection_photo a6_g06_restore
+5267; 0 35733 TABLE DATA public payment a6_g06_restore
+5269; 0 35747 TABLE DATA public rental a6_g06_restore
+5270; 0 35775 TABLE DATA public rental_rate a6_g06_restore
+5273; 0 35787 TABLE DATA public rental_terms a6_g06_restore
+5275; 0 35800 TABLE DATA public staff a6_g06_restore
+5277; 0 35817 TABLE DATA public vehicle a6_g06_restore
+5278; 0 35832 TABLE DATA public vehicle_category a6_g06_restore
+5280; 0 35842 TABLE DATA public vehicle_inspection a6_g06_restore
+5282; 0 35855 TABLE DATA public vehicle_maintenance a6_g06_restore
+5356; 0 0 SEQUENCE SET public audit_log_audit_id_seq a6_g06_restore
+5357; 0 0 SEQUENCE SET public cancellation_cancellation_id_seq a6_g06_restore
+5358; 0 0 SEQUENCE SET public customer_customer_id_seq a6_g06_restore
+5359; 0 0 SEQUENCE SET public damage_fee_damage_fee_id_seq a6_g06_restore
+5360; 0 0 SEQUENCE SET public damage_incident_damage_id_seq a6_g06_restore
+5361; 0 0 SEQUENCE SET public driver_license_license_id_seq a6_g06_restore
+5362; 0 0 SEQUENCE SET public inspection_item_item_id_seq a6_g06_restore
+5363; 0 0 SEQUENCE SET public inspection_photo_photo_id_seq a6_g06_restore
+5364; 0 0 SEQUENCE SET public payment_payment_id_seq a6_g06_restore
+5365; 0 0 SEQUENCE SET public rental_rate_rate_id_seq a6_g06_restore
+5366; 0 0 SEQUENCE SET public rental_rental_id_seq a6_g06_restore
+5367; 0 0 SEQUENCE SET public rental_terms_terms_id_seq a6_g06_restore
+5368; 0 0 SEQUENCE SET public staff_staff_id_seq a6_g06_restore
+5369; 0 0 SEQUENCE SET public vehicle_category_category_id_seq a6_g06_restore
+5370; 0 0 SEQUENCE SET public vehicle_inspection_inspection_id_seq a6_g06_restore
+5371; 0 0 SEQUENCE SET public vehicle_maintenance_maintenance_id_seq a6_g06_restore
+5372; 0 0 SEQUENCE SET public vehicle_vehicle_id_seq a6_g06_restore
+5076; 2606 36088 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g06_restore
+5078; 2606 36086 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g06_restore
+5012; 2606 35887 CONSTRAINT public audit_log audit_log_pkey a6_g06_restore
+5016; 2606 35889 CONSTRAINT public cancellation cancellation_pkey a6_g06_restore
+5018; 2606 35891 CONSTRAINT public cancellation cancellation_rental_id_key a6_g06_restore
+5020; 2606 35893 CONSTRAINT public customer customer_email_key a6_g06_restore
+5022; 2606 35895 CONSTRAINT public customer customer_pkey a6_g06_restore
+5024; 2606 35897 CONSTRAINT public damage_fee damage_fee_damage_id_key a6_g06_restore
+5026; 2606 35899 CONSTRAINT public damage_fee damage_fee_pkey a6_g06_restore
+5029; 2606 35901 CONSTRAINT public damage_incident damage_incident_pkey a6_g06_restore
+5031; 2606 35903 CONSTRAINT public driver_license driver_license_pkey a6_g06_restore
+5035; 2606 35905 CONSTRAINT public inspection_item inspection_item_pkey a6_g06_restore
+5037; 2606 35907 CONSTRAINT public inspection_item inspection_item_unique a6_g06_restore
+5039; 2606 35909 CONSTRAINT public inspection_photo inspection_photo_pkey a6_g06_restore
+5042; 2606 35911 CONSTRAINT public payment payment_payment_code_key a6_g06_restore
+5044; 2606 35913 CONSTRAINT public payment payment_pkey a6_g06_restore
+5050; 2606 35915 CONSTRAINT public rental rental_pkey a6_g06_restore
+5052; 2606 35917 CONSTRAINT public rental_rate rental_rate_pkey a6_g06_restore
+5054; 2606 35919 CONSTRAINT public rental_terms rental_terms_pkey a6_g06_restore
+5056; 2606 35921 CONSTRAINT public rental_terms rental_terms_rental_id_key a6_g06_restore
+5058; 2606 35923 CONSTRAINT public staff staff_email_key a6_g06_restore
+5060; 2606 35925 CONSTRAINT public staff staff_pkey a6_g06_restore
+5067; 2606 35927 CONSTRAINT public vehicle_category vehicle_category_category_name_key a6_g06_restore
+5069; 2606 35929 CONSTRAINT public vehicle_category vehicle_category_pkey a6_g06_restore
+5071; 2606 35931 CONSTRAINT public vehicle_inspection vehicle_inspection_pkey a6_g06_restore
+5074; 2606 35933 CONSTRAINT public vehicle_maintenance vehicle_maintenance_pkey a6_g06_restore
+5063; 2606 35935 CONSTRAINT public vehicle vehicle_pkey a6_g06_restore
+5065; 2606 35937 CONSTRAINT public vehicle vehicle_plate_number_key a6_g06_restore
+5013; 1259 35938 INDEX public idx_audit_datetime a6_g06_restore
+5014; 1259 35939 INDEX public idx_audit_staff a6_g06_restore
+5027; 1259 35940 INDEX public idx_damage_fee_status a6_g06_restore
+5032; 1259 35941 INDEX public idx_license_customer a6_g06_restore
+5033; 1259 35942 INDEX public idx_license_status a6_g06_restore
+5072; 1259 35943 INDEX public idx_maintenance_vehicle a6_g06_restore
+5040; 1259 35944 INDEX public idx_payment_status a6_g06_restore
+5045; 1259 35945 INDEX public idx_rental_customer a6_g06_restore
+5046; 1259 35946 INDEX public idx_rental_dates a6_g06_restore
+5047; 1259 35947 INDEX public idx_rental_status a6_g06_restore
+5048; 1259 35948 INDEX public idx_rental_vehicle a6_g06_restore
+5061; 1259 35949 INDEX public idx_vehicle_status a6_g06_restore
+5079; 2606 35950 FK CONSTRAINT public audit_log fk_audit_staff a6_g06_restore
+5080; 2606 35955 FK CONSTRAINT public cancellation fk_cancellation_rental a6_g06_restore
+5081; 2606 35960 FK CONSTRAINT public cancellation fk_cancelled_by_customer a6_g06_restore
+5082; 2606 35965 FK CONSTRAINT public cancellation fk_cancelled_by_staff a6_g06_restore
+5083; 2606 35970 FK CONSTRAINT public damage_fee fk_damage_fee_damage a6_g06_restore
+5084; 2606 35975 FK CONSTRAINT public damage_incident fk_damage_inspection a6_g06_restore
+5100; 2606 35980 FK CONSTRAINT public vehicle_inspection fk_inspection_customer a6_g06_restore
+5101; 2606 35985 FK CONSTRAINT public vehicle_inspection fk_inspection_rental a6_g06_restore
+5102; 2606 35990 FK CONSTRAINT public vehicle_inspection fk_inspection_staff a6_g06_restore
+5085; 2606 35995 FK CONSTRAINT public driver_license fk_license_customer a6_g06_restore
+5086; 2606 36000 FK CONSTRAINT public driver_license fk_license_verified_staff a6_g06_restore
+5103; 2606 36005 FK CONSTRAINT public vehicle_maintenance fk_maintenance_vehicle a6_g06_restore
+5091; 2606 36010 FK CONSTRAINT public payment fk_payment_damage_fee a6_g06_restore
+5092; 2606 36015 FK CONSTRAINT public payment fk_payment_rental a6_g06_restore
+5088; 2606 36020 FK CONSTRAINT public inspection_photo fk_photo_customer a6_g06_restore
+5089; 2606 36025 FK CONSTRAINT public inspection_photo fk_photo_inspection a6_g06_restore
+5090; 2606 36030 FK CONSTRAINT public inspection_photo fk_photo_staff a6_g06_restore
+5094; 2606 36035 FK CONSTRAINT public rental fk_rental_customer a6_g06_restore
+5095; 2606 36040 FK CONSTRAINT public rental fk_rental_rate a6_g06_restore
+5097; 2606 36045 FK CONSTRAINT public rental_rate fk_rental_rate_category a6_g06_restore
+5096; 2606 36050 FK CONSTRAINT public rental fk_rental_vehicle a6_g06_restore
+5098; 2606 36055 FK CONSTRAINT public rental_terms fk_terms_rental a6_g06_restore
+5099; 2606 36060 FK CONSTRAINT public vehicle fk_vehicle_category a6_g06_restore
+5087; 2606 36065 FK CONSTRAINT public inspection_item inspection_item_inspection_id_fkey a6_g06_restore
+5093; 2606 36070 FK CONSTRAINT public payment payment_received_by_fkey a6_g06_restore
+2138; 826 36076 DEFAULT ACL public DEFAULT PRIVILEGES FOR SEQUENCES a6_g06_restore
+2137; 826 36075 DEFAULT ACL public DEFAULT PRIVILEGES FOR TABLES a6_g06_restore
+

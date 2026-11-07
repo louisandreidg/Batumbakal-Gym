@@ -1,0 +1,25 @@
+{
+  "source_archive": {
+    "file": "g08_source_run1.dump",
+    "bytes": 36513,
+    "sha256": "b06a7366da87f2fcdb581e3cf87f8b24350eacbd9a558c50a0429742e19ae6ef",
+    "database": "catering_management_db",
+    "account": "a6_g08_backup",
+    "created_at": "2026-11-07T01:49:21.1049182+08:00",
+    "duration_seconds": 0.269
+  },
+  "checkpoint_archive": {
+    "file": "g08_checkpoint_run1.dump",
+    "bytes": 38480,
+    "sha256": "210d14ab8d2d94ec7540a89293e657b6924281b62eea823bc5e40dfc6afa24e3",
+    "database": "a6_g08_restore_20261107",
+    "account": "a6_g08_restore",
+    "created_at": "2026-11-07T01:49:22.4847251+08:00",
+    "duration_seconds": 0.239
+  },
+  "source_database": "catering_management_db",
+  "restore_database": "a6_g08_restore_20261107",
+  "preflight_database": "a6_g08_preflight_20261107",
+  "recovery_database": "a6_g08_recovery_20261107",
+  "source_unchanged": true
+}

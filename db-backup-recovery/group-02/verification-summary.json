@@ -1,0 +1,33 @@
+{
+  "group": "02",
+  "counts": {
+    "tables": 10,
+    "table_rows": 92,
+    "sequences": 9,
+    "constraints": 83,
+    "primary_keys": 10,
+    "foreign_keys": 8,
+    "indexes": 27,
+    "views": 0,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "75522626e206a0f33e32a470a0b6da9b",
+    "kind": "data",
+    "name": "school_event_management_db.audit_log",
+    "rows": 84
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "02",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:29.6119524+08:00"
+  },
+  "application_connection": null,
+  "latest_run": "run1",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G02-20261107"
+}

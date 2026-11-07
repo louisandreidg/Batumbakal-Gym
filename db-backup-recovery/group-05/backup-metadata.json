@@ -1,0 +1,25 @@
+{
+  "source_archive": {
+    "file": "g05_source_run1.dump",
+    "bytes": 89339,
+    "sha256": "cd73d0b27d739368c43efc6f163b9d7431caba1e609ffca50284c3ed861b900b",
+    "database": "grp10_shioricafedb",
+    "account": "a6_g05_backup",
+    "created_at": "2026-11-07T01:49:14.8715268+08:00",
+    "duration_seconds": 0.271
+  },
+  "checkpoint_archive": {
+    "file": "g05_checkpoint_run1.dump",
+    "bytes": 91988,
+    "sha256": "5e43a0681d99390a890b88ec9e172a119f1f8e9a3b195025400e492d6b53bca4",
+    "database": "a6_g05_restore_20261107",
+    "account": "a6_g05_restore",
+    "created_at": "2026-11-07T01:49:16.3057667+08:00",
+    "duration_seconds": 0.242
+  },
+  "source_database": "grp10_shioricafedb",
+  "restore_database": "a6_g05_restore_20261107",
+  "preflight_database": "a6_g05_preflight_20261107",
+  "recovery_database": "a6_g05_recovery_20261107",
+  "source_unchanged": true
+}

@@ -1,0 +1,42 @@
+{
+  "group": "08",
+  "counts": {
+    "tables": 12,
+    "table_rows": 35,
+    "sequences": 9,
+    "constraints": 81,
+    "primary_keys": 12,
+    "foreign_keys": 8,
+    "indexes": 16,
+    "views": 0,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "f4a2e1c17871703c45ee59fd13c33290",
+    "kind": "data",
+    "name": "public.admin",
+    "rows": 1
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "08",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:31.6063490+08:00"
+  },
+  "application_connection": {
+    "group": "08",
+    "method": "Original Node.js connection module",
+    "database": "a6_g08_restore_20261107",
+    "account": "a6_g08_verify",
+    "exit_code": 0,
+    "passed": true,
+    "output": "{\"database\":\"a6_g08_restore_20261107\",\"account\":\"a6_g08_verify\"}\r\n",
+    "checked_at": "2026-11-07T01:55:00.3724393+08:00"
+  },
+  "latest_run": "run1",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G08-20261107"
+}

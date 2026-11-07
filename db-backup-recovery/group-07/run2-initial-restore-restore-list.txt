@@ -1,0 +1,103 @@
+;
+; Archive created at 2026-11-07 01:49:20
+;     dbname: grp07_applicantdb
+;     TOC Entries: 93
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+5128; 0 0 ACL - SCHEMA public pg_database_owner
+224; 1259 18009 TABLE public applicant grp07_owner
+5129; 0 0 ACL public TABLE applicant grp07_owner
+223; 1259 18008 SEQUENCE public applicant_applicant_id_seq grp07_owner
+5130; 0 0 SEQUENCE OWNED BY public applicant_applicant_id_seq grp07_owner
+5131; 0 0 ACL public SEQUENCE applicant_applicant_id_seq grp07_owner
+233; 1259 18111 TABLE public applicant_requirement grp07_owner
+5132; 0 0 ACL public TABLE applicant_requirement grp07_owner
+228; 1259 18044 TABLE public application grp07_owner
+5133; 0 0 ACL public TABLE application grp07_owner
+227; 1259 18043 SEQUENCE public application_application_id_seq grp07_owner
+5134; 0 0 SEQUENCE OWNED BY public application_application_id_seq grp07_owner
+5135; 0 0 ACL public SEQUENCE application_application_id_seq grp07_owner
+226; 1259 18030 TABLE public application_status grp07_owner
+5136; 0 0 ACL public TABLE application_status grp07_owner
+225; 1259 18029 SEQUENCE public application_status_status_id_seq grp07_owner
+5137; 0 0 SEQUENCE OWNED BY public application_status_status_id_seq grp07_owner
+5138; 0 0 ACL public SEQUENCE application_status_status_id_seq grp07_owner
+220; 1259 17971 TABLE public department grp07_owner
+5139; 0 0 ACL public TABLE department grp07_owner
+219; 1259 17970 SEQUENCE public department_department_id_seq grp07_owner
+5140; 0 0 SEQUENCE OWNED BY public department_department_id_seq grp07_owner
+5141; 0 0 ACL public SEQUENCE department_department_id_seq grp07_owner
+230; 1259 18074 TABLE public interview grp07_owner
+5142; 0 0 ACL public TABLE interview grp07_owner
+229; 1259 18073 SEQUENCE public interview_interview_id_seq grp07_owner
+5143; 0 0 SEQUENCE OWNED BY public interview_interview_id_seq grp07_owner
+5144; 0 0 ACL public SEQUENCE interview_interview_id_seq grp07_owner
+222; 1259 17985 TABLE public position grp07_owner
+5145; 0 0 ACL public TABLE "position" grp07_owner
+221; 1259 17984 SEQUENCE public position_position_id_seq grp07_owner
+5146; 0 0 SEQUENCE OWNED BY public position_position_id_seq grp07_owner
+5147; 0 0 ACL public SEQUENCE position_position_id_seq grp07_owner
+232; 1259 18096 TABLE public requirement grp07_owner
+5148; 0 0 ACL public TABLE requirement grp07_owner
+231; 1259 18095 SEQUENCE public requirement_requirement_id_seq grp07_owner
+5149; 0 0 SEQUENCE OWNED BY public requirement_requirement_id_seq grp07_owner
+5150; 0 0 ACL public SEQUENCE requirement_requirement_id_seq grp07_owner
+4895; 2604 18012 DEFAULT public applicant applicant_id grp07_owner
+4898; 2604 18047 DEFAULT public application application_id grp07_owner
+4897; 2604 18033 DEFAULT public application_status status_id grp07_owner
+4891; 2604 17974 DEFAULT public department department_id grp07_owner
+4900; 2604 18077 DEFAULT public interview interview_id grp07_owner
+4892; 2604 17988 DEFAULT public position position_id grp07_owner
+4903; 2604 18099 DEFAULT public requirement requirement_id grp07_owner
+5111; 0 18009 TABLE DATA public applicant grp07_owner
+5120; 0 18111 TABLE DATA public applicant_requirement grp07_owner
+5115; 0 18044 TABLE DATA public application grp07_owner
+5113; 0 18030 TABLE DATA public application_status grp07_owner
+5107; 0 17971 TABLE DATA public department grp07_owner
+5117; 0 18074 TABLE DATA public interview grp07_owner
+5109; 0 17985 TABLE DATA public position grp07_owner
+5119; 0 18096 TABLE DATA public requirement grp07_owner
+5151; 0 0 SEQUENCE SET public applicant_applicant_id_seq grp07_owner
+5152; 0 0 SEQUENCE SET public application_application_id_seq grp07_owner
+5153; 0 0 SEQUENCE SET public application_status_status_id_seq grp07_owner
+5154; 0 0 SEQUENCE SET public department_department_id_seq grp07_owner
+5155; 0 0 SEQUENCE SET public interview_interview_id_seq grp07_owner
+5156; 0 0 SEQUENCE SET public position_position_id_seq grp07_owner
+5157; 0 0 SEQUENCE SET public requirement_requirement_id_seq grp07_owner
+4927; 2606 18026 CONSTRAINT public applicant applicant_pkey grp07_owner
+4936; 2606 18055 CONSTRAINT public application application_pkey grp07_owner
+4932; 2606 18040 CONSTRAINT public application_status application_status_pkey grp07_owner
+4920; 2606 17981 CONSTRAINT public department department_pkey grp07_owner
+4944; 2606 18089 CONSTRAINT public interview interview_pkey grp07_owner
+4951; 2606 18123 CONSTRAINT public applicant_requirement pk_applicant_requirement grp07_owner
+4925; 2606 18002 CONSTRAINT public position position_pkey grp07_owner
+4946; 2606 18108 CONSTRAINT public requirement requirement_pkey grp07_owner
+4930; 2606 18028 CONSTRAINT public applicant uq_applicant_email grp07_owner
+4940; 2606 18057 CONSTRAINT public application uq_application_applicant_position grp07_owner
+4934; 2606 18042 CONSTRAINT public application_status uq_application_status_name grp07_owner
+4922; 2606 17983 CONSTRAINT public department uq_department_name grp07_owner
+4948; 2606 18110 CONSTRAINT public requirement uq_requirement_name grp07_owner
+4928; 1259 18140 INDEX public idx_applicant_last_name grp07_owner
+4937; 1259 18135 INDEX public idx_application_position grp07_owner
+4938; 1259 18136 INDEX public idx_application_status grp07_owner
+4949; 1259 18139 INDEX public idx_appreq_requirement grp07_owner
+4941; 1259 18137 INDEX public idx_interview_application grp07_owner
+4942; 1259 18138 INDEX public idx_interview_date grp07_owner
+4923; 1259 18134 INDEX public idx_position_department grp07_owner
+4953; 2606 18058 FK CONSTRAINT public application fk_application_applicant grp07_owner
+4954; 2606 18063 FK CONSTRAINT public application fk_application_position grp07_owner
+4955; 2606 18068 FK CONSTRAINT public application fk_application_status grp07_owner
+4957; 2606 18124 FK CONSTRAINT public applicant_requirement fk_appreq_applicant grp07_owner
+4958; 2606 18129 FK CONSTRAINT public applicant_requirement fk_appreq_requirement grp07_owner
+4956; 2606 18090 FK CONSTRAINT public interview fk_interview_application grp07_owner
+4952; 2606 18003 FK CONSTRAINT public position fk_position_department grp07_owner
+; Omitted for explicit isolated-owner replay: 2086; 826 18141 DEFAULT ACL public DEFAULT PRIVILEGES FOR TABLES grp07_owner

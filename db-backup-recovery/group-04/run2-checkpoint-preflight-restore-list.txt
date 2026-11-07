@@ -1,0 +1,147 @@
+;
+; Archive created at 2026-11-07 01:51:55
+;     dbname: a6_g04_restore_20261107
+;     TOC Entries: 137
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+7; 2615 35036 SCHEMA - activity6_probe a6_g04_restore
+5219; 0 0 ACL - SCHEMA public pg_database_owner
+2; 3079 34761 EXTENSION - pgcrypto 
+5220; 0 0 COMMENT - EXTENSION pgcrypto 
+245; 1259 35037 TABLE activity6_probe recovery_record a6_g04_restore
+221; 1259 34799 TABLE public appointments a6_g04_restore
+5221; 0 0 ACL public TABLE appointments a6_g04_restore
+222; 1259 34809 TABLE public doctors a6_g04_restore
+5222; 0 0 ACL public TABLE doctors a6_g04_restore
+223; 1259 34817 TABLE public patients a6_g04_restore
+5223; 0 0 ACL public TABLE patients a6_g04_restore
+224; 1259 34826 TABLE public specialties a6_g04_restore
+5224; 0 0 ACL public TABLE specialties a6_g04_restore
+225; 1259 34831 VIEW public appointment_details a6_g04_restore
+5225; 0 0 ACL public TABLE appointment_details a6_g04_restore
+226; 1259 34836 SEQUENCE public appointments_appointment_id_seq a6_g04_restore
+5226; 0 0 SEQUENCE OWNED BY public appointments_appointment_id_seq a6_g04_restore
+5227; 0 0 ACL public SEQUENCE appointments_appointment_id_seq a6_g04_restore
+227; 1259 34837 TABLE public billing a6_g04_restore
+5228; 0 0 ACL public TABLE billing a6_g04_restore
+228; 1259 34850 SEQUENCE public billing_bill_id_seq a6_g04_restore
+5229; 0 0 SEQUENCE OWNED BY public billing_bill_id_seq a6_g04_restore
+5230; 0 0 ACL public SEQUENCE billing_bill_id_seq a6_g04_restore
+229; 1259 34851 TABLE public deleted_records a6_g04_restore
+5231; 0 0 ACL public TABLE deleted_records a6_g04_restore
+230; 1259 34864 SEQUENCE public deleted_records_record_id_seq a6_g04_restore
+5232; 0 0 SEQUENCE OWNED BY public deleted_records_record_id_seq a6_g04_restore
+5233; 0 0 ACL public SEQUENCE deleted_records_record_id_seq a6_g04_restore
+231; 1259 34865 SEQUENCE public doctors_doctor_id_seq a6_g04_restore
+5234; 0 0 SEQUENCE OWNED BY public doctors_doctor_id_seq a6_g04_restore
+5235; 0 0 ACL public SEQUENCE doctors_doctor_id_seq a6_g04_restore
+232; 1259 34866 TABLE public medical_notes a6_g04_restore
+5236; 0 0 ACL public TABLE medical_notes a6_g04_restore
+233; 1259 34875 SEQUENCE public medical_notes_note_id_seq a6_g04_restore
+5237; 0 0 SEQUENCE OWNED BY public medical_notes_note_id_seq a6_g04_restore
+5238; 0 0 ACL public SEQUENCE medical_notes_note_id_seq a6_g04_restore
+234; 1259 34876 TABLE public patient_password_resets a6_g04_restore
+5239; 0 0 ACL public TABLE patient_password_resets a6_g04_restore
+235; 1259 34891 SEQUENCE public patient_password_resets_reset_id_seq a6_g04_restore
+5240; 0 0 SEQUENCE OWNED BY public patient_password_resets_reset_id_seq a6_g04_restore
+5241; 0 0 ACL public SEQUENCE patient_password_resets_reset_id_seq a6_g04_restore
+236; 1259 34892 SEQUENCE public patients_patient_id_seq a6_g04_restore
+5242; 0 0 SEQUENCE OWNED BY public patients_patient_id_seq a6_g04_restore
+5243; 0 0 ACL public SEQUENCE patients_patient_id_seq a6_g04_restore
+237; 1259 34893 TABLE public prescriptions a6_g04_restore
+5244; 0 0 ACL public TABLE prescriptions a6_g04_restore
+238; 1259 34903 SEQUENCE public prescriptions_prescription_id_seq a6_g04_restore
+5245; 0 0 SEQUENCE OWNED BY public prescriptions_prescription_id_seq a6_g04_restore
+5246; 0 0 ACL public SEQUENCE prescriptions_prescription_id_seq a6_g04_restore
+239; 1259 34904 SEQUENCE public specialties_specialty_id_seq a6_g04_restore
+5247; 0 0 SEQUENCE OWNED BY public specialties_specialty_id_seq a6_g04_restore
+5248; 0 0 ACL public SEQUENCE specialties_specialty_id_seq a6_g04_restore
+240; 1259 34905 TABLE public staff_password_resets a6_g04_restore
+5249; 0 0 ACL public TABLE staff_password_resets a6_g04_restore
+241; 1259 34920 SEQUENCE public staff_password_resets_reset_id_seq a6_g04_restore
+5250; 0 0 SEQUENCE OWNED BY public staff_password_resets_reset_id_seq a6_g04_restore
+5251; 0 0 ACL public SEQUENCE staff_password_resets_reset_id_seq a6_g04_restore
+242; 1259 34921 TABLE public staff_users a6_g04_restore
+5252; 0 0 ACL public TABLE staff_users a6_g04_restore
+243; 1259 34936 SEQUENCE public staff_users_user_id_seq a6_g04_restore
+5253; 0 0 SEQUENCE OWNED BY public staff_users_user_id_seq a6_g04_restore
+5254; 0 0 ACL public SEQUENCE staff_users_user_id_seq a6_g04_restore
+244; 1259 34937 VIEW public visit_records a6_g04_restore
+5255; 0 0 ACL public TABLE visit_records a6_g04_restore
+4958; 2604 34942 DEFAULT public appointments appointment_id a6_g04_restore
+4963; 2604 34943 DEFAULT public billing bill_id a6_g04_restore
+4966; 2604 34944 DEFAULT public deleted_records record_id a6_g04_restore
+4960; 2604 34945 DEFAULT public doctors doctor_id a6_g04_restore
+4968; 2604 34946 DEFAULT public medical_notes note_id a6_g04_restore
+4970; 2604 34947 DEFAULT public patient_password_resets reset_id a6_g04_restore
+4961; 2604 34948 DEFAULT public patients patient_id a6_g04_restore
+4974; 2604 34949 DEFAULT public prescriptions prescription_id a6_g04_restore
+4962; 2604 34950 DEFAULT public specialties specialty_id a6_g04_restore
+4975; 2604 34951 DEFAULT public staff_password_resets reset_id a6_g04_restore
+4979; 2604 34952 DEFAULT public staff_users user_id a6_g04_restore
+5211; 0 35037 TABLE DATA activity6_probe recovery_record a6_g04_restore
+5189; 0 34799 TABLE DATA public appointments a6_g04_restore
+5194; 0 34837 TABLE DATA public billing a6_g04_restore
+5196; 0 34851 TABLE DATA public deleted_records a6_g04_restore
+5190; 0 34809 TABLE DATA public doctors a6_g04_restore
+5199; 0 34866 TABLE DATA public medical_notes a6_g04_restore
+5201; 0 34876 TABLE DATA public patient_password_resets a6_g04_restore
+5191; 0 34817 TABLE DATA public patients a6_g04_restore
+5204; 0 34893 TABLE DATA public prescriptions a6_g04_restore
+5192; 0 34826 TABLE DATA public specialties a6_g04_restore
+5207; 0 34905 TABLE DATA public staff_password_resets a6_g04_restore
+5209; 0 34921 TABLE DATA public staff_users a6_g04_restore
+5256; 0 0 SEQUENCE SET public appointments_appointment_id_seq a6_g04_restore
+5257; 0 0 SEQUENCE SET public billing_bill_id_seq a6_g04_restore
+5258; 0 0 SEQUENCE SET public deleted_records_record_id_seq a6_g04_restore
+5259; 0 0 SEQUENCE SET public doctors_doctor_id_seq a6_g04_restore
+5260; 0 0 SEQUENCE SET public medical_notes_note_id_seq a6_g04_restore
+5261; 0 0 SEQUENCE SET public patient_password_resets_reset_id_seq a6_g04_restore
+5262; 0 0 SEQUENCE SET public patients_patient_id_seq a6_g04_restore
+5263; 0 0 SEQUENCE SET public prescriptions_prescription_id_seq a6_g04_restore
+5264; 0 0 SEQUENCE SET public specialties_specialty_id_seq a6_g04_restore
+5265; 0 0 SEQUENCE SET public staff_password_resets_reset_id_seq a6_g04_restore
+5266; 0 0 SEQUENCE SET public staff_users_user_id_seq a6_g04_restore
+5028; 2606 35047 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g04_restore
+5030; 2606 35045 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g04_restore
+4992; 2606 34954 CONSTRAINT public appointments appointments_pkey a6_g04_restore
+5005; 2606 34956 CONSTRAINT public billing billing_appointment_id_key a6_g04_restore
+5007; 2606 34958 CONSTRAINT public billing billing_pkey a6_g04_restore
+5009; 2606 34960 CONSTRAINT public deleted_records deleted_records_pkey a6_g04_restore
+4994; 2606 34962 CONSTRAINT public doctors doctors_email_key a6_g04_restore
+4996; 2606 34964 CONSTRAINT public doctors doctors_pkey a6_g04_restore
+5011; 2606 34966 CONSTRAINT public medical_notes medical_notes_pkey a6_g04_restore
+5013; 2606 34968 CONSTRAINT public medical_notes one_note_per_visit a6_g04_restore
+5016; 2606 34970 CONSTRAINT public patient_password_resets patient_password_resets_pkey a6_g04_restore
+4999; 2606 34972 CONSTRAINT public patients patients_pkey a6_g04_restore
+5018; 2606 34974 CONSTRAINT public prescriptions prescriptions_pkey a6_g04_restore
+5001; 2606 34976 CONSTRAINT public specialties specialties_pkey a6_g04_restore
+5003; 2606 34978 CONSTRAINT public specialties specialties_specialty_name_key a6_g04_restore
+5020; 2606 34980 CONSTRAINT public staff_password_resets staff_password_resets_pkey a6_g04_restore
+5026; 2606 34982 CONSTRAINT public staff_users staff_users_pkey a6_g04_restore
+4990; 1259 34983 INDEX public appointments_doctor_slot a6_g04_restore
+5014; 1259 34984 INDEX public patient_password_resets_idx a6_g04_restore
+4997; 1259 34985 INDEX public patients_email_unique a6_g04_restore
+5021; 1259 34986 INDEX public staff_password_resets_user_idx a6_g04_restore
+5022; 1259 34987 INDEX public staff_users_doctor_unique a6_g04_restore
+5023; 1259 34988 INDEX public staff_users_email_unique a6_g04_restore
+5024; 1259 34989 INDEX public staff_users_phone_unique a6_g04_restore
+5031; 2606 34990 FK CONSTRAINT public appointments appointments_doctor_id_fkey a6_g04_restore
+5032; 2606 34995 FK CONSTRAINT public appointments appointments_patient_id_fkey a6_g04_restore
+5034; 2606 35000 FK CONSTRAINT public billing billing_appointment_id_fkey a6_g04_restore
+5033; 2606 35005 FK CONSTRAINT public doctors doctors_specialty_id_fkey a6_g04_restore
+5035; 2606 35010 FK CONSTRAINT public medical_notes medical_notes_appointment_id_fkey a6_g04_restore
+5036; 2606 35015 FK CONSTRAINT public patient_password_resets patient_password_resets_patient_id_fkey a6_g04_restore
+5037; 2606 35020 FK CONSTRAINT public prescriptions prescriptions_appointment_id_fkey a6_g04_restore
+5038; 2606 35025 FK CONSTRAINT public staff_password_resets staff_password_resets_user_id_fkey a6_g04_restore
+5039; 2606 35030 FK CONSTRAINT public staff_users staff_users_doctor_id_fkey a6_g04_restore
+; Omitted for explicit isolated-owner replay: 2153; 826 35035 DEFAULT ACL public DEFAULT PRIVILEGES FOR TABLES a6_g04_restore

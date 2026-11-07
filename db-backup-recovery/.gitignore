@@ -1,0 +1,14 @@
+*.dump
+*.backup
+*.bak
+*.zip
+*.gz
+*.env
+.env
+*.clixml
+*secrets*
+*.docx
+*Tracker*
+*paste-ready*
+Activity6-Private/
+!**/*.log

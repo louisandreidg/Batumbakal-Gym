@@ -1,0 +1,42 @@
+{
+  "group": "07",
+  "counts": {
+    "tables": 8,
+    "table_rows": 74,
+    "sequences": 7,
+    "constraints": 63,
+    "primary_keys": 8,
+    "foreign_keys": 7,
+    "indexes": 20,
+    "views": 0,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "a79adc5f6ad0db809d34bf41c801c792",
+    "kind": "data",
+    "name": "public.applicant",
+    "rows": 10
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "07",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:31.2983431+08:00"
+  },
+  "application_connection": {
+    "group": "07",
+    "method": "Original PHP database.php db() function",
+    "database": "a6_g07_restore_20261107",
+    "account": "a6_g07_verify",
+    "exit_code": 0,
+    "passed": true,
+    "output": "{\"database\":\"a6_g07_restore_20261107\",\"account\":\"a6_g07_verify\"}\r\n",
+    "checked_at": "2026-11-07T01:55:00.1466965+08:00"
+  },
+  "latest_run": "run3",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G07-20261107"
+}

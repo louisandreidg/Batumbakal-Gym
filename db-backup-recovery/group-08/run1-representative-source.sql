@@ -1,0 +1,1 @@
+WITH q AS (SELECT package_id,package_name,description,price_per_guest FROM public.package ORDER BY package_id) SELECT jsonb_build_object('rows',count(*),'md5',md5(COALESCE(string_agg(to_jsonb(q)::text,E'\n' ORDER BY to_jsonb(q)::text),''))) FROM q;

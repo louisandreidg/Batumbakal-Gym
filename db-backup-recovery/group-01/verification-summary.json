@@ -1,0 +1,42 @@
+{
+  "group": "01",
+  "counts": {
+    "tables": 8,
+    "table_rows": 5,
+    "sequences": 8,
+    "constraints": 72,
+    "primary_keys": 8,
+    "foreign_keys": 8,
+    "indexes": 22,
+    "views": 0,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "889bcf2ed9d12f0587fc6c46a12038e0",
+    "kind": "data",
+    "name": "dropboxed.complaint_categories",
+    "rows": 4
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "01",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:29.2152233+08:00"
+  },
+  "application_connection": {
+    "group": "01",
+    "method": "Original Node.js connection module",
+    "database": "a6_g01_restore_20261107",
+    "account": "a6_g01_verify",
+    "exit_code": 0,
+    "passed": true,
+    "output": "{\"database\":\"a6_g01_restore_20261107\",\"account\":\"a6_g01_verify\"}\r\n",
+    "checked_at": "2026-11-07T01:54:59.1569961+08:00"
+  },
+  "latest_run": "run2",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G01-20261107"
+}

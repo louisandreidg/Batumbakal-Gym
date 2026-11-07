@@ -1,0 +1,25 @@
+{
+  "source_archive": {
+    "file": "g06_source_run1.dump",
+    "bytes": 81697,
+    "sha256": "93a6621652610f5728c660742191da60df06ddaa9603e11881a0ad2103761f64",
+    "database": "car_rental_db",
+    "account": "a6_g06_backup",
+    "created_at": "2026-11-07T01:49:18.7091514+08:00",
+    "duration_seconds": 0.405
+  },
+  "checkpoint_archive": {
+    "file": "g06_checkpoint_run2.dump",
+    "bytes": 84481,
+    "sha256": "51264e270254770343ef926cde35ef49e5c7b7254163535c483932debc273583",
+    "database": "a6_g06_restore_20261107",
+    "account": "a6_g06_restore",
+    "created_at": "2026-11-07T01:51:58.9708306+08:00",
+    "duration_seconds": 0.34
+  },
+  "source_database": "car_rental_db",
+  "restore_database": "a6_g06_restore_20261107",
+  "preflight_database": "a6_g06_preflight_20261107",
+  "recovery_database": "a6_g06_recovery_20261107",
+  "source_unchanged": true
+}

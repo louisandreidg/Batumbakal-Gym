@@ -1,0 +1,4 @@
+ERROR:  permission denied for schema shioricafe_schema
+LINE 1: CREATE TABLE "shioricafe_schema".activity6_denied_probe(id i...
+                     ^
+

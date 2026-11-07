@@ -1,0 +1,72 @@
+[
+  {
+    "group": "01",
+    "name": "DropBoxed",
+    "result": "Success with issues",
+    "recovery": "Recovered",
+    "note": "Backup and recovery worked; the existing direct-grant runtime design still needs review."
+  },
+  {
+    "group": "02",
+    "name": "Eventer / School Event Management",
+    "result": "Success",
+    "recovery": "Recovered",
+    "note": "Backup, restore, access checks and recovery worked."
+  },
+  {
+    "group": "03",
+    "name": "PAWPAW Veterinary",
+    "result": "Success with issues",
+    "recovery": "Recovered",
+    "note": "Backup and recovery worked; the existing direct-grant runtime design still needs review."
+  },
+  {
+    "group": "04",
+    "name": "HealthBridge Clinic",
+    "result": "Success with issues",
+    "recovery": "Recovered",
+    "note": "Backup and recovery worked after mapping owner-specific default privileges to the test owner."
+  },
+  {
+    "group": "05",
+    "name": "SHIORI Cafe",
+    "result": "Success",
+    "recovery": "Recovered",
+    "note": "Backup, restore, access checks and recovery worked."
+  },
+  {
+    "group": "06",
+    "name": "ByaheRentals / Car Rental",
+    "result": "Success with issues",
+    "recovery": "Recovered",
+    "note": "Backup and recovery worked after mapping owner-specific default privileges to the test owner."
+  },
+  {
+    "group": "07",
+    "name": "Applicant Management",
+    "result": "Success with issues",
+    "recovery": "Recovered",
+    "note": "Backup and recovery worked after mapping owner-specific default privileges to the test owner."
+  },
+  {
+    "group": "08",
+    "name": "Catering Management",
+    "result": "Success",
+    "recovery": "Recovered",
+    "note": "Backup, restore, access checks and recovery worked."
+  },
+  {
+    "group": "10",
+    "name": "UniSync",
+    "result": "Success",
+    "recovery": "Recovered",
+    "note": "Backup, restore, access checks and recovery worked."
+  },
+  {
+    "group": "11",
+    "name": "ReserveIT",
+    "result": "Success",
+    "recovery": "Recovered",
+    "note": "Backup, restore, access checks and recovery worked."
+  }
+]

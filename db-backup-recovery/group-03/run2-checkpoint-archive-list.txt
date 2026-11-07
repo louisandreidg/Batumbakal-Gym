@@ -1,0 +1,141 @@
+;
+; Archive created at 2026-11-07 01:51:49
+;     dbname: a6_g03_restore_20261107
+;     TOC Entries: 130
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+6; 2615 32288 SCHEMA - activity6_probe a6_g03_restore
+5202; 0 0 ACL - SCHEMA public pg_database_owner
+247; 1255 25115 FUNCTION public set_appointment_service_price() a6_g03_restore
+246; 1259 32289 TABLE activity6_probe recovery_record a6_g03_restore
+220; 1259 25116 TABLE public appointment a6_g03_restore
+5203; 0 0 ACL public TABLE appointment a6_g03_restore
+221; 1259 25132 SEQUENCE public appointment_appointment_id_seq a6_g03_restore
+5204; 0 0 ACL public SEQUENCE appointment_appointment_id_seq a6_g03_restore
+222; 1259 25133 TABLE public appointment_service a6_g03_restore
+5205; 0 0 ACL public TABLE appointment_service a6_g03_restore
+223; 1259 25143 TABLE public audit_log a6_g03_restore
+5206; 0 0 ACL public TABLE audit_log a6_g03_restore
+224; 1259 25154 SEQUENCE public audit_log_audit_id_seq a6_g03_restore
+5207; 0 0 ACL public SEQUENCE audit_log_audit_id_seq a6_g03_restore
+225; 1259 25155 TABLE public auth_session a6_g03_restore
+5208; 0 0 ACL public TABLE auth_session a6_g03_restore
+226; 1259 25165 TABLE public medical_record a6_g03_restore
+5209; 0 0 ACL public TABLE medical_record a6_g03_restore
+227; 1259 25176 SEQUENCE public medical_record_record_id_seq a6_g03_restore
+5210; 0 0 ACL public SEQUENCE medical_record_record_id_seq a6_g03_restore
+228; 1259 25177 TABLE public notification a6_g03_restore
+5211; 0 0 ACL public TABLE notification a6_g03_restore
+229; 1259 25189 SEQUENCE public notification_notification_id_seq a6_g03_restore
+5212; 0 0 ACL public SEQUENCE notification_notification_id_seq a6_g03_restore
+230; 1259 25190 TABLE public owner a6_g03_restore
+5213; 0 0 ACL public TABLE owner a6_g03_restore
+231; 1259 25199 SEQUENCE public owner_owner_id_seq a6_g03_restore
+5214; 0 0 ACL public SEQUENCE owner_owner_id_seq a6_g03_restore
+232; 1259 25200 TABLE public password_reset_code a6_g03_restore
+5215; 0 0 ACL public TABLE password_reset_code a6_g03_restore
+233; 1259 25212 SEQUENCE public password_reset_code_reset_id_seq a6_g03_restore
+5216; 0 0 ACL public SEQUENCE password_reset_code_reset_id_seq a6_g03_restore
+234; 1259 25213 TABLE public pet a6_g03_restore
+5217; 0 0 ACL public TABLE pet a6_g03_restore
+235; 1259 25227 SEQUENCE public pet_pet_id_seq a6_g03_restore
+5218; 0 0 ACL public SEQUENCE pet_pet_id_seq a6_g03_restore
+236; 1259 25228 TABLE public prescription a6_g03_restore
+5219; 0 0 ACL public TABLE prescription a6_g03_restore
+237; 1259 25242 SEQUENCE public prescription_prescription_id_seq a6_g03_restore
+5220; 0 0 ACL public SEQUENCE prescription_prescription_id_seq a6_g03_restore
+238; 1259 25243 TABLE public service a6_g03_restore
+5221; 0 0 ACL public TABLE service a6_g03_restore
+239; 1259 25252 SEQUENCE public service_service_id_seq a6_g03_restore
+5222; 0 0 ACL public SEQUENCE service_service_id_seq a6_g03_restore
+240; 1259 25253 TABLE public user_account a6_g03_restore
+5223; 0 0 ACL public TABLE user_account a6_g03_restore
+241; 1259 25268 SEQUENCE public user_account_user_id_seq a6_g03_restore
+5224; 0 0 ACL public SEQUENCE user_account_user_id_seq a6_g03_restore
+242; 1259 25269 TABLE public vaccination a6_g03_restore
+5225; 0 0 ACL public TABLE vaccination a6_g03_restore
+243; 1259 25279 SEQUENCE public vaccination_vaccination_id_seq a6_g03_restore
+5226; 0 0 ACL public SEQUENCE vaccination_vaccination_id_seq a6_g03_restore
+244; 1259 25280 TABLE public veterinarian a6_g03_restore
+5227; 0 0 ACL public TABLE veterinarian a6_g03_restore
+245; 1259 25285 SEQUENCE public veterinarian_veterinarian_id_seq a6_g03_restore
+5228; 0 0 ACL public SEQUENCE veterinarian_veterinarian_id_seq a6_g03_restore
+5194; 0 32289 TABLE DATA activity6_probe recovery_record a6_g03_restore
+5168; 0 25116 TABLE DATA public appointment a6_g03_restore
+5170; 0 25133 TABLE DATA public appointment_service a6_g03_restore
+5171; 0 25143 TABLE DATA public audit_log a6_g03_restore
+5173; 0 25155 TABLE DATA public auth_session a6_g03_restore
+5174; 0 25165 TABLE DATA public medical_record a6_g03_restore
+5176; 0 25177 TABLE DATA public notification a6_g03_restore
+5178; 0 25190 TABLE DATA public owner a6_g03_restore
+5180; 0 25200 TABLE DATA public password_reset_code a6_g03_restore
+5182; 0 25213 TABLE DATA public pet a6_g03_restore
+5184; 0 25228 TABLE DATA public prescription a6_g03_restore
+5186; 0 25243 TABLE DATA public service a6_g03_restore
+5188; 0 25253 TABLE DATA public user_account a6_g03_restore
+5190; 0 25269 TABLE DATA public vaccination a6_g03_restore
+5192; 0 25280 TABLE DATA public veterinarian a6_g03_restore
+5229; 0 0 SEQUENCE SET public appointment_appointment_id_seq a6_g03_restore
+5230; 0 0 SEQUENCE SET public audit_log_audit_id_seq a6_g03_restore
+5231; 0 0 SEQUENCE SET public medical_record_record_id_seq a6_g03_restore
+5232; 0 0 SEQUENCE SET public notification_notification_id_seq a6_g03_restore
+5233; 0 0 SEQUENCE SET public owner_owner_id_seq a6_g03_restore
+5234; 0 0 SEQUENCE SET public password_reset_code_reset_id_seq a6_g03_restore
+5235; 0 0 SEQUENCE SET public pet_pet_id_seq a6_g03_restore
+5236; 0 0 SEQUENCE SET public prescription_prescription_id_seq a6_g03_restore
+5237; 0 0 SEQUENCE SET public service_service_id_seq a6_g03_restore
+5238; 0 0 SEQUENCE SET public user_account_user_id_seq a6_g03_restore
+5239; 0 0 SEQUENCE SET public vaccination_vaccination_id_seq a6_g03_restore
+5240; 0 0 SEQUENCE SET public veterinarian_veterinarian_id_seq a6_g03_restore
+5001; 2606 32299 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g03_restore
+5003; 2606 32297 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g03_restore
+4956; 2606 25287 CONSTRAINT public appointment appointment_pkey a6_g03_restore
+4958; 2606 25289 CONSTRAINT public appointment_service appointment_service_pkey a6_g03_restore
+4960; 2606 25291 CONSTRAINT public audit_log audit_log_pkey a6_g03_restore
+4962; 2606 25293 CONSTRAINT public auth_session auth_session_pkey a6_g03_restore
+4964; 2606 25295 CONSTRAINT public medical_record medical_record_appointment_id_key a6_g03_restore
+4966; 2606 25297 CONSTRAINT public medical_record medical_record_pkey a6_g03_restore
+4968; 2606 25299 CONSTRAINT public notification notification_pkey a6_g03_restore
+4970; 2606 25301 CONSTRAINT public owner owner_email_key a6_g03_restore
+4972; 2606 25303 CONSTRAINT public owner owner_pkey a6_g03_restore
+4974; 2606 25305 CONSTRAINT public owner owner_user_id_key a6_g03_restore
+4977; 2606 25307 CONSTRAINT public password_reset_code password_reset_code_pkey a6_g03_restore
+4979; 2606 25309 CONSTRAINT public pet pet_pkey a6_g03_restore
+4981; 2606 25311 CONSTRAINT public prescription prescription_pkey a6_g03_restore
+4983; 2606 25313 CONSTRAINT public service service_pkey a6_g03_restore
+4985; 2606 25315 CONSTRAINT public service service_service_name_key a6_g03_restore
+4987; 2606 25317 CONSTRAINT public user_account user_account_email_key a6_g03_restore
+4989; 2606 25319 CONSTRAINT public user_account user_account_pkey a6_g03_restore
+4991; 2606 25321 CONSTRAINT public user_account user_account_username_key a6_g03_restore
+4993; 2606 25323 CONSTRAINT public vaccination vaccination_pkey a6_g03_restore
+4995; 2606 25325 CONSTRAINT public veterinarian veterinarian_license_number_key a6_g03_restore
+4997; 2606 25327 CONSTRAINT public veterinarian veterinarian_pkey a6_g03_restore
+4999; 2606 25329 CONSTRAINT public veterinarian veterinarian_user_id_key a6_g03_restore
+4975; 1259 25330 INDEX public idx_password_reset_code_user_created a6_g03_restore
+5020; 2620 25331 TRIGGER public appointment_service trg_appointment_service_price a6_g03_restore
+5004; 2606 25332 FK CONSTRAINT public appointment appointment_pet_id_fkey a6_g03_restore
+5006; 2606 25337 FK CONSTRAINT public appointment_service appointment_service_appointment_id_fkey a6_g03_restore
+5007; 2606 25342 FK CONSTRAINT public appointment_service appointment_service_service_id_fkey a6_g03_restore
+5005; 2606 25347 FK CONSTRAINT public appointment appointment_veterinarian_id_fkey a6_g03_restore
+5008; 2606 25352 FK CONSTRAINT public audit_log audit_log_user_id_fkey a6_g03_restore
+5009; 2606 25357 FK CONSTRAINT public auth_session auth_session_user_id_fkey a6_g03_restore
+5010; 2606 25362 FK CONSTRAINT public medical_record medical_record_appointment_id_fkey a6_g03_restore
+5011; 2606 25367 FK CONSTRAINT public notification notification_user_id_fkey a6_g03_restore
+5012; 2606 25372 FK CONSTRAINT public owner owner_user_id_fkey a6_g03_restore
+5013; 2606 25377 FK CONSTRAINT public password_reset_code password_reset_code_user_id_fkey a6_g03_restore
+5014; 2606 25382 FK CONSTRAINT public pet pet_owner_id_fkey a6_g03_restore
+5015; 2606 25387 FK CONSTRAINT public prescription prescription_record_id_fkey a6_g03_restore
+5016; 2606 25392 FK CONSTRAINT public vaccination vaccination_appointment_id_fkey a6_g03_restore
+5017; 2606 25397 FK CONSTRAINT public vaccination vaccination_pet_id_fkey a6_g03_restore
+5018; 2606 25402 FK CONSTRAINT public vaccination vaccination_veterinarian_id_fkey a6_g03_restore
+5019; 2606 25407 FK CONSTRAINT public veterinarian veterinarian_user_id_fkey a6_g03_restore
+

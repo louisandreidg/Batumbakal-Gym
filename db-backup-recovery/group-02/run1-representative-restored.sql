@@ -1,0 +1,1 @@
+WITH q AS (SELECT count(*) FROM school_event_management_db.event e WHERE e.venue_id=1 AND e.event_date=DATE '2026-11-07' AND e.event_status<>'Cancelled' AND e.start_time<TIME '17:00' AND e.end_time>TIME '08:00' AND e.event_id<>0) SELECT jsonb_build_object('rows',count(*),'md5',md5(COALESCE(string_agg(to_jsonb(q)::text,E'\n' ORDER BY to_jsonb(q)::text),''))) FROM q;

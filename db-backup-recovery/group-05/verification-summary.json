@@ -1,0 +1,42 @@
+{
+  "group": "05",
+  "counts": {
+    "tables": 17,
+    "table_rows": 23,
+    "sequences": 17,
+    "constraints": 217,
+    "primary_keys": 17,
+    "foreign_keys": 24,
+    "indexes": 49,
+    "views": 3,
+    "user_functions": 3
+  },
+  "selected_table": {
+    "md5": "0ec36ea2bd8ea807f95b47c734894766",
+    "kind": "data",
+    "name": "shioricafe_schema.category",
+    "rows": 2
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "05",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:30.7743106+08:00"
+  },
+  "application_connection": {
+    "group": "05",
+    "method": "Original SHIORI db.php with separate private test configuration",
+    "database": "a6_g05_restore_20261107",
+    "account": "a6_g05_verify",
+    "exit_code": 0,
+    "passed": true,
+    "output": "{\"database\":\"a6_g05_restore_20261107\",\"account\":\"a6_g05_verify\"}\r\n",
+    "checked_at": "2026-11-07T01:54:59.9949002+08:00"
+  },
+  "latest_run": "run1",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G05-20261107"
+}

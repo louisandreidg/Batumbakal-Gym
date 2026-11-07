@@ -1,0 +1,112 @@
+;
+; Archive created at 2026-11-07 01:49:21
+;     dbname: catering_management_db
+;     TOC Entries: 101
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+5135; 0 0 ACL - SCHEMA public pg_database_owner
+238; 1259 21201 TABLE public admin postgres
+5136; 0 0 ACL public TABLE admin postgres
+5137; 0 0 ACL public COLUMN admin.admin_id postgres
+5138; 0 0 ACL public COLUMN admin.username postgres
+5139; 0 0 ACL public COLUMN admin.created_at postgres
+237; 1259 21200 SEQUENCE public admin_admin_id_seq postgres
+5140; 0 0 ACL public SEQUENCE admin_admin_id_seq postgres
+236; 1259 21183 TABLE public cancellation postgres
+5141; 0 0 ACL public TABLE cancellation postgres
+235; 1259 21182 SEQUENCE public cancellation_cancellation_id_seq postgres
+5142; 0 0 ACL public SEQUENCE cancellation_cancellation_id_seq postgres
+220; 1259 21038 TABLE public customer postgres
+5143; 0 0 ACL public TABLE customer postgres
+5144; 0 0 ACL public COLUMN customer.customer_id postgres
+5145; 0 0 ACL public COLUMN customer.first_name postgres
+5146; 0 0 ACL public COLUMN customer.last_name postgres
+5147; 0 0 ACL public COLUMN customer.phone postgres
+5148; 0 0 ACL public COLUMN customer.address postgres
+219; 1259 21037 SEQUENCE public customer_customer_id_seq postgres
+5149; 0 0 ACL public SEQUENCE customer_customer_id_seq postgres
+226; 1259 21079 TABLE public employee postgres
+5150; 0 0 ACL public TABLE employee postgres
+225; 1259 21078 SEQUENCE public employee_employee_id_seq postgres
+5151; 0 0 ACL public SEQUENCE employee_employee_id_seq postgres
+234; 1259 21164 TABLE public event_assignment postgres
+5152; 0 0 ACL public TABLE event_assignment postgres
+228; 1259 21089 TABLE public inventory postgres
+5153; 0 0 ACL public TABLE inventory postgres
+227; 1259 21088 SEQUENCE public inventory_inventory_id_seq postgres
+5154; 0 0 ACL public SEQUENCE inventory_inventory_id_seq postgres
+224; 1259 21066 TABLE public menu_item postgres
+5155; 0 0 ACL public TABLE menu_item postgres
+223; 1259 21065 SEQUENCE public menu_item_menu_item_id_seq postgres
+5156; 0 0 ACL public SEQUENCE menu_item_menu_item_id_seq postgres
+222; 1259 21052 TABLE public package postgres
+5157; 0 0 ACL public TABLE package postgres
+221; 1259 21051 SEQUENCE public package_package_id_seq postgres
+5158; 0 0 ACL public SEQUENCE package_package_id_seq postgres
+232; 1259 21128 TABLE public payment postgres
+5159; 0 0 ACL public TABLE payment postgres
+231; 1259 21127 SEQUENCE public payment_payment_id_seq postgres
+5160; 0 0 ACL public SEQUENCE payment_payment_id_seq postgres
+230; 1259 21102 TABLE public reservation postgres
+5161; 0 0 ACL public TABLE reservation postgres
+233; 1259 21145 TABLE public reservation_menu postgres
+5162; 0 0 ACL public TABLE reservation_menu postgres
+229; 1259 21101 SEQUENCE public reservation_reservation_id_seq postgres
+5163; 0 0 ACL public SEQUENCE reservation_reservation_id_seq postgres
+239; 1259 21417 TABLE public session postgres
+5164; 0 0 ACL public TABLE session postgres
+5126; 0 21201 TABLE DATA public admin postgres
+5124; 0 21183 TABLE DATA public cancellation postgres
+5108; 0 21038 TABLE DATA public customer postgres
+5114; 0 21079 TABLE DATA public employee postgres
+5122; 0 21164 TABLE DATA public event_assignment postgres
+5116; 0 21089 TABLE DATA public inventory postgres
+5112; 0 21066 TABLE DATA public menu_item postgres
+5110; 0 21052 TABLE DATA public package postgres
+5120; 0 21128 TABLE DATA public payment postgres
+5118; 0 21102 TABLE DATA public reservation postgres
+5121; 0 21145 TABLE DATA public reservation_menu postgres
+5127; 0 21417 TABLE DATA public session postgres
+5165; 0 0 SEQUENCE SET public admin_admin_id_seq postgres
+5166; 0 0 SEQUENCE SET public cancellation_cancellation_id_seq postgres
+5167; 0 0 SEQUENCE SET public customer_customer_id_seq postgres
+5168; 0 0 SEQUENCE SET public employee_employee_id_seq postgres
+5169; 0 0 SEQUENCE SET public inventory_inventory_id_seq postgres
+5170; 0 0 SEQUENCE SET public menu_item_menu_item_id_seq postgres
+5171; 0 0 SEQUENCE SET public package_package_id_seq postgres
+5172; 0 0 SEQUENCE SET public payment_payment_id_seq postgres
+5173; 0 0 SEQUENCE SET public reservation_reservation_id_seq postgres
+4946; 2606 21212 CONSTRAINT public admin admin_pkey postgres
+4948; 2606 21214 CONSTRAINT public admin admin_username_key postgres
+4944; 2606 21194 CONSTRAINT public cancellation cancellation_pkey postgres
+4922; 2606 21050 CONSTRAINT public customer customer_email_key postgres
+4924; 2606 21048 CONSTRAINT public customer customer_pkey postgres
+4932; 2606 21087 CONSTRAINT public employee employee_pkey postgres
+4942; 2606 21171 CONSTRAINT public event_assignment event_assignment_pkey postgres
+4934; 2606 21100 CONSTRAINT public inventory inventory_pkey postgres
+4930; 2606 21077 CONSTRAINT public menu_item menu_item_pkey postgres
+4926; 2606 21064 CONSTRAINT public package package_package_name_key postgres
+4928; 2606 21062 CONSTRAINT public package package_pkey postgres
+4938; 2606 21139 CONSTRAINT public payment payment_pkey postgres
+4940; 2606 21153 CONSTRAINT public reservation_menu reservation_menu_pkey postgres
+4936; 2606 21116 CONSTRAINT public reservation reservation_pkey postgres
+4951; 2606 21426 CONSTRAINT public session session_pkey postgres
+4949; 1259 21427 INDEX public IDX_session_expire postgres
+4957; 2606 21177 FK CONSTRAINT public event_assignment event_assignment_employee_id_fkey postgres
+4958; 2606 21172 FK CONSTRAINT public event_assignment event_assignment_reservation_id_fkey postgres
+4959; 2606 21195 FK CONSTRAINT public cancellation fk_cancellation_reservation postgres
+4954; 2606 21140 FK CONSTRAINT public payment fk_payment_reservation postgres
+4952; 2606 21117 FK CONSTRAINT public reservation fk_reservation_customer postgres
+4953; 2606 21122 FK CONSTRAINT public reservation fk_reservation_package postgres
+4955; 2606 21159 FK CONSTRAINT public reservation_menu reservation_menu_menu_item_id_fkey postgres
+4956; 2606 21154 FK CONSTRAINT public reservation_menu reservation_menu_reservation_id_fkey postgres
+

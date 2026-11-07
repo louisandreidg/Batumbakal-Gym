@@ -1,0 +1,2 @@
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  pg_hba.conf rejects connection for host "::1", user "a6_g03_backup", database "a6_g03_restore_20261107", no encryption
+

@@ -1,0 +1,136 @@
+;
+; Archive created at 2026-11-07 01:49:12
+;     dbname: group3_Pawpaw
+;     TOC Entries: 125
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+5192; 0 0 ACL - SCHEMA public pg_database_owner
+245; 1255 16762 FUNCTION public set_appointment_service_price() postgres
+230; 1259 16641 TABLE public appointment postgres
+5193; 0 0 ACL public TABLE appointment postgres
+229; 1259 16640 SEQUENCE public appointment_appointment_id_seq postgres
+5194; 0 0 ACL public SEQUENCE appointment_appointment_id_seq postgres
+231; 1259 16669 TABLE public appointment_service postgres
+5195; 0 0 ACL public TABLE appointment_service postgres
+239; 1259 16765 TABLE public audit_log postgres
+5196; 0 0 ACL public TABLE audit_log postgres
+238; 1259 16764 SEQUENCE public audit_log_audit_id_seq postgres
+5197; 0 0 ACL public SEQUENCE audit_log_audit_id_seq postgres
+242; 1259 16803 TABLE public auth_session postgres
+5198; 0 0 ACL public TABLE auth_session postgres
+233; 1259 16692 TABLE public medical_record postgres
+5199; 0 0 ACL public TABLE medical_record postgres
+232; 1259 16691 SEQUENCE public medical_record_record_id_seq postgres
+5200; 0 0 ACL public SEQUENCE medical_record_record_id_seq postgres
+241; 1259 16784 TABLE public notification postgres
+5201; 0 0 ACL public TABLE notification postgres
+240; 1259 16783 SEQUENCE public notification_notification_id_seq postgres
+5202; 0 0 ACL public SEQUENCE notification_notification_id_seq postgres
+222; 1259 16567 TABLE public owner postgres
+5203; 0 0 ACL public TABLE owner postgres
+221; 1259 16566 SEQUENCE public owner_owner_id_seq postgres
+5204; 0 0 ACL public SEQUENCE owner_owner_id_seq postgres
+244; 1259 16821 TABLE public password_reset_code postgres
+5205; 0 0 ACL public TABLE password_reset_code postgres
+243; 1259 16820 SEQUENCE public password_reset_code_reset_id_seq postgres
+5206; 0 0 ACL public SEQUENCE password_reset_code_reset_id_seq postgres
+228; 1259 16619 TABLE public pet postgres
+5207; 0 0 ACL public TABLE pet postgres
+227; 1259 16618 SEQUENCE public pet_pet_id_seq postgres
+5208; 0 0 ACL public SEQUENCE pet_pet_id_seq postgres
+235; 1259 16713 TABLE public prescription postgres
+5209; 0 0 ACL public TABLE prescription postgres
+234; 1259 16712 SEQUENCE public prescription_prescription_id_seq postgres
+5210; 0 0 ACL public SEQUENCE prescription_prescription_id_seq postgres
+226; 1259 16605 TABLE public service postgres
+5211; 0 0 ACL public TABLE service postgres
+225; 1259 16604 SEQUENCE public service_service_id_seq postgres
+5212; 0 0 ACL public SEQUENCE service_service_id_seq postgres
+220; 1259 16545 TABLE public user_account postgres
+5213; 0 0 ACL public TABLE user_account postgres
+219; 1259 16544 SEQUENCE public user_account_user_id_seq postgres
+5214; 0 0 ACL public SEQUENCE user_account_user_id_seq postgres
+237; 1259 16735 TABLE public vaccination postgres
+5215; 0 0 ACL public TABLE vaccination postgres
+236; 1259 16734 SEQUENCE public vaccination_vaccination_id_seq postgres
+5216; 0 0 ACL public SEQUENCE vaccination_vaccination_id_seq postgres
+224; 1259 16588 TABLE public veterinarian postgres
+5217; 0 0 ACL public TABLE veterinarian postgres
+223; 1259 16587 SEQUENCE public veterinarian_veterinarian_id_seq postgres
+5218; 0 0 ACL public SEQUENCE veterinarian_veterinarian_id_seq postgres
+5170; 0 16641 TABLE DATA public appointment postgres
+5171; 0 16669 TABLE DATA public appointment_service postgres
+5179; 0 16765 TABLE DATA public audit_log postgres
+5182; 0 16803 TABLE DATA public auth_session postgres
+5173; 0 16692 TABLE DATA public medical_record postgres
+5181; 0 16784 TABLE DATA public notification postgres
+5162; 0 16567 TABLE DATA public owner postgres
+5184; 0 16821 TABLE DATA public password_reset_code postgres
+5168; 0 16619 TABLE DATA public pet postgres
+5175; 0 16713 TABLE DATA public prescription postgres
+5166; 0 16605 TABLE DATA public service postgres
+5160; 0 16545 TABLE DATA public user_account postgres
+5177; 0 16735 TABLE DATA public vaccination postgres
+5164; 0 16588 TABLE DATA public veterinarian postgres
+5219; 0 0 SEQUENCE SET public appointment_appointment_id_seq postgres
+5220; 0 0 SEQUENCE SET public audit_log_audit_id_seq postgres
+5221; 0 0 SEQUENCE SET public medical_record_record_id_seq postgres
+5222; 0 0 SEQUENCE SET public notification_notification_id_seq postgres
+5223; 0 0 SEQUENCE SET public owner_owner_id_seq postgres
+5224; 0 0 SEQUENCE SET public password_reset_code_reset_id_seq postgres
+5225; 0 0 SEQUENCE SET public pet_pet_id_seq postgres
+5226; 0 0 SEQUENCE SET public prescription_prescription_id_seq postgres
+5227; 0 0 SEQUENCE SET public service_service_id_seq postgres
+5228; 0 0 SEQUENCE SET public user_account_user_id_seq postgres
+5229; 0 0 SEQUENCE SET public vaccination_vaccination_id_seq postgres
+5230; 0 0 SEQUENCE SET public veterinarian_veterinarian_id_seq postgres
+4975; 2606 16658 CONSTRAINT public appointment appointment_pkey postgres
+4977; 2606 16680 CONSTRAINT public appointment_service appointment_service_pkey postgres
+4987; 2606 16777 CONSTRAINT public audit_log audit_log_pkey postgres
+4991; 2606 16814 CONSTRAINT public auth_session auth_session_pkey postgres
+4979; 2606 16706 CONSTRAINT public medical_record medical_record_appointment_id_key postgres
+4981; 2606 16704 CONSTRAINT public medical_record medical_record_pkey postgres
+4989; 2606 16797 CONSTRAINT public notification notification_pkey postgres
+4957; 2606 16581 CONSTRAINT public owner owner_email_key postgres
+4959; 2606 16577 CONSTRAINT public owner owner_pkey postgres
+4961; 2606 16579 CONSTRAINT public owner owner_user_id_key postgres
+4994; 2606 16834 CONSTRAINT public password_reset_code password_reset_code_pkey postgres
+4973; 2606 16634 CONSTRAINT public pet pet_pkey postgres
+4983; 2606 16728 CONSTRAINT public prescription prescription_pkey postgres
+4969; 2606 16615 CONSTRAINT public service service_pkey postgres
+4971; 2606 16617 CONSTRAINT public service service_service_name_key postgres
+4951; 2606 16565 CONSTRAINT public user_account user_account_email_key postgres
+4953; 2606 16561 CONSTRAINT public user_account user_account_pkey postgres
+4955; 2606 16563 CONSTRAINT public user_account user_account_username_key postgres
+4985; 2606 16746 CONSTRAINT public vaccination vaccination_pkey postgres
+4963; 2606 16598 CONSTRAINT public veterinarian veterinarian_license_number_key postgres
+4965; 2606 16594 CONSTRAINT public veterinarian veterinarian_pkey postgres
+4967; 2606 16596 CONSTRAINT public veterinarian veterinarian_user_id_key postgres
+4992; 1259 16840 INDEX public idx_password_reset_code_user_created postgres
+5011; 2620 16763 TRIGGER public appointment_service trg_appointment_service_price postgres
+4998; 2606 16659 FK CONSTRAINT public appointment appointment_pet_id_fkey postgres
+5000; 2606 16681 FK CONSTRAINT public appointment_service appointment_service_appointment_id_fkey postgres
+5001; 2606 16686 FK CONSTRAINT public appointment_service appointment_service_service_id_fkey postgres
+4999; 2606 16664 FK CONSTRAINT public appointment appointment_veterinarian_id_fkey postgres
+5007; 2606 16778 FK CONSTRAINT public audit_log audit_log_user_id_fkey postgres
+5009; 2606 16815 FK CONSTRAINT public auth_session auth_session_user_id_fkey postgres
+5002; 2606 16707 FK CONSTRAINT public medical_record medical_record_appointment_id_fkey postgres
+5008; 2606 16798 FK CONSTRAINT public notification notification_user_id_fkey postgres
+4995; 2606 16582 FK CONSTRAINT public owner owner_user_id_fkey postgres
+5010; 2606 16835 FK CONSTRAINT public password_reset_code password_reset_code_user_id_fkey postgres
+4997; 2606 16635 FK CONSTRAINT public pet pet_owner_id_fkey postgres
+5003; 2606 16729 FK CONSTRAINT public prescription prescription_record_id_fkey postgres
+5004; 2606 16757 FK CONSTRAINT public vaccination vaccination_appointment_id_fkey postgres
+5005; 2606 16747 FK CONSTRAINT public vaccination vaccination_pet_id_fkey postgres
+5006; 2606 16752 FK CONSTRAINT public vaccination vaccination_veterinarian_id_fkey postgres
+4996; 2606 16599 FK CONSTRAINT public veterinarian veterinarian_user_id_fkey postgres
+

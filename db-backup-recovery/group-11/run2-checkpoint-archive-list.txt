@@ -1,0 +1,132 @@
+;
+; Archive created at 2026-11-07 01:51:51
+;     dbname: a6_g11_restore_20261107
+;     TOC Entries: 121
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+7; 2615 32919 SCHEMA - activity6_probe a6_g11_restore
+5432; 0 0 ACL - SCHEMA public pg_database_owner
+2; 3079 31377 EXTENSION - btree_gist 
+5433; 0 0 COMMENT - EXTENSION btree_gist 
+236; 1259 32920 TABLE activity6_probe recovery_record a6_g11_restore
+221; 1259 32103 TABLE public app_user a6_g11_restore
+5434; 0 0 ACL public TABLE app_user a6_g11_restore
+5435; 0 0 ACL public COLUMN app_user.user_id a6_g11_restore
+5436; 0 0 ACL public COLUMN app_user.first_name a6_g11_restore
+5437; 0 0 ACL public COLUMN app_user.last_name a6_g11_restore
+5438; 0 0 ACL public COLUMN app_user.role a6_g11_restore
+5439; 0 0 ACL public COLUMN app_user.department_id a6_g11_restore
+5440; 0 0 ACL public COLUMN app_user.status a6_g11_restore
+222; 1259 32118 SEQUENCE public app_user_user_id_seq a6_g11_restore
+5441; 0 0 SEQUENCE OWNED BY public app_user_user_id_seq a6_g11_restore
+5442; 0 0 ACL public SEQUENCE app_user_user_id_seq a6_g11_restore
+223; 1259 32119 TABLE public department a6_g11_restore
+5443; 0 0 ACL public TABLE department a6_g11_restore
+224; 1259 32124 SEQUENCE public department_department_id_seq a6_g11_restore
+5444; 0 0 SEQUENCE OWNED BY public department_department_id_seq a6_g11_restore
+5445; 0 0 ACL public SEQUENCE department_department_id_seq a6_g11_restore
+225; 1259 32125 TABLE public material a6_g11_restore
+5446; 0 0 ACL public TABLE material a6_g11_restore
+5447; 0 0 ACL public COLUMN material.material_name a6_g11_restore
+5448; 0 0 ACL public COLUMN material.category a6_g11_restore
+5449; 0 0 ACL public COLUMN material.total_quantity a6_g11_restore
+5450; 0 0 ACL public COLUMN material.available_quantity a6_g11_restore
+226; 1259 32136 SEQUENCE public material_material_id_seq a6_g11_restore
+5451; 0 0 SEQUENCE OWNED BY public material_material_id_seq a6_g11_restore
+5452; 0 0 ACL public SEQUENCE material_material_id_seq a6_g11_restore
+227; 1259 32137 TABLE public penalty a6_g11_restore
+5453; 0 0 ACL public TABLE penalty a6_g11_restore
+5454; 0 0 ACL public COLUMN penalty.paid_status a6_g11_restore
+5455; 0 0 ACL public COLUMN penalty.paid_date a6_g11_restore
+228; 1259 32152 SEQUENCE public penalty_penalty_id_seq a6_g11_restore
+5456; 0 0 SEQUENCE OWNED BY public penalty_penalty_id_seq a6_g11_restore
+5457; 0 0 ACL public SEQUENCE penalty_penalty_id_seq a6_g11_restore
+229; 1259 32153 TABLE public reservation a6_g11_restore
+5458; 0 0 ACL public TABLE reservation a6_g11_restore
+5459; 0 0 ACL public COLUMN reservation.staff_id a6_g11_restore
+5460; 0 0 ACL public COLUMN reservation.status a6_g11_restore
+230; 1259 32168 TABLE public reservation_material a6_g11_restore
+5461; 0 0 ACL public TABLE reservation_material a6_g11_restore
+231; 1259 32175 SEQUENCE public reservation_reservation_id_seq a6_g11_restore
+5462; 0 0 SEQUENCE OWNED BY public reservation_reservation_id_seq a6_g11_restore
+5463; 0 0 ACL public SEQUENCE reservation_reservation_id_seq a6_g11_restore
+232; 1259 32176 TABLE public room a6_g11_restore
+5464; 0 0 ACL public TABLE room a6_g11_restore
+5465; 0 0 ACL public COLUMN room.room_name a6_g11_restore
+5466; 0 0 ACL public COLUMN room.building a6_g11_restore
+5467; 0 0 ACL public COLUMN room.capacity a6_g11_restore
+5468; 0 0 ACL public COLUMN room.room_type a6_g11_restore
+5469; 0 0 ACL public COLUMN room.status a6_g11_restore
+233; 1259 32189 SEQUENCE public room_room_id_seq a6_g11_restore
+5470; 0 0 SEQUENCE OWNED BY public room_room_id_seq a6_g11_restore
+5471; 0 0 ACL public SEQUENCE room_room_id_seq a6_g11_restore
+234; 1259 32190 TABLE public staff a6_g11_restore
+5472; 0 0 ACL public TABLE staff a6_g11_restore
+5473; 0 0 ACL public COLUMN staff.staff_id a6_g11_restore
+5474; 0 0 ACL public COLUMN staff.full_name a6_g11_restore
+5475; 0 0 ACL public COLUMN staff.role a6_g11_restore
+5476; 0 0 ACL public COLUMN staff.status a6_g11_restore
+235; 1259 32203 SEQUENCE public staff_staff_id_seq a6_g11_restore
+5477; 0 0 SEQUENCE OWNED BY public staff_staff_id_seq a6_g11_restore
+5478; 0 0 ACL public SEQUENCE staff_staff_id_seq a6_g11_restore
+5184; 2604 32204 DEFAULT public app_user user_id a6_g11_restore
+5186; 2604 32205 DEFAULT public department department_id a6_g11_restore
+5187; 2604 32206 DEFAULT public material material_id a6_g11_restore
+5188; 2604 32207 DEFAULT public penalty penalty_id a6_g11_restore
+5191; 2604 32208 DEFAULT public reservation reservation_id a6_g11_restore
+5193; 2604 32209 DEFAULT public room room_id a6_g11_restore
+5195; 2604 32210 DEFAULT public staff staff_id a6_g11_restore
+5424; 0 32920 TABLE DATA activity6_probe recovery_record a6_g11_restore
+5409; 0 32103 TABLE DATA public app_user a6_g11_restore
+5411; 0 32119 TABLE DATA public department a6_g11_restore
+5413; 0 32125 TABLE DATA public material a6_g11_restore
+5415; 0 32137 TABLE DATA public penalty a6_g11_restore
+5417; 0 32153 TABLE DATA public reservation a6_g11_restore
+5418; 0 32168 TABLE DATA public reservation_material a6_g11_restore
+5420; 0 32176 TABLE DATA public room a6_g11_restore
+5422; 0 32190 TABLE DATA public staff a6_g11_restore
+5479; 0 0 SEQUENCE SET public app_user_user_id_seq a6_g11_restore
+5480; 0 0 SEQUENCE SET public department_department_id_seq a6_g11_restore
+5481; 0 0 SEQUENCE SET public material_material_id_seq a6_g11_restore
+5482; 0 0 SEQUENCE SET public penalty_penalty_id_seq a6_g11_restore
+5483; 0 0 SEQUENCE SET public reservation_reservation_id_seq a6_g11_restore
+5484; 0 0 SEQUENCE SET public room_room_id_seq a6_g11_restore
+5485; 0 0 SEQUENCE SET public staff_staff_id_seq a6_g11_restore
+5252; 2606 32930 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g11_restore
+5254; 2606 32928 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g11_restore
+5218; 2606 32212 CONSTRAINT public app_user app_user_email_key a6_g11_restore
+5220; 2606 32214 CONSTRAINT public app_user app_user_pkey a6_g11_restore
+5222; 2606 32216 CONSTRAINT public department department_department_name_key a6_g11_restore
+5224; 2606 32218 CONSTRAINT public department department_pkey a6_g11_restore
+5226; 2606 32220 CONSTRAINT public material material_material_name_key a6_g11_restore
+5228; 2606 32222 CONSTRAINT public material material_pkey a6_g11_restore
+5238; 2606 32224 CONSTRAINT public reservation no_overlapping_approved_reservations a6_g11_restore
+5230; 2606 32226 CONSTRAINT public penalty penalty_pkey a6_g11_restore
+5232; 2606 32228 CONSTRAINT public penalty penalty_reservation_id_key a6_g11_restore
+5242; 2606 32230 CONSTRAINT public reservation_material reservation_material_pkey a6_g11_restore
+5240; 2606 32232 CONSTRAINT public reservation reservation_pkey a6_g11_restore
+5244; 2606 32234 CONSTRAINT public room room_building_room_name_key a6_g11_restore
+5246; 2606 32236 CONSTRAINT public room room_pkey a6_g11_restore
+5248; 2606 32238 CONSTRAINT public staff staff_email_key a6_g11_restore
+5250; 2606 32240 CONSTRAINT public staff staff_pkey a6_g11_restore
+5233; 1259 32241 INDEX public idx_reservation_date a6_g11_restore
+5234; 1259 32242 INDEX public idx_reservation_room a6_g11_restore
+5235; 1259 32243 INDEX public idx_reservation_status a6_g11_restore
+5236; 1259 32244 INDEX public idx_reservation_user a6_g11_restore
+5255; 2606 32245 FK CONSTRAINT public app_user app_user_department_id_fkey a6_g11_restore
+5256; 2606 32250 FK CONSTRAINT public penalty penalty_reservation_id_fkey a6_g11_restore
+5260; 2606 32255 FK CONSTRAINT public reservation_material reservation_material_material_id_fkey a6_g11_restore
+5261; 2606 32260 FK CONSTRAINT public reservation_material reservation_material_reservation_id_fkey a6_g11_restore
+5257; 2606 32265 FK CONSTRAINT public reservation reservation_room_id_fkey a6_g11_restore
+5258; 2606 32270 FK CONSTRAINT public reservation reservation_staff_id_fkey a6_g11_restore
+5259; 2606 32275 FK CONSTRAINT public reservation reservation_user_id_fkey a6_g11_restore
+

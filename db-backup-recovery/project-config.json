@@ -1,0 +1,434 @@
+[
+  {
+    "group": "01",
+    "name": "DropBoxed",
+    "repo": "https://github.com/joshxaaaaaa/GRP1_Dropboxed",
+    "snapshot": "Earlier local ZIP; revision not established",
+    "database": "dropboxed_db / dropboxed",
+    "roles": [
+      [
+        "dropboxed_app",
+        "No evidenced NOLOGIN group",
+        "Direct table CRUD; non-superuser, no role/database creation. Broad grants need review."
+      ]
+    ],
+    "query": "SELECT cat.category_id,cat.category_name,cat.description,COUNT(c.complaint_id)::int AS complaint_count FROM dropboxed.complaint_categories cat LEFT JOIN dropboxed.complaints c ON c.category_id=cat.category_id GROUP BY cat.category_id ORDER BY cat.category_id;",
+    "query_source": "src/db/categories.js:6; category list with complaint counts",
+    "source_db": "dropboxed_db",
+    "schema": "dropboxed",
+    "backup_group": "a6_g01_backup_grp",
+    "backup_login": "a6_g01_backup",
+    "restore_login": "a6_g01_restore",
+    "verify_login": "a6_g01_verify",
+    "runtime": "dropboxed_app",
+    "target": "dropboxed.complaints",
+    "restore_db": "a6_g01_restore_20261107",
+    "preflight_db": "a6_g01_preflight_20261107",
+    "recovery_db": "a6_g01_recovery_20261107",
+    "rpo_hours": 24,
+    "rto_hours": 4,
+    "original_role_names": [
+      "dropboxed_app"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "02",
+    "name": "Eventer / School Event Management",
+    "repo": "https://github.com/JosephEmmanuelBabas/School_Event_Management_Web_Appli",
+    "snapshot": "main ZIP; commit unavailable; SHA256 B251FC9C32CECF3090C7AC0ED14EF11862BE29E89656947DBF3A6F00B86569B3",
+    "database": "grp02_event_management_db / school_event_management_db",
+    "roles": [
+      [
+        "event_owner",
+        "Object owner",
+        "Schema/migration ownership; no superuser or role/database creation."
+      ],
+      [
+        "event_app",
+        "grp02_runtime_grp",
+        "Read role; SIU user_account; CRUD operational tables; SELECT/INSERT audit_log; sequence USAGE."
+      ],
+      [
+        "grp02_readonly",
+        "grp02_readonly_grp",
+        "SELECT role/venue/event; no writes or account-table access."
+      ]
+    ],
+    "query": "SELECT count(*) FROM school_event_management_db.event e WHERE e.venue_id=1 AND e.event_date=CURRENT_DATE AND e.event_status<>'Cancelled' AND e.start_time<TIME '17:00' AND e.end_time>TIME '08:00' AND e.event_id<>0;",
+    "query_source": "school_event_management/src/main/java/com/school_event/school_event_management/repository/EventRepository.java:19; JPQL countVenueConflicts translated to SQL; venue 1, today, 08:00-17:00, exclusion 0",
+    "source_db": "grp02_event_management_db",
+    "schema": "school_event_management_db",
+    "backup_group": "a6_g02_backup_grp",
+    "backup_login": "a6_g02_backup",
+    "restore_login": "a6_g02_restore",
+    "verify_login": "a6_g02_verify",
+    "runtime": "event_app",
+    "target": "school_event_management_db.event",
+    "restore_db": "a6_g02_restore_20261107",
+    "preflight_db": "a6_g02_preflight_20261107",
+    "recovery_db": "a6_g02_recovery_20261107",
+    "rpo_hours": 4,
+    "rto_hours": 2,
+    "original_role_names": [
+      "event_owner",
+      "event_app",
+      "grp02_readonly"
+    ],
+    "old_owner_names": [
+      "event_owner"
+    ]
+  },
+  {
+    "group": "03",
+    "name": "PAWPAW Veterinary",
+    "repo": "https://github.com/rubiakylashane/GRP03_PAWPAW",
+    "snapshot": "Earlier local checkout; tested revision not established",
+    "database": "group3_Pawpaw / public",
+    "roles": [
+      [
+        "pawpaw_app",
+        "No evidenced NOLOGIN group",
+        "Direct table CRUD; non-superuser, no role/database creation. Audit/history protection needs review."
+      ]
+    ],
+    "query": "SELECT service_id,service_name,description,price FROM public.service ORDER BY service_name;",
+    "query_source": "server/routes/clinic.js:910; service listing (unfiltered)",
+    "source_db": "group3_Pawpaw",
+    "schema": "public",
+    "backup_group": "a6_g03_backup_grp",
+    "backup_login": "a6_g03_backup",
+    "restore_login": "a6_g03_restore",
+    "verify_login": "a6_g03_verify",
+    "runtime": "pawpaw_app",
+    "target": "public.appointment",
+    "restore_db": "a6_g03_restore_20261107",
+    "preflight_db": "a6_g03_preflight_20261107",
+    "recovery_db": "a6_g03_recovery_20261107",
+    "rpo_hours": 1,
+    "rto_hours": 1,
+    "original_role_names": [
+      "pawpaw_app"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "04",
+    "name": "HealthBridge Clinic",
+    "repo": "https://github.com/RainneQuintab/GRP03_PROJECTDB",
+    "snapshot": "main / 2e5abb5440c1e2f7cadc364352a598ca220c7bc7",
+    "database": "grp03_projectdb / public",
+    "roles": [
+      [
+        "hb_app",
+        "hb_staff",
+        "Clinical operations; reference reads; documented clinical deletes and backup operations."
+      ],
+      [
+        "hb_report",
+        "hb_readonly_grp",
+        "SELECT approved clinical/reporting tables; staff password hashes withheld."
+      ],
+      [
+        "hb_maintenance",
+        "hb_admin",
+        "Local maintenance role; no role/database creation or schema CREATE."
+      ]
+    ],
+    "query": "SELECT a.appointment_id,a.appointment_date,a.status,a.reason,p.patient_id,p.first_name AS patient_first,p.last_name AS patient_last,p.contact_number,d.doctor_id,d.first_name AS doctor_first,d.last_name AS doctor_last,sp.specialty_name FROM public.appointments a JOIN public.patients p ON p.patient_id=a.patient_id JOIN public.doctors d ON d.doctor_id=a.doctor_id LEFT JOIN public.specialties sp ON sp.specialty_id=d.specialty_id ORDER BY a.appointment_date;",
+    "query_source": "backend/staff_appointments.php:39; unfiltered appointment listing",
+    "source_db": "grp03_projectdb",
+    "schema": "public",
+    "backup_group": "a6_g04_backup_grp",
+    "backup_login": "a6_g04_backup",
+    "restore_login": "a6_g04_restore",
+    "verify_login": "a6_g04_verify",
+    "runtime": "hb_app",
+    "target": "public.appointments",
+    "restore_db": "a6_g04_restore_20261107",
+    "preflight_db": "a6_g04_preflight_20261107",
+    "recovery_db": "a6_g04_recovery_20261107",
+    "rpo_hours": 1,
+    "rto_hours": 1,
+    "original_role_names": [
+      "hb_app",
+      "hb_report",
+      "hb_maintenance"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "05",
+    "name": "SHIORI Cafe",
+    "repo": "https://github.com/LeeJnsn27/SHIORIcafe-new",
+    "snapshot": "main / 8fab8f7139e3f1d4565e5a600b3f3e5cf1f6cad8",
+    "database": "grp10_shioricafedb / shioricafe_schema",
+    "roles": [
+      [
+        "shiori_app",
+        "shiori_runtime_grp",
+        "Table CRUD and sequence USAGE; no schema/role/database creation."
+      ],
+      [
+        "shiori_report",
+        "shiori_readonly_grp",
+        "Approved category/menu/table/payment reporting; no staff password-hash access."
+      ]
+    ],
+    "query": "SELECT r.table_id,r.reservation_start_at,r.reservation_end_at,c.full_name AS guest_name FROM shioricafe_schema.reservation r LEFT JOIN shioricafe_schema.customer c ON r.customer_id=c.customer_id WHERE r.status='Confirmed' AND CURRENT_TIMESTAMP>=r.reservation_start_at AND CURRENT_TIMESTAMP<r.reservation_end_at;",
+    "query_source": "backend/api/get-table-occupancy.php:16; active table occupancy",
+    "source_db": "grp10_shioricafedb",
+    "schema": "shioricafe_schema",
+    "backup_group": "a6_g05_backup_grp",
+    "backup_login": "a6_g05_backup",
+    "restore_login": "a6_g05_restore",
+    "verify_login": "a6_g05_verify",
+    "runtime": "shiori_app",
+    "target": "shioricafe_schema.reservation",
+    "restore_db": "a6_g05_restore_20261107",
+    "preflight_db": "a6_g05_preflight_20261107",
+    "recovery_db": "a6_g05_recovery_20261107",
+    "rpo_hours": 1,
+    "rto_hours": 1,
+    "original_role_names": [
+      "shiori_app",
+      "shiori_report"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "06",
+    "name": "ByaheRentals / Car Rental",
+    "repo": "https://github.com/123airabels/Car_Rental_Management_System",
+    "snapshot": "main / ea2cd1691a08cb0e455fc18b398a7570cac1b7ad",
+    "database": "car_rental_db / public",
+    "roles": [
+      [
+        "app_runtime",
+        "car_runtime_grp",
+        "SIU operational tables; DELETE vehicle only; audit UPDATE/DELETE denied."
+      ],
+      [
+        "car_report",
+        "car_readonly_grp",
+        "Approved reporting columns; customer/staff password hashes withheld."
+      ],
+      [
+        "car_dba",
+        "car_admin_grp",
+        "Data maintenance; no schema/role/database creation."
+      ]
+    ],
+    "query": "SELECT v.vehicle_id,v.make,v.model,v.year,c.category_name,v.seating_capacity,v.fuel_type,v.color,v.status,(SELECT r.rate_amount FROM public.rental_rate r WHERE r.category_id=v.category_id AND r.rental_period_type='Daily' AND r.rate_status='Active' ORDER BY r.rate_id LIMIT 1)+v.unit_rate_adjustment AS daily_rate FROM public.vehicle v JOIN public.vehicle_category c ON c.category_id=v.category_id WHERE c.category_status='Active' AND v.status<>'Retired' ORDER BY c.category_name,v.make,v.model;",
+    "query_source": "Application/src/main/java/com/carrental/car_rental_app/web/VehicleController.java:27; list without optional filters",
+    "source_db": "car_rental_db",
+    "schema": "public",
+    "backup_group": "a6_g06_backup_grp",
+    "backup_login": "a6_g06_backup",
+    "restore_login": "a6_g06_restore",
+    "verify_login": "a6_g06_verify",
+    "runtime": "app_runtime",
+    "target": "public.vehicle",
+    "restore_db": "a6_g06_restore_20261107",
+    "preflight_db": "a6_g06_preflight_20261107",
+    "recovery_db": "a6_g06_recovery_20261107",
+    "rpo_hours": 1,
+    "rto_hours": 2,
+    "original_role_names": [
+      "app_runtime",
+      "car_report",
+      "car_dba"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "07",
+    "name": "Applicant Management",
+    "repo": "https://github.com/mang2mas/grp07-applicant-management-system",
+    "snapshot": "main / 2ccec581b94708d5a8f864c353281454dc725fcd",
+    "database": "grp07_applicantdb / public",
+    "roles": [
+      [
+        "grp07_owner",
+        "Object owner",
+        "Owns database/objects; no superuser or role/database creation."
+      ],
+      [
+        "grp07_app",
+        "grp07_runtime_grp",
+        "CRUD operational tables; SELECT only application_status; sequence USAGE."
+      ],
+      [
+        "grp07_readonly",
+        "grp07_readonly_grp",
+        "SELECT eight tables; no writes or schema CREATE."
+      ]
+    ],
+    "query": "SELECT d.department_id,d.department_name,d.description,COUNT(p.position_id) AS position_count FROM public.department d LEFT JOIN public.position p ON p.department_id=d.department_id GROUP BY d.department_id,d.department_name,d.description ORDER BY d.department_name LIMIT 10 OFFSET 0;",
+    "query_source": "src/views/departments/index.php:20; first page without search",
+    "source_db": "grp07_applicantdb",
+    "schema": "public",
+    "backup_group": "a6_g07_backup_grp",
+    "backup_login": "a6_g07_backup",
+    "restore_login": "a6_g07_restore",
+    "verify_login": "a6_g07_verify",
+    "runtime": "grp07_app",
+    "target": "public.department",
+    "restore_db": "a6_g07_restore_20261107",
+    "preflight_db": "a6_g07_preflight_20261107",
+    "recovery_db": "a6_g07_recovery_20261107",
+    "rpo_hours": 24,
+    "rto_hours": 4,
+    "original_role_names": [
+      "grp07_owner",
+      "grp07_app",
+      "grp07_readonly"
+    ],
+    "old_owner_names": [
+      "grp07_owner"
+    ]
+  },
+  {
+    "group": "08",
+    "name": "Catering Management",
+    "repo": "https://github.com/yami-sumi/catering-management-system",
+    "snapshot": "main / a415ead922213f9b559339ab26e17f30924fb1a1",
+    "database": "catering_management_db / public",
+    "roles": [
+      [
+        "catering_app",
+        "catering_runtime_grp",
+        "Application CRUD and session DML; sequence USAGE; no schema CREATE."
+      ],
+      [
+        "catering_report",
+        "catering_readonly_grp",
+        "Approved reporting tables/columns; customer/admin hashes excluded."
+      ],
+      [
+        "catering_admin_grp",
+        "NOLOGIN maintenance group",
+        "Source maintenance privileges, no independent maintenance login tested."
+      ]
+    ],
+    "query": "SELECT package_id,package_name,description,price_per_guest FROM public.package ORDER BY package_id;",
+    "query_source": "backend/routes/customerPortal.js:83; customer package catalog",
+    "source_db": "catering_management_db",
+    "schema": "public",
+    "backup_group": "a6_g08_backup_grp",
+    "backup_login": "a6_g08_backup",
+    "restore_login": "a6_g08_restore",
+    "verify_login": "a6_g08_verify",
+    "runtime": "catering_app",
+    "target": "public.package",
+    "restore_db": "a6_g08_restore_20261107",
+    "preflight_db": "a6_g08_preflight_20261107",
+    "recovery_db": "a6_g08_recovery_20261107",
+    "rpo_hours": 1,
+    "rto_hours": 2,
+    "original_role_names": [
+      "catering_app",
+      "catering_report",
+      "catering_admin_grp"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "10",
+    "name": "UniSync",
+    "repo": "https://github.com/CoffyJosh/unisync",
+    "snapshot": "main / c3b916a080f3201567f467a456d55c74b9ca3ba8",
+    "database": "grp10_unisyncdb / public",
+    "roles": [
+      [
+        "unisync_app",
+        "unisync_runtime_grp",
+        "SELECT/INSERT/UPDATE and sequences; no physical DELETE."
+      ],
+      [
+        "unisync_auditor",
+        "unisync_readonly_grp",
+        "Approved SELECT columns; account.password_hash excluded."
+      ],
+      [
+        "unisync_dba",
+        "unisync_admin_grp",
+        "Data CRUD and documented schema CREATE; no role/database creation."
+      ]
+    ],
+    "query": "SELECT COUNT(*) FROM public.registration r INNER JOIN public.event e ON r.event_id=e.event_id INNER JOIN public.organization o ON e.organization_id=o.organization_id WHERE r.account_id=1 AND r.status='active' AND e.status<>'deleted' AND o.status='active' AND o.organization_name ILIKE '%%';",
+    "query_source": "php/app/dashboard/get_dashboard.php:31; account 1 and empty search",
+    "source_db": "grp10_unisyncdb",
+    "schema": "public",
+    "backup_group": "a6_g10_backup_grp",
+    "backup_login": "a6_g10_backup",
+    "restore_login": "a6_g10_restore",
+    "verify_login": "a6_g10_verify",
+    "runtime": "unisync_app",
+    "target": "public.registration",
+    "restore_db": "a6_g10_restore_20261107",
+    "preflight_db": "a6_g10_preflight_20261107",
+    "recovery_db": "a6_g10_recovery_20261107",
+    "rpo_hours": 4,
+    "rto_hours": 2,
+    "original_role_names": [
+      "unisync_app",
+      "unisync_auditor",
+      "unisync_dba"
+    ],
+    "old_owner_names": []
+  },
+  {
+    "group": "11",
+    "name": "ReserveIT",
+    "repo": "https://github.com/sev-villanueva/ReserveIT-Classroom-and-Material-Reservation-System-",
+    "snapshot": "main / dd466cabb7c9628fac386a1e55840fd5f0303334",
+    "database": "ReserveIT / public",
+    "roles": [
+      [
+        "reserveit_owner",
+        "Object owner",
+        "Owns database/objects; no superuser or role/database creation."
+      ],
+      [
+        "reserveit_app",
+        "app_runtime_grp",
+        "Required SIU; restricted UPDATE columns; DELETE room/material only."
+      ],
+      [
+        "reserveit_reporter",
+        "app_readonly_grp",
+        "Approved reporting and people columns; emails/password hashes withheld."
+      ],
+      [
+        "reserveit_dba",
+        "app_admin_grp",
+        "Data/sequence maintenance; no schema/role/database creation."
+      ]
+    ],
+    "query": "SELECT status,COUNT(*) AS n FROM public.reservation GROUP BY status;",
+    "query_source": "app/main.py:38; staff dashboard status counts",
+    "source_db": "ReserveIT",
+    "schema": "public",
+    "backup_group": "a6_g11_backup_grp",
+    "backup_login": "a6_g11_backup",
+    "restore_login": "a6_g11_restore",
+    "verify_login": "a6_g11_verify",
+    "runtime": "reserveit_app",
+    "target": "public.reservation",
+    "restore_db": "a6_g11_restore_20261107",
+    "preflight_db": "a6_g11_preflight_20261107",
+    "recovery_db": "a6_g11_recovery_20261107",
+    "rpo_hours": 1,
+    "rto_hours": 1,
+    "original_role_names": [
+      "reserveit_owner",
+      "reserveit_app",
+      "reserveit_reporter",
+      "reserveit_dba"
+    ],
+    "old_owner_names": [
+      "reserveit_owner"
+    ]
+  }
+]

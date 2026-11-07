@@ -1,0 +1,10 @@
+-- Reconstructed role and membership plan from the tested local cluster.
+-- Fresh-cluster prerequisite only. Existing names must be reviewed, not overwritten.
+-- Login passwords are excluded; set them securely with psql password prompts.
+CREATE ROLE "a6_g01_backup" LOGIN INHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS;
+CREATE ROLE "a6_g01_backup_grp" NOLOGIN INHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS;
+CREATE ROLE "a6_g01_restore" LOGIN INHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS;
+CREATE ROLE "a6_g01_verify" LOGIN INHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS;
+CREATE ROLE "dropboxed_app" LOGIN INHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS;
+GRANT "a6_g01_backup_grp" TO "a6_g01_backup";
+GRANT "dropboxed_app" TO "a6_g01_verify";

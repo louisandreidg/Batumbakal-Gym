@@ -1,0 +1,33 @@
+{
+  "group": "04",
+  "counts": {
+    "tables": 11,
+    "table_rows": 21,
+    "sequences": 11,
+    "constraints": 90,
+    "primary_keys": 11,
+    "foreign_keys": 9,
+    "indexes": 22,
+    "views": 2,
+    "user_functions": 0
+  },
+  "selected_table": {
+    "md5": "635e43b75e1f6bfcd62a923a12de7b24",
+    "kind": "data",
+    "name": "public.appointments",
+    "rows": 2
+  },
+  "source_unchanged": true,
+  "data_objects_sequences_acl_match": true,
+  "role_default_acl_audit": {
+    "group": "04",
+    "roles_and_memberships_present": true,
+    "no_elevated_role": true,
+    "default_grants_match_after_owner_mapping": true,
+    "checked_at": "2026-11-07T01:53:30.4072891+08:00"
+  },
+  "application_connection": null,
+  "latest_run": "run2",
+  "recovery": "Recovered",
+  "fixture_marker": "COMP018-A6-G04-20261107"
+}

@@ -1,0 +1,1 @@
+WITH q AS (SELECT status,COUNT(*) AS n FROM public.reservation GROUP BY status) SELECT jsonb_build_object('rows',count(*),'md5',md5(COALESCE(string_agg(to_jsonb(q)::text,E'\n' ORDER BY to_jsonb(q)::text),''))) FROM q;

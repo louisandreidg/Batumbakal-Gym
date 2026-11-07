@@ -1,0 +1,123 @@
+;
+; Archive created at 2026-11-07 01:49:25
+;     dbname: a6_g10_restore_20261107
+;     TOC Entries: 112
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+6; 2615 30924 SCHEMA - activity6_probe a6_g10_restore
+5150; 0 0 ACL - SCHEMA public pg_database_owner
+236; 1259 30925 TABLE activity6_probe recovery_record a6_g10_restore
+220; 1259 30710 TABLE public account a6_g10_restore
+5151; 0 0 ACL public TABLE account a6_g10_restore
+5152; 0 0 ACL public COLUMN account.account_id a6_g10_restore
+5153; 0 0 ACL public COLUMN account.account_name a6_g10_restore
+5154; 0 0 ACL public COLUMN account.email a6_g10_restore
+5155; 0 0 ACL public COLUMN account.avatar_url a6_g10_restore
+5156; 0 0 ACL public COLUMN account.account_status a6_g10_restore
+221; 1259 30722 SEQUENCE public account_account_id_seq a6_g10_restore
+5157; 0 0 SEQUENCE OWNED BY public account_account_id_seq a6_g10_restore
+5158; 0 0 ACL public SEQUENCE account_account_id_seq a6_g10_restore
+222; 1259 30723 TABLE public event a6_g10_restore
+5159; 0 0 ACL public TABLE event a6_g10_restore
+223; 1259 30734 SEQUENCE public event_event_id_seq a6_g10_restore
+5160; 0 0 SEQUENCE OWNED BY public event_event_id_seq a6_g10_restore
+5161; 0 0 ACL public SEQUENCE event_event_id_seq a6_g10_restore
+224; 1259 30735 TABLE public event_schedule a6_g10_restore
+5162; 0 0 ACL public TABLE event_schedule a6_g10_restore
+225; 1259 30748 SEQUENCE public event_schedule_schedule_id_seq a6_g10_restore
+5163; 0 0 SEQUENCE OWNED BY public event_schedule_schedule_id_seq a6_g10_restore
+5164; 0 0 ACL public SEQUENCE event_schedule_schedule_id_seq a6_g10_restore
+226; 1259 30749 TABLE public membership a6_g10_restore
+5165; 0 0 ACL public TABLE membership a6_g10_restore
+227; 1259 30763 SEQUENCE public membership_membership_id_seq a6_g10_restore
+5166; 0 0 SEQUENCE OWNED BY public membership_membership_id_seq a6_g10_restore
+5167; 0 0 ACL public SEQUENCE membership_membership_id_seq a6_g10_restore
+228; 1259 30764 TABLE public notification a6_g10_restore
+5168; 0 0 ACL public TABLE notification a6_g10_restore
+229; 1259 30780 SEQUENCE public notification_notification_id_seq a6_g10_restore
+5169; 0 0 SEQUENCE OWNED BY public notification_notification_id_seq a6_g10_restore
+5170; 0 0 ACL public SEQUENCE notification_notification_id_seq a6_g10_restore
+230; 1259 30781 TABLE public organization a6_g10_restore
+5171; 0 0 ACL public TABLE organization a6_g10_restore
+231; 1259 30792 SEQUENCE public organization_organization_id_seq a6_g10_restore
+5172; 0 0 SEQUENCE OWNED BY public organization_organization_id_seq a6_g10_restore
+5173; 0 0 ACL public SEQUENCE organization_organization_id_seq a6_g10_restore
+232; 1259 30793 TABLE public registration a6_g10_restore
+5174; 0 0 ACL public TABLE registration a6_g10_restore
+233; 1259 30804 SEQUENCE public registration_registration_id_seq a6_g10_restore
+5175; 0 0 SEQUENCE OWNED BY public registration_registration_id_seq a6_g10_restore
+5176; 0 0 ACL public SEQUENCE registration_registration_id_seq a6_g10_restore
+234; 1259 30805 TABLE public venue a6_g10_restore
+5177; 0 0 ACL public TABLE venue a6_g10_restore
+235; 1259 30821 SEQUENCE public venue_venue_id_seq a6_g10_restore
+5178; 0 0 SEQUENCE OWNED BY public venue_venue_id_seq a6_g10_restore
+5179; 0 0 ACL public SEQUENCE venue_venue_id_seq a6_g10_restore
+4896; 2604 30822 DEFAULT public account account_id a6_g10_restore
+4898; 2604 30823 DEFAULT public event event_id a6_g10_restore
+4900; 2604 30824 DEFAULT public event_schedule schedule_id a6_g10_restore
+4902; 2604 30825 DEFAULT public membership membership_id a6_g10_restore
+4906; 2604 30826 DEFAULT public notification notification_id a6_g10_restore
+4910; 2604 30827 DEFAULT public organization organization_id a6_g10_restore
+4912; 2604 30828 DEFAULT public registration registration_id a6_g10_restore
+4915; 2604 30829 DEFAULT public venue venue_id a6_g10_restore
+5142; 0 30925 TABLE DATA activity6_probe recovery_record a6_g10_restore
+5126; 0 30710 TABLE DATA public account a6_g10_restore
+5128; 0 30723 TABLE DATA public event a6_g10_restore
+5130; 0 30735 TABLE DATA public event_schedule a6_g10_restore
+5132; 0 30749 TABLE DATA public membership a6_g10_restore
+5134; 0 30764 TABLE DATA public notification a6_g10_restore
+5136; 0 30781 TABLE DATA public organization a6_g10_restore
+5138; 0 30793 TABLE DATA public registration a6_g10_restore
+5140; 0 30805 TABLE DATA public venue a6_g10_restore
+5180; 0 0 SEQUENCE SET public account_account_id_seq a6_g10_restore
+5181; 0 0 SEQUENCE SET public event_event_id_seq a6_g10_restore
+5182; 0 0 SEQUENCE SET public event_schedule_schedule_id_seq a6_g10_restore
+5183; 0 0 SEQUENCE SET public membership_membership_id_seq a6_g10_restore
+5184; 0 0 SEQUENCE SET public notification_notification_id_seq a6_g10_restore
+5185; 0 0 SEQUENCE SET public organization_organization_id_seq a6_g10_restore
+5186; 0 0 SEQUENCE SET public registration_registration_id_seq a6_g10_restore
+5187; 0 0 SEQUENCE SET public venue_venue_id_seq a6_g10_restore
+4965; 2606 30935 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g10_restore
+4967; 2606 30933 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g10_restore
+4932; 2606 30831 CONSTRAINT public account account_email_key a6_g10_restore
+4934; 2606 30833 CONSTRAINT public account account_pkey a6_g10_restore
+4936; 2606 30835 CONSTRAINT public event event_pkey a6_g10_restore
+4939; 2606 30837 CONSTRAINT public event_schedule event_schedule_pkey a6_g10_restore
+4945; 2606 30839 CONSTRAINT public membership membership_pkey a6_g10_restore
+4950; 2606 30841 CONSTRAINT public notification notification_pkey a6_g10_restore
+4952; 2606 30843 CONSTRAINT public organization organization_pkey a6_g10_restore
+4956; 2606 30845 CONSTRAINT public registration registration_pkey a6_g10_restore
+4958; 2606 30847 CONSTRAINT public registration uq_account_event a6_g10_restore
+4947; 2606 30849 CONSTRAINT public membership uq_account_organization a6_g10_restore
+4961; 2606 30851 CONSTRAINT public venue uq_provider_venue_name a6_g10_restore
+4963; 2606 30853 CONSTRAINT public venue venue_pkey a6_g10_restore
+4937; 1259 30854 INDEX public idx_event_organization a6_g10_restore
+4942; 1259 30855 INDEX public idx_membership_account a6_g10_restore
+4943; 1259 30856 INDEX public idx_membership_organization a6_g10_restore
+4948; 1259 30857 INDEX public idx_notification_account_created a6_g10_restore
+4953; 1259 30858 INDEX public idx_registration_account a6_g10_restore
+4954; 1259 30859 INDEX public idx_registration_event a6_g10_restore
+4940; 1259 30860 INDEX public idx_schedule_date_venue a6_g10_restore
+4941; 1259 30861 INDEX public idx_schedule_status a6_g10_restore
+4959; 1259 30862 INDEX public idx_venue_account a6_g10_restore
+4968; 2606 30863 FK CONSTRAINT public event fk_event_organization a6_g10_restore
+4971; 2606 30868 FK CONSTRAINT public membership fk_membership_account a6_g10_restore
+4972; 2606 30873 FK CONSTRAINT public membership fk_membership_organization a6_g10_restore
+4973; 2606 30878 FK CONSTRAINT public notification fk_notification_account a6_g10_restore
+4974; 2606 30883 FK CONSTRAINT public notification fk_notification_event a6_g10_restore
+4975; 2606 30888 FK CONSTRAINT public notification fk_notification_organization a6_g10_restore
+4976; 2606 30893 FK CONSTRAINT public registration fk_registration_account a6_g10_restore
+4977; 2606 30898 FK CONSTRAINT public registration fk_registration_event a6_g10_restore
+4969; 2606 30903 FK CONSTRAINT public event_schedule fk_schedule_event a6_g10_restore
+4970; 2606 30908 FK CONSTRAINT public event_schedule fk_schedule_venue a6_g10_restore
+4978; 2606 30913 FK CONSTRAINT public venue fk_venue_account a6_g10_restore
+

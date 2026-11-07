@@ -1,0 +1,25 @@
+{
+  "source_archive": {
+    "file": "g11_source_run1.dump",
+    "bytes": 41311,
+    "sha256": "2361aee2673097130edcf6e88fa474edf0b348ec5ed4301b92ec5fbfd3bd471d",
+    "database": "ReserveIT",
+    "account": "a6_g11_backup",
+    "created_at": "2026-11-07T01:49:27.9766413+08:00",
+    "duration_seconds": 0.279
+  },
+  "checkpoint_archive": {
+    "file": "g11_checkpoint_run2.dump",
+    "bytes": 42773,
+    "sha256": "454b19f898ce483cc26909486f9cce3b94bd71b951e8095f7a7c6ecfe8b31ff8",
+    "database": "a6_g11_restore_20261107",
+    "account": "a6_g11_restore",
+    "created_at": "2026-11-07T01:51:51.7689613+08:00",
+    "duration_seconds": 0.23
+  },
+  "source_database": "ReserveIT",
+  "restore_database": "a6_g11_restore_20261107",
+  "preflight_database": "a6_g11_preflight_20261107",
+  "recovery_database": "a6_g11_recovery_20261107",
+  "source_unchanged": true
+}

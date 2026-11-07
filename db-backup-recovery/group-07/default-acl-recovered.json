@@ -1,0 +1,2 @@
+[{"schema": "public", "grantee": "grp07_readonly_grp", "object_type": "r", "is_grantable": false, "privilege_type": "SELECT"}]
+

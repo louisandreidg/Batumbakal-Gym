@@ -1,0 +1,214 @@
+;
+; Archive created at 2026-11-07 01:49:16
+;     dbname: a6_g05_restore_20261107
+;     TOC Entries: 203
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+8; 2615 26939 SCHEMA - activity6_probe a6_g05_restore
+5649; 0 0 ACL - SCHEMA public pg_database_owner
+7; 2615 25687 SCHEMA - shioricafe_schema a6_g05_restore
+5650; 0 0 ACL - SCHEMA shioricafe_schema a6_g05_restore
+2; 3079 25688 EXTENSION - btree_gist 
+5651; 0 0 COMMENT - EXTENSION btree_gist 
+483; 1255 26414 FUNCTION shioricafe_schema refresh_order_gross_amount() a6_g05_restore
+484; 1255 26415 FUNCTION shioricafe_schema set_updated_at() a6_g05_restore
+485; 1255 26416 FUNCTION shioricafe_schema validate_refund_allocation() a6_g05_restore
+259; 1259 26940 TABLE activity6_probe recovery_record a6_g05_restore
+222; 1259 26417 TABLE shioricafe_schema category a6_g05_restore
+5652; 0 0 ACL shioricafe_schema TABLE category a6_g05_restore
+223; 1259 26431 SEQUENCE shioricafe_schema category_category_id_seq a6_g05_restore
+5653; 0 0 ACL shioricafe_schema SEQUENCE category_category_id_seq a6_g05_restore
+224; 1259 26432 TABLE shioricafe_schema customer a6_g05_restore
+5654; 0 0 ACL shioricafe_schema TABLE customer a6_g05_restore
+225; 1259 26447 SEQUENCE shioricafe_schema customer_customer_id_seq a6_g05_restore
+5655; 0 0 ACL shioricafe_schema SEQUENCE customer_customer_id_seq a6_g05_restore
+226; 1259 26448 TABLE shioricafe_schema menu_item a6_g05_restore
+5656; 0 0 ACL shioricafe_schema TABLE menu_item a6_g05_restore
+227; 1259 26468 SEQUENCE shioricafe_schema menu_item_menu_item_id_seq a6_g05_restore
+5657; 0 0 ACL shioricafe_schema SEQUENCE menu_item_menu_item_id_seq a6_g05_restore
+228; 1259 26469 TABLE shioricafe_schema order a6_g05_restore
+5658; 0 0 ACL shioricafe_schema TABLE "order" a6_g05_restore
+229; 1259 26492 TABLE shioricafe_schema order_discount a6_g05_restore
+5659; 0 0 ACL shioricafe_schema TABLE order_discount a6_g05_restore
+230; 1259 26504 TABLE shioricafe_schema order_discount_allocation a6_g05_restore
+5660; 0 0 ACL shioricafe_schema TABLE order_discount_allocation a6_g05_restore
+231; 1259 26515 SEQUENCE shioricafe_schema order_discount_allocation_order_discount_allocation_id_seq a6_g05_restore
+5661; 0 0 ACL shioricafe_schema SEQUENCE order_discount_allocation_order_discount_allocation_id_seq a6_g05_restore
+232; 1259 26516 SEQUENCE shioricafe_schema order_discount_order_discount_id_seq a6_g05_restore
+5662; 0 0 ACL shioricafe_schema SEQUENCE order_discount_order_discount_id_seq a6_g05_restore
+233; 1259 26517 TABLE shioricafe_schema order_item a6_g05_restore
+5663; 0 0 ACL shioricafe_schema TABLE order_item a6_g05_restore
+234; 1259 26535 SEQUENCE shioricafe_schema order_item_order_item_id_seq a6_g05_restore
+5664; 0 0 ACL shioricafe_schema SEQUENCE order_item_order_item_id_seq a6_g05_restore
+235; 1259 26536 SEQUENCE shioricafe_schema order_order_id_seq a6_g05_restore
+5665; 0 0 ACL shioricafe_schema SEQUENCE order_order_id_seq a6_g05_restore
+236; 1259 26537 TABLE shioricafe_schema payment_attempt a6_g05_restore
+5666; 0 0 ACL shioricafe_schema TABLE payment_attempt a6_g05_restore
+237; 1259 26557 SEQUENCE shioricafe_schema payment_attempt_payment_attempt_id_seq a6_g05_restore
+5667; 0 0 ACL shioricafe_schema SEQUENCE payment_attempt_payment_attempt_id_seq a6_g05_restore
+238; 1259 26558 TABLE shioricafe_schema payment_refund a6_g05_restore
+5668; 0 0 ACL shioricafe_schema TABLE payment_refund a6_g05_restore
+239; 1259 26575 TABLE shioricafe_schema payment_refund_item_allocation a6_g05_restore
+5669; 0 0 ACL shioricafe_schema TABLE payment_refund_item_allocation a6_g05_restore
+240; 1259 26585 SEQUENCE shioricafe_schema payment_refund_item_allocatio_payment_refund_item_allocatio_seq a6_g05_restore
+5670; 0 0 ACL shioricafe_schema SEQUENCE payment_refund_item_allocatio_payment_refund_item_allocatio_seq a6_g05_restore
+241; 1259 26586 SEQUENCE shioricafe_schema payment_refund_payment_refund_id_seq a6_g05_restore
+5671; 0 0 ACL shioricafe_schema SEQUENCE payment_refund_payment_refund_id_seq a6_g05_restore
+242; 1259 26587 TABLE shioricafe_schema payment_reversal a6_g05_restore
+5672; 0 0 ACL shioricafe_schema TABLE payment_reversal a6_g05_restore
+243; 1259 26604 SEQUENCE shioricafe_schema payment_reversal_payment_reversal_id_seq a6_g05_restore
+5673; 0 0 ACL shioricafe_schema SEQUENCE payment_reversal_payment_reversal_id_seq a6_g05_restore
+244; 1259 26605 TABLE shioricafe_schema payment_transaction a6_g05_restore
+5674; 0 0 ACL shioricafe_schema TABLE payment_transaction a6_g05_restore
+245; 1259 26623 SEQUENCE shioricafe_schema payment_transaction_payment_transaction_id_seq a6_g05_restore
+5675; 0 0 ACL shioricafe_schema SEQUENCE payment_transaction_payment_transaction_id_seq a6_g05_restore
+246; 1259 26624 TABLE shioricafe_schema provider_event a6_g05_restore
+5676; 0 0 ACL shioricafe_schema TABLE provider_event a6_g05_restore
+247; 1259 26639 SEQUENCE shioricafe_schema provider_event_provider_event_id_seq a6_g05_restore
+5677; 0 0 ACL shioricafe_schema SEQUENCE provider_event_provider_event_id_seq a6_g05_restore
+248; 1259 26640 TABLE shioricafe_schema reservation a6_g05_restore
+5678; 0 0 ACL shioricafe_schema TABLE reservation a6_g05_restore
+249; 1259 26672 SEQUENCE shioricafe_schema reservation_reservation_id_seq a6_g05_restore
+5679; 0 0 ACL shioricafe_schema SEQUENCE reservation_reservation_id_seq a6_g05_restore
+250; 1259 26673 TABLE shioricafe_schema staff a6_g05_restore
+5680; 0 0 ACL shioricafe_schema TABLE staff a6_g05_restore
+251; 1259 26690 SEQUENCE shioricafe_schema staff_staff_id_seq a6_g05_restore
+5681; 0 0 ACL shioricafe_schema SEQUENCE staff_staff_id_seq a6_g05_restore
+252; 1259 26691 TABLE shioricafe_schema store_credit_ledger a6_g05_restore
+5682; 0 0 ACL shioricafe_schema TABLE store_credit_ledger a6_g05_restore
+253; 1259 26706 SEQUENCE shioricafe_schema store_credit_ledger_store_credit_ledger_id_seq a6_g05_restore
+5683; 0 0 ACL shioricafe_schema SEQUENCE store_credit_ledger_store_credit_ledger_id_seq a6_g05_restore
+254; 1259 26707 TABLE shioricafe_schema table a6_g05_restore
+5684; 0 0 ACL shioricafe_schema TABLE "table" a6_g05_restore
+255; 1259 26728 SEQUENCE shioricafe_schema table_table_id_seq a6_g05_restore
+5685; 0 0 ACL shioricafe_schema SEQUENCE table_table_id_seq a6_g05_restore
+256; 1259 26729 VIEW shioricafe_schema v_order_item_summary a6_g05_restore
+5686; 0 0 ACL shioricafe_schema TABLE v_order_item_summary a6_g05_restore
+257; 1259 26733 VIEW shioricafe_schema v_order_summary a6_g05_restore
+5687; 0 0 ACL shioricafe_schema TABLE v_order_summary a6_g05_restore
+258; 1259 26737 VIEW shioricafe_schema v_payment_summary a6_g05_restore
+5688; 0 0 ACL shioricafe_schema TABLE v_payment_summary a6_g05_restore
+5641; 0 26940 TABLE DATA activity6_probe recovery_record a6_g05_restore
+5607; 0 26417 TABLE DATA shioricafe_schema category a6_g05_restore
+5609; 0 26432 TABLE DATA shioricafe_schema customer a6_g05_restore
+5611; 0 26448 TABLE DATA shioricafe_schema menu_item a6_g05_restore
+5613; 0 26469 TABLE DATA shioricafe_schema order a6_g05_restore
+5614; 0 26492 TABLE DATA shioricafe_schema order_discount a6_g05_restore
+5615; 0 26504 TABLE DATA shioricafe_schema order_discount_allocation a6_g05_restore
+5618; 0 26517 TABLE DATA shioricafe_schema order_item a6_g05_restore
+5621; 0 26537 TABLE DATA shioricafe_schema payment_attempt a6_g05_restore
+5623; 0 26558 TABLE DATA shioricafe_schema payment_refund a6_g05_restore
+5624; 0 26575 TABLE DATA shioricafe_schema payment_refund_item_allocation a6_g05_restore
+5627; 0 26587 TABLE DATA shioricafe_schema payment_reversal a6_g05_restore
+5629; 0 26605 TABLE DATA shioricafe_schema payment_transaction a6_g05_restore
+5631; 0 26624 TABLE DATA shioricafe_schema provider_event a6_g05_restore
+5633; 0 26640 TABLE DATA shioricafe_schema reservation a6_g05_restore
+5635; 0 26673 TABLE DATA shioricafe_schema staff a6_g05_restore
+5637; 0 26691 TABLE DATA shioricafe_schema store_credit_ledger a6_g05_restore
+5639; 0 26707 TABLE DATA shioricafe_schema table a6_g05_restore
+5689; 0 0 SEQUENCE SET shioricafe_schema category_category_id_seq a6_g05_restore
+5690; 0 0 SEQUENCE SET shioricafe_schema customer_customer_id_seq a6_g05_restore
+5691; 0 0 SEQUENCE SET shioricafe_schema menu_item_menu_item_id_seq a6_g05_restore
+5692; 0 0 SEQUENCE SET shioricafe_schema order_discount_allocation_order_discount_allocation_id_seq a6_g05_restore
+5693; 0 0 SEQUENCE SET shioricafe_schema order_discount_order_discount_id_seq a6_g05_restore
+5694; 0 0 SEQUENCE SET shioricafe_schema order_item_order_item_id_seq a6_g05_restore
+5695; 0 0 SEQUENCE SET shioricafe_schema order_order_id_seq a6_g05_restore
+5696; 0 0 SEQUENCE SET shioricafe_schema payment_attempt_payment_attempt_id_seq a6_g05_restore
+5697; 0 0 SEQUENCE SET shioricafe_schema payment_refund_item_allocatio_payment_refund_item_allocatio_seq a6_g05_restore
+5698; 0 0 SEQUENCE SET shioricafe_schema payment_refund_payment_refund_id_seq a6_g05_restore
+5699; 0 0 SEQUENCE SET shioricafe_schema payment_reversal_payment_reversal_id_seq a6_g05_restore
+5700; 0 0 SEQUENCE SET shioricafe_schema payment_transaction_payment_transaction_id_seq a6_g05_restore
+5701; 0 0 SEQUENCE SET shioricafe_schema provider_event_provider_event_id_seq a6_g05_restore
+5702; 0 0 SEQUENCE SET shioricafe_schema reservation_reservation_id_seq a6_g05_restore
+5703; 0 0 SEQUENCE SET shioricafe_schema staff_staff_id_seq a6_g05_restore
+5704; 0 0 SEQUENCE SET shioricafe_schema store_credit_ledger_store_credit_ledger_id_seq a6_g05_restore
+5705; 0 0 SEQUENCE SET shioricafe_schema table_table_id_seq a6_g05_restore
+5426; 2606 26950 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g05_restore
+5428; 2606 26948 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g05_restore
+5352; 2606 26742 CONSTRAINT shioricafe_schema category category_category_name_key a6_g05_restore
+5354; 2606 26744 CONSTRAINT shioricafe_schema category category_pkey a6_g05_restore
+5356; 2606 26746 CONSTRAINT shioricafe_schema customer customer_pkey a6_g05_restore
+5408; 2606 26748 CONSTRAINT shioricafe_schema reservation ex_reservation_no_overlap a6_g05_restore
+5359; 2606 26750 CONSTRAINT shioricafe_schema menu_item menu_item_pkey a6_g05_restore
+5386; 2606 26752 CONSTRAINT shioricafe_schema payment_attempt payment_attempt_pkey a6_g05_restore
+5392; 2606 26754 CONSTRAINT shioricafe_schema payment_refund_item_allocation payment_refund_item_allocation_pkey a6_g05_restore
+5389; 2606 26756 CONSTRAINT shioricafe_schema payment_refund payment_refund_pkey a6_g05_restore
+5397; 2606 26758 CONSTRAINT shioricafe_schema payment_reversal payment_reversal_pkey a6_g05_restore
+5401; 2606 26760 CONSTRAINT shioricafe_schema payment_transaction payment_transaction_pkey a6_g05_restore
+5366; 2606 26762 CONSTRAINT shioricafe_schema order pk_order a6_g05_restore
+5369; 2606 26764 CONSTRAINT shioricafe_schema order_discount pk_order_discount a6_g05_restore
+5376; 2606 26766 CONSTRAINT shioricafe_schema order_discount_allocation pk_order_discount_allocation a6_g05_restore
+5382; 2606 26768 CONSTRAINT shioricafe_schema order_item pk_order_item a6_g05_restore
+5404; 2606 26770 CONSTRAINT shioricafe_schema provider_event provider_event_pkey a6_g05_restore
+5410; 2606 26772 CONSTRAINT shioricafe_schema reservation reservation_pkey a6_g05_restore
+5415; 2606 26774 CONSTRAINT shioricafe_schema staff staff_pkey a6_g05_restore
+5420; 2606 26776 CONSTRAINT shioricafe_schema store_credit_ledger store_credit_ledger_pkey a6_g05_restore
+5422; 2606 26778 CONSTRAINT shioricafe_schema table table_pkey a6_g05_restore
+5378; 2606 26780 CONSTRAINT shioricafe_schema order_discount_allocation uq_discount_allocation_item a6_g05_restore
+5371; 2606 26782 CONSTRAINT shioricafe_schema order_discount uq_order_discount_order_pair a6_g05_restore
+5406; 2606 26784 CONSTRAINT shioricafe_schema provider_event uq_provider_event_reference a6_g05_restore
+5394; 2606 26786 CONSTRAINT shioricafe_schema payment_refund_item_allocation uq_refund_item a6_g05_restore
+5412; 2606 26788 CONSTRAINT shioricafe_schema reservation uq_reservation_id_customer a6_g05_restore
+5424; 2606 26790 CONSTRAINT shioricafe_schema table uq_table_number a6_g05_restore
+5383; 1259 26791 INDEX shioricafe_schema ix_attempt_order a6_g05_restore
+5384; 1259 26792 INDEX shioricafe_schema ix_attempt_status a6_g05_restore
+5417; 1259 26793 INDEX shioricafe_schema ix_credit_customer a6_g05_restore
+5418; 1259 26794 INDEX shioricafe_schema ix_credit_order a6_g05_restore
+5372; 1259 26795 INDEX shioricafe_schema ix_discount_allocation_discount_id a6_g05_restore
+5373; 1259 26796 INDEX shioricafe_schema ix_discount_allocation_item_id a6_g05_restore
+5374; 1259 26797 INDEX shioricafe_schema ix_discount_allocation_order_id a6_g05_restore
+5361; 1259 26798 INDEX shioricafe_schema ix_order_created_at a6_g05_restore
+5367; 1259 26799 INDEX shioricafe_schema ix_order_discount_order_id a6_g05_restore
+5379; 1259 26800 INDEX shioricafe_schema ix_order_item_menu_item_id a6_g05_restore
+5380; 1259 26801 INDEX shioricafe_schema ix_order_item_order_id a6_g05_restore
+5362; 1259 26802 INDEX shioricafe_schema ix_order_preparation_status a6_g05_restore
+5363; 1259 26803 INDEX shioricafe_schema ix_order_reservation_id a6_g05_restore
+5364; 1259 26804 INDEX shioricafe_schema ix_order_table_id a6_g05_restore
+5402; 1259 26805 INDEX shioricafe_schema ix_provider_event_status a6_g05_restore
+5390; 1259 26806 INDEX shioricafe_schema ix_refund_allocation_refund a6_g05_restore
+5387; 1259 26807 INDEX shioricafe_schema ix_refund_transaction a6_g05_restore
+5395; 1259 26808 INDEX shioricafe_schema ix_reversal_transaction a6_g05_restore
+5398; 1259 26809 INDEX shioricafe_schema ix_transaction_attempt a6_g05_restore
+5399; 1259 26810 INDEX shioricafe_schema ix_transaction_order a6_g05_restore
+5357; 1259 26811 INDEX shioricafe_schema uq_customer_email_lower a6_g05_restore
+5360; 1259 26812 INDEX shioricafe_schema uq_menu_item_name_lower a6_g05_restore
+5413; 1259 26813 INDEX shioricafe_schema uq_reservation_one_active_per_customer a6_g05_restore
+5416; 1259 26814 INDEX shioricafe_schema uq_staff_email_lower a6_g05_restore
+5453; 2620 26815 TRIGGER shioricafe_schema order trg_order_updated_at a6_g05_restore
+5455; 2620 26816 TRIGGER shioricafe_schema payment_attempt trg_payment_attempt_updated_at a6_g05_restore
+5454; 2620 26817 TRIGGER shioricafe_schema order_item trg_refresh_order_gross_amount a6_g05_restore
+5456; 2620 26818 TRIGGER shioricafe_schema payment_refund_item_allocation trg_validate_refund_allocation a6_g05_restore
+5437; 2606 26819 FK CONSTRAINT shioricafe_schema payment_attempt fk_attempt_order a6_g05_restore
+5450; 2606 26824 FK CONSTRAINT shioricafe_schema store_credit_ledger fk_credit_customer a6_g05_restore
+5451; 2606 26829 FK CONSTRAINT shioricafe_schema store_credit_ledger fk_credit_order a6_g05_restore
+5452; 2606 26834 FK CONSTRAINT shioricafe_schema store_credit_ledger fk_credit_reservation a6_g05_restore
+5433; 2606 26839 FK CONSTRAINT shioricafe_schema order_discount_allocation fk_discount_allocation_discount a6_g05_restore
+5434; 2606 26844 FK CONSTRAINT shioricafe_schema order_discount_allocation fk_discount_allocation_order_item a6_g05_restore
+5432; 2606 26849 FK CONSTRAINT shioricafe_schema order_discount fk_order_discount_order a6_g05_restore
+5435; 2606 26854 FK CONSTRAINT shioricafe_schema order_item fk_order_item_menu_item a6_g05_restore
+5436; 2606 26859 FK CONSTRAINT shioricafe_schema order_item fk_order_item_order a6_g05_restore
+5430; 2606 26864 FK CONSTRAINT shioricafe_schema order fk_order_reservation a6_g05_restore
+5431; 2606 26869 FK CONSTRAINT shioricafe_schema order fk_order_table a6_g05_restore
+5439; 2606 26874 FK CONSTRAINT shioricafe_schema payment_refund_item_allocation fk_refund_allocation_item a6_g05_restore
+5440; 2606 26879 FK CONSTRAINT shioricafe_schema payment_refund_item_allocation fk_refund_allocation_refund a6_g05_restore
+5438; 2606 26884 FK CONSTRAINT shioricafe_schema payment_refund fk_refund_transaction a6_g05_restore
+5441; 2606 26889 FK CONSTRAINT shioricafe_schema payment_reversal fk_reversal_transaction a6_g05_restore
+5442; 2606 26894 FK CONSTRAINT shioricafe_schema payment_transaction fk_transaction_attempt a6_g05_restore
+5443; 2606 26899 FK CONSTRAINT shioricafe_schema payment_transaction fk_transaction_order a6_g05_restore
+5429; 2606 26904 FK CONSTRAINT shioricafe_schema menu_item menu_item_category_id_fkey a6_g05_restore
+5444; 2606 26909 FK CONSTRAINT shioricafe_schema reservation reservation_checked_in_by_staff_id_fkey a6_g05_restore
+5445; 2606 26914 FK CONSTRAINT shioricafe_schema reservation reservation_completed_by_staff_id_fkey a6_g05_restore
+5446; 2606 26919 FK CONSTRAINT shioricafe_schema reservation reservation_customer_id_fkey a6_g05_restore
+5447; 2606 26924 FK CONSTRAINT shioricafe_schema reservation reservation_seat_notice_acknowledged_by_staff_id_fkey a6_g05_restore
+5448; 2606 26929 FK CONSTRAINT shioricafe_schema reservation reservation_table_id_fkey a6_g05_restore
+5449; 2606 26934 FK CONSTRAINT shioricafe_schema staff staff_created_by_staff_id_fkey a6_g05_restore
+

@@ -1,0 +1,125 @@
+;
+; Archive created at 2026-11-07 01:48:57
+;     dbname: a6_g01_restore_20261107
+;     TOC Entries: 114
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+7; 2615 21927 SCHEMA - activity6_probe a6_g01_restore
+5; 2615 21746 SCHEMA - dropboxed a6_g01_restore
+5133; 0 0 COMMENT - SCHEMA dropboxed a6_g01_restore
+5134; 0 0 ACL - SCHEMA dropboxed a6_g01_restore
+5135; 0 0 ACL - SCHEMA public pg_database_owner
+237; 1259 21928 TABLE activity6_probe recovery_record a6_g01_restore
+221; 1259 21747 TABLE dropboxed attachments a6_g01_restore
+5136; 0 0 COMMENT dropboxed TABLE attachments a6_g01_restore
+5137; 0 0 COMMENT dropboxed COLUMN attachments.file_path a6_g01_restore
+5138; 0 0 COMMENT dropboxed COLUMN attachments.file_type a6_g01_restore
+5139; 0 0 ACL dropboxed TABLE attachments a6_g01_restore
+222; 1259 21762 SEQUENCE dropboxed attachments_attachment_id_seq a6_g01_restore
+5140; 0 0 ACL dropboxed SEQUENCE attachments_attachment_id_seq a6_g01_restore
+223; 1259 21763 TABLE dropboxed complaint_assignments a6_g01_restore
+5141; 0 0 COMMENT dropboxed TABLE complaint_assignments a6_g01_restore
+5142; 0 0 ACL dropboxed TABLE complaint_assignments a6_g01_restore
+224; 1259 21771 SEQUENCE dropboxed complaint_assignments_assignment_id_seq a6_g01_restore
+5143; 0 0 ACL dropboxed SEQUENCE complaint_assignments_assignment_id_seq a6_g01_restore
+225; 1259 21772 TABLE dropboxed complaint_categories a6_g01_restore
+5144; 0 0 COMMENT dropboxed TABLE complaint_categories a6_g01_restore
+5145; 0 0 ACL dropboxed TABLE complaint_categories a6_g01_restore
+226; 1259 21779 SEQUENCE dropboxed complaint_categories_category_id_seq a6_g01_restore
+5146; 0 0 ACL dropboxed SEQUENCE complaint_categories_category_id_seq a6_g01_restore
+227; 1259 21780 TABLE dropboxed complaints a6_g01_restore
+5147; 0 0 COMMENT dropboxed TABLE complaints a6_g01_restore
+5148; 0 0 COMMENT dropboxed COLUMN complaints.status a6_g01_restore
+5149; 0 0 COMMENT dropboxed COLUMN complaints.is_flagged a6_g01_restore
+5150; 0 0 COMMENT dropboxed COLUMN complaints.flag_reason a6_g01_restore
+5151; 0 0 COMMENT dropboxed COLUMN complaints.resolved_at a6_g01_restore
+5152; 0 0 ACL dropboxed TABLE complaints a6_g01_restore
+228; 1259 21800 SEQUENCE dropboxed complaints_complaint_id_seq a6_g01_restore
+5153; 0 0 ACL dropboxed SEQUENCE complaints_complaint_id_seq a6_g01_restore
+229; 1259 21801 TABLE dropboxed locations a6_g01_restore
+5154; 0 0 COMMENT dropboxed TABLE locations a6_g01_restore
+5155; 0 0 COMMENT dropboxed COLUMN locations.barangay a6_g01_restore
+5156; 0 0 ACL dropboxed TABLE locations a6_g01_restore
+230; 1259 21809 SEQUENCE dropboxed locations_location_id_seq a6_g01_restore
+5157; 0 0 ACL dropboxed SEQUENCE locations_location_id_seq a6_g01_restore
+231; 1259 21810 TABLE dropboxed staff a6_g01_restore
+5158; 0 0 COMMENT dropboxed TABLE staff a6_g01_restore
+5159; 0 0 COMMENT dropboxed COLUMN staff.email a6_g01_restore
+5160; 0 0 COMMENT dropboxed COLUMN staff.password_hash a6_g01_restore
+5161; 0 0 COMMENT dropboxed COLUMN staff.account_status a6_g01_restore
+5162; 0 0 ACL dropboxed TABLE staff a6_g01_restore
+232; 1259 21824 SEQUENCE dropboxed staff_staff_id_seq a6_g01_restore
+5163; 0 0 ACL dropboxed SEQUENCE staff_staff_id_seq a6_g01_restore
+233; 1259 21825 TABLE dropboxed status_logs a6_g01_restore
+5164; 0 0 COMMENT dropboxed TABLE status_logs a6_g01_restore
+5165; 0 0 COMMENT dropboxed COLUMN status_logs.staff_id a6_g01_restore
+5166; 0 0 ACL dropboxed TABLE status_logs a6_g01_restore
+234; 1259 21837 SEQUENCE dropboxed status_logs_status_log_id_seq a6_g01_restore
+5167; 0 0 ACL dropboxed SEQUENCE status_logs_status_log_id_seq a6_g01_restore
+235; 1259 21838 TABLE dropboxed users a6_g01_restore
+5168; 0 0 COMMENT dropboxed TABLE users a6_g01_restore
+5169; 0 0 COMMENT dropboxed COLUMN users.email a6_g01_restore
+5170; 0 0 COMMENT dropboxed COLUMN users.password_hash a6_g01_restore
+5171; 0 0 COMMENT dropboxed COLUMN users.account_status a6_g01_restore
+5172; 0 0 ACL dropboxed TABLE users a6_g01_restore
+236; 1259 21852 SEQUENCE dropboxed users_user_id_seq a6_g01_restore
+5173; 0 0 ACL dropboxed SEQUENCE users_user_id_seq a6_g01_restore
+5125; 0 21928 TABLE DATA activity6_probe recovery_record a6_g01_restore
+5109; 0 21747 TABLE DATA dropboxed attachments a6_g01_restore
+5111; 0 21763 TABLE DATA dropboxed complaint_assignments a6_g01_restore
+5113; 0 21772 TABLE DATA dropboxed complaint_categories a6_g01_restore
+5115; 0 21780 TABLE DATA dropboxed complaints a6_g01_restore
+5117; 0 21801 TABLE DATA dropboxed locations a6_g01_restore
+5119; 0 21810 TABLE DATA dropboxed staff a6_g01_restore
+5121; 0 21825 TABLE DATA dropboxed status_logs a6_g01_restore
+5123; 0 21838 TABLE DATA dropboxed users a6_g01_restore
+5174; 0 0 SEQUENCE SET dropboxed attachments_attachment_id_seq a6_g01_restore
+5175; 0 0 SEQUENCE SET dropboxed complaint_assignments_assignment_id_seq a6_g01_restore
+5176; 0 0 SEQUENCE SET dropboxed complaint_categories_category_id_seq a6_g01_restore
+5177; 0 0 SEQUENCE SET dropboxed complaints_complaint_id_seq a6_g01_restore
+5178; 0 0 SEQUENCE SET dropboxed locations_location_id_seq a6_g01_restore
+5179; 0 0 SEQUENCE SET dropboxed staff_staff_id_seq a6_g01_restore
+5180; 0 0 SEQUENCE SET dropboxed status_logs_status_log_id_seq a6_g01_restore
+5181; 0 0 SEQUENCE SET dropboxed users_user_id_seq a6_g01_restore
+4951; 2606 21938 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g01_restore
+4953; 2606 21936 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g01_restore
+4918; 2606 21854 CONSTRAINT dropboxed attachments pk_attachments a6_g01_restore
+4921; 2606 21856 CONSTRAINT dropboxed complaint_assignments pk_complaint_assignments a6_g01_restore
+4925; 2606 21858 CONSTRAINT dropboxed complaint_categories pk_complaint_categories a6_g01_restore
+4934; 2606 21860 CONSTRAINT dropboxed complaints pk_complaints a6_g01_restore
+4937; 2606 21862 CONSTRAINT dropboxed locations pk_locations a6_g01_restore
+4939; 2606 21864 CONSTRAINT dropboxed staff pk_staff a6_g01_restore
+4945; 2606 21866 CONSTRAINT dropboxed status_logs pk_status_logs a6_g01_restore
+4947; 2606 21868 CONSTRAINT dropboxed users pk_users a6_g01_restore
+4923; 2606 21870 CONSTRAINT dropboxed complaint_assignments uq_complaint_assignments_complaint_staff a6_g01_restore
+4927; 2606 21872 CONSTRAINT dropboxed complaint_categories uq_complaint_categories_name a6_g01_restore
+4941; 2606 21874 CONSTRAINT dropboxed staff uq_staff_email a6_g01_restore
+4949; 2606 21876 CONSTRAINT dropboxed users uq_users_email a6_g01_restore
+4916; 1259 21877 INDEX dropboxed idx_attachments_complaint_id a6_g01_restore
+4919; 1259 21878 INDEX dropboxed idx_complaint_assignments_staff_id a6_g01_restore
+4928; 1259 21879 INDEX dropboxed idx_complaints_category_id a6_g01_restore
+4929; 1259 21880 INDEX dropboxed idx_complaints_location_id a6_g01_restore
+4930; 1259 21881 INDEX dropboxed idx_complaints_status a6_g01_restore
+4931; 1259 21882 INDEX dropboxed idx_complaints_submitted_at a6_g01_restore
+4932; 1259 21883 INDEX dropboxed idx_complaints_user_id a6_g01_restore
+4935; 1259 21884 INDEX dropboxed idx_locations_barangay a6_g01_restore
+4942; 1259 21885 INDEX dropboxed idx_status_logs_complaint_id a6_g01_restore
+4943; 1259 21886 INDEX dropboxed idx_status_logs_staff_id a6_g01_restore
+4954; 2606 21887 FK CONSTRAINT dropboxed attachments fk_attachments_complaint a6_g01_restore
+4955; 2606 21892 FK CONSTRAINT dropboxed complaint_assignments fk_complaint_assignments_complaint a6_g01_restore
+4956; 2606 21897 FK CONSTRAINT dropboxed complaint_assignments fk_complaint_assignments_staff a6_g01_restore
+4957; 2606 21902 FK CONSTRAINT dropboxed complaints fk_complaints_category a6_g01_restore
+4958; 2606 21907 FK CONSTRAINT dropboxed complaints fk_complaints_location a6_g01_restore
+4959; 2606 21912 FK CONSTRAINT dropboxed complaints fk_complaints_user a6_g01_restore
+4960; 2606 21917 FK CONSTRAINT dropboxed status_logs fk_status_logs_complaint a6_g01_restore
+4961; 2606 21922 FK CONSTRAINT dropboxed status_logs fk_status_logs_staff a6_g01_restore
+

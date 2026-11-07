@@ -1,0 +1,4 @@
+ERROR:  permission denied for schema dropboxed
+LINE 1: CREATE TABLE "dropboxed".activity6_denied_probe(id int);
+                     ^
+

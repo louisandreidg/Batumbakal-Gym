@@ -1,0 +1,117 @@
+;
+; Archive created at 2026-11-07 01:49:22
+;     dbname: a6_g08_restore_20261107
+;     TOC Entries: 106
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+6; 2615 30296 SCHEMA - activity6_probe a6_g08_restore
+5145; 0 0 ACL - SCHEMA public pg_database_owner
+241; 1259 30297 TABLE activity6_probe recovery_record a6_g08_restore
+220; 1259 30107 TABLE public admin a6_g08_restore
+5146; 0 0 ACL public TABLE admin a6_g08_restore
+5147; 0 0 ACL public COLUMN admin.admin_id a6_g08_restore
+5148; 0 0 ACL public COLUMN admin.username a6_g08_restore
+5149; 0 0 ACL public COLUMN admin.created_at a6_g08_restore
+221; 1259 30117 SEQUENCE public admin_admin_id_seq a6_g08_restore
+5150; 0 0 ACL public SEQUENCE admin_admin_id_seq a6_g08_restore
+222; 1259 30118 TABLE public cancellation a6_g08_restore
+5151; 0 0 ACL public TABLE cancellation a6_g08_restore
+223; 1259 30128 SEQUENCE public cancellation_cancellation_id_seq a6_g08_restore
+5152; 0 0 ACL public SEQUENCE cancellation_cancellation_id_seq a6_g08_restore
+224; 1259 30129 TABLE public customer a6_g08_restore
+5153; 0 0 ACL public TABLE customer a6_g08_restore
+5154; 0 0 ACL public COLUMN customer.customer_id a6_g08_restore
+5155; 0 0 ACL public COLUMN customer.first_name a6_g08_restore
+5156; 0 0 ACL public COLUMN customer.last_name a6_g08_restore
+5157; 0 0 ACL public COLUMN customer.phone a6_g08_restore
+5158; 0 0 ACL public COLUMN customer.address a6_g08_restore
+225; 1259 30138 SEQUENCE public customer_customer_id_seq a6_g08_restore
+5159; 0 0 ACL public SEQUENCE customer_customer_id_seq a6_g08_restore
+226; 1259 30139 TABLE public employee a6_g08_restore
+5160; 0 0 ACL public TABLE employee a6_g08_restore
+227; 1259 30146 SEQUENCE public employee_employee_id_seq a6_g08_restore
+5161; 0 0 ACL public SEQUENCE employee_employee_id_seq a6_g08_restore
+228; 1259 30147 TABLE public event_assignment a6_g08_restore
+5162; 0 0 ACL public TABLE event_assignment a6_g08_restore
+229; 1259 30153 TABLE public inventory a6_g08_restore
+5163; 0 0 ACL public TABLE inventory a6_g08_restore
+230; 1259 30163 SEQUENCE public inventory_inventory_id_seq a6_g08_restore
+5164; 0 0 ACL public SEQUENCE inventory_inventory_id_seq a6_g08_restore
+231; 1259 30164 TABLE public menu_item a6_g08_restore
+5165; 0 0 ACL public TABLE menu_item a6_g08_restore
+232; 1259 30174 SEQUENCE public menu_item_menu_item_id_seq a6_g08_restore
+5166; 0 0 ACL public SEQUENCE menu_item_menu_item_id_seq a6_g08_restore
+233; 1259 30175 TABLE public package a6_g08_restore
+5167; 0 0 ACL public TABLE package a6_g08_restore
+234; 1259 30184 SEQUENCE public package_package_id_seq a6_g08_restore
+5168; 0 0 ACL public SEQUENCE package_package_id_seq a6_g08_restore
+235; 1259 30185 TABLE public payment a6_g08_restore
+5169; 0 0 ACL public TABLE payment a6_g08_restore
+236; 1259 30195 SEQUENCE public payment_payment_id_seq a6_g08_restore
+5170; 0 0 ACL public SEQUENCE payment_payment_id_seq a6_g08_restore
+237; 1259 30196 TABLE public reservation a6_g08_restore
+5171; 0 0 ACL public TABLE reservation a6_g08_restore
+238; 1259 30209 TABLE public reservation_menu a6_g08_restore
+5172; 0 0 ACL public TABLE reservation_menu a6_g08_restore
+239; 1259 30216 SEQUENCE public reservation_reservation_id_seq a6_g08_restore
+5173; 0 0 ACL public SEQUENCE reservation_reservation_id_seq a6_g08_restore
+240; 1259 30217 TABLE public session a6_g08_restore
+5174; 0 0 ACL public TABLE session a6_g08_restore
+5137; 0 30297 TABLE DATA activity6_probe recovery_record a6_g08_restore
+5116; 0 30107 TABLE DATA public admin a6_g08_restore
+5118; 0 30118 TABLE DATA public cancellation a6_g08_restore
+5120; 0 30129 TABLE DATA public customer a6_g08_restore
+5122; 0 30139 TABLE DATA public employee a6_g08_restore
+5124; 0 30147 TABLE DATA public event_assignment a6_g08_restore
+5125; 0 30153 TABLE DATA public inventory a6_g08_restore
+5127; 0 30164 TABLE DATA public menu_item a6_g08_restore
+5129; 0 30175 TABLE DATA public package a6_g08_restore
+5131; 0 30185 TABLE DATA public payment a6_g08_restore
+5133; 0 30196 TABLE DATA public reservation a6_g08_restore
+5134; 0 30209 TABLE DATA public reservation_menu a6_g08_restore
+5136; 0 30217 TABLE DATA public session a6_g08_restore
+5175; 0 0 SEQUENCE SET public admin_admin_id_seq a6_g08_restore
+5176; 0 0 SEQUENCE SET public cancellation_cancellation_id_seq a6_g08_restore
+5177; 0 0 SEQUENCE SET public customer_customer_id_seq a6_g08_restore
+5178; 0 0 SEQUENCE SET public employee_employee_id_seq a6_g08_restore
+5179; 0 0 SEQUENCE SET public inventory_inventory_id_seq a6_g08_restore
+5180; 0 0 SEQUENCE SET public menu_item_menu_item_id_seq a6_g08_restore
+5181; 0 0 SEQUENCE SET public package_package_id_seq a6_g08_restore
+5182; 0 0 SEQUENCE SET public payment_payment_id_seq a6_g08_restore
+5183; 0 0 SEQUENCE SET public reservation_reservation_id_seq a6_g08_restore
+4958; 2606 30307 CONSTRAINT activity6_probe recovery_record recovery_record_marker_key a6_g08_restore
+4960; 2606 30305 CONSTRAINT activity6_probe recovery_record recovery_record_pkey a6_g08_restore
+4927; 2606 30226 CONSTRAINT public admin admin_pkey a6_g08_restore
+4929; 2606 30228 CONSTRAINT public admin admin_username_key a6_g08_restore
+4931; 2606 30230 CONSTRAINT public cancellation cancellation_pkey a6_g08_restore
+4933; 2606 30232 CONSTRAINT public customer customer_email_key a6_g08_restore
+4935; 2606 30234 CONSTRAINT public customer customer_pkey a6_g08_restore
+4937; 2606 30236 CONSTRAINT public employee employee_pkey a6_g08_restore
+4939; 2606 30238 CONSTRAINT public event_assignment event_assignment_pkey a6_g08_restore
+4941; 2606 30240 CONSTRAINT public inventory inventory_pkey a6_g08_restore
+4943; 2606 30242 CONSTRAINT public menu_item menu_item_pkey a6_g08_restore
+4945; 2606 30244 CONSTRAINT public package package_package_name_key a6_g08_restore
+4947; 2606 30246 CONSTRAINT public package package_pkey a6_g08_restore
+4949; 2606 30248 CONSTRAINT public payment payment_pkey a6_g08_restore
+4953; 2606 30250 CONSTRAINT public reservation_menu reservation_menu_pkey a6_g08_restore
+4951; 2606 30252 CONSTRAINT public reservation reservation_pkey a6_g08_restore
+4956; 2606 30254 CONSTRAINT public session session_pkey a6_g08_restore
+4954; 1259 30255 INDEX public IDX_session_expire a6_g08_restore
+4962; 2606 30256 FK CONSTRAINT public event_assignment event_assignment_employee_id_fkey a6_g08_restore
+4963; 2606 30261 FK CONSTRAINT public event_assignment event_assignment_reservation_id_fkey a6_g08_restore
+4961; 2606 30266 FK CONSTRAINT public cancellation fk_cancellation_reservation a6_g08_restore
+4964; 2606 30271 FK CONSTRAINT public payment fk_payment_reservation a6_g08_restore
+4965; 2606 30276 FK CONSTRAINT public reservation fk_reservation_customer a6_g08_restore
+4966; 2606 30281 FK CONSTRAINT public reservation fk_reservation_package a6_g08_restore
+4967; 2606 30286 FK CONSTRAINT public reservation_menu reservation_menu_menu_item_id_fkey a6_g08_restore
+4968; 2606 30291 FK CONSTRAINT public reservation_menu reservation_menu_reservation_id_fkey a6_g08_restore
+
