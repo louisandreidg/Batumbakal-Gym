@@ -1,18 +1,13 @@
-# Activity 6 Backup Restoration and Recovery
+# Activity 6 Backup and Recovery
 
-[Progress PDF](../docs/Activity6-Progress-Report.pdf)
+[Progress report](../docs/Activity6-Progress-Report.pdf)
 
-Group 9 Batumbakal Gym. Louis Andrei de Guzman and Mark Timothy Casilan. Test date 7 November 2026.
+Each group folder contains the backup plan, commands, archive metadata, restore checks and recovery results. Data archives and credentials are stored privately outside the repository.
 
-Each group-XX folder contains its backup plan, command list, archive metadata, restore output, verification SQL, role plan, recovery evidence and findings. Archives contain application data and are stored in a protected local directory outside this repository. No archive, credential file, Word report or tracker preparation file is uploaded.
+All projects were backed up and recovered in separate test databases. G01/G03 retain their earlier runtime-role design gaps. G04/G06/G07 required default privileges to be mapped to the test owner. Original application data and passwords were preserved.
 
-All projects were backed up and recovered. G01/G03 retain their earlier runtime-role design gaps. G04/G06/G07 needed owner-specific default privileges explicitly mapped to the isolated restore owner. Existing application data and passwords were preserved. Only one labeled probe in each disposable incident database was deleted, after verifying a checkpoint restore. Backup/recovery timing covers the database test, not a full application restart.
+backup-metadata.json records the archive file names, sizes and SHA-256 checksums. execution-index.json points to command output. latest-results.json contains each final result; earlier errors remain in the case logs. Role memberships, object grants, data fingerprints and sequence states were checked.
 
-execution-index.json identifies accounts, commands, times and case files. backup-metadata.json records archive names, sizes and SHA-256 hashes. Earlier errors remain in their original case logs; the final successful run is identified per project. Equivalent literal text-array cast forms are normalized for comparison; original expressions remain available. Default grants and role memberships were also checked separately.
+Recovery deleted only one labeled row in a disposable probe table, after verifying a checkpoint restore. No application rows were deleted. The initial source archive predates that probe; recovery used the later checkpoint.
 
-Roles are cluster-wide. The fresh-cluster reconstruction scripts contain no passwords and must be reviewed before use; do not overwrite existing roles. --no-owner intentionally maps object ownership to the isolated test owner. Ordinary ACLs are restored; reviewed DEFAULT ACL entries are replayed for that owner instead of granting superuser access. New account-specific localhost rules restrict backup and clone accounts without changing existing account rules.
-
-Feedback messages remain drafts and the live tracker was not edited. Submit the PDF and repository link after entering the Activity 6 Log and reviewing feedback.
-
-Repository: https://github.com/louisandreidg/Batumbakal-Gym
-Tracker: https://docs.google.com/spreadsheets/d/1BClCa9rEs9o-D9Rp3tUZVhECipJ234zX/edit?gid=2123136180
+See REPRODUCE.md before running the scripts. Existing roles must not be overwritten, and backup storage must stay outside the repository. Feedback files are drafts and have not been sent.

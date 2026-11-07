@@ -12,8 +12,8 @@ The source/restored application-table counts and row fingerprints, sequence stat
 
 Recovery used a single clearly identified activity6_probe.recovery_record row, never an application table. The checkpoint archive was restored and verified in the preflight copy before deletion in the incident copy. A fresh recovery copy restored after the deletion contained the expected marker. Original application data and the initial archive remained unchanged.
 
-Actual SQL and command output are retained with their run labels. Earlier failed checks/restores remain for traceability; the final successful test is run1. backup-metadata.json records both archive checksums. roles-reconstruction.sql is a secret-free fresh-cluster prerequisite, not an executed creation of roles that already existed. Default privilege mappings are in the explicit replay SQL files. Full web workflows were not exercised.
+See the case output for the commands and results, backup-metadata.json for archive checksums, and roles-reconstruction.sql for the role plan. Full web workflows were not tested.
 
-Proposed backup interval/RPO: 4 hour(s). RTO: 2 hour(s). See backup-plan.md. The original source archive predates the disposable fixture; fixture recovery uses the separate checkpoint archive.
+Proposed backup interval/RPO: 4 hours. RTO: 2 hours. See backup-plan.md. The original source archive predates the disposable fixture; fixture recovery uses the separate checkpoint archive.
 
 Feedback: drafted, not sent.

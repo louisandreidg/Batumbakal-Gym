@@ -23,30 +23,23 @@ Fourteen tables for accounts, pets, appointments, clinical records, sessions, no
 All named groups in the table are NOLOGIN except the explicitly described owner/direct-login cases. SIU means SELECT/INSERT/UPDATE; CRUD includes DELETE. Web roles are enforced by application code, separately from these database roles.
 
 | Login or group | Membership/responsibility | Privileges |
-
 |---|---|---|
-
 | pawpaw_app | No evidenced NOLOGIN group | Direct table CRUD; non-superuser, no role/database creation. Audit/history protection needs review. |
 
 ## Representative verification
 
 | Account | Operation | Expected/actual evidence |
-
 |---|---|---|
-
 | postgres | Inspect objects and grants | Inventory returned; administrative metadata only. |
-
 | pawpaw_app | Password-free login attempt | No password supplied; no restricted-account DML result claimed. |
 
 ## Limits and issues
 
 Tracker previously says Success. NOLOGIN roles, reporting scope, account-only isolation and actual restricted-account test output remain outstanding. PUBLIC CONNECT persists; existing grants were preserved as requested.
 
-## Script provenance
+## SQL and evidence
 
-reconstructed-catalog-grants.sql is a read-only catalog-derived reconstruction of existing roles, memberships, database/schema/table/column/sequence ACLs. It is not an original execution log or a complete hardening installer. It omits ownership transfer, function ACLs and default privileges; use the original setup and the supplied plan. Passwords are excluded. final-configuration-audit.txt is administrative metadata, not runtime DML proof.
-
-Previously available original/reconstructed setup scripts and original evidence are retained below this folder. Actual statement/output evidence is referenced in ../verification-results.csv. Account isolation depends on the matching pg_hba snippet, where supplied. Do not replace the server policy wholesale.
+The SQL files labeled reconstructed describe the inspected configuration. Use the source setup instructions and ../REPRODUCE.md. Actual operation results are linked in ../verification-results.csv.
 
 ## Feedback
 
