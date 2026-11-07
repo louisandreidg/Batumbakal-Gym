@@ -1,6 +1,6 @@
 # Group 9 Activity 4
 
-[Progress report by Casilan and de Guzman](Activity4-Progress-Report-Casilan-de-Guzman.pdf)
+[Progress report by Casilan and de Guzman](../docs/Activity4-Progress-Report-Casilan-de-Guzman.pdf)
 
 [SQL scripts, role plans and test evidence](final/README.md)
 

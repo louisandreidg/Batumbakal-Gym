@@ -1,6 +1,6 @@
 # Activity 6 Backup Restoration and Recovery
 
-[Progress PDF](Activity6-Progress-Report.pdf)
+[Progress PDF](../docs/Activity6-Progress-Report.pdf)
 
 Group 9 Batumbakal Gym. Louis Andrei de Guzman and Mark Timothy Casilan. Test date 7 November 2026.
 

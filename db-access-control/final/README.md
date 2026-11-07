@@ -1,6 +1,6 @@
 # Activity 4 scripts and evidence
 
-[Group progress PDF](../Activity4-Progress-Report-Casilan-de-Guzman.pdf)
+[Group progress PDF](../../docs/Activity4-Progress-Report-Casilan-de-Guzman.pdf)
 
 Group 9 Batumbakal Gym. Louis Andrei de Guzman and Mark Timothy Casilan.
 

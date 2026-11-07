@@ -1,6 +1,6 @@
 # Activity 5 Database Maintenance and Monitoring
 
-[Progress PDF](Activity5-Progress-Report.pdf)
+[Progress PDF](../docs/Activity5-Progress-Report.pdf)
 
 Group 9 Batumbakal Gym. Louis Andrei de Guzman and Mark Timothy Casilan. Inspection date 7 November 2026.
 
@@ -16,4 +16,4 @@ The scripts expect local encrypted credentials, which are excluded. Adapt psql/c
 
 Owner feedback remains explicitly labeled drafts, not sent messages. The live tracker was not edited. Tracker preparation files are kept locally. Enter only this group monitoring rows in the instructor Activity 5 Log and record actual feedback dates after review and delivery.
 
-[Activity 4 documentation](../db-access-control/Activity4-Progress-Report-Casilan-de-Guzman.pdf) is linked above. Its final/ folder retains prior SQL and testing evidence. G01/G03 access limitations remain consistent across both activities.
+[Activity 4 documentation](../docs/Activity4-Progress-Report-Casilan-de-Guzman.pdf) is linked above. Its final/ folder retains prior SQL and testing evidence. G01/G03 access limitations remain consistent across both activities.
