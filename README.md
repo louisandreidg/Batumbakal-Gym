@@ -141,4 +141,4 @@ src/main/resources/static  Browser interface
 - [Database Design](docs/DATABASE.md)
 - [Database and Application Roles](docs/ROLES.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
-- [Activity 3 Progress Report Draft](docs/ACTIVITY3_REPORT_DRAFT.md)
+- [Activity 3 Progress Report](docs/Batumbakal-Gym-Activity3-Progress-Report.pdf)
